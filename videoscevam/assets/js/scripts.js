@@ -121,14 +121,23 @@ function onPlayerStateChange(event) {
   }
 
   if (event.data == YT.PlayerState.PLAYING) {
-    $('#preloader').fadeOut(500)
+    $('#preloader').fadeOut()
     if (intro == false) {
       $('#btn-menu').css('display', 'block')
     }
+    $('#btn-menu').on('click', function() {
+      if (checkMenu == 'navigationOpen') {
+        player.pauseVideo();
+      }
+    });
   }
 
   if (event.data == YT.PlayerState.PAUSED) {
-
+    $('#btn-menu').on('click', function() {
+      if (checkMenu == 'navigationClose') {
+        player.playVideo();
+      }
+    });
   }
 
   if ((event.data == YT.PlayerState.ENDED) && (intro == true)) {
@@ -152,3 +161,11 @@ function onPlayerStateChange(event) {
     $('#preloader').fadeIn()
   }
 }
+// *****************************************************************************
+// * VIDEOS
+// *****************************************************************************
+$('#aboutCevam01').on('click', function () {
+  // $('#preloader').fadeIn()
+  player.loadVideoById('66O5zgVLtYw')
+  navigationClose()
+})

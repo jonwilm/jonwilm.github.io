@@ -14051,8 +14051,7 @@ body {
       height: 100%;
       position: absolute;
       top: 0;
-      left: 0;
-      pointer-events: none; }
+      left: 0; }
       @media (min-aspect-ratio: 16 / 9) {
         #main-container #video-container iframe#video {
           height: 200%;

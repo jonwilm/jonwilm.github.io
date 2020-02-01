@@ -3373,175 +3373,175 @@ function updateProgressBar(){
 // *****************************************************************************
 var endVideo
 $('#aboutCevam01').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#aboutCevam02').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#aboutCevam03').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#aboutCevam04').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#courses01').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#courses02').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#educationUSA01').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#educationUSA02').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#educationUSA03').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#educationUSA04').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#educationUSA05').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#educationUSA06').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#alumni01').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#alumni02').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#outreach01').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#outreach02').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#outreach03').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#outreach04').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#outreach05').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#outreach06').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#aboutUSA01').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#aboutUSA02').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#services01').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#services02').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()
   endVideo = false
 })
 $('#services03').on('click', function () {
-  player.loadVideoById('66O5zgVLtYw')
+  player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
   changeClassControls()

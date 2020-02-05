@@ -3165,7 +3165,6 @@ bunker(bootstrap);
 
 }());
 
-
 // *****************************************************************************
 // * NAVIGATION
 // *****************************************************************************
@@ -3176,8 +3175,8 @@ var checkMenu = 'navigationClose'
     checkMenu = 'navigationOpen'
     window.setTimeout(function() {
       $('#btn-menu').addClass('close-menu')
-      $('#navigation').removeClass('d-none animated fadeOutDown')
-      $('#navigation').addClass('d-lg-flex animated fadeInDown')
+      $('#navigation').removeClass('d-none animated fadeOut')
+      $('#navigation').addClass('d-lg-block animated fadeIn')
     }, 100)
   }
   // *****************************************************************************
@@ -3185,10 +3184,10 @@ var checkMenu = 'navigationClose'
   function navigationClose (){
     checkMenu = 'navigationClose'
     $('#btn-menu').removeClass('close-menu')
-    $('#navigation').removeClass('animated fadeInDown')
-    $('#navigation').addClass('animated fadeOutDown')
+    $('#navigation').removeClass('animated fadeIn')
+    $('#navigation').addClass('animated fadeOut')
     window.setTimeout(function() {
-      $('#navigation').removeClass('d-lg-flex')
+      $('#navigation').removeClass('d-lg-block')
       $('#navigation').addClass('d-none')
     }, 1000)
   }
@@ -3219,6 +3218,107 @@ var checkMenu = 'navigationClose'
     $('#btn-saltar-intro').addClass('d-none')
     $('#preloader').fadeIn()
   })
+  // *****************************************************************************
+  // * POSITION MENU NAVIGATION
+  var imageWidth
+  var imageHeight
+  var imageAspectRatio
+  var $window = $(window)
+  var hotSpots
+  function nav_4_3() {
+    imageWidth = $(window).width()
+    imageHeight = ($(window).width() * 0.562814)
+    imageAspectRatio = imageWidth / imageHeight
+    $('#navigation').addClass('nav-4-3')
+    hotSpots = [{
+      x: -20.7,
+      y: -22.2,
+      height: (imageHeight * 0.5401),
+      width: ($(window).width() * 0.4104)
+    }]
+  }
+  function nav_16_9() {
+    $('#navigation').removeClass('nav-4-3')
+    imageWidth = 1194
+    imageHeight = 672
+    imageAspectRatio = imageWidth / imageHeight
+    hotSpots = [{
+      x: -248,
+      y: -265,
+      height: 363,
+      width: 490
+    }]
+  }
+  if ($(window).width() < ($(window).height() * 1.57)) {
+    nav_4_3()
+  } else {
+    nav_16_9()
+  }
+  $(window).resize(function(){
+    if ($(window).width() < ($(window).height() * 1.57)) {
+      nav_4_3()
+    } else {
+      nav_16_9()
+    }
+  })
+
+  function appendHotSpots() {
+    for (var i = 0; i < hotSpots.length; i++) {
+      $('#menu-navigation').addClass('hot-spot');
+    }
+    positionHotSpots();
+  }
+
+  function positionHotSpots() {
+    var windowWidth = $window.width()
+    var windowHeight = $window.height()
+    var windowAspectRatio = windowWidth / windowHeight
+    var $hotSpot = $('.hot-spot')
+
+    $hotSpot.each(function(index) {
+      var cambio = 1
+      var xPos = hotSpots[index]['x']
+      var yPos = hotSpots[index]['y']
+      var xSize = hotSpots[index]['width']
+      var ySize = hotSpots[index]['height']
+      var desiredLeft = 0
+      var desiredTop = 0
+
+      if (windowAspectRatio > imageAspectRatio) {
+        var ratio = windowWidth / imageWidth;
+      } else {
+        var ratio = windowHeight / imageHeight;
+      }
+
+      if ($(window).width() < ($(window).height() * 1.57)) {
+        xPos = xPos;
+        yPos = yPos;
+        xSize = xSize;
+        ySize = ySize;
+        $(this).css({
+        'margin-top': yPos + '%',
+        'margin-left': xPos + '%',
+        'width': xSize + 'px',
+        'height': ySize + 'px'
+      });
+      } else {
+        xPos = xPos * ratio;
+        yPos = yPos * ratio;
+        xSize = xSize * ratio;
+        ySize = ySize * ratio;
+        $(this).css({
+        'margin-top': yPos + 'px',
+        'margin-left': xPos + 'px',
+        'width': xSize + 'px',
+        'height': ySize + 'px'
+      });
+      }
+
+    });
+  }
+
+  appendHotSpots();
+  $(window).resize(positionHotSpots);
 // *****************************************************************************
 // * YOUTUBE PLAYER
 // *****************************************************************************
@@ -3261,17 +3361,17 @@ function onYouTubeIframeAPIReady() {
 function onPlayerReady(event) {
   player.playVideo()
 }
-
+var timeUpdateInterval = null
 function onPlayerStateChange(event) {
+  console.log(intro)
+  console.log(endVideo)
   // *****************************************************************************
   // * PRELOADER
   // *****************************************************************************
   if (event.data == YT.PlayerState.PLAYING) {
     $('#preloader').fadeOut()
     updateProgressBar()
-    var timeUpdateInterval = setInterval(function () {
-      updateProgressBar()
-    }, 500)
+    timeUpdateInterval = setInterval(updateProgressBar, 500)
     if (intro == false) {
       $('#btn-menu').css('display', 'block')
     }
@@ -3363,15 +3463,17 @@ function updateProgressBar(){
 
   currentPorcent = (currentTime / duration)
 
-  if ((currentPorcent > 0.98) && (intro == false) && (endVideo == false)) {
+  if ((currentPorcent > 0.9) && (intro == false) && (endVideo == false)) {
+    player.pauseVideo()
     navigationOpen()
+    $('#btn-menu').css('display', 'none')
     endVideo = true
   }
 }
 // *****************************************************************************
 // * VIDEOS
 // *****************************************************************************
-var endVideo
+var endVideo = false
 $('#aboutCevam01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()

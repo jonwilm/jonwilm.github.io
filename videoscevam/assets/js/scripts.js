@@ -3178,6 +3178,8 @@ var checkMenu = 'navigationClose'
       $('#navigation').removeClass('d-none animated fadeOut')
       $('#navigation').addClass('d-lg-block animated fadeIn')
     }, 100)
+    controlsNone()
+    $('#btn-saltar-intro').addClass('d-none')
   }
   // *****************************************************************************
   // * FUNCTION NAVIGATION CLOSE
@@ -3236,6 +3238,8 @@ var checkMenu = 'navigationClose'
       height: (imageHeight * 0.5401),
       width: ($(window).width() * 0.4104)
     }]
+    $('#controls').css('bottom', ((($(window).height() - imageHeight) / 2) + 10) + 'px')
+    $('.content-video').css('bottom', ((($(window).height() - imageHeight) / 2) + 20) + 'px')
   }
   function nav_16_9() {
     $('#navigation').removeClass('nav-4-3')
@@ -3248,6 +3252,12 @@ var checkMenu = 'navigationClose'
       height: 363,
       width: 490
     }]
+    $('#controls').css('bottom', '15px')
+    $('.content-video').css('bottom', '10px')
+    if ($(window).height() < 330) {
+      $('#controls').css('bottom', '0px')
+      $('.content-video').css('bottom', '0px')
+    }
   }
   if ($(window).width() < ($(window).height() * 1.57)) {
     nav_4_3()
@@ -3296,22 +3306,22 @@ var checkMenu = 'navigationClose'
         xSize = xSize;
         ySize = ySize;
         $(this).css({
-        'margin-top': yPos + '%',
-        'margin-left': xPos + '%',
-        'width': xSize + 'px',
-        'height': ySize + 'px'
-      });
+          'margin-top': yPos + '%',
+          'margin-left': xPos + '%',
+          'width': xSize + 'px',
+          'height': ySize + 'px'
+        });
       } else {
         xPos = xPos * ratio;
         yPos = yPos * ratio;
         xSize = xSize * ratio;
         ySize = ySize * ratio;
         $(this).css({
-        'margin-top': yPos + 'px',
-        'margin-left': xPos + 'px',
-        'width': xSize + 'px',
-        'height': ySize + 'px'
-      });
+          'margin-top': yPos + 'px',
+          'margin-left': xPos + 'px',
+          'width': xSize + 'px',
+          'height': ySize + 'px'
+        });
       }
 
     });
@@ -3344,7 +3354,7 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag)
 var player
 function onYouTubeIframeAPIReady() {
   player = new YT.Player('video', {
-    videoId: 'Pe_142IKNc4',
+    videoId: '7Pmx58A2CGU',
     playerVars: {
       autoplay: '1',
       controls: '0',
@@ -3352,6 +3362,7 @@ function onYouTubeIframeAPIReady() {
       rel: '0',
       showinfo: '0',
     },
+    origin: 'http://localhost',
     events: {
       'onReady': onPlayerReady,
       'onStateChange': onPlayerStateChange
@@ -3362,9 +3373,18 @@ function onPlayerReady(event) {
   player.playVideo()
 }
 var timeUpdateInterval = null
+var playerIn
+
+$('#btn-playpause').on('click', function() {
+  if (playerIn == 'play') {
+    player.pauseVideo()
+  } else if (playerIn == 'pause') {
+    player.playVideo()
+  }
+})
 function onPlayerStateChange(event) {
+  console.log(playerIn)
   console.log(intro)
-  console.log(endVideo)
   // *****************************************************************************
   // * PRELOADER
   // *****************************************************************************
@@ -3377,9 +3397,7 @@ function onPlayerStateChange(event) {
     }
     $('#icon-playpause').removeClass('fa-play-circle')
     $('#icon-playpause').addClass('fa-pause-circle')
-    $('#btn-playpause').on('click', function() {
-      player.pauseVideo()
-    })
+    playerIn = 'play'
     $('#btn-menu').on('click', function() {
       if (checkMenu == 'navigationOpen') {
         player.pauseVideo()
@@ -3392,32 +3410,12 @@ function onPlayerStateChange(event) {
     timeUpdateInterval = null
     $('#icon-playpause').removeClass('fa-pause-circle')
     $('#icon-playpause').addClass('fa-play-circle')
-    $('#btn-playpause').on('click', function() {
-      player.playVideo()
-    })
+    playerIn = 'pause'
     $('#btn-menu').on('click', function() {
       if (checkMenu == 'navigationClose') {
         player.playVideo()
       }
     })
-  }
-
-  if ((event.data == YT.PlayerState.ENDED) && (intro == true)) {
-    clearInterval(timeUpdateInterval)
-    timeUpdateInterval = null
-    player.loadVideoById('Pe_142IKNc4')
-    $('#preloader').fadeIn()
-    $('#btn-saltar-intro').addClass('d-none')
-    window.setTimeout(function() {
-      intro = false
-    }, 500)
-  }
-
-  if ((event.data == YT.PlayerState.ENDED) && (intro == false)) {
-    clearInterval(timeUpdateInterval)
-    timeUpdateInterval = null
-    navigationOpen()
-    $('#btn-menu').css('display', 'none')
   }
 
   if (event.data !== YT.PlayerState.PLAYING) {
@@ -3428,9 +3426,13 @@ function onPlayerStateChange(event) {
 // *****************************************************************************
 // * CONTROLS
 // *****************************************************************************
-function changeClassControls() {
+function controlsBlock() {
   $('#controls').addClass('d-block')
   $('#controls').removeClass('d-none')
+}
+function controlsNone() {
+  $('#controls').removeClass('d-block')
+  $('#controls').addClass('d-none')
 }
 var x
 $("#progressbar").on('click', function(e){
@@ -3463,11 +3465,22 @@ function updateProgressBar(){
 
   currentPorcent = (currentTime / duration)
 
-  if ((currentPorcent > 0.9) && (intro == false) && (endVideo == false)) {
-    player.pauseVideo()
-    navigationOpen()
-    $('#btn-menu').css('display', 'none')
-    endVideo = true
+  if (duration < 10) {
+    if ((currentPorcent > 0.9) && (endVideo == false)) {
+      player.pauseVideo()
+      navigationOpen()
+      $('#btn-menu').css('display', 'none')
+      endVideo = true
+      intro = false
+    } 
+  } else {
+    if ((currentPorcent > 0.98) && (endVideo == false)) {
+      player.pauseVideo()
+      navigationOpen()
+      $('#btn-menu').css('display', 'none')
+      endVideo = true
+      intro = false
+    } 
   }
 }
 // *****************************************************************************
@@ -3475,177 +3488,191 @@ function updateProgressBar(){
 // *****************************************************************************
 var endVideo = false
 $('#aboutCevam01').on('click', function () {
-  player.loadVideoById('Pe_142IKNc4')
+  player.loadVideoById('NKGbDxXrf8M')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#aboutCevam02').on('click', function () {
-  player.loadVideoById('Pe_142IKNc4')
+  player.loadVideoById('o5aLk1fvlDo')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#aboutCevam03').on('click', function () {
-  player.loadVideoById('Pe_142IKNc4')
+  player.loadVideoById('yZvubLSnMSs')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#aboutCevam04').on('click', function () {
-  player.loadVideoById('Pe_142IKNc4')
+  player.loadVideoById('ByB3I7HPBec')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#courses01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#courses02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#educationUSA01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#educationUSA02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#educationUSA03').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#educationUSA04').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#educationUSA05').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#educationUSA06').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
+  endVideo = false
+})
+$('#educationUSA07').on('click', function () {
+  player.loadVideoById('Pe_142IKNc4')
+  $('#preloader').fadeIn()
+  navigationClose()
+  controlsBlock()
   endVideo = false
 })
 $('#alumni01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#alumni02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#outreach01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#outreach02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#outreach03').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#outreach04').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#outreach05').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#outreach06').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#aboutUSA01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#aboutUSA02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
+  endVideo = false
+})
+$('#aboutUSA03').on('click', function () {
+  player.loadVideoById('Pe_142IKNc4')
+  $('#preloader').fadeIn()
+  navigationClose()
+  controlsBlock()
   endVideo = false
 })
 $('#services01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#services02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })
 $('#services03').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
   $('#preloader').fadeIn()
   navigationClose()
-  changeClassControls()
+  controlsBlock()
   endVideo = false
 })

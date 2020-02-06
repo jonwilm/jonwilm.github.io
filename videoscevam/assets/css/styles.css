@@ -9717,18 +9717,18 @@ body {
       left: 0 !important;
       height: 200% !important;
       top: -50% !important; }
-    #main-container #video-container .content {
+    #main-container #video-container .content-video {
       position: fixed;
       width: 100%;
       bottom: 10px;
       display: flex;
       justify-content: center; }
-      #main-container #video-container .content #btn-saltar-intro {
+      #main-container #video-container .content-video #btn-saltar-intro {
         background-color: #063c9b;
         color: #eee;
         border-radius: 10px;
         padding: 10px 20px; }
-        #main-container #video-container .content #btn-saltar-intro:hover {
+        #main-container #video-container .content-video #btn-saltar-intro:hover {
           opacity: 0.8; }
 
 #preloader {

@@ -3488,21 +3488,24 @@ function updateProgressBar(){
 // *****************************************************************************
 var endVideo = false
 $('#aboutCevam01').on('click', function () {
-  player.loadVideoById('NKGbDxXrf8M')
+  // player.loadVideoById('NKGbDxXrf8M')
+  player.loadVideoById('4TgFn10PpBU')
   $('#preloader').fadeIn()
   navigationClose()
   controlsBlock()
   endVideo = false
 })
 $('#aboutCevam02').on('click', function () {
-  player.loadVideoById('o5aLk1fvlDo')
+  // player.loadVideoById('o5aLk1fvlDo')
+  player.loadVideoById('9kIZ2DAtmk0')
   $('#preloader').fadeIn()
   navigationClose()
   controlsBlock()
   endVideo = false
 })
 $('#aboutCevam03').on('click', function () {
-  player.loadVideoById('yZvubLSnMSs')
+  // player.loadVideoById('yZvubLSnMSs')
+  player.loadVideoById('GRWNiW1LI4w')
   $('#preloader').fadeIn()
   navigationClose()
   controlsBlock()

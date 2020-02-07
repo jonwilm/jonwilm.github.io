@@ -3192,6 +3192,7 @@ var checkMenu = 'navigationClose'
       $('#navigation').removeClass('d-lg-block')
       $('#navigation').addClass('d-none')
     }, 1000)
+    controlsBlock()
   }
   // *****************************************************************************
   // * FUNCTION OPEN-CLOSE NAVIGATION

@@ -3233,6 +3233,7 @@ var checkMenu = 'navigationClose'
     imageHeight = ($(window).width() * 0.562814)
     imageAspectRatio = imageWidth / imageHeight
     $('#navigation').addClass('nav-4-3')
+    $('#box-video').addClass('nav-4-3')
     hotSpots = [{
       x: -20.7,
       y: -22.2,
@@ -3244,6 +3245,7 @@ var checkMenu = 'navigationClose'
   }
   function nav_16_9() {
     $('#navigation').removeClass('nav-4-3')
+    $('#box-video').removeClass('nav-4-3')
     imageWidth = 1194
     imageHeight = 672
     imageAspectRatio = imageWidth / imageHeight
@@ -3312,6 +3314,12 @@ var checkMenu = 'navigationClose'
           'width': xSize + 'px',
           'height': ySize + 'px'
         });
+        $('#textbox-video').css({
+          'margin-top': yPos + '%',
+          'margin-left': xPos + '%',
+          'width': xSize + 'px',
+          'height': ySize + 'px'
+        })
       } else {
         xPos = xPos * ratio;
         yPos = yPos * ratio;
@@ -3323,6 +3331,12 @@ var checkMenu = 'navigationClose'
           'width': xSize + 'px',
           'height': ySize + 'px'
         });
+        $('#textbox-video').css({
+          'margin-top': yPos + 'px',
+          'margin-left': xPos + 'px',
+          'width': xSize + 'px',
+          'height': ySize + 'px'
+        })
       }
 
     });
@@ -3483,6 +3497,10 @@ function updateProgressBar(){
       intro = false
     } 
   }
+
+  if (currentTime > 1) {
+    $('#textbox-video').css('opacity', '1')
+  }
 }
 // *****************************************************************************
 // * VIDEOS
@@ -3495,6 +3513,8 @@ $('#aboutCevam01').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#aboutCevam02').on('click', function () {
   // player.loadVideoById('o5aLk1fvlDo')
@@ -3503,6 +3523,8 @@ $('#aboutCevam02').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#aboutCevam03').on('click', function () {
   // player.loadVideoById('yZvubLSnMSs')
@@ -3511,6 +3533,8 @@ $('#aboutCevam03').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#aboutCevam04').on('click', function () {
   player.loadVideoById('ByB3I7HPBec')
@@ -3518,6 +3542,8 @@ $('#aboutCevam04').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#courses01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3525,6 +3551,8 @@ $('#courses01').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#courses02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3532,6 +3560,8 @@ $('#courses02').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#educationUSA01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3539,6 +3569,8 @@ $('#educationUSA01').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#educationUSA02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3546,6 +3578,8 @@ $('#educationUSA02').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#educationUSA03').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3553,6 +3587,8 @@ $('#educationUSA03').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').load('content-videos.html #educationUSACalendar')
 })
 $('#educationUSA04').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3560,6 +3596,8 @@ $('#educationUSA04').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#educationUSA05').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3567,6 +3605,8 @@ $('#educationUSA05').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#educationUSA06').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3574,6 +3614,8 @@ $('#educationUSA06').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#educationUSA07').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3581,6 +3623,8 @@ $('#educationUSA07').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#alumni01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3588,6 +3632,8 @@ $('#alumni01').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#alumni02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3595,6 +3641,8 @@ $('#alumni02').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#outreach01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3602,6 +3650,8 @@ $('#outreach01').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#outreach02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3609,6 +3659,8 @@ $('#outreach02').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#outreach03').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3616,6 +3668,8 @@ $('#outreach03').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#outreach04').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3623,6 +3677,8 @@ $('#outreach04').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').load('content-videos.html #outreachCalendarSocial')
 })
 $('#outreach05').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3630,6 +3686,8 @@ $('#outreach05').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').load('content-videos.html #outreachCalendarCultural')
 })
 $('#outreach06').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3637,6 +3695,8 @@ $('#outreach06').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').load('content-videos.html #outreachCalendarAcademico')
 })
 $('#aboutUSA01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3644,6 +3704,8 @@ $('#aboutUSA01').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').load('content-videos.html #aboutUSALinks')
 })
 $('#aboutUSA02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3651,6 +3713,8 @@ $('#aboutUSA02').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').load('content-videos.html #aboutUSAMultimedia')
 })
 $('#aboutUSA03').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3658,6 +3722,8 @@ $('#aboutUSA03').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').load('content-videos.html #aboutUSAMinuto')
 })
 $('#services01').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3665,6 +3731,8 @@ $('#services01').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#services02').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3672,6 +3740,8 @@ $('#services02').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })
 $('#services03').on('click', function () {
   player.loadVideoById('Pe_142IKNc4')
@@ -3679,4 +3749,6 @@ $('#services03').on('click', function () {
   navigationClose()
   controlsBlock()
   endVideo = false
+  $('#textbox-video').css('opacity', '0')
+  $('#textbox-video').empty()
 })

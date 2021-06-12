@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Int 1 | Bill Regulator</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/animate.css/animate.compat.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+
+  <link rel="stylesheet" href="assets/css/int1.min.css">
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-lg">
+      <a class="navbar-brand" href="./">
+        <div class="img-logo">
+          <img class="img-fluid" src="assets/images/logo-nav.png" alt="Bill Regulator">
+        </div>
+        <h3 class="m-0 ms-2">BillRegulator</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <img src="assets/images/menu-bars.svg" alt="MenuBars"> -->
+        <div class="menu-toggle"><i></i></div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: calc(100vh - 190px);">
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center index" href="./">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center int1" href="./int1.html">Empresa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center int2" href="./int2.html">Acesoria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center int3" href="./int3.html">App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center" href="">Precio</a>
+          </li>
+        </ul>
+        <div class="text-center">
+          <a href="" class="btn btn-outline-white-red btn-rounded hvr-center-out"><strong>Acceder</strong></a>
+        </div>
+        <div class="text-center">
+          <a href="" class="btn btn-red-white btn-rounded hvr-center-out"><strong>Pruébalo Gratis</strong></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <main>
+
+    <section id="welcome">
+  
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-6 text-center">
+            <h1 class="title wow fadeInLeft">Gestiona tus <span>facturas</span> rápida <br class="d-none d-lg-block"> y cómodamente desde <br class="d-none d-lg-block"> dónde quieras</h1>
+            <div class="access-player wow zoomIn">
+              <img class="img-fluid w-100" src="assets/images/img-player-int-1.png" alt="Player">
+              <button id="open-player" class="btn-red-white hvr-center-out" type="button" data-bs-toggle="modal" data-bs-target="#modal-player-welcome">
+                <div>
+                  <img src="assets/images/icons/play-red.svg" alt="Play">
+                </div>
+              </button>
+            </div>
+            <a href="" class="btn btn-red-white btn-rounded hvr-center-out wow fadeInUp"><strong>¡Empieza ya!</strong></a>
+          </div>
+          <div class="col-12 col-md-6 d-flex align-items-center">
+            <img class="img-fluid w-100 wow fadeInRight" src="assets/images/int1/img-welcome.png" alt="Welcome">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12 wow fadeInUp">
+            <ul>
+              <li>
+                <a href="">
+                  <img src="assets/images/icons/icon-android.svg" alt="Icon Android">
+                  Android
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="assets/images/icons/icon-windows.svg" alt="Icon Microsoft">
+                  Microsoft
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <img src="assets/images/icons/icon-apple.svg" alt="Icon Apple">
+                  Apple 
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal modal-player fade" id="modal-player-welcome" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modal-player-welcomeLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+              <img src="assets/images/icons/close-modal.svg" alt="Close">
+            </button>
+          </div>
+          <div class="modal-body">
+            <iframe
+              id="player-modal"
+              src=""
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="global-caracteristicas">
+      <div class="container">
+        <div class="content-cards">
+          <div class="row px-sm-5">
+            <div class="col-custom col-12 col-lg-4 py-3 wow zoomIn">
+              <div class="card">
+                <div class="icon-card">
+                  <img class="img-fluid" src="assets/images/icons/icon-img.png" alt="Icon">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title">¡Todo para ti!</h3>
+                  <p class="card-text">Queremos que te sientas como en casa, personaliza tus facturas con tu <span>logo, colores y nombre</span>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-custom col-12 col-lg-4 py-3 wow zoomIn">
+              <div class="card">
+                <div class="icon-card">
+                  <img class="img-fluid" src="assets/images/icons/icon-phone.png" alt="Icon">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title">Al Alcance de tu mano</h3>
+                  <p class="card-text">Revisa los datos de tu empresa cómodamente en el programa o en la app desde cualquier lugar y <span>dispositivo</span>.</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-custom col-12 col-lg-4 py-3 wow zoomIn">
+              <div class="card">
+                <div class="icon-card">
+                  <img class="img-fluid" src="assets/images/icons/icon-cronometer.png" alt="Icon">
+                </div>
+                <div class="card-body text-center">
+                  <h3 class="card-title">Más eficiencia</h3>
+                  <p class="card-text">Menos horas de trabajo, porque lo primero es la satisfación de nuestros <span>clientes</span>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="informacion1">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12 col-lg-7 mb-3 mb-lg-0 d-flex align-items-center">
+            <div class="text wow fadeInLeft">
+              <h2>Reduce el tiempo, las facturas duplicadas o perdidas y aumenta tu productividad</h2>
+              <p>Un programa original y eficaz con el que obtendrás mayor resultado por tu tiempo invertido y observa cómo tu esfuerzo alcanza una mayor recompensa. <br> Olvidate de demoras en los pagos de impuestos con nuestro sistema de gestion y control único.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 pe-0 d-flex align-items-center justify-content-center">
+            <img class="img-fluid w-100 wow fadeInRight" src="assets/images/int1/info1.png" alt="" style="width: 100% !important;">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="informacion2">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-5 mb-5 mb-lg-0 d-flex align-items-center">
+            <div class="w-100">
+              <div class="content-img-1">
+                <img class="img-1 img-fluid wow fadeInLeft" src="assets/images/int1/info2-1.png" alt="">
+              </div>
+              <div class="content-img-2">
+                <img class="img-2 img-fluid wow fadeInLeft" src="assets/images/int1/info2-2.png" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-lg-7 d-flex align-items-center">
+            <div class="text wow fadeInRight">
+              <h2>Mantén al día las facturas teniendo el control de tu empresa.</h2>
+              <p>Digitaliza al momento desde dónde más te convenga y guarda todas tus facturas en la nube. Estate informado en todo momento con completos gráficos estadísticos y análisis de los ingresos y gastos, pudiendo comprobar los pendientes de tu empresa con nuestra sencilla e intuitiva intervaz de usuario.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="prices">
+      <div class="container">
+        <h2>¡Disfruta de beneficio de tener un sistema dinámico y <br class="d-none d-lg-block"> personalizado!</h2>
+        <div class="text-center">
+          <div class="form-check form-switch">
+            <label class="form-check-label" for="checkBill">Bill monthly</label>
+            <input class="form-check-input" type="checkbox" name="checkBill" id="checkBill" value="1" onchange="clickBill()">
+            <label class="form-check-label" for="checkBill">Bill Yearly</label>
+          </div>
+        </div>
+        <div id="price-monthly">
+          <div class="row px-sm-5 mt-5">
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card">
+                <div class="arrow arrow-gray text-center">
+                  <h2>Free</h2>
+                </div>
+                <div class="card-body text-center">
+                  <div>
+                    <p class="small">One project for personal use</p>
+                    <p class="price">$0<span>/mo</span></p>
+                    <hr>
+                    <div class="mt-4 mb-5">
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>3 people</span>
+                        </div>
+                      </div>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Limited features</span>
+                        </div>
+                      </div>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Freeforever</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="" class="btn btn-gray-white btn-rounded hvr-center-out"><strong>Try Free</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card">
+                <div class="position-relative">
+                  <div class="arrow text-center">
+                    <h2>Standard Plan</h2>
+                  </div>
+                  <div class="arrow2 text-center">
+                    <p>Premium</p>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <div>
+                    <p class="small">UnLimited Project - Business features</p>
+                    <p class="price">$75.<span>20/mo</span></p>
+                    <hr>
+                    <div class="mt-4 mb-5">
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Team up to people</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Get workloads, baselines & more</span>
+                        </div>
+                      </div>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Free 30-day trial <br> Cancel anytime</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="" class="btn btn-red-white btn-rounded hvr-center-out"><strong>Try Standard</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card">
+                <div class="position-relative">
+                  <div class="arrow text-center">
+                    <h2>Standard Plan</h2>
+                  </div>
+                  <div class="arrow2 text-center">
+                    <p>Premium</p>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <div>
+                    <p class="small">UnLimited Project - Business features</p>
+                    <p class="price">$111<span>60/mo</span></p>
+                    <hr>
+                    <div class="mt-4 mb-5">
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Team up to people</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Standard features + time tracking & hourly stimating</span>
+                        </div>
+                      </div>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Free 30-day trial <br> Cancel anytime</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="" class="btn btn-red-white btn-rounded hvr-center-out"><strong>Try Advanced</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <div id="price-yearly" style="display: none;">
+          <div class="row px-sm-5 mt-5">
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card">
+                <div class="arrow arrow-gray text-center">
+                  <h2>Free</h2>
+                </div>
+                <div class="card-body text-center">
+                  <div>
+                    <p class="small">One project for personal use</p>
+                    <p class="price">$0<span>/yr</span></p>
+                    <hr>
+                    <div class="mt-4 mb-5">
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>3 people</span>
+                        </div>
+                      </div>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Limited features</span>
+                        </div>
+                      </div>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Freeforever</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="" class="btn btn-gray-white btn-rounded hvr-center-out"><strong>Try Free</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card">
+                <div class="position-relative">
+                  <div class="arrow text-center">
+                    <h2>Standard Plan</h2>
+                  </div>
+                  <div class="arrow2 text-center">
+                    <p>Premium</p>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <div>
+                    <p class="small">UnLimited Project - Business features</p>
+                    <p class="price">$750.<span>20/yr</span></p>
+                    <hr>
+                    <div class="mt-4 mb-5">
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Team up to people</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Get workloads, baselines & more</span>
+                        </div>
+                      </div>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Free 30-day trial <br> Cancel anytime</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="" class="btn btn-red-white btn-rounded hvr-center-out"><strong>Try Standard</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4 py-3">
+              <div class="card">
+                <div class="position-relative">
+                  <div class="arrow text-center">
+                    <h2>Standard Plan</h2>
+                  </div>
+                  <div class="arrow2 text-center">
+                    <p>Premium</p>
+                  </div>
+                </div>
+                <div class="card-body text-center">
+                  <div>
+                    <p class="small">UnLimited Project - Business features</p>
+                    <p class="price">$1100<span>60/yr</span></p>
+                    <hr>
+                    <div class="mt-4 mb-5">
+                      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                        <option selected>Team up to people</option>
+                        <option value="1">One</option>
+                        <option value="2">Two</option>
+                        <option value="3">Three</option>
+                      </select>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Standard features + time tracking & hourly stimating</span>
+                        </div>
+                      </div>
+                      <div class="alert" role="alert">
+                        <div class="check"></div>
+                        <div class="text">
+                          <span>Free 30-day trial <br> Cancel anytime</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <a href="" class="btn btn-red-white btn-rounded hvr-center-out"><strong>Try Advanced</strong></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function clickBill() {
+        pMonthly = $('#price-monthly')
+        pYearly = $('#price-yearly')
+        checkBill = $('#checkBill')
+        if (checkBill.prop('checked')) {
+          pYearly.css('display', 'block')
+          pMonthly.css('display', 'none')
+        } else {
+          pYearly.css('display', 'none')
+          pMonthly.css('display', 'block')
+        }
+      }
+    </script>
+    <section id="colaboradores">
+      <div class="container">
+        <h2 class="mb-0 wow fadeInUp">Colaboradores</h2>
+        <div class="row">
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/1.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/2.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/3.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/4.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/5.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/6.png" alt="Colaborador">
+            </a href="">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="row footer-1">
+        <div class="col-12 col-lg-8">
+          <div class="row">
+            <div class="col-12 col-lg-4 text-center text-lg-start mb-3 mb-lg-0 wow fadeInLeft">
+              <h4>Producto</h4>
+              <p>
+                <a href="">
+                  Usuario
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Empresa
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Precios
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  App
+                </a>
+              </p>
+            </div>
+            <div class="col-12 col-lg-4 text-center text-lg-start mb-3 mb-lg-0 wow fadeInLeft">
+              <h4>Soporte</h4>
+              <p>
+                <a href="">
+                  Recomendaciones
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Blog
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Contáctanos
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Dudas y Preguntas
+                </a>
+              </p>
+            </div>
+            <div class="col-12 col-lg-4 text-center text-lg-start mb-3 mb-lg-0 wow fadeInLeft">
+              <h4>Legal</h4>
+              <p>
+                <a href="">
+                  Política de privacidad
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Términos y condiciones
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Aviso legal
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Mapa Web
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="row">
+            <div class="col-12 wow fadeInRight">
+              <h4 class="text-center text-lg-end">Programa y aplicación <br class="d-lg-none"> compatible con:</h4>
+              <div class="mb-3 d-flex justify-content-between">
+                <li>
+                  <a href="">
+                    <img src="assets/images/icons/icon-android.svg" alt="Icon Android" style="">
+                    Android
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="assets/images/icons/icon-windows.svg" alt="Icon Microsoft">
+                    Microsoft
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="assets/images/icons/icon-apple.svg" alt="Icon Apple">
+                    Apple
+                  </a>
+                </li>
+              </div>
+              <p class="redes text-center text-lg-end" style="font-size: 0.8rem;">
+                Siguenos
+                <a href="">
+                  <span class="btn-redes fb">
+                    <img class="w-100" src="assets/images/icons/icon-facebook.svg" alt="Icon Facebook">
+                  </span>
+                </a>
+                <a href="">
+                  <span class="btn-redes ig">
+                    <img class="w-100" src="assets/images/icons/icon-instagram.svg" alt="Icon Instagram">
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <div class="row footer-2 text-center">
+        <div class="col-12 wow fadeInUp">
+          <span>Todos los derechos reservados &COPY;2021 <br class="d-lg-none"> Double-R Technologie</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/wowjs/wow.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    wow = new WOW({
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    })
+    wow.init();
+  </script>
+  <script src="assets/js/pages/int1.js"></script>
+
+  <script>
+    srcModalPlayer = 'https://www.youtube.com/embed/acP9f6ZORf4?&autoplay=1'
+    $('#modal-player-welcome').on('shown.bs.modal', function() {
+      $('#modal-player-welcome iframe').attr('src', srcModalPlayer)
+    })
+    $('#modal-player-welcome').on('hidden.bs.modal', function() {
+      $('#modal-player-welcome iframe').removeAttr('src')
+    })
+    $('#open-player').click(function() {
+      $('#modal-player-welcome iframe').attr('src', srcModalPlayer)
+    })
+  </script>
+  
+</body>
+</html>

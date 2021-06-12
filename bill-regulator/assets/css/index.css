@@ -1,0 +1,309 @@
+section {
+  padding-top: 3rem;
+  padding-bottom: 3rem; }
+  @media (min-width: 992px) {
+    section {
+      padding-top: 5rem;
+      padding-bottom: 5rem; } }
+
+#welcome {
+  position: relative;
+  padding-top: calc(75px + 5rem);
+  padding-bottom: 5rem; }
+  @media (min-width: 992px) {
+    #welcome {
+      padding-top: calc(100px + 5rem); } }
+  #welcome .video-welcome {
+    position: absolute;
+    overflow: hidden;
+    background-image: url(../images/index/bg-welcome.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1; }
+    #welcome .video-welcome iframe#player-welcome {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: none; }
+      @media (min-width: 992px) {
+        #welcome .video-welcome iframe#player-welcome {
+          display: block; } }
+      @media (min-aspect-ratio: 16 / 9) {
+        #welcome .video-welcome iframe#player-welcome {
+          height: 200%;
+          top: -50%; } }
+      @media (max-aspect-ratio: 16 / 9) {
+        #welcome .video-welcome iframe#player-welcome {
+          width: 200%;
+          left: -50%; } }
+    #welcome .video-welcome .placa-video {
+      position: absolute;
+      overflow: hidden;
+      background: rgba(0, 0, 0, 0.8);
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0; }
+  #welcome .title {
+    font-family: "MyriadRoman";
+    font-weight: bold;
+    color: #fff;
+    text-align: center; }
+    @media (min-width: 992px) {
+      #welcome .title {
+        font-size: 3rem; } }
+    #welcome .title span {
+      font-style: italic;
+      color: #f32735; }
+  #welcome .boxes {
+    padding-top: 5vh; }
+    @media (min-width: 992px) {
+      #welcome .boxes {
+        padding-top: 15vh; } }
+    #welcome .boxes .box1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 2px;
+      color: #fff;
+      background-color: #f32735; }
+      #welcome .boxes .box1 h2 {
+        font-family: "MyriadRoman";
+        font-weight: bold; }
+    #welcome .boxes .box2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 2px;
+      color: #090218;
+      background-color: #fff; }
+      #welcome .boxes .box2 h2 {
+        font-family: "MyriadRoman";
+        font-weight: bold; }
+
+#que-buscas {
+  background-color: #fff; }
+  #que-buscas img {
+    width: 50%; }
+    @media (min-width: 992px) {
+      #que-buscas img {
+        width: 75%; } }
+  #que-buscas .text {
+    text-align: center;
+    display: flex;
+    align-items: center; }
+    @media (min-width: 992px) {
+      #que-buscas .text {
+        padding-left: 5rem;
+        padding-right: 5rem; } }
+    #que-buscas .text h2 {
+      font-family: "MyriadRoman";
+      font-weight: bold;
+      margin-bottom: 1.5rem; }
+      @media (min-width: 992px) {
+        #que-buscas .text h2 {
+          font-size: 3rem; } }
+    @media (min-width: 992px) {
+      #que-buscas .text p {
+        font-size: 2rem; } }
+    #que-buscas .text p span {
+      font-weight: bold; }
+
+#caracteristicas {
+  background-image: url(../images/index/bg-caracteristicas.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  #caracteristicas img {
+    width: 80px;
+    margin-bottom: 1rem;
+    transition: transform 0.3s; }
+    #caracteristicas img:hover {
+      transform: scale(1.2); }
+  #caracteristicas h2 {
+    font-family: "MyriadRoman";
+    font-weight: bold;
+    font-style: italic;
+    color: #f32735;
+    margin-bottom: 1rem; }
+  #caracteristicas p {
+    color: #fff; }
+
+.empresario h2 {
+  font-family: "MyriadRoman";
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem; }
+  @media (min-width: 992px) {
+    .empresario h2 {
+      font-size: 3rem;
+      margin-bottom: 5rem; } }
+
+.empresario img {
+  width: 100%; }
+
+@media (min-width: 992px) {
+  .empresario .text p {
+    font-size: 1.5rem; } }
+
+#empresario1 {
+  background-color: #fff; }
+
+#empresario2 {
+  background-color: #1a1a1a; }
+  #empresario2 h2 {
+    color: #f32735; }
+  #empresario2 p {
+    color: #fff; }
+
+#blog {
+  background-color: #f6f6f6; }
+  #blog h2 {
+    font-family: "MyriadRoman";
+    font-weight: bold;
+    margin-bottom: 2rem; }
+    @media (min-width: 992px) {
+      #blog h2 {
+        font-size: 3rem;
+        margin-bottom: 5rem; } }
+  #blog a {
+    text-decoration: none;
+    color: #090218; }
+    #blog a .card {
+      border: 1px solid #f6f6f6;
+      padding: 0.5rem;
+      transition: transform 0.3s; }
+      #blog a .card:hover {
+        transform: scale(1.1);
+        z-index: 1; }
+      #blog a .card .card-body {
+        padding: 1rem 0.5rem; }
+        #blog a .card .card-body .card-title {
+          font-family: "MyriadRoman";
+          font-weight: bold; }
+        #blog a .card .card-body .card-text {
+          font-family: "MyriadRoman";
+          font-size: 0.8rem;
+          color: #4d4d4d; }
+        #blog a .card .card-body hr {
+          background-color: #f6f6f6;
+          height: 1px;
+          margin: 1.5rem 0;
+          opacity: 1; }
+        #blog a .card .card-body .card-firm {
+          display: flex;
+          align-items: center; }
+          #blog a .card .card-body .card-firm img {
+            width: 25%;
+            height: auto; }
+          #blog a .card .card-body .card-firm div {
+            padding-left: 1rem; }
+            #blog a .card .card-body .card-firm div .person {
+              font-family: "MyriadRoman";
+              color: #f32735;
+              margin-bottom: 0rem; }
+            #blog a .card .card-body .card-firm div .position {
+              font-family: "MyriadRoman";
+              font-size: 0.8rem;
+              color: #4d4d4d;
+              margin-bottom: 0rem; }
+
+#estadisticas {
+  background-color: #fff;
+  padding-bottom: 0; }
+  #estadisticas .question {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem; }
+    @media (min-width: 992px) {
+      #estadisticas .question {
+        justify-content: flex-end;
+        padding-bottom: 0;
+        padding-right: 0; } }
+    @media (min-width: 1200px) {
+      #estadisticas .question {
+        padding-right: 2vw; } }
+    @media (min-width: 1400px) {
+      #estadisticas .question {
+        padding-right: 10vw; } }
+    #estadisticas .question h2 {
+      font-family: "MyriadRoman";
+      text-align: center;
+      font-size: 3rem;
+      font-weight: bold; }
+    @media (min-width: 576px) {
+      #estadisticas .question .q1 {
+        margin-right: 5vw; } }
+    @media (min-width: 576px) {
+      #estadisticas .question .q2 {
+        text-align: end; } }
+  #estadisticas .alert {
+    display: flex;
+    align-items: center;
+    background-color: #fef4f8; }
+    #estadisticas .alert .check {
+      position: relative;
+      width: 30px;
+      height: 30px;
+      background: #fddae7;
+      border-radius: 0.25rem;
+      display: inline-table; }
+      #estadisticas .alert .check:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 15px;
+        height: 8px;
+        border: 3px solid #f32735;
+        margin-left: 8px;
+        border-right: 0;
+        border-top: 0;
+        margin-top: 8px;
+        transform: rotate(-45deg); }
+    #estadisticas .alert .text {
+      font-family: "MyriadRoman";
+      padding-left: 1rem; }
+  #estadisticas .container-fluid {
+    background-color: #1a1a1a;
+    position: relative; }
+    #estadisticas .container-fluid .girl {
+      position: absolute;
+      left: -4vw;
+      bottom: 0;
+      width: 38vw; }
+      @media (min-width: 1400px) {
+        #estadisticas .container-fluid .girl {
+          left: 0;
+          width: 36vw; } }
+      @media (min-width: 1600px) {
+        #estadisticas .container-fluid .girl {
+          left: 2vw;
+          width: 33vw; } }
+      @media (min-width: 1800px) {
+        #estadisticas .container-fluid .girl {
+          left: 7vw;
+          width: 28vw; } }
+    @media (min-width: 576px) {
+      #estadisticas .container-fluid .container .border-lr {
+        border-left: 1px solid #4d4d4d;
+        border-right: 1px solid #4d4d4d; } }
+    #estadisticas .container-fluid .container h2 {
+      font-family: "MyriadRoman";
+      text-align: center;
+      color: #f32735;
+      font-weight: bold;
+      font-size: 3rem; }
+    #estadisticas .container-fluid .container p {
+      font-family: "MyriadRoman";
+      text-align: center;
+      color: #fff;
+      margin: 0; }

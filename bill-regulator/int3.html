@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Int 3 | Bill Regulator</title>
+  <link rel="apple-touch-icon" sizes="57x57" href="assets/images/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="assets/images/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="assets/images/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/images/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="assets/images/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="assets/images/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="assets/images/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+  <link rel="manifest" href="assets/images/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="assets/images/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/animate.css/animate.compat.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+  
+  <link rel="stylesheet" href="assets/css/int3.min.css">
+</head>
+<body>
+  
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container-lg">
+      <a class="navbar-brand" href="./">
+        <div class="img-logo">
+          <img class="img-fluid" src="assets/images/logo-nav.png" alt="Bill Regulator">
+        </div>
+        <h3 class="m-0 ms-2">BillRegulator</h3>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- <img src="assets/images/menu-bars.svg" alt="MenuBars"> -->
+        <div class="menu-toggle"><i></i></div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: calc(100vh - 190px);">
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center index" href="./">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center int1" href="./int1.html">Empresa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center int2" href="./int2.html">Acesoria</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center int3" href="./int3.html">App</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link hvr-underline-from-center" href="">Precio</a>
+          </li>
+        </ul>
+        <div class="text-center">
+          <a href="" class="btn btn-outline-white-red btn-rounded hvr-center-out"><strong>Acceder</strong></a>
+        </div>
+        <div class="text-center">
+          <a href="" class="btn btn-red-white btn-rounded hvr-center-out"><strong>Pruébalo Gratis</strong></a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+  <main>
+    
+    <section id="welcome">
+  
+      <div class="container">
+        <div class="row">
+          <div class="content-list col-12 col-md-7 text-center position-relative">
+            <img class="phone-welcome-mobile d-md-none wow fadeInRight" src="assets/images/int3/img-welcome.png" alt="">
+            <div style="z-index: 1;">
+              <div class="list wow fadeInLeft">
+                <div class="circle">
+                  <h2>1</h2>
+                </div>
+                <div class="text">
+                  <h2>Instala la App</h2>
+                </div>
+              </div>
+              <div class="list wow fadeInLeft">
+                <div class="circle">
+                  <h2>2</h2>
+                </div>
+                <div class="text">
+                  <h2>Regístrate</h2>
+                </div>
+              </div>
+              <div class="list wow fadeInLeft">
+                <div class="circle">
+                  <h2>3</h2>
+                </div>
+                <div class="text">
+                  <h2>¡Empieza a ahorrar tiempo!</h2>
+                </div>
+              </div>
+              <div class="download-app wow zoomIn">
+                <h2><span>Descarga </span>la App aquí</h2>
+                <div class="d-flex">
+                  <a class="mx-0 mx-lg-3" href="">
+                    <img class="img-fluid my-1 my-sm-0" src="assets/images/int3/google-play.png" alt="Play Store">
+                  </a>
+                  <a class="mx-0 mx-lg-3" href="">
+                    <img class="img-fluid my-1 my-sm-0" src="assets/images/int3/app-store.png" alt="App Store">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-5 d-flex align-items-center justify-content-center d-none d-md-block">
+            <img class="img-welcome wow fadeInRight" src="assets/images/int3/img-welcome.png" alt="Welcome">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="caracteristicas">
+      <div class="container">
+        <div class="row">
+          <div class="col-4 offset-4 text-center">
+            <div class="content-icon wow fadeInDown">
+              <img src="assets/images/int3/icon1.png" alt="Icon">
+              <p>Ingresos y gastos <br> al dia</p>
+            </div>
+          </div>
+        </div>
+        <div class="row py-3 py-md-5">
+          <div class="lateral col-4 text-center d-flex flex-column justify-content-around">
+            <div class="content-icon wow fadeInLeft">
+              <img src="assets/images/int3/icon2.png" alt="Icon">
+              <p>Nube</p>
+            </div>
+            <div class="content-icon wow fadeInLeft">
+              <img src="assets/images/int3/icon4.png" alt="Icon">
+              <p>Datos fácilmente transferibles</p>
+            </div>
+          </div>
+          <div class="center col-4 text-center">
+            <div class="circle-center circle-1"></div>
+            <div class="circle-center circle-2"></div>
+            <div class="circle-center circle-3"></div>
+            <img class="phone-center wow rotateIn delay-1s" src="assets/images/int3/img-welcome.png" alt="Icon">
+          </div>
+          <div class="lateral col-4 text-center d-flex flex-column justify-content-around">
+            <div class="content-icon wow fadeInRight">
+              <img src="assets/images/int3/icon3.png" alt="Icon">
+              <p>Rapido y sencillo</p>
+            </div>
+            <div class="content-icon wow fadeInRight">
+              <img src="assets/images/int3/icon5.png" alt="Icon">
+              <p>invita</p>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-4 offset-4 text-center">
+            <div class="content-icon wow fadeInUp">
+              <img src="assets/images/int3/icon6.png" alt="Icon">
+              <p>Donde quieras</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="informacion1">
+      <div class="container">
+        <h2 class="wow fadeInUp mb-lg-5">¡El complemento perfecto para <br class="d-none d-lg-block"> la gestion de las empresas!</h2>
+        <div class="row">
+          <div class="col-12 col-lg-7 mb-3 mb-lg-0 d-flex align-items-center">
+            <div class="text wow fadeInLeft">
+              <p class="text-center">Aprovecha ese momento del día sin estrés para mirar como va tu empresa. Comprueba el resumen estadístico de los gastos e ingresos. Ten el control de las facturas que te quedan por cobrar o pagar y así no tener demoras para el pago de los impuestos. Céntrate en lo que te tienes que centrar, únicamente facturas, no te compliques. <br> Todo al alcance de tu mano.</p>
+            </div>
+          </div>
+          <div class="col-12 col-lg-5 d-flex align-items-center justify-content-center">
+            <img class="img-fluid w-100 wow fadeInRight" src="assets/images/int3/info1.png" alt="" style="width: 100% !important;">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="informacion2">
+      <div class="container">
+        <h2 class="wow fadeInUp mb-lg-5">Lleva el control de los negocios <br class="d-none d-lg-block"> siempre contigo</h2>
+        <div class="row">
+          <div class="col-12 col-lg-5 d-flex align-items-center">
+            <img class="img-fluid w-100 wow fadeInLeft" src="assets/images/int3/info2.png" alt="">
+          </div>
+          <div class="col-12 col-lg-7 mb-3 mb-lg-0 d-flex align-items-center">
+            <div class="text wow fadeInRight">
+              <p class="text-center">Comprueba toda la información correctamente administrada, gestionada y organizada de tus usuarios desde cualquier lugar. Visualiza rápidamente nada más entrar en la App, los estadísticos y análisis de tus clientes. Exporta los datos en formatos como PDF o Excel para transferirlos o utilizarlos como mejor te convenga.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="procesos">
+      <div class="container">
+        <div class="row py-3 py-md-5">
+          <div class="lateral col-12 col-lg-3 text-center wow fadeInLeft">
+            <h3>Empresa</h3>
+            <div class="box-button btn-outline-white-white hvr-center-out my-3"
+              role="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#empresa-proceso"
+              aria-expanded="true"
+              aria-controls="empresa-proceso"
+            >
+              Proceso
+            </div>
+            <div id="empresa-proceso" class="collapse multi-collapse" data-bs-parent="#procesos">
+              <p>Lorem ipsum dolor si amet consectetur adipisicing elit. Officiis ut voluptate maxime quod, quia dolor mollitia neque ullam delectus eius.</p>
+            </div>
+            <div class="box-button btn-outline-white-white hvr-center-out my-3"
+              role="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#empresa-titulo"
+              aria-expanded="false"
+              aria-controls="empresa-titulo"
+            >
+              Título
+            </div>
+            <div id="empresa-titulo" class="collapse multi-collapse" data-bs-parent="#procesos">
+              <p>Lorem ipsum dolor si amet consectetur adipisicing elit. Officiis ut voluptate maxime quod, quia dolor mollitia neque ullam delectus eius.</p>
+            </div>
+          </div>
+          <div class="center col-12 col-lg-6 mb-3 mb-lg-0 text-center">
+            <img class="w-100 wow fadeInUp" src="assets/images/int3/procesos.png" alt="Icon">
+          </div>
+          <div class="lateral col-12 col-lg-3 text-center wow fadeInRight">
+            <h3>Asesoría</h3>
+            <div class="box-button btn-outline-white-white hvr-center-out my-3"
+              role="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#asesoria-proceso"
+              aria-expanded="false"
+              aria-controls="asesoria-proceso"
+            >
+              Proceso
+            </div>
+            <div id="asesoria-proceso" class="collapse multi-collapse" data-bs-parent="#procesos">
+              <p>Lorem ipsum dolor si amet consectetur adipisicing elit. Officiis ut voluptate maxime quod, quia dolor mollitia neque ullam delectus eius.</p>
+            </div>
+            <div class="box-button btn-outline-white-white hvr-center-out my-3"
+              role="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#asesoria-titulo"
+              aria-expanded="false"
+              aria-controls="asesoria-titulo"
+            >
+              Título
+            </div>
+            <div id="asesoria-titulo" class="collapse multi-collapse" data-bs-parent="#procesos">
+              <p>Lorem ipsum dolor si amet consectetur adipisicing elit. Officiis ut voluptate maxime quod, quia dolor mollitia neque ullam delectus eius.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="download">
+      <div class="container py-5 py-lg-0">
+        <div class="row">
+          <div class="col-12 col-md-9 d-flex align-items-center justify-content-center wow zoomIn">
+            <div class="text-center">
+              <img class="w-50 mb-3 d-md-none" src="assets/images/int3/img-welcome.png" alt="">
+              <h2 class="text-center mb-3">¡Descárgala <span>Ya! </span></h2>
+              <div class="d-flex justify-content-center">
+                <a class="mx-0 mx-lg-3" href="">
+                  <img class="img-store img-fluid my-1 my-sm-0" src="assets/images/int3/google-play.png" alt="Play Store">
+                </a>
+                <a class="mx-0 mx-lg-3" href="">
+                  <img class="img-store img-fluid my-1 my-sm-0" src="assets/images/int3/app-store.png" alt="App Store">
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 d-none d-md-block position-relative text-end wow fadeInRight">
+            <div class="circle-phone"></div>
+            <img class="phone-mobile" src="assets/images/int3/img-welcome.png" alt="">
+            <img class="phone d-none d-lg-block" src="assets/images/int3/img-welcome.png" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid">
+        <!-- <img class="phone d-none d-lg-block wow fadeInLeft" src="assets/images/index/girl-estadisticas.png" alt="Persona"> -->
+        <div class="container py-4">
+          <div class="row">
+            <div class="col-12 col-sm-4 col-lg-3 py-sm-3">
+              <h2 class="wow zoomIn">500M+</h2>
+              <p class="wow zoomIn">Asesorias</p>
+            </div>
+            <div class="col-12 col-sm-4 col-lg-3 border-lr py-sm-3">
+              <h2 class="wow zoomIn">500M+</h2>
+              <p class="wow zoomIn">Empresas</p>
+            </div>
+            <div class="col-12 col-sm-4 col-lg-3 py-sm-3">
+              <h2 class="wow zoomIn">600K+</h2>
+              <p class="wow zoomIn">Facturas digitalizadas al día</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="colaboradores">
+      <div class="container">
+        <h2 class="mb-0 wow fadeInUp">Colaboradores</h2>
+        <div class="row">
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/1.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/2.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/3.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/4.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/5.png" alt="Colaborador">
+            </a href="">
+          </div>
+          <div class="col-6 col-sm-4 col-lg-2 mt-5">
+            <a href="">
+              <img class="img-fluid w-50 wow zoomIn" src="assets/images/colaboradores/6.png" alt="Colaborador">
+            </a href="">
+          </div>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <footer>
+    <div class="container">
+      <div class="row footer-1">
+        <div class="col-12 col-lg-8">
+          <div class="row">
+            <div class="col-12 col-lg-4 text-center text-lg-start mb-3 mb-lg-0 wow fadeInLeft">
+              <h4>Producto</h4>
+              <p>
+                <a href="">
+                  Usuario
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Empresa
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Precios
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  App
+                </a>
+              </p>
+            </div>
+            <div class="col-12 col-lg-4 text-center text-lg-start mb-3 mb-lg-0 wow fadeInLeft">
+              <h4>Soporte</h4>
+              <p>
+                <a href="">
+                  Recomendaciones
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Blog
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Contáctanos
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Dudas y Preguntas
+                </a>
+              </p>
+            </div>
+            <div class="col-12 col-lg-4 text-center text-lg-start mb-3 mb-lg-0 wow fadeInLeft">
+              <h4>Legal</h4>
+              <p>
+                <a href="">
+                  Política de privacidad
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Términos y condiciones
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Aviso legal
+                </a>
+              </p>
+              <p>
+                <a href="">
+                  Mapa Web
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4">
+          <div class="row">
+            <div class="col-12 wow fadeInRight">
+              <h4 class="text-center text-lg-end">Programa y aplicación <br class="d-lg-none"> compatible con:</h4>
+              <div class="mb-3 d-flex justify-content-between">
+                <li>
+                  <a href="">
+                    <img src="assets/images/icons/icon-android.svg" alt="Icon Android" style="">
+                    Android
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="assets/images/icons/icon-windows.svg" alt="Icon Microsoft">
+                    Microsoft
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <img src="assets/images/icons/icon-apple.svg" alt="Icon Apple">
+                    Apple
+                  </a>
+                </li>
+              </div>
+              <p class="redes text-center text-lg-end" style="font-size: 0.8rem;">
+                Siguenos
+                <a href="">
+                  <span class="btn-redes fb">
+                    <img class="w-100" src="assets/images/icons/icon-facebook.svg" alt="Icon Facebook">
+                  </span>
+                </a>
+                <a href="">
+                  <span class="btn-redes ig">
+                    <img class="w-100" src="assets/images/icons/icon-instagram.svg" alt="Icon Instagram">
+                  </span>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container">
+      <div class="row footer-2 text-center">
+        <div class="col-12 wow fadeInUp">
+          <span>Todos los derechos reservados &COPY;2021 <br class="d-lg-none"> Double-R Technologie</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/wowjs/wow.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    wow = new WOW({
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    })
+    wow.init();
+  </script>
+  
+  <script>
+    if (($(window).width() > 992) && ($(this).scrollTop() > 50)) {
+      $('.navbar').removeClass('nav-white')
+    } else if (($(window).width() > 992) && ($(this).scrollTop() <= 50)) {
+      $('.navbar').addClass('nav-white')
+    }
+    $(window).scroll(function() {
+      if (($(window).width() > 992) && ($(this).scrollTop() > 50)) {
+        $('.navbar').removeClass('nav-white')
+      } else if (($(window).width() > 992) && ($(this).scrollTop() <= 50)) {
+        $('.navbar').addClass('nav-white')
+      }
+    })
+  </script>
+  
+</body>
+</html>

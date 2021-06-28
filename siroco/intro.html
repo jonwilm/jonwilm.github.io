@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Siroco</title>
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+  
+  <link rel="stylesheet" href="assets/css/intro.min.css">
+  
+</head>
+<body>
+  
+  <main>
+    
+    <div class="content-intro">
+      <div class="container">
+        <img class="logo wow fadeIn" src="assets/images/logo-big-color.png" alt="Siroco">
+        <div class="content-form wow fadeIn">
+          <p>Lorem ipsum <span>dolor</span></p>
+          <div class="row">
+            <div class="col-12 col-md-3 px-md-0 py-3">
+              <select class="form-select select1" aria-label="Default select example">
+                <option selected>Isla</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-3 px-md-0 py-3">
+              <select class="form-select select2" aria-label="Default select example">
+                <option selected>Deporte</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-3 px-md-0 py-3">
+              <select class="form-select select3" aria-label="Default select example">
+                <option selected>Nivel</option>
+                <option value="1">One</option>
+                <option value="2">Two</option>
+                <option value="3">Three</option>
+              </select>
+            </div>
+            <div class="col-12 col-md-3 py-3">
+              <div class="d-grid gap-2">  
+                <a class="btn btn-block btn-custom btn-rounded btn-red-white btn-center-out" href="#">Entrar</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown dropup d-inline-block wow fadeInLeft">
+          <a class="btn btn-idiomas d-flex justify-content-between" type="button" id="idiomaButton" data-bs-toggle="dropdown" aria-expanded="false">
+            <div>
+              <img src="assets/images/idiomas.png" alt="idiomas" class="img-fluid" style="width: 15%;">
+              <small>Idioma</small>
+            </div>
+            <div>
+              <img class="arrow-down" src="assets/images/icons/angle-down.png" alt="Down">
+            </div>
+          </a>
+          <ul class="dropdown-menu my-0 ddAnimate" aria-labelledby="idiomaButton">
+            <li><a class="dropdown-item" href="#">Inglés</a></li>
+            <li><a class="dropdown-item" href="#">Español</a></li>
+            <li><a class="dropdown-item" href="#">Portugues</a></li>
+          </ul>
+        </div>
+      </div>
+      <a href="#" class="whatsapp wow fadeInRight" target="_blank">
+        <img src="assets/images/whatsapp-white.png" alt="logo-whatsapp" class="img-fluid whatsapp-icon">
+      </a>
+    </div>
+
+    
+  </main>
+  
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/wowjs/wow.min.js"></script>
+  <!-- <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script> -->
+  <script src="assets/js/main.js"></script>
+  <script>
+    wow = new WOW({
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    })
+    wow.init();
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,83 @@
+.btn-rounded {
+  border-radius: 50px; }
+
+.btn-custom {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  letter-spacing: 0.2rem; }
+
+.btn-custom2 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  font-weight: bold; }
+
+.btn-red-white {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #ffffff;
+  background: #F14F78;
+  transition: all 0.3s; }
+  .btn-red-white:hover {
+    color: #F14F78; }
+  .btn-red-white:before {
+    background: #ffffff;
+    border-radius: 50px; }
+
+.btn-center-out {
+  transform: perspective(1px) translateZ(0);
+  overflow: hidden; }
+
+.btn-center-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.3s; }
+
+.btn-center-out:hover:before,
+.btn-center-out:focus:before,
+.btn-center-out:active:before {
+  transform: scale(1.1); }
+
+.btn-blue-white {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #ffffff;
+  background: #3B90DB; }
+
+.accordion-button {
+  padding: .6rem 1.25rem;
+  font-family: "Roboto";
+  font-weight: 300;
+  color: #808080; }
+
+.accordion-button::after {
+  background-image: url("../images/icons/plus-accordion.png"); }
+
+.accordion-button:not(.collapsed)::after {
+  background-image: url("../images/icons/plus-accordion.png");
+  transform: rotate(-135deg); }
+
+.accordion-button:focus {
+  z-index: 3;
+  border-color: none;
+  outline: 0;
+  box-shadow: none; }
+
+.section-contacto {
+  background-image: url("../images/olas.png");
+  background-repeat: no-repeat;
+  background-position: bottom; }
+  .section-contacto .form-contacto {
+    background-color: #2f4b91;
+    color: #ffffff;
+    border-radius: 15px; }
+  .section-contacto p.text-form {
+    font-family: Roboto; }
+    .section-contacto p.text-form span {
+      font-weight: 800; }

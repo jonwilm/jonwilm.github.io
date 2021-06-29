@@ -23,6 +23,49 @@
     background: #ffffff;
     border-radius: 50px; }
 
+.btn-rect {
+  border-radius: 0; }
+
+.btn-red-outline {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #F14F78;
+  background: #ffffff;
+  border: 1px solid #F14F78;
+  transition: all 0.3s; }
+  .btn-red-outline:hover {
+    color: #ffffff;
+    border-color: #2f4b91; }
+  .btn-red-outline:before {
+    background: #2f4b91;
+    border-radius: 50px; }
+  .btn-red-outline:focus {
+    box-shadow: none; }
+  .btn-red-outline.active {
+    background-color: #2f4b91;
+    color: #ffffff;
+    border-color: #2f4b91; }
+
+.btn-blue-celeste {
+  padding-left: 2rem;
+  padding-right: 2rem;
+  color: #ffffff;
+  background: #3B90DB;
+  border: 1px solid #3B90DB;
+  transition: all 0.3s; }
+  .btn-blue-celeste:hover {
+    color: #ffffff;
+    border-color: #2f4b91; }
+  .btn-blue-celeste:before {
+    background: #2f4b91;
+    border-radius: 50px; }
+  .btn-blue-celeste:focus {
+    box-shadow: none; }
+  .btn-blue-celeste.active {
+    color: #ffffff;
+    background-color: #2f4b91;
+    border-color: #2f4b91; }
+
 .btn-center-out {
   transform: perspective(1px) translateZ(0);
   overflow: hidden; }
@@ -42,7 +85,7 @@
 .btn-center-out:hover:before,
 .btn-center-out:focus:before,
 .btn-center-out:active:before {
-  transform: scale(1.1); }
+  transform: scale(1.15); }
 
 .btn-blue-white {
   padding-left: 2rem;
@@ -60,8 +103,7 @@
   background-image: url("../images/icons/plus-accordion.png"); }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("../images/icons/plus-accordion.png");
-  transform: rotate(-135deg); }
+  background-image: url("../images/icons/menos.svg"); }
 
 .accordion-button:focus {
   z-index: 3;

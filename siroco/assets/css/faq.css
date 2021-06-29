@@ -8,8 +8,7 @@
   background-image: url("../images/icons/plus-accordion.png"); }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("../images/icons/plus-accordion.png");
-  transform: rotate(-135deg); }
+  background-image: url("../images/icons/menos.svg"); }
 
 .accordion-button:focus {
   z-index: 3;
@@ -27,3 +26,17 @@
   @media (max-width: 767.98px) {
     .section-dudas {
       padding-top: 4rem; } }
+
+.content-accordion li {
+  color: #808080; }
+  .content-accordion li span {
+    font-weight: 800; }
+
+.content-accordion a {
+  color: #808080;
+  text-decoration: none;
+  word-break: break-all;
+  transition: all 0.3s; }
+  .content-accordion a:hover {
+    font-weight: 800;
+    color: #2f4b91; }

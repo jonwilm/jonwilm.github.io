@@ -8,8 +8,7 @@
   background-image: url("../images/icons/plus-accordion.png"); }
 
 .accordion-button:not(.collapsed)::after {
-  background-image: url("../images/icons/plus-accordion.png");
-  transform: rotate(-135deg); }
+  background-image: url("../images/icons/menos.svg"); }
 
 .accordion-button:focus {
   z-index: 3;

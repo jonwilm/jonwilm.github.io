@@ -441,7 +441,8 @@
             transition-delay: 0.3s; }
           .seccion-slider-alumnos .content-slider-alumnos-img .alumnos-img .slick-list .slick-track .slick-slide.slick-active {
             z-index: 1;
-            opacity: 1; }
+            opacity: 1;
+            cursor: pointer; }
           .seccion-slider-alumnos .content-slider-alumnos-img .alumnos-img .slick-list .slick-track .slick-slide.slick-center {
             z-index: 2;
             transform: scale(1.2); }

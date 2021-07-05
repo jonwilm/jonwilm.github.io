@@ -63,47 +63,58 @@
     opacity: 1; }
   .section-1 .contenido-card {
     padding: 2rem;
-    background-color: #3B90DB; }
+    background-color: #3B90DB;
+    transition: all .3s; }
   .section-1 .contenido-card2 {
     padding: 2rem;
     background-color: #6EC6EB;
-    transform: translateY(30px); }
+    transform: translateY(30px);
+    transition: all .3s; }
     @media (max-width: 767.98px) {
       .section-1 .contenido-card2 {
         transform: translateY(0);
-        margin-top: 1rem; } }
+        margin-top: 1.5rem; } }
   .section-1 .contenido-card3 {
     padding: 2rem;
-    background-color: #6EC6EB; }
+    background-color: #6EC6EB;
+    transition: all .3s; }
+    @media (max-width: 991.98px) {
+      .section-1 .contenido-card3 {
+        margin-top: 1.5rem; } }
   .section-1 .contenido-card4 {
     padding: 2rem;
     background-color: #3B90DB;
-    transform: translateY(30px); }
+    transform: translateY(30px);
+    transition: all .3s; }
+    @media (max-width: 1199.98px) {
+      .section-1 .contenido-card4 {
+        transform: translateY(55px); } }
     @media (max-width: 767.98px) {
       .section-1 .contenido-card4 {
         transform: translateY(0);
-        margin-top: 1rem; } }
+        margin-top: 1.5rem; } }
   .section-1 .title-card-alquiler {
     font-family: "radicalis";
     font-weight: 400;
     color: #ffffff;
-    font-size: 2rem; }
+    font-size: 1.5rem; }
   .section-1 .text-card-alquiler {
     color: #ffffff; }
+  .section-1 .card-alquiler {
+    text-decoration: none;
+    transition: all .3s; }
+    .section-1 .card-alquiler:hover .contenido-card,
+    .section-1 .card-alquiler:hover .contenido-card3 {
+      transform: scale(1.02); }
+    .section-1 .card-alquiler:hover .contenido-card4 {
+      transform: translateY(15px); }
+    .section-1 .card-alquiler:hover .contenido-card2 {
+      transform: translateY(45px); }
 
 .section-2 {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #F7FBFC; }
-  .section-2 a {
-    color: #808080;
-    text-decoration: none;
-    word-break: break-all;
-    transition: all 0.3s; }
-    .section-2 a span {
-      font-weight: 800; }
-    .section-2 a:hover {
-      color: #2f4b91; }
 
 .content-accordion li {
   color: #808080; }

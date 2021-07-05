@@ -87,18 +87,23 @@ p.title {
     height: 100%;
     top: 0;
     left: 0;
-    background-color: rgba(41, 171, 226, 0.5);
-    padding-bottom: 3rem;
+    background-color: rgba(21, 236, 243, 0.5);
+    padding-bottom: 5rem;
     padding-top: calc(135px + 10rem); }
   .section-welcome .title-welcome {
     font-family: "Montserrat";
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     margin-bottom: 0;
     line-height: 1; }
+    @media (max-width: 1199.98px) {
+      .section-welcome .title-welcome {
+        position: relative;
+        top: -4rem; } }
     @media (max-width: 424.98px) {
       .section-welcome .title-welcome {
-        font-size: 2rem; } }
+        font-size: 3rem;
+        top: -5rem; } }
     .section-welcome .title-welcome span.yellow {
       color: #FCEA2E; }
     .section-welcome .title-welcome span.white {
@@ -116,13 +121,18 @@ p.title {
     color: #ffffff;
     text-align: center;
     margin-bottom: 0; }
+    @media (max-width: 1199.98px) {
+      .section-welcome .subtitulo-welcome {
+        position: relative;
+        top: -4rem; } }
     @media (max-width: 424.98px) {
       .section-welcome .subtitulo-welcome {
-        font-size: 1rem; } }
+        font-size: 1rem;
+        top: -5rem; } }
   .section-welcome .radicalis-welcome {
     font-family: "radicalis";
     font-weight: 500;
-    font-size: 3rem;
+    font-size: 4rem;
     text-align: center;
     margin-bottom: 0;
     color: #FCEA2E;
@@ -219,6 +229,9 @@ p.title {
   .btn-red-white:before {
     background: #ffffff;
     border-radius: 50px; }
+  .btn-red-white:focus {
+    box-shadow: none;
+    color: #F14F78; }
 
 .btn-rect {
   border-radius: 0; }
@@ -305,7 +318,7 @@ p.title {
     transition: all 0.3s; }
     @media (max-width: 1199.98px) {
       #navbar #pre-nav {
-        background-color: #03b9e9 !important; } }
+        display: none; } }
     #navbar #pre-nav a {
       text-decoration: none;
       color: #fff;
@@ -419,7 +432,7 @@ p.title {
     position: relative;
     left: 30px; }
   .section-footer1 .dropdown-menu {
-    min-width: 146px !important;
+    min-width: 145px !important;
     padding: 0 !important;
     border-radius: 1.25rem !important;
     border: none;

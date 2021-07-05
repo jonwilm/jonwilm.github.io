@@ -1,6 +1,6 @@
 .section-galeria {
   padding-top: 3rem;
-  padding-bottom: 3rem; }
+  padding-bottom: 1rem; }
   @media (max-width: 424.98px) {
     .section-galeria {
       padding-top: 2rem;
@@ -20,6 +20,20 @@
     @media (max-width: 424.98px) {
       .section-galeria .galeria-ppal {
         gap: 5px; } }
+    .section-galeria .galeria-ppal .item {
+      position: relative;
+      transition: all .5s; }
+      .section-galeria .galeria-ppal .item .placa-gray {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all .5s; }
+      .section-galeria .galeria-ppal .item:hover .placa-gray {
+        display: inline-block; }
+      .section-galeria .galeria-ppal .item:hover .agrandar-img {
+        display: inline-block; }
     .section-galeria .galeria-ppal .item1 {
       grid-area: item1; }
     .section-galeria .galeria-ppal .item2 {
@@ -65,6 +79,20 @@
     @media (max-width: 424.98px) {
       .section-galeria2 .galeria-ppal2 {
         gap: 5px; } }
+    .section-galeria2 .galeria-ppal2 .item {
+      position: relative;
+      transition: all .5s; }
+      .section-galeria2 .galeria-ppal2 .item .placa-gray {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: none;
+        background-color: rgba(0, 0, 0, 0.6);
+        transition: all .5s; }
+      .section-galeria2 .galeria-ppal2 .item:hover .placa-gray {
+        display: inline-block; }
+      .section-galeria2 .galeria-ppal2 .item:hover .agrandar-img {
+        display: inline-block; }
     .section-galeria2 .galeria-ppal2 .item6 {
       grid-area: item6; }
     .section-galeria2 .galeria-ppal2 .item7 {
@@ -86,3 +114,22 @@
       color: #2f4b91; }
     .section-galeria2 .ver-mas2:focus {
       box-shadow: none; }
+
+.lightbox {
+  position: fixed;
+  top: 50% !important;
+  transform: translateY(-50%); }
+
+.lb-dataContainer {
+  position: absolute;
+  top: -40px;
+  right: 50%;
+  transform: translateX(50%); }
+
+.agrandar-img {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #3B90DB; }

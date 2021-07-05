@@ -22,6 +22,9 @@
   .btn-red-white:before {
     background: #ffffff;
     border-radius: 50px; }
+  .btn-red-white:focus {
+    box-shadow: none;
+    color: #F14F78; }
 
 .btn-rect {
   border-radius: 0; }
@@ -118,8 +121,48 @@
   .section-contacto .form-contacto {
     background-color: #2f4b91;
     color: #ffffff;
+    position: relative;
     border-radius: 15px; }
+    .section-contacto .form-contacto .envio-success {
+      position: absolute;
+      border-radius: 15px;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: #2f4b91; }
   .section-contacto p.text-form {
     font-family: Roboto; }
     .section-contacto p.text-form span {
       font-weight: 800; }
+  .section-contacto span.flag-icon {
+    color: #000000; }
+  .section-contacto .bootstrap-select > .dropdown-toggle.bs-placeholder,
+  .section-contacto .bootstrap-select > .dropdown-toggle.bs-placeholder:hover,
+  .section-contacto .bootstrap-select > .dropdown-toggle.bs-placeholder:focus {
+    color: #000000; }
+  .section-contacto .bootstrap-select .dropdown-toggle:focus,
+  .section-contacto .bootstrap-select > select.mobile-device:focus + .dropdown-toggle {
+    outline: none !important;
+    color: #000000;
+    background-color: #fff;
+    border-color: #86b7fe !important;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important; }
+  .section-contacto .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+    width: 175px !important; }
+    @media (max-width: 767.98px) {
+      .section-contacto .bootstrap-select:not([class*=col-]):not([class*=form-control]):not(.input-group-btn) {
+        width: 125px !important;
+        margin-left: 1rem; } }
+  .section-contacto .dropdown-item.active, .section-contacto .dropdown-item:active {
+    color: #fff;
+    text-decoration: none;
+    background-color: #2f4b91; }
+  .section-contacto .dropdown-item:focus, .section-contacto .dropdown-item:hover {
+    color: #fff;
+    background-color: #808080; }
+  .section-contacto .dropdown-menu.show {
+    z-index: 1050; }

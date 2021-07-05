@@ -117,6 +117,8 @@
   </div>
 
   <link rel="stylesheet" href="assets/css/contacto.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/css/bootstrap-select.min.css" integrity="sha512-mR/b5Y7FRsKqrYZou7uysnOdCIJib/7r5QeJMFvLNHNhtye3xJp1TdJVPLtetkukFn227nKpXD9OjUc09lx97Q==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
 
   <main>
 
@@ -148,11 +150,97 @@
                   <input type="email" class="form-control" id="InputEmail">
                 </div>
                 <div class="form-group mb-3 row">
-                  <div class="col-lg-6  mo-b-15">
+                  <div class="col-xl-6  mo-b-15">
                     <label for="InputPrefijo" class="form-label">Prefijo telefónico</label>
-                    <input class="form-control" type="text" id="InputPrefijo">                                                       
+                    <!-- <input class="form-control" type="text" id="InputPrefijo"> -->
+                    <select class="selectpicker">
+                      <option data-content="<span class='flag-icon flag-icon-es'></span><span class='ms-2'>+34</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ar'></span><span class='ms-2'>+54</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-bo'></span><span class='ms-2'>+591</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-br'></span><span class='ms-2'>+55</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-cl'></span><span class='ms-2'>+56</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-co'></span><span class='ms-2'>+57</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-cr'></span><span class='ms-2'>+506</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-cu'></span><span class='ms-2'>+53</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ec'></span><span class='ms-2'>+593</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-sv'></span><span class='ms-2'>+503</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-gt'></span><span class='ms-2'>+502</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ht'></span><span class='ms-2'>+509</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-hn'></span><span class='ms-2'>+504</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-jm'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-mx'></span><span class='ms-2'>+52</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ni'></span><span class='ms-2'>+505</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-py'></span><span class='ms-2'>+595</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-pa'></span><span class='ms-2'>+507</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-pr'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-do'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-sr'></span><span class='ms-2'>+597</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-uy'></span><span class='ms-2'>+598</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ve'></span><span class='ms-2'>+58</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-bb'></span><span class='ms-2'>+1268</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-bs'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-bz'></span><span class='ms-2'>+501</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ca'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-dm'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-us'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-gt'></span><span class='ms-2'>+502</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-gy'></span><span class='ms-2'>+592</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-pe'></span><span class='ms-2'>+51</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-vc'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-lc'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-tt'></span><span class='ms-2'>+1</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-uy'></span><span class='ms-2'>+598</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-al'></span><span class='ms-2'>+355</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-de'></span><span class='ms-2'>+49</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ad'></span><span class='ms-2'>+376</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-am'></span><span class='ms-2'>+374</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-at'></span><span class='ms-2'>+43</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-az'></span><span class='ms-2'>+994</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-be'></span><span class='ms-2'>+32</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-by'></span><span class='ms-2'>+375</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ba'></span><span class='ms-2'>+387</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-bg'></span><span class='ms-2'>+359</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-cy'></span><span class='ms-2'>+357</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-dk'></span><span class='ms-2'>+45</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-sk'></span><span class='ms-2'>+421</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-si'></span><span class='ms-2'>+386</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ee'></span><span class='ms-2'>+372</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-fi'></span><span class='ms-2'>+358</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-fr'></span><span class='ms-2'>+33</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ge'></span><span class='ms-2'>+995</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-gr'></span><span class='ms-2'>+30</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-hu'></span><span class='ms-2'>+36</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ie'></span><span class='ms-2'>+353</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ic'></span><span class='ms-2'>+354</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-it'></span><span class='ms-2'>+39</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-kz'></span><span class='ms-2'>+7</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-lv'></span><span class='ms-2'>+371</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-li'></span><span class='ms-2'>+423</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-lt'></span><span class='ms-2'>+370</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-lu'></span><span class='ms-2'>+352</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-mk'></span><span class='ms-2'>+389</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-mt'></span><span class='ms-2'>+356</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-md'></span><span class='ms-2'>+373</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-mc'></span><span class='ms-2'>+377</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-me'></span><span class='ms-2'>+382</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-no'></span><span class='ms-2'>+47</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-nl'></span><span class='ms-2'>+31</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-pl'></span><span class='ms-2'>+48</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-pt'></span><span class='ms-2'>+351</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-gb'></span><span class='ms-2'>+44</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-cz'></span><span class='ms-2'>+420</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ro'></span><span class='ms-2'>+40</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ru'></span><span class='ms-2'>+7</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-sm'></span><span class='ms-2'>+378</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-rs'></span><span class='ms-2'>+381</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-se'></span><span class='ms-2'>+46</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ch'></span><span class='ms-2'>+41</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-tr'></span><span class='ms-2'>+90</span>"></option>
+                      <option data-content="<span class='flag-icon flag-icon-ua'></span><span class='ms-2'>+380</span>"></option>
+                    </select>
+                    
                   </div> 
-                  <div class="col-lg-6">
+                  <div class="col-xl-6 mt-3 mt-xl-0">
                     <label for="InputTelef" class="form-label">N° de teléfono móvil</label>
                     <input class="form-control" type="text" id="InputTelef"> 
                   </div>                                                   
@@ -179,9 +267,15 @@
                   <textarea class="form-control" id="exampleFormControlTextarea1" rows="11"></textarea>
                 </div>
                 <div class="text-end mt-4">
-                  <button type="submit" class="btn btn-custom1 btn-rounded btn-red-white btn-center-out">Enviar consulta</button>
+                  <a type="submit" class="btn btn-custom1 btn-rounded btn-red-white btn-center-out" onclick="envioSuccess()">Enviar consulta</a>
                 </div>
               </form>
+            </div>
+          </div>
+          <div class="envio-success" style="display: none;">
+            <div class="text-center">
+              <lord-icon src="assets/images/contacto/approved-checked-outline.json" trigger="loop" target="a" colors="primary:#FCEA2E;,secondary:#ffffff;" style="width:30%; height:30%;"></lord-icon>
+              <h3 class="mt-3">Se ha enviado el mensaje correctamente</h3>
             </div>
           </div>
         </div>
@@ -450,6 +544,12 @@
     })
     wow.init();
   </script>
-  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.14.0-beta2/js/bootstrap-select.min.js" integrity="sha512-FHZVRMUW9FsXobt+ONiix6Z0tIkxvQfxtCSirkKc5Sb4TKHmqq1dZa8DphF0XqKb3ldLu/wgMa8mT6uXiLlRlw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+  <script>
+    function envioSuccess() {
+      $(".envio-success").fadeIn(300)
+    }
+  </script>
 </body>
 </html>

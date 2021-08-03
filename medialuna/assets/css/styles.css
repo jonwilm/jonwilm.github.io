@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+html, body {
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden;
+  color: #4f4f4f; }
+  @media (max-width: 424.98px) {
+    html, body {
+      font-size: 12px; } }
+  @media (max-width: 359.98px) {
+    html, body {
+      font-size: 10px; } }
+  html a, body a {
+    text-decoration: none; }
+
+.delay-200 {
+  -webkit-animation-delay: 200ms;
+          animation-delay: 200ms; }
+
+.delay-400 {
+  -webkit-animation-delay: 400ms;
+          animation-delay: 400ms; }
+
+.delay-600 {
+  -webkit-animation-delay: 600ms;
+          animation-delay: 600ms; }
+
+.delay-800 {
+  -webkit-animation-delay: 800ms;
+          animation-delay: 800ms; }
+
+#redes {
+  display: flex; }
+  #redes a img {
+    height: 16px; }
+  #redes .red {
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    transition-property: color;
+    transition-duration: 0.3s;
+    border-radius: 3px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #redes .red:before {
+      border-radius: 3px;
+      width: 30px;
+      height: 30px;
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      transform: scaleY(0);
+      transform-origin: 50% 100%;
+      transition-property: transform;
+      transition-duration: 0.3s;
+      transition-timing-function: ease-out; }
+    #redes .red.fb:before {
+      background-color: #3b5998; }
+    #redes .red.ig:before {
+      background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #bc1888 75%, #833ab4 100%) !important; }
+    #redes .red.ta:before {
+      background-color: #00af87; }
+    #redes .red.go:before {
+      background: linear-gradient(-120deg, #4285f4, #34a853, #fbbc05, #ea4335); }
+    #redes .red.fb:hover:before, #redes .red.ig:hover:before, #redes .red.ta:hover:before, #redes .red.go:hover:before {
+      transform: scaleY(1); }
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  z-index: 1030; }
+  #navbar #pre-nav {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    transition: all 0.3s;
+    background-color: #f9f9f9; }
+    @media (max-width: 1199.98px) {
+      #navbar #pre-nav {
+        display: none; } }
+    #navbar #pre-nav a {
+      color: #4f4f4f;
+      text-decoration: none; }
+      #navbar #pre-nav a span {
+        color: #828282; }
+  #navbar .navbar {
+    transition: background-color 0.3s; }
+    #navbar .navbar a {
+      color: #ffffff;
+      font-weight: bold; }
+    #navbar .navbar .navbar-toggler:focus {
+      box-shadow: none; }
+    #navbar .navbar .navbar-toggler .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); }
+    #navbar .navbar .navbar-nav .nav-item {
+      padding-left: 0.5rem;
+      padding-right: 0.5rem; }
+      @media (min-width: 1400px) {
+        #navbar .navbar .navbar-nav .nav-item {
+          padding-left: 1rem;
+          padding-right: 1rem; } }
+      #navbar .navbar .navbar-nav .nav-item .nav-link {
+        color: #ffffff;
+        border-bottom: 1px solid transparent;
+        text-align: center;
+        transition: all 0.3s; }
+      #navbar .navbar .navbar-nav .nav-item:hover .nav-link {
+        border-bottom: 1px solid #ffffff; }
+    #navbar .navbar .icons-perfil a {
+      transition: all .3s; }
+      #navbar .navbar .icons-perfil a:hover {
+        color: #4f4f4f; }
+
+.btn-rounded {
+  line-height: 1.3; }
+
+.btn-custom {
+  font-size: 1.1rem; }
+
+.btn-blue-white {
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 5px;
+  background: linear-gradient(134.42deg, #9CD3CD 0%, #9CD3CD 34%, #BDE7E2 100%);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.31);
+  transition: all 0.3s; }
+  .btn-blue-white:hover {
+    color: #90ccc6; }
+  .btn-blue-white:before {
+    background: #ffffff;
+    border-radius: 5px; }
+  .btn-blue-white:focus {
+    box-shadow: none;
+    color: #90ccc6; }
+
+.btn-blue-white2 {
+  color: #4f4f4f;
+  border-radius: 5px;
+  background: linear-gradient(134.42deg, #BDE7E2 0%, #D1F2EE 34%, #DDF7F3 100%);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.31);
+  transition: all 0.3s; }
+  .btn-blue-white2:hover {
+    color: #90ccc6; }
+  .btn-blue-white2:before {
+    background: #ffffff;
+    border-radius: 5px; }
+  .btn-blue-white2:focus {
+    box-shadow: none;
+    color: #90ccc6; }
+
+.btn-center-out {
+  transform: perspective(1px) translateZ(0);
+  overflow: hidden; }
+
+.btn-center-out:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transform: scale(0);
+  transition-property: transform;
+  transition-duration: 0.3s; }
+
+.btn-center-out:hover:before,
+.btn-center-out:focus:before,
+.btn-center-out:active:before {
+  transform: scale(1.15); }
+
+.section-footer1 {
+  background-image: url(../images/bg-footer.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  .section-footer1 h5 {
+    color: #ffffff;
+    font-weight: bold; }
+  .section-footer1 p {
+    color: #ffffff;
+    font-weight: 200; }
+  .section-footer1 ul {
+    padding-left: 0; }
+  .section-footer1 li {
+    list-style: none;
+    margin-bottom: .3rem; }
+    .section-footer1 li .items-menu {
+      color: #ffffff;
+      font-weight: 200;
+      text-decoration: none; }
+      .section-footer1 li .items-menu:hover {
+        color: #4f4f4f; }
+  .section-footer1 small {
+    color: #ffffff; }
+
+.section-footer2 {
+  padding: .5rem 0; }
+  .section-footer2 img {
+    width: 5%; }
+
+.section-footer3 {
+  padding: .5rem 0;
+  background-color: #4f4f4f;
+  color: #ffffff; }

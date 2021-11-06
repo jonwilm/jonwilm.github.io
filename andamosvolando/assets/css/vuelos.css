@@ -1,0 +1,137 @@
+.section-vuelos {
+  padding: 5% 0; }
+  .section-vuelos .title-page {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #7d428f; }
+  .section-vuelos .accordion-button:not(.collapsed) {
+    color: #7d428f;
+    font-weight: bold;
+    background-color: #f0d5f8; }
+  .section-vuelos .accordion-button {
+    font-weight: bold; }
+    .section-vuelos .accordion-button:focus {
+      border-color: #86b7fe;
+      box-shadow: none; }
+  .section-vuelos .accordion-item:last-of-type {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .section-vuelos .clean-filtro {
+    padding: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-top: 0;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem; }
+    .section-vuelos .clean-filtro a {
+      color: #3a3a3a;
+      padding: .4rem;
+      border: 2px solid #f8b300;
+      border-radius: .25rem;
+      transition: all .3s; }
+      .section-vuelos .clean-filtro a:hover {
+        color: #7d428f; }
+  .section-vuelos .search-more {
+    position: relative;
+    padding: 1rem;
+    background-color: #7d428f;
+    border-radius: 5px; }
+    .section-vuelos .search-more .text-big {
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0;
+      line-height: 1; }
+    .section-vuelos .search-more a {
+      color: #ffffff;
+      font-size: .8rem;
+      transition: all .3s; }
+      .section-vuelos .search-more a:hover {
+        color: #f8b300; }
+    .section-vuelos .search-more img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 10%; }
+      @media (min-width: 992px) {
+        .section-vuelos .search-more img {
+          width: 30%; } }
+  .section-vuelos .alarm {
+    position: relative;
+    padding: 1rem;
+    background-color: #7d428f;
+    border-radius: 5px; }
+    .section-vuelos .alarm .text-big {
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0;
+      line-height: 1; }
+    .section-vuelos .alarm .content-alarm {
+      width: 70%; }
+      .section-vuelos .alarm .content-alarm p {
+        font-size: .8rem; }
+    .section-vuelos .alarm img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 10%; }
+      @media (min-width: 992px) {
+        .section-vuelos .alarm img {
+          width: 35%; } }
+  .section-vuelos .nav-tabs .nav-link {
+    color: #3a3a3a;
+    font-weight: bold;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0; }
+  .section-vuelos .nav-tabs .nav-link.active {
+    color: #3a3a3a;
+    font-weight: bold;
+    background-color: #bfa1c7;
+    border-color: #dee2e6 #dee2e6 #fff; }
+  .section-vuelos .nav-item button {
+    padding: .5rem 3rem;
+    background-color: #e5d9e9; }
+  .section-vuelos .nav-item:nth-child(2) {
+    margin-left: .4rem; }
+  .section-vuelos .first-column {
+    display: none; }
+    @media (min-width: 768px) {
+      .section-vuelos .first-column {
+        display: block; } }
+  .section-vuelos .column-fly {
+    border: 1px solid #b1b1b1;
+    padding: 0; }
+    .section-vuelos .column-fly .content-text-column,
+    .section-vuelos .column-fly .content-text-border {
+      padding: .6rem 1.3rem;
+      position: relative; }
+    .section-vuelos .column-fly .content-text-gray {
+      padding: .6rem 1.3rem;
+      background-color: #c4c4c4; }
+      .section-vuelos .column-fly .content-text-gray .img-copa {
+        width: 5%; }
+        @media (min-width: 768px) {
+          .section-vuelos .column-fly .content-text-gray .img-copa {
+            width: 15%; } }
+    .section-vuelos .column-fly .content-text-border {
+      border-bottom: 1px solid #b1b1b1; }
+    .section-vuelos .column-fly .movil-type {
+      border: 1px solid #7f4391;
+      padding: 5px 10px;
+      color: #7f4391;
+      font-size: 11px;
+      font-weight: 400;
+      position: absolute;
+      left: 20px;
+      top: 5px;
+      display: block; }
+      @media (min-width: 768px) {
+        .section-vuelos .column-fly .movil-type {
+          display: none; } }
+
+/*# sourceMappingURL=vuelos.css.map */

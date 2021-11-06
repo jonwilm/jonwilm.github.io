@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andamos Volando</title>
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/libs/slick-slider/slick/slick.css">
+  <link rel="stylesheet" href="assets/libs/slick-slider/slick/slick-theme.css">
+  <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/daterangepicker.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/alojamiento-detalle.css">
+  
+</head>
+<body>
+  <div class="content-navbar">
+    <div class="pre-nav d-none d-xl-flex">
+      <div class="container">
+        <div class="left">
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM24.0012 11.2C20.5249 11.2 20.0886 11.2152 18.7233 11.2773C17.3606 11.3397 16.4305 11.5555 15.6166 11.872C14.7747 12.1989 14.0606 12.6363 13.3491 13.348C12.6371 14.0595 12.1997 14.7736 11.8717 15.6152C11.5544 16.4294 11.3384 17.3598 11.2771 18.7219C11.216 20.0873 11.2 20.5238 11.2 24.0001C11.2 27.4764 11.2155 27.9114 11.2773 29.2767C11.34 30.6394 11.5557 31.5695 11.872 32.3834C12.1992 33.2253 12.6365 33.9394 13.3483 34.6509C14.0595 35.3629 14.7736 35.8013 15.615 36.1283C16.4294 36.4448 17.3598 36.6605 18.7222 36.7229C20.0876 36.7851 20.5236 36.8003 23.9996 36.8003C27.4762 36.8003 27.9111 36.7851 29.2765 36.7229C30.6391 36.6605 31.5703 36.4448 32.3848 36.1283C33.2264 35.8013 33.9394 35.3629 34.6506 34.6509C35.3626 33.9394 35.8 33.2253 36.128 32.3837C36.4427 31.5695 36.6587 30.6391 36.7227 29.277C36.784 27.9116 36.8 27.4764 36.8 24.0001C36.8 20.5238 36.784 20.0876 36.7227 18.7222C36.6587 17.3595 36.4427 16.4294 36.128 15.6155C35.8 14.7736 35.3626 14.0595 34.6506 13.348C33.9386 12.636 33.2266 12.1987 32.384 11.872C31.5679 11.5555 30.6373 11.3397 29.2746 11.2773C27.9092 11.2152 27.4746 11.2 23.9972 11.2H24.0012Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M22.8529 13.5067C23.1937 13.5062 23.574 13.5067 24.0012 13.5067C27.4188 13.5067 27.8239 13.519 29.1735 13.5803C30.4215 13.6374 31.0989 13.8459 31.5501 14.0211C32.1474 14.2531 32.5733 14.5304 33.021 14.9784C33.469 15.4264 33.7464 15.8531 33.9789 16.4505C34.1541 16.9011 34.3629 17.5785 34.4197 18.8265C34.481 20.1758 34.4944 20.5812 34.4944 23.9972C34.4944 27.4132 34.481 27.8186 34.4197 29.1679C34.3626 30.4159 34.1541 31.0933 33.9789 31.5439C33.7469 32.1413 33.469 32.5666 33.021 33.0144C32.573 33.4624 32.1477 33.7397 31.5501 33.9717C31.0994 34.1477 30.4215 34.3557 29.1735 34.4128C27.8242 34.4741 27.4188 34.4874 24.0012 34.4874C20.5833 34.4874 20.1782 34.4741 18.8289 34.4128C17.5809 34.3552 16.9035 34.1466 16.4521 33.9714C15.8547 33.7394 15.428 33.4621 14.98 33.0141C14.532 32.5661 14.2547 32.1405 14.0222 31.5429C13.847 31.0922 13.6382 30.4149 13.5814 29.1669C13.52 27.8175 13.5078 27.4122 13.5078 23.994C13.5078 20.5758 13.52 20.1726 13.5814 18.8233C13.6384 17.5753 13.847 16.8979 14.0222 16.4467C14.2542 15.8494 14.532 15.4227 14.98 14.9747C15.428 14.5267 15.8547 14.2494 16.4521 14.0168C16.9033 13.8408 17.5809 13.6328 18.8289 13.5755C20.0097 13.5222 20.4673 13.5062 22.8529 13.5035V13.5067ZM30.8338 15.632C29.9858 15.632 29.2978 16.3193 29.2978 17.1675C29.2978 18.0155 29.9858 18.7035 30.8338 18.7035C31.6818 18.7035 32.3698 18.0155 32.3698 17.1675C32.3698 16.3195 31.6818 15.632 30.8338 15.632ZM24.0012 17.4267C20.371 17.4267 17.4278 20.37 17.4278 24.0001C17.4278 27.6303 20.371 30.5722 24.0012 30.5722C27.6314 30.5722 30.5735 27.6303 30.5735 24.0001C30.5735 20.37 27.6314 17.4267 24.0012 17.4267Z"/>
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M24.0012 19.7334C26.3575 19.7334 28.2679 21.6436 28.2679 24.0001C28.2679 26.3564 26.3575 28.2668 24.0012 28.2668C21.6446 28.2668 19.7345 26.3564 19.7345 24.0001C19.7345 21.6436 21.6446 19.7334 24.0012 19.7334Z"/>
+            </svg>
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM26.5016 38.1115V25.0542H30.1059L30.5836 20.5546H26.5016L26.5077 18.3025C26.5077 17.1289 26.6192 16.5001 28.3048 16.5001H30.5581V12H26.9532C22.6231 12 21.0991 14.1828 21.0991 17.8536V20.5551H18.4V25.0547H21.0991V38.1115H26.5016Z"/>
+            </svg>
+          </a>
+          <a href="http://" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24ZM16.9605 19.8778H11.5216V36.2196H16.9605V19.8778ZM17.3188 14.8227C17.2835 13.2204 16.1377 12 14.277 12C12.4164 12 11.2 13.2204 11.2 14.8227C11.2 16.3918 12.3805 17.6473 14.2064 17.6473H14.2412C16.1377 17.6473 17.3188 16.3918 17.3188 14.8227ZM36.5754 26.8497C36.5754 21.8303 33.8922 19.4941 30.3131 19.4941C27.4254 19.4941 26.1326 21.0802 25.4107 22.1929V19.8783H19.9711C20.0428 21.4117 19.9711 36.22 19.9711 36.22H25.4107V27.0934C25.4107 26.605 25.446 26.1178 25.5898 25.7681C25.9829 24.7924 26.8779 23.7822 28.3805 23.7822C30.3494 23.7822 31.1365 25.2807 31.1365 27.4767V36.2196H36.5752L36.5754 26.8497Z"/>
+            </svg>
+          </a>
+          <a href="mailto:info@andamosturismo.com">info@andamosturismo.com</a>
+        </div>
+        <div class="right">
+          <a href="https://wa.me/59896861585" class="pe-2">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 90 90" style="enable-background:new 0 0 90 90;" xml:space="preserve">
+              <g>
+                <path id="WhatsApp" d="M90,43.841c0,24.213-19.779,43.841-44.182,43.841c-7.747,0-15.025-1.98-21.357-5.455L0,90l7.975-23.522
+                  c-4.023-6.606-6.34-14.354-6.34-22.637C1.635,19.628,21.416,0,45.818,0C70.223,0,90,19.628,90,43.841z M45.818,6.982
+                  c-20.484,0-37.146,16.535-37.146,36.859c0,8.065,2.629,15.534,7.076,21.61L11.107,79.14l14.275-4.537
+                  c5.865,3.851,12.891,6.097,20.437,6.097c20.481,0,37.146-16.533,37.146-36.857S66.301,6.982,45.818,6.982z M68.129,53.938
+                  c-0.273-0.447-0.994-0.717-2.076-1.254c-1.084-0.537-6.41-3.138-7.4-3.495c-0.993-0.358-1.717-0.538-2.438,0.537
+                  c-0.721,1.076-2.797,3.495-3.43,4.212c-0.632,0.719-1.263,0.809-2.347,0.271c-1.082-0.537-4.571-1.673-8.708-5.333
+                  c-3.219-2.848-5.393-6.364-6.025-7.441c-0.631-1.075-0.066-1.656,0.475-2.191c0.488-0.482,1.084-1.255,1.625-1.882
+                  c0.543-0.628,0.723-1.075,1.082-1.793c0.363-0.717,0.182-1.344-0.09-1.883c-0.27-0.537-2.438-5.825-3.34-7.977
+                  c-0.902-2.15-1.803-1.792-2.436-1.792c-0.631,0-1.354-0.09-2.076-0.09c-0.722,0-1.896,0.269-2.889,1.344
+                  c-0.992,1.076-3.789,3.676-3.789,8.963c0,5.288,3.879,10.397,4.422,11.113c0.541,0.716,7.49,11.92,18.5,16.223
+                  C58.2,65.771,58.2,64.336,60.186,64.156c1.984-0.179,6.406-2.599,7.312-5.107C68.398,56.537,68.398,54.386,68.129,53.938z"/>
+              </g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g><g></g>
+            </svg>
+            598 96 861 585</a>
+          <a href="" class="line px-2">Iniciar Sesión</a>
+          <a href="" class="line px-2">Registrarse</a>
+          <a href="" class="ps-2">USD</a>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-xl navbar-light bg-light">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <img class="logo-nav" src="assets/images/logo-text-black.png" alt="Andamos Volando">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link line" href="#">Paquetes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link line" href="vuelos.html">Vuelos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link line" href="alojamientos.html">Alojamientos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link line" href="#">Actividades</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link line" href="#">Autos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link line" href="#">Seguros</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Más
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-rounded-10 btn-white-orange btn-center-out" href="#">OUTLET</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48"><path fill-rule="evenodd" d="M33.5 38.25a.75.75 0 0 1 0 1.5.75.75 0 0 1 0-1.5zm-3 .75c0 1.654 1.346 3 3 3s3-1.346 3-3-1.346-3-3-3-3 1.346-3 3zM9 39.891a.75.75 0 1 1 0-1.5.75.75 0 0 1 0 1.5zm0-3.9c-1.654 0-3 1.346-3 3s1.346 3 3 3 3-1.346 3-3-1.346-3-3-3zm27.953-10.715l-5.166.163.205-5.939h6.575l-.235 4.381c-.052.755-.66 1.354-1.379 1.395zm-21.05-1.439l-.932-4.337h6.53v6.264l-5.49.173c.057-.695.03-1.4-.108-2.1zM19 13h2.5v5h-6.853l-1.224-5.696C14.791 12.696 16.61 13 19 13zm11.49 6.5l-.206 5.986-7.284.23V19.5h7.49zm.225-6.5l-.173 5H23v-5h7.715zm7.933 5h-6.604l.172-5h6.701l-.269 5zm2.941-7.532A1.5 1.5 0 0 0 40.5 10H19c-3.474 0-5.422-.717-6.328-1.187l-.085-.395A3.077 3.077 0 0 0 9.595 6H6v3l3.653.048 3.312 15.392a4.502 4.502 0 0 1-.803 3.551l-1.836 2.361a3.478 3.478 0 0 0-.382 3.686A3.479 3.479 0 0 0 13.09 36h23.36v-3H13.09a.479.479 0 0 1-.45-.28.482.482 0 0 1 .053-.527l1.852-2.381c.202-.269.378-.554.541-.845l21.997-.694a4.512 4.512 0 0 0 4.243-4.21l.672-12.482a1.503 1.503 0 0 0-.409-1.113z"/></svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  
+  <main>
+    <div class="searcher">
+      <div class="container">
+        <div class="dropdown dropdown-search-mobile d-lg-none">
+          <button class="btn btn-dropdown-search dropdown-toggle w-100" type="button" id="dropdown-menu-search" data-bs-toggle="dropdown" aria-expanded="false">
+            Menu
+          </button>
+          <ul class="nav dropdown-menu w-100" id="tabSearcher" role="tablist" aria-labelledby="dropdown-menu-search">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="Paquetes-tab" data-bs-toggle="tab" data-bs-target="#Paquetes" type="button" role="tab" aria-controls="Paquetes" aria-selected="false">Paquetes</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="Vuelos-tab" data-bs-toggle="tab" data-bs-target="#Vuelos" type="button" role="tab" aria-controls="Vuelos" aria-selected="false">Vuelos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="Alojamientos-tab" data-bs-toggle="tab" data-bs-target="#Alojamientos" type="button" role="tab" aria-controls="Alojamientos" aria-selected="true">Alojamientos</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="Actividades-tab" data-bs-toggle="tab" data-bs-target="#Actividades" type="button" role="tab" aria-controls="Actividades" aria-selected="false">Actividades</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="Traslados-tab" data-bs-toggle="tab" data-bs-target="#Traslados" type="button" role="tab" aria-controls="Traslados" aria-selected="false">Traslados</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="Seguros-tab" data-bs-toggle="tab" data-bs-target="#Seguros" type="button" role="tab" aria-controls="Seguros" aria-selected="false">Seguros</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="Autos-tab" data-bs-toggle="tab" data-bs-target="#Autos" type="button" role="tab" aria-controls="Autos" aria-selected="false">Autos</button>
+            </li>
+          </ul>
+        </div>
+        <ul class="nav nav-tabs d-none d-lg-flex" id="tabSearcher" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Paquetes-tab" data-bs-toggle="tab" data-bs-target="#Paquetes" type="button" role="tab" aria-controls="Paquetes" aria-selected="false">Paquetes</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Vuelos-tab" data-bs-toggle="tab" data-bs-target="#Vuelos" type="button" role="tab" aria-controls="Vuelos" aria-selected="false">Vuelos</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="Alojamientos-tab" data-bs-toggle="tab" data-bs-target="#Alojamientos" type="button" role="tab" aria-controls="Alojamientos" aria-selected="true">Alojamientos</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Actividades-tab" data-bs-toggle="tab" data-bs-target="#Actividades" type="button" role="tab" aria-controls="Actividades" aria-selected="false">Actividades</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Traslados-tab" data-bs-toggle="tab" data-bs-target="#Traslados" type="button" role="tab" aria-controls="Traslados" aria-selected="false">Traslados</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Seguros-tab" data-bs-toggle="tab" data-bs-target="#Seguros" type="button" role="tab" aria-controls="Seguros" aria-selected="false">Seguros</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Autos-tab" data-bs-toggle="tab" data-bs-target="#Autos" type="button" role="tab" aria-controls="Autos" aria-selected="false">Autos</button>
+          </li>
+        </ul>
+        <div class="tab-content" id="tabSearcherContent">
+          <div class="tab-pane fade" id="Paquetes" role="tabpanel" aria-labelledby="Paquetes-tab">
+        
+          </div>
+          <div class="tab-pane fade" id="Vuelos" role="tabpanel" aria-labelledby="Vuelos-tab">
+        
+          </div>
+          <div class="tab-pane fade show active" id="Alojamientos" role="tabpanel" aria-labelledby="Alojamientos-tab">
+            <form action="" method="get">
+              <div class="row">
+                <div class="col-12 col-lg-4 border-right">
+                  <div class="line-horizontal">
+                    <div class="icon">
+                      <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
+                    </div>
+                    <div class="ps-3 w-100">
+                      <label for="alojamientoDestino" class="form-label">Destino</label>
+                      <div class="input-group">
+                        <select id="alojamientoDestino" class="form-control">
+                          <option value="">País, Ciudad, Ubicación</option>
+                          <optgroup label="Alaskan/Hawaiian Time Zone">
+                            <option value="AK">Alaska</option>
+                            <option value="HI">Hawaii</option>
+                          </optgroup>
+                          <optgroup label="Pacific Time Zone">
+                            <option value="CA">California</option>
+                            <option value="NV">Nevada</option>
+                            <option value="OR">Oregon</option>
+                            <option value="WA">Washington</option>
+                          </optgroup>
+                          <optgroup label="Mountain Time Zone">
+                            <option value="AZ">Arizona</option>
+                            <option value="CO">Colorado</option>
+                            <option value="ID">Idaho</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="UT">Utah</option>
+                            <option value="WY">Wyoming</option>
+                          </optgroup>
+                          <optgroup label="Central Time Zone">
+                            <option value="AL">Alabama</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TX">Texas</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="WI">Wisconsin</option>
+                          </optgroup>
+                          <optgroup label="Eastern Time Zone">
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="IN">Indiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="OH">Ohio</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WV">West Virginia</option>
+                          </optgroup>
+                        </select>
+                        <!-- <input type="text" class="form-control" list="alojamientoDestinoOptions" id="alojamientoDestino" placeholder="País, Ciudad, Ubicación"/> -->
+                      </div>
+                      <!-- <datalist id="alojamientoDestinoOptions">
+                        <option value="San Francisco"></option>
+                        <option value="New York"></option>
+                        <option value="Seattle"></option>
+                        <option value="Los Angeles"></option>
+                        <option value="Chicago"></option>
+                      </datalist> -->
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 border-right">
+                  <div class="line-horizontal">
+                    <div class="icon">
+                      <img class="img-fluid" src="assets/images/icons/calendar.png" alt=""/>
+                    </div>
+                    <div class="ps-3 w-100">
+                      <label for="alojamientoFechas" class="form-label">Fechas</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" id="alojamientoFechas" placeholder="Desde - Hasta"/>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                  <div class="line-horizontal">
+                    <div class="icon">
+                      <img class="img-fluid" src="assets/images/icons/person.png" alt=""/>
+                    </div>
+                    <div class="ps-3 w-100 position-relative">
+                      <label for="alojamientoPersons" class="form-label me-3">Habitaciones</label>
+                      <div id="btn-habs" class="w-100">
+                        <div class="input-group">
+                          <i class="fa fa-bed fa-lg icon-fa me-3"></i>
+                          <input id="nro-habs" class="me-3" value="1" readonly/>
+                          <i class="fa fa-user fa-lg icon-fa me-3"></i>
+                          <input id="nro-persons" class="me-3" value="1" readonly/>
+                        </div>
+                      </div>
+                      <div id="popover-habs">
+                        <div class="content-item">
+                          <span>Habitaciones</span>
+                          <div>
+                            <button class="menos" id="menos-habs">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                            <input type="number" id="habs" data="habs" class="cantidad" min="1" max="8" step="1" value="1" readonly>
+                            <button class="mas" id="mas-habs">
+                              <i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <hr>
+                        <div id="hab1">
+                          <p><strong>Habitación</strong></p>
+                          <div class="content-adult1">
+                            <span class="me-3">Adultos</span>
+                            <div>
+                              <button class="menos">
+                                <i class="fa fa-minus"></i>
+                              </button>
+                              <input type="number" id="adult1" data="persons" class="cantidad" min="1" max="8" step="1" value="1" readonly>
+                              <button class="mas">
+                                <i class="fa fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <div class="content-child1">
+                            <span class="me-3">Niños</span>
+                            <div>
+                              <button class="menos" onclick="less(1, this)">
+                                <i class="fa fa-minus"></i>
+                              </button>
+                              <input type="number" id="child1" data="persons" class="cantidad" min="0" max="8" step="1" value="0" readonly>
+                              <button class="mas" onclick="mas(1, this)">
+                                <i class="fa fa-plus"></i>
+                              </button>
+                            </div>
+                          </div>
+                          <hr>
+                        </div>
+                        <div class="text-end">
+                          <button type="button" id="aplicar" class="btn btn-violet-white btn-center-out ms-auto">Aplicar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-2 d-flex align-items-center">
+                  <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100">Buscar</button>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="Actividades" role="tabpanel" aria-labelledby="Actividades-tab">
+        
+          </div>
+          <div class="tab-pane fade" id="Traslados" role="tabpanel" aria-labelledby="Traslados-tab">
+        
+          </div>
+          <div class="tab-pane fade" id="Seguros" role="tabpanel" aria-labelledby="Seguros-tab">
+        
+          </div>
+          <div class="tab-pane fade" id="Autos" role="tabpanel" aria-labelledby="Autos-tab">
+        
+          </div>
+        </div>
+      </div>
+      <div class="box-colors container-fluid">
+        <div class="row">
+          <div class="col-3 offset-3 bg-yellow py-3"></div>
+          <div class="col-3 bg-orange py-3"></div>
+          <div class="col-3 bg-violet py-3"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container py-5">
+      <div class="d-lg-flex align-items-center justify-content-between">
+        <div class="title-page">
+          <h1>ALOJAMIENTOS</h1>
+        </div>
+        <div class="data-search">
+          <img class="icon" src="assets/images/icons/calendar.png" alt=""/>
+          <span>00/00/0000 - 00/00/0000</span>
+          <img class="icon" src="assets/images/icons/person.png" alt=""/>
+          <span>00 Adultos 00 Niños</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-12 col-lg-3 order-2 order-lg-1">
+          <div class="consulta-alojamiento">
+            <div class="title">
+              <span>Consultar sobre este alojamiento</span>
+            </div>
+            <div class="form">
+              <form action="">
+                <label for="name" class="form-label">Nombre y Apellido <span>*</span></label>
+                <input type="text" class="form-control" id="name"/>
+                <label for="email" class="form-label">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email"/>
+                <label for="phone" class="form-label">Celular <span>*</span></label>
+                <input type="text" class="form-control" id="phone"/>
+                <label for="consulta" class="form-label">Consulta <span>*</span></label>
+                <textarea id="consulta" rows="1"></textarea>
+                <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out">Enviar</button>
+              </form>
+            </div>
+          </div>
+          <div class="mi-reserva">
+            <div class="title">
+              <span>Mi Reserva</span>
+            </div>
+            <div class="content">
+              <p><strong>4 Noches</strong></p>
+              <p><strong>2 Adultos, 2 Niños</strong></p>
+              <ul>
+                <li>Habitación superior 1 cama King Size</li>
+                <li>Desayuno</li>
+                <li>Podés cancelar hasta el 02/10/2021 a las 19:00</li>
+              </ul>
+              <hr>
+              <p class="label-precio">Precio Final</p>
+              <p class="precio"><span>USD</span>999</p>
+              <p><small>Tarifa 1 Adulto USD 895</small></p>
+              <p><small>Imp. y Tasas USD 185</small></p>
+              <div class="button">
+                <button id="reservar" class="btn btn-violet-white btn-center-out">Reservar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="detalle-alojamiento col-12 col-lg-9 order-1 order-lg-2">
+          <div class="encabezado">
+            <h2>Envision Hotel Boston</h2>
+            <div class="valoracion">
+              <span class="valor">4.4</span>
+              <img src="assets/images/icons/star-gold.svg" alt="">
+              <img src="assets/images/icons/star-gold.svg" alt="">
+              <img src="assets/images/icons/star-medium.svg" alt="">
+              <img src="assets/images/icons/star-gray.svg" alt="">
+              <img src="assets/images/icons/star-gray.svg" alt="">
+            </div>
+          </div>
+          <div class="location">
+            <i class="fa fa-map-marker-alt"></i>
+            <span>Boston, MA, USA - <a href="">Ver en el mapa</a></span>
+          </div>
+          <div class="slider-detalle-alojamiento mt-3">
+            <div>
+              <img class="w-100" src="assets/images/detalle-alojamiento/img-hab.png" alt="">
+            </div>
+            <div>
+              <img class="w-100" src="assets/images/detalle-alojamiento/img-hab2.png" alt="">
+            </div>
+            <div>
+              <img class="w-100" src="assets/images/detalle-alojamiento/img-hab3.png" alt="">
+            </div>
+            <div>
+              <img class="w-100" src="assets/images/detalle-alojamiento/img-hab.png" alt="">
+            </div>
+            <div>
+              <img class="w-100" src="assets/images/detalle-alojamiento/img-hab2.png" alt="">
+            </div>
+          </div>
+          <ul class="nav nav-tabs" id="tabDetalle" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="descripcion-tab" data-bs-toggle="tab" data-bs-target="#descripcion" type="button" role="tab" aria-controls="descripcion" aria-selected="false">Descripcion</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="facilidades-tab" data-bs-toggle="tab" data-bs-target="#facilidades" type="button" role="tab" aria-controls="facilidades" aria-selected="true">Facilidades</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="reglas-tab" data-bs-toggle="tab" data-bs-target="#reglas" type="button" role="tab" aria-controls="reglas" aria-selected="false">Reglas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="reseñas-tab" data-bs-toggle="tab" data-bs-target="#reseñas" type="button" role="tab" aria-controls="reseñas" aria-selected="false">Reseñas</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="tabContentDetalle">
+            <div class="tab-pane fade" id="descripcion" role="tabpanel" aria-labelledby="descripcion-tab">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro totam voluptate explicabo amet. Voluptatem cupiditate quidem itaque aperiam libero eos sed fugit, officia illum omnis, ab in non est atque nam eaque natus fugiat voluptas obcaecati neque officiis. Sunt distinctio repudiandae hic nesciunt quas porro minus natus quaerat magni voluptatibus?
+            </div>
+            <div class="tab-pane fade show active" id="facilidades" role="tabpanel" aria-labelledby="facilidades-tab">
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="title-pane">
+                    <img src="assets/images/icons/entretenimiento.png" alt="">
+                    <h3>Entretenimiento</h3>
+                  </div>
+                  <ul>
+                    <li>Piscina exterior de agua dulce</li>
+                    <li>Sombrillas</li>
+                    <li>Wifi</li>
+                    <li>Consigna</li>
+                    <li>Comedor</li>
+                    <li>Secadora de ropa</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="title-pane">
+                    <img src="assets/images/icons/instalaciones.png" alt="">
+                    <h3>Instalaciones</h3>
+                  </div>
+                  <ul>
+                    <li>Piscina exterior de agua dulce</li>
+                    <li>Sombrillas</li>
+                    <li>Wifi</li>
+                    <li>Consigna</li>
+                    <li>Comedor</li>
+                    <li>Secadora de ropa</li>
+                    <li>Sombrillas</li>
+                    <li>Wifi</li>
+                    <li>Consigna</li>
+                    <li>Comedor</li>
+                    <li>Secadora de ropa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="reglas" role="tabpanel" aria-labelledby="reglas-tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, eaque repellat qui mollitia commodi amet! Labore nobis officia eaque, nihil asperiores neque vero culpa cum? Libero, esse consectetur. Facilis, non.
+            </div>
+            <div class="tab-pane fade" id="reseñas" role="tabpanel" aria-labelledby="reseñas-tab">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi ex dolorum deleniti eum quibusdam fuga, odit impedit quo? Maiores maxime rerum omnis explicabo nulla in error nemo magni eos repellendus nostrum accusantium consequuntur sint, aliquam pariatur, nobis animi molestiae quis laboriosam adipisci nam ea commodi vero! Illo, maiores vitae a repellendus mollitia aliquam, recusandae fugit repudiandae velit soluta cum, facere itaque sequi! Impedit necessitatibus ut adipisci blanditiis molestias! Quod aliquam dolorum ad similique, corrupti neque quas qui odit esse minus totam eius officia sed iusto sapiente dolor? Ab nulla blanditiis cupiditate ipsam, vero quasi dicta doloremque dolores error sit harum!
+            </div>
+          </div>
+          <hr>
+          <div class="disponibles">
+            <h3>Habitaciones Disponibles</h3>
+            <div class="container">
+              <div class="row">
+                <div class="col-6 col-sm-4 col-md-12">
+                  <div class="row mb-3">
+                    <div class="col-12 col-md-4 img-destacada">
+                      <img class="" src="assets/images/alojamiento/hotel.jpg" alt="destacada">
+                      <div class="destacado">
+                        Destacado
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-5 detalles-habitacion">
+                      <div class="name-habitacion">
+                        <p>Habitacion superior</p>
+                        <p>1 cama King Size</p>
+                      </div>
+                      <div class="content">
+                        <p><strong>Incluye:</strong></p>
+                        <p>+ Desayuno</p>
+                        <p>+ Podés cancelar hasta el 02/10/2021 a las 19:00</p>
+                        <p>+ Reserva Flexible</p>
+                        <button id="seleccionar" class="btn btn-white-orange btn-center-out">+ info de la habitación</button>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-3 price-habitacion">
+                      <div class="p-4">
+                        <p class="label-precio">Precio Final</p>
+                        <p class="precio"><span>USD</span>999</p>
+                        <hr>
+                        <p class="descrip-reserva">4 noches</p>
+                        <p class="descrip-reserva">2 adultos, 2 niños</p>
+                        <div class="button">
+                          <button id="seleccionar" class="btn btn-violet-white btn-center-out">Seleccionar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-6 col-sm-4 col-md-12">
+                  <div class="row mb-3">
+                    <div class="col-12 col-md-4 img-destacada">
+                      <img class="" src="assets/images/alojamiento/hotel.jpg" alt="destacada">
+                      <div class="destacado">
+                        Destacado
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-5 detalles-habitacion">
+                      <div class="name-habitacion">
+                        <p>Habitacion superior</p>
+                        <p>1 cama King Size</p>
+                      </div>
+                      <div class="content">
+                        <p><strong>Incluye:</strong></p>
+                        <p>+ Desayuno</p>
+                        <p>+ Podés cancelar hasta el 02/10/2021 a las 19:00</p>
+                        <p>+ Reserva Flexible</p>
+                        <button id="seleccionar" class="btn btn-white-orange btn-center-out">+ info de la habitación</button>
+                      </div>
+                    </div>
+                    <div class="col-12 col-md-3 price-habitacion">
+                      <div class="p-4">
+                        <p class="label-precio">Precio Final</p>
+                        <p class="precio"><span>USD</span>999</p>
+                        <hr>
+                        <p class="descrip-reserva">4 noches</p>
+                        <p class="descrip-reserva">2 adultos, 2 niños</p>
+                        <div class="button">
+                          <button id="seleccionar" class="btn btn-violet-white btn-center-out">Seleccionar</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <footer>
+      <div class="container py-5">
+        <div class="row">
+          <div class="col-12 col-lg-3 border-left ps-3">
+            <a href="tel:+59896861585"><strong>+598 96 861 585</strong></a>
+            <a href="mailto:info@andamosturismo.com">info@andamosturismo.com</a>
+            <p class="mb-3">Conocé nuestra agencia.</p>
+            <p><strong>Atención</strong></p>
+            <p>Lunes a Viernes 09 a 18hs.</p>
+          </div>
+          <div class="col-12 col-lg-3">
+            <p class="title">Nosotros</p>
+            <ul>
+              <li><a href="">Quienes Somos</a></li>
+              <li><a href="">Servicios</a></li>
+              <li><a href="">Sumate al Equipo</a></li>
+              <li><a href="">Comunidad Turismo</a></li>
+              <li><a href="">Preguntas Frecuentes</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3">
+            <p class="title">Comprá Tranquilo</p>
+            <ul>
+              <li><a href="">Agencia Registrada</a></li>
+              <li><a href="">Formas de Pago</a></li>
+              <li><a href="">Términos y Condiciones</a></li>
+              <li><a href="">Politicas de Privacidad</a></li>
+            </ul>
+          </div>
+          <div class="col-12 col-lg-3">
+            <a href="/">
+              <img class="img-fluid" src="assets/images/logo-text-white.png" alt="Andamos Volando">
+            </a>
+          </div>
+          <p class="text-end"><small>2021, Andamos S.A. Todos los derechos reservados.</small></p>
+        </div>
+      </div>
+      <div class="box-colors container-fluid">
+        <div class="row">
+          <div class="col-3 offset-3 bg-yellow py-3"></div>
+          <div class="col-3 bg-orange py-3"></div>
+          <div class="col-3 bg-violet py-3"></div>
+        </div>
+      </div>
+    </footer>
+    
+  </main>
+  
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/@fortawesome/fontawesome-free/js/all.min.js"></script>
+  <script src="assets/libs/slick-slider/slick/slick.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+  <script src="assets/js/moment.min.js"></script>
+  <script src="assets/js/daterangepicker.min.js"></script>
+  <script src="assets/js/main.js"></script>
+  
+  <script>
+    $(".slider-detalle-alojamiento").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '10%',
+      arrows: true,
+      focusOnSelect: false,
+      prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-arrow-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="fa fa-arrow-right"></button>',
+    });
+  </script>
+</body>
+</html>

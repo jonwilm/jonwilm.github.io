@@ -244,11 +244,13 @@ main {
       color: #7d428f; }
     .searcher .tab-pane form #submit {
       font-size: 1.5rem; }
-    .searcher .tab-pane #btn-habs .input-group {
-      align-items: center; }
-      .searcher .tab-pane #btn-habs .input-group input {
-        width: 20%;
-        text-align: center; }
+    .searcher .tab-pane #btn-habs {
+      cursor: pointer; }
+      .searcher .tab-pane #btn-habs .input-group {
+        align-items: center; }
+        .searcher .tab-pane #btn-habs .input-group input {
+          width: 20%;
+          text-align: center; }
     .searcher .tab-pane #popover-habs {
       position: absolute;
       background-color: white;

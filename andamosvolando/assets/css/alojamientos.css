@@ -99,7 +99,15 @@
   .section-alojamientos .img-destacada {
     position: relative;
     border: 1px solid #d7d7d7; }
-    .section-alojamientos .img-destacada .destacado {
+    @media (min-width: 768px) {
+      .section-alojamientos .img-destacada .content {
+        position: absolute;
+        width: 100%;
+        height: 100%; } }
+    @media (max-width: 767.98px) {
+      .section-alojamientos .img-destacada .content {
+        height: 40vw; } }
+    .section-alojamientos .img-destacada .content .destacado {
       background-color: #e8663f;
       text-align: center;
       color: #ffffff;
@@ -112,16 +120,16 @@
       top: 15px;
       left: 0; }
       @media (min-width: 768px) {
-        .section-alojamientos .img-destacada .destacado {
+        .section-alojamientos .img-destacada .content .destacado {
           font-size: .9rem; } }
-    .section-alojamientos .img-destacada .img-ppal {
+    .section-alojamientos .img-destacada .content .img-ppal {
       width: 100%;
       height: 100%;
       -o-object-fit: cover;
          object-fit: cover;
       -o-object-position: center;
          object-position: center; }
-    .section-alojamientos .img-destacada .heart {
+    .section-alojamientos .img-destacada .content .heart {
       position: absolute;
       top: 20px;
       right: 0;

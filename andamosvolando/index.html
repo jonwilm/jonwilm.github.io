@@ -168,10 +168,10 @@
         </ul>
         <div class="tab-content" id="tabSearcherContent">
           <div class="tab-pane fade" id="Paquetes" role="tabpanel" aria-labelledby="Paquetes-tab">
-        
+
           </div>
           <div class="tab-pane fade" id="Vuelos" role="tabpanel" aria-labelledby="Vuelos-tab">
-        
+
           </div>
           <div class="tab-pane fade show active" id="Alojamientos" role="tabpanel" aria-labelledby="Alojamientos-tab">
             <form action="" method="get">
@@ -183,8 +183,8 @@
                     </div>
                     <div class="ps-3 w-100">
                       <label for="alojamientoDestino" class="form-label">Destino</label>
-                      <div class="input-group">
-                        <select id="alojamientoDestino" class="form-control">
+                      <div class="input-group h-100">
+                        <select id="alojamientoDestino" class="form-control" name="destination">
                           <option value="">País, Ciudad, Ubicación</option>
                           <optgroup label="Alaskan/Hawaiian Time Zone">
                             <option value="AK">Alaska</option>
@@ -268,6 +268,8 @@
                       <label for="alojamientoFechas" class="form-label">Fechas</label>
                       <div class="input-group">
                         <input type="text" class="form-control" id="alojamientoFechas" placeholder="Desde - Hasta"/>
+                        <input type="hidden" name="checkIn" value="">
+                        <input type="hidden" name="checkOut" value="">
                       </div>
                     </div>
                   </div>
@@ -282,7 +284,7 @@
                       <div id="btn-habs" class="w-100">
                         <div class="input-group">
                           <i class="fa fa-bed fa-lg icon-fa me-3"></i>
-                          <input id="nro-habs" class="me-3" value="1" readonly/>
+                          <input id="nro-habs" name="rooms" class="me-3" value="1" readonly/>
                           <i class="fa fa-user fa-lg icon-fa me-3"></i>
                           <input id="nro-persons" class="me-3" value="1" readonly/>
                         </div>
@@ -309,7 +311,7 @@
                               <button class="menos">
                                 <i class="fa fa-minus"></i>
                               </button>
-                              <input type="number" id="adult1" data="persons" class="cantidad" min="1" max="8" step="1" value="1" readonly>
+                              <input type="number" id="adult1" name="adults[]" data="persons" class="cantidad" min="1" max="8" step="1" value="1" readonly>
                               <button class="mas">
                                 <i class="fa fa-plus"></i>
                               </button>
@@ -321,7 +323,7 @@
                               <button class="menos" onclick="less(1, this)">
                                 <i class="fa fa-minus"></i>
                               </button>
-                              <input type="number" id="child1" data="persons" class="cantidad" min="0" max="8" step="1" value="0" readonly>
+                              <input type="number" id="child1" name="children[]" data="persons" class="cantidad" min="0" max="8" step="1" value="0" readonly>
                               <button class="mas" onclick="mas(1, this)">
                                 <i class="fa fa-plus"></i>
                               </button>
@@ -343,16 +345,16 @@
             </form>
           </div>
           <div class="tab-pane fade" id="Actividades" role="tabpanel" aria-labelledby="Actividades-tab">
-        
+
           </div>
           <div class="tab-pane fade" id="Traslados" role="tabpanel" aria-labelledby="Traslados-tab">
-        
+
           </div>
           <div class="tab-pane fade" id="Seguros" role="tabpanel" aria-labelledby="Seguros-tab">
-        
+
           </div>
           <div class="tab-pane fade" id="Autos" role="tabpanel" aria-labelledby="Autos-tab">
-        
+
           </div>
         </div>
       </div>

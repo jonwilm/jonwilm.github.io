@@ -61,6 +61,21 @@ main {
   .btn-white-orange:focus {
     box-shadow: none; }
 
+.btn-white-yellow {
+  color: #3a3a3a;
+  border: 1px solid #f8b300;
+  font-weight: bold;
+  background: white;
+  transition: all 0.3s; }
+  .btn-white-yellow:hover {
+    color: white;
+    background: #f8b300; }
+  .btn-white-yellow:before {
+    background: #f8b300;
+    border-radius: 5px; }
+  .btn-white-yellow:focus {
+    box-shadow: none; }
+
 .btn-violet-white {
   color: white;
   border: 1px solid #7d428f;
@@ -271,40 +286,49 @@ main {
         justify-content: space-between; }
         .searcher .tab-pane #popover-habs [class^='content-'] span, .searcher .tab-pane #popover-habs [class^='content-age'] span {
           font-size: 1rem; }
-      .searcher .tab-pane #popover-habs input.cantidad {
-        text-align: center;
-        border: none;
-        background: transparent;
-        margin: 0 0.5rem;
-        color: var(--primary-color);
-        font-size: 1rem;
-        width: 35px;
-        padding: 0 5px; }
-        @media (max-width: 500px) {
-          .searcher .tab-pane #popover-habs input.cantidad {
-            margin: 0; } }
-      .searcher .tab-pane #popover-habs input.cantidad:focus-visible {
-        outline: none; }
-      .searcher .tab-pane #popover-habs input.cantidad::-webkit-outer-spin-button,
-      .searcher .tab-pane #popover-habs input.cantidad::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-        margin: 0; }
-      .searcher .tab-pane #popover-habs input.cantidad {
-        -moz-appearance: textfield; }
-      .searcher .tab-pane #popover-habs .mas,
-      .searcher .tab-pane #popover-habs .menos {
-        border-radius: 50px;
-        border: none;
-        background-color: #eee;
-        color: #7d428f;
-        font-size: 0.8rem;
-        padding: 0 5px; }
       .searcher .tab-pane #popover-habs .form-select {
         cursor: pointer; }
         .searcher .tab-pane #popover-habs .form-select:focus {
           border-color: #7d428f;
           outline: 0;
           box-shadow: 0 0 0 0.25rem rgba(125, 66, 143, 0.5); }
+  .searcher input.cantidad {
+    text-align: center;
+    border: none;
+    background: transparent;
+    margin: 0 0.5rem;
+    color: var(--primary-color);
+    font-size: 1rem;
+    width: 35px;
+    padding: 0 5px; }
+    @media (max-width: 500px) {
+      .searcher input.cantidad {
+        margin: 0; } }
+  .searcher input.cantidad:focus-visible {
+    outline: none; }
+  .searcher input.cantidad::-webkit-outer-spin-button,
+  .searcher input.cantidad::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; }
+  .searcher input.cantidad {
+    -moz-appearance: textfield; }
+  .searcher .mas,
+  .searcher .menos {
+    border-radius: 50px;
+    border: none;
+    background-color: #eee;
+    color: #7d428f;
+    font-size: 0.8rem;
+    padding: 0 5px; }
+  .searcher .form-check-input {
+    border: 1px solid #7d428f; }
+    .searcher .form-check-input:checked {
+      background-color: #7d428f;
+      border-color: #7d428f; }
+    .searcher .form-check-input:focus {
+      box-shadow: 0 0 0 0.25rem rgba(125, 66, 143, 0.3); }
+  .searcher input {
+    cursor: pointer; }
   .searcher .box-colors {
     position: absolute;
     bottom: -1rem;

@@ -1,5 +1,7 @@
 jQuery(document).ready(function ($) {
     $("#alojamientoDestino").select2({});
+    $("#vueloOrigen").select2({});
+    $("#vueloDestino").select2({});
 });
 
 (function ($) {
@@ -8,7 +10,7 @@ jQuery(document).ready(function ($) {
         endDate: moment().add(1, "day"),
         autoApply: true,
         locale: {
-          format: "DD/MM/YYYY",
+            format: "DD/MM/YYYY",
         },
     });
 
@@ -17,8 +19,23 @@ jQuery(document).ready(function ($) {
         $('input[name="checkOut"]').val(picker.endDate.format('YYYY-MM-DD'));
     });
 
-    $("#popover-habs").on("click", ".mas, .menos", function (e) {
-        let cantidad = $(this).siblings("#popover-habs .cantidad");
+    $("input#vueloSalida, input#vueloRegreso").daterangepicker({
+        singleDatePicker: true,
+        startDate: moment(),
+        endDate: moment().add(1, "day"),
+        autoApply: true,
+        locale: {
+            format: "DD/MM/YYYY",
+        },
+    });
+
+    $('input#vueloSalida, input#vueloRegreso').on('apply.daterangepicker', function(event, picker) {
+        $('input[name="checkIn"]').val(picker.startDate.format('YYYY-MM-DD'));
+        $('input[name="checkOut"]').val(picker.endDate.format('YYYY-MM-DD'));
+    });
+
+    $("#popover-habs, #nroPasajeros").on("click", ".mas, .menos", function (e) {
+        let cantidad = $(this).siblings(".cantidad");
         let min = parseInt(cantidad.attr("min"));
         let max = parseInt(cantidad.attr("max"));
         e.preventDefault();

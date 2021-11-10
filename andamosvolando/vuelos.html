@@ -168,23 +168,39 @@
           </li>
         </ul>
         <div class="tab-content" id="tabSearcherContent">
+
           <div class="tab-pane fade" id="Paquetes" role="tabpanel" aria-labelledby="Paquetes-tab">
 
           </div>
+
           <div class="tab-pane fade" id="Vuelos" role="tabpanel" aria-labelledby="Vuelos-tab">
             <form action="" method="get">
               <div class="row">
-                <div class="col-12 col-lg-5 border-right">
+                <div class="col-12 col-lg-4 offset-lg-4 d-flex justify-content-end">
+                  <div class="form-check p-0">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input radio-vuelo" type="radio" name="inlineRadioOptions" id="vueloIdayVuelta" value="option1" checked>
+                      <label class="form-check-label" for="vueloIdayVuelta">Ida y Vuelta</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input radio-vuelo" type="radio" name="inlineRadioOptions" id="vueloSoloIda" value="option2">
+                      <label class="form-check-label" for="vueloSoloIda">Solo Ida</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-4 border-right">
                   <div class="line-horizontal">
                     <div class="icon">
                       <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
                     </div>
                     <div class="ps-3 w-100 d-flex justify-content-around">
-                      <div>
-                        <label for="vueloOrigen" class="form-label">Origen</label>
-                        <div class="input-group h-100">
-                          <select id="vueloOrigen" class="form-control" name="destination">
-                            <option value="">País, Ciudad, Ubicación</option>
+                      <div class="w-50">
+                        <label for="vueloOrigen" class="form-label w-100">Origen</label>
+                        <div class="input-group h-100 w-100">
+                          <select id="vueloOrigen" class="form-control" name="origen">
+                          <option value="">País, Ciudad</option>
                             <optgroup label="Alaskan/Hawaiian Time Zone">
                               <option value="AK">Alaska</option>
                               <option value="HI">Hawaii</option>
@@ -248,11 +264,11 @@
                           </select>
                         </div>
                       </div>
-                      <div>
-                        <label for="vueloDestino" class="form-label">Destino</label>
-                        <div class="input-group h-100">
-                          <select id="vueloDestino" class="form-control" name="destination">
-                            <option value="">País, Ciudad, Ubicación</option>
+                      <div class="w-50">
+                        <label for="vueloDestino" class="form-label w-100">Destino</label>
+                        <div class="input-group h-100 w-100">
+                          <select id="vueloDestino" class="form-control" name="destino">
+                          <option value="">País, Ciudad</option>
                             <optgroup label="Alaskan/Hawaiian Time Zone">
                               <option value="AK">Alaska</option>
                               <option value="HI">Hawaii</option>
@@ -319,22 +335,22 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-lg-5 border-right">
+                <div class="col-12 col-lg-4 border-right">
                   <div class="line-horizontal">
                     <div class="icon">
                       <img class="img-fluid" src="assets/images/icons/calendar.png" alt=""/>
                     </div>
                     <div class="ps-3 w-100 d-flex">
                       <div>
-                        <label for="vueloSalida" class="form-label">Fecha de Salida</label>
+                        <label for="vueloSalida" class="form-label">Salida</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="vueloSalida" placeholder="Salida"/>
                           <input type="hidden" name="checkIn" value="">
                           <input type="hidden" name="checkOut" value="">
                         </div>
                       </div>
-                      <div>
-                        <label for="vueloRegreso" class="form-label">Fecha de Regreso</label>
+                      <div id="contentVueloRegreso">
+                        <label for="vueloRegreso" class="form-label">Regreso</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="vueloRegreso" placeholder="Regreso"/>
                           <input type="hidden" name="checkIn" value="">
@@ -347,36 +363,75 @@
                 <div class="col-12 col-lg-2">
                   <div class="line-horizontal">
                     <div class="icon">
-                      <img class="img-fluid" src="assets/images/icons/person.png" alt=""/>
+                      <img class="" src="assets/images/icons/person.png" alt=""/>
                     </div>
-                    <div id="nroPasajeros" class="ps-3 w-100 position-relative">
+                    <div class="ps-3 w-100 position-relative">
                       <label for="vueloPasajeros" class="form-label me-3">Pasajeros</label>
-                      <div class="w-100 py-2">
-                        <button class="menos" id="menos-habs">
-                          <i class="fa fa-minus"></i>
-                        </button>
-                        <input type="number" id="vueloPasajeros" class="cantidad" min="1" max="8" step="1" value="1" readonly>
-                        <button class="mas" id="mas-habs">
-                          <i class="fa fa-plus"></i>
-                        </button>
+                      <div id="btn-pasajeros" class="w-100">
+                        <div class="input-group">
+                          <input id="nro-pasajeros" name="pasajeros" class="w-100 me-3" value="1" readonly/>
+                        </div>
+                      </div>
+                      <div id="popover-pasajeros">
+                        <div class="content-item">
+                          <span>Adultos</span>
+                          <div>
+                            <button class="menos">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                            <input type="number" id="adultos" data="pasajeros" class="cantidad" min="1" max="8" step="1" value="1" readonly>
+                            <button class="mas">
+                              <i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="content-item">
+                          <span>Niños</span>
+                          <div>
+                            <button class="menos">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                            <input type="number" id="niños" data="pasajeros" class="cantidad" min="0" max="8" step="1" value="0" readonly>
+                            <button class="mas">
+                              <i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="content-item">
+                          <span>Infantes</span>
+                          <div>
+                            <button class="menos">
+                              <i class="fa fa-minus"></i>
+                            </button>
+                            <input type="number" id="infantes" data="pasajeros" class="cantidad" min="0" max="8" step="1" value="0" readonly>
+                            <button class="mas">
+                              <i class="fa fa-plus"></i>
+                            </button>
+                          </div>
+                        </div>
+                        <hr>
+                        <div class="text-end">
+                          <button type="button" id="aplicarPasajeros" class="btn btn-violet-white btn-center-out ms-auto">Aplicar</button>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 d-flex align-items-center mt-3">
-                  <div class="form-check">
+                <div class="col-12 col-lg-2 d-flex align-items-center">
+                  <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100 mt-3 mt-lg-0">Buscar</button>
+                </div>
+                <div class="col-12">
+                  <div class="form-check mt-3 mt-lg-0">
                     <input class="form-check-input" type="checkbox" value="" id="vueloFlexible">
                     <label class="form-check-label" for="vueloFlexible">
-                      Soy flexible con mis fechas
+                      Soy flexible con mis fechas de viaje
                     </label>
                   </div>
-                </div>
-                <div class="col-12 d-flex align-items-center mt-3">
-                  <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100">Buscar</button>
                 </div>
               </div>
             </form>
           </div>
+
           <div class="tab-pane fade show active" id="Alojamientos" role="tabpanel" aria-labelledby="Alojamientos-tab">
             <form action="" method="get">
               <div class="row">
@@ -528,27 +583,31 @@
                           <hr>
                         </div>
                         <div class="text-end">
-                          <button type="button" id="aplicar" class="btn btn-violet-white btn-center-out ms-auto">Aplicar</button>
+                          <button type="button" id="aplicarHabs" class="btn btn-violet-white btn-center-out ms-auto">Aplicar</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
                 <div class="col-12 col-lg-2 d-flex align-items-center">
-                  <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100">Buscar</button>
+                  <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100 mt-3 mt-lg-0">Buscar</button>
                 </div>
               </div>
             </form>
           </div>
+
           <div class="tab-pane fade" id="Actividades" role="tabpanel" aria-labelledby="Actividades-tab">
 
           </div>
+
           <div class="tab-pane fade" id="Traslados" role="tabpanel" aria-labelledby="Traslados-tab">
 
           </div>
+
           <div class="tab-pane fade" id="Seguros" role="tabpanel" aria-labelledby="Seguros-tab">
 
           </div>
+      
           <div class="tab-pane fade" id="Autos" role="tabpanel" aria-labelledby="Autos-tab">
 
           </div>
@@ -896,9 +955,7 @@
                       </div>
                       <div class="col-2 column-details-flight">
                         <button class="more-info btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleVuelo">
-                          <a href="#">
-                            + info
-                          </a>
+                          + info
                         </button>
                       </div>
                     </div>
@@ -935,19 +992,15 @@
                       </div>
                       <div class="col-2 column-details-flight">
                         <button class="more-info btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleVuelo">
-                          <a href="#">
-                            + info
-                          </a>
+                          + info
                         </button>
                       </div>
                     </div>
                     <div class="row custom-flight ms-0 me-0">
                       <div class="col-7">
                         <div class="btn-custom-flight">
-                          <button class="btn btn-white-yellow btn-center-out">
-                            <a href="#">
-                              Armá el vuelo a tu medida
-                            </a>
+                          <button class="btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalPaquetesVuelos">
+                            Armá el vuelo a tu medida
                           </button>
                         </div>
                       </div>
@@ -1013,9 +1066,7 @@
                       </div>
                       <div class="col-2 column-details-flight">
                         <button class="more-info btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleVuelo">
-                          <a href="#">
-                            + info
-                          </a>
+                          + info
                         </button>
                       </div>
                     </div>
@@ -1052,19 +1103,15 @@
                       </div>
                       <div class="col-2 column-details-flight">
                         <button class="more-info btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleVuelo">
-                          <a href="#">
-                            + info
-                          </a>
+                          + info
                         </button>
                       </div>
                     </div>
                     <div class="row custom-flight ms-0 me-0">
                       <div class="col-7">
                         <div class="btn-custom-flight">
-                          <button class="btn btn-white-yellow btn-center-out">
-                            <a href="#">
-                              Armá el vuelo a tu medida
-                            </a>
+                          <button class="btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalPaquetesVuelos">
+                            Armá el vuelo a tu medida
                           </button>
                         </div>
                       </div>
@@ -1199,9 +1246,7 @@
                       </div>
                       <div class="col-2 column-details-flight">
                         <button class="more-info btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleVuelo">
-                          <a href="#">
-                            + info
-                          </a>
+                          + info
                         </button>
                       </div>
                     </div>
@@ -1238,19 +1283,15 @@
                       </div>
                       <div class="col-2 column-details-flight">
                         <button class="more-info btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleVuelo">
-                          <a href="#">
-                            + info
-                          </a>
+                          + info
                         </button>
                       </div>
                     </div>
                     <div class="row custom-flight ms-0 me-0">
                       <div class="col-7">
                         <div class="btn-custom-flight">
-                          <button class="btn btn-white-yellow btn-center-out">
-                            <a href="#">
-                              Armá el vuelo a tu medida
-                            </a>
+                          <button class="btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalPaquetesVuelos">
+                            Armá el vuelo a tu medida
                           </button>
                         </div>
                       </div>
@@ -1316,9 +1357,7 @@
                       </div>
                       <div class="col-2 column-details-flight">
                         <button class="more-info btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleVuelo">
-                          <a href="#">
-                            + info
-                          </a>
+                          + info
                         </button>
                       </div>
                     </div>
@@ -1355,19 +1394,15 @@
                       </div>
                       <div class="col-2 column-details-flight">
                         <button class="more-info btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleVuelo">
-                          <a href="#">
-                            + info
-                          </a>
+                          + info
                         </button>
                       </div>
                     </div>
                     <div class="row custom-flight ms-0 me-0">
                       <div class="col-7">
                         <div class="btn-custom-flight">
-                          <button class="btn btn-white-yellow btn-center-out">
-                            <a href="#">
-                              Armá el vuelo a tu medida
-                            </a>
+                          <button class="btn btn-white-yellow btn-center-out" data-bs-toggle="modal" data-bs-target="#modalPaquetesVuelos">
+                            Armá el vuelo a tu medida
                           </button>
                         </div>
                       </div>
@@ -1453,8 +1488,177 @@
         </div>
       </div>
     </div>
-
-
+    
+    <div class="modal fade" id="modalPaquetesVuelos" tabindex="-1" aria-labelledby="modalPaquetesVuelosLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title" id="modalPaquetesVuelosLabel">Paquetes <br><strong>Agregá servicios a tu vuelo y viajá como quieras</strong></h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="package">
+                  <div class="type-package">
+                    <p class="title-type-package">Clase Económica</p>
+                    <p class="subtitle-type-package">Tarifa Economy Classic</p>
+                  </div>
+                  <hr class="mt-0">
+                  <div class="form-check ms-2">
+                    <input class="form-check-input radio-package" type="radio" name="flexRadioDefault" id="package1">
+                    <label class="form-check-label" for="package1">
+                      Adicional por persona <br>+ USD <strong>0</strong>
+                    </label>
+                  </div>
+                  <div class="details-package">
+                    <p class="title">Equipaje</p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Mochila o cartera</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-suitcase"></i>
+                        <span>Equipaje de mano</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-briefcase"></i>
+                        <span>Equipaje para despachar</span>
+                      </li>
+                    </ul>
+                    <small>1 pieza por persona</small>
+                    <p class="title mt-4">Servicios extras</p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Selección de asientos</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Asientos con más espacio con carga extra</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-times"></i>
+                        <span>Cancelaciones antes del vuelo</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Cambio de itinerario antes del vuelo desde US$250</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="package">
+                  <div class="type-package">
+                    <p class="title-type-package">Clase Económica</p>
+                    <p class="subtitle-type-package">Tarifa Economy Classic</p>
+                  </div>
+                  <hr class="mt-0">
+                  <div class="form-check ms-2">
+                    <input class="form-check-input radio-package" type="radio" name="flexRadioDefault" id="package2">
+                    <label class="form-check-label" for="package2">
+                      Adicional por persona <br>+ USD <strong>1.050</strong>
+                    </label>
+                  </div>
+                  <div class="details-package">
+                    <p class="title">Equipaje</p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Mochila o cartera</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-suitcase"></i>
+                        <span>Equipaje de mano</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-briefcase"></i>
+                        <span>Equipaje para despachar</span>
+                      </li>
+                    </ul>
+                    <small>1 pieza por persona</small>
+                    <p class="title mt-4">Servicios extras</p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Selección de asientos</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Asientos con más espacio con carga extra</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-times"></i>
+                        <span>Cancelaciones antes del vuelo</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Cambio de itinerario antes del vuelo desde US$250</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 col-lg-4">
+                <div class="package">
+                  <div class="type-package">
+                    <p class="title-type-package">Clase Económica</p>
+                    <p class="subtitle-type-package">Tarifa Economy Classic</p>
+                  </div>
+                  <hr class="mt-0">
+                  <div class="form-check ms-2">
+                    <input class="form-check-input radio-package" type="radio" name="flexRadioDefault" id="package3">
+                    <label class="form-check-label" for="package3">
+                      Adicional por persona <br>+ USD <strong>1.250</strong>
+                    </label>
+                  </div>
+                  <div class="details-package">
+                    <p class="title">Equipaje</p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-shopping-bag"></i>
+                        <span>Mochila o cartera</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-suitcase"></i>
+                        <span>Equipaje de mano</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-briefcase"></i>
+                        <span>Equipaje para despachar</span>
+                      </li>
+                    </ul>
+                    <small>1 pieza por persona</small>
+                    <p class="title mt-4">Servicios extras</p>
+                    <ul>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Selección de asientos</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Asientos con más espacio con carga extra</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-times"></i>
+                        <span>Cancelaciones antes del vuelo</span>
+                      </li>
+                      <li>
+                        <i class="fas fa-check"></i>
+                        <span>Cambio de itinerario antes del vuelo desde US$250</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="container py-5">
         <div class="row">
@@ -1513,7 +1717,17 @@
   <script src="assets/js/main.js"></script>
   
   <script>
-    
+    $(".radio-package").change(function () {
+      $(".package").css("border", "1px solid #b1b1b1");
+      $(".type-package").css({ background: "#fff", color: "#3a3a3a" });
+      if ($(this).is(":checked")) {
+        $(this).parent().parent().css("border", "1px solid #7d428f");
+        $(this)
+          .parent()
+          .siblings(".type-package")
+          .css({ background: "#7d428f", color: "#fff" });
+      }
+    });
   </script>
 </body>
 </html>

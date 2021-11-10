@@ -181,6 +181,7 @@
         margin-left: 1rem;
         font-size: .8rem; }
       .section-vuelos .details-flight .column-details-flight .more-info {
+        font-size: .8rem;
         padding: .375rem .25rem; }
         @media (min-width: 456px) {
           .section-vuelos .details-flight .column-details-flight .more-info {
@@ -230,5 +231,59 @@
     background-color: #d7d7d7; }
     #modalDetalleVuelo .modal-content .modal-header .modal-title {
       font-weight: bold; }
+
+#modalPaquetesVuelos {
+  z-index: 3050; }
+  #modalPaquetesVuelos .modal-content .modal-header .modal-title {
+    font-weight: bold;
+    color: #7d428f;
+    line-height: 0.7; }
+    #modalPaquetesVuelos .modal-content .modal-header .modal-title strong {
+      font-size: 1.2rem;
+      color: #3a3a3a;
+      font-weight: 600; }
+  #modalPaquetesVuelos .modal-content .modal-body .package {
+    border: 1px solid #b1b1b1;
+    margin: .3rem;
+    border-radius: 15px; }
+    #modalPaquetesVuelos .modal-content .modal-body .package .type-package {
+      border-top-left-radius: 13px;
+      border-top-right-radius: 13px;
+      text-align: center;
+      padding: .5rem 0; }
+      #modalPaquetesVuelos .modal-content .modal-body .package .type-package .title-type-package {
+        font-weight: 700;
+        font-size: 1.3rem;
+        margin-bottom: 0; }
+      #modalPaquetesVuelos .modal-content .modal-body .package .type-package .subtitle-type-package {
+        margin-bottom: 0; }
+    #modalPaquetesVuelos .modal-content .modal-body .package .form-check-input:checked {
+      background-color: #7d428f;
+      border-color: #7d428f; }
+    #modalPaquetesVuelos .modal-content .modal-body .package .form-check-input:focus {
+      border-color: #7d428f;
+      box-shadow: none; }
+    #modalPaquetesVuelos .modal-content .modal-body .package .form-check-label strong {
+      font-size: 1.5rem; }
+    #modalPaquetesVuelos .modal-content .modal-body .package .details-package {
+      padding: 1rem;
+      background-color: #d7d7d7;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px; }
+      #modalPaquetesVuelos .modal-content .modal-body .package .details-package .title {
+        font-weight: 700;
+        margin-bottom: .5rem; }
+      #modalPaquetesVuelos .modal-content .modal-body .package .details-package ul {
+        list-style: none;
+        padding-left: 0;
+        margin-bottom: 0; }
+        #modalPaquetesVuelos .modal-content .modal-body .package .details-package ul .fa-shopping-bag,
+        #modalPaquetesVuelos .modal-content .modal-body .package .details-package ul .fa-suitcase,
+        #modalPaquetesVuelos .modal-content .modal-body .package .details-package ul .fa-briefcase {
+          color: green; }
+        #modalPaquetesVuelos .modal-content .modal-body .package .details-package ul .fa-check,
+        #modalPaquetesVuelos .modal-content .modal-body .package .details-package ul .fa-times {
+          font-size: .7rem;
+          color: green; }
 
 /*# sourceMappingURL=vuelos.css.map */

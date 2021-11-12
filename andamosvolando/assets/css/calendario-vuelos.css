@@ -1,6 +1,6 @@
 .calendario-vuelos .table tr th, .calendario-vuelos .table tr td {
   min-width: 100px;
-  height: 60px;
+  height: 90px;
   text-align: center;
   vertical-align: middle;
   border: 1px solid #d7d7d7; }
@@ -15,7 +15,20 @@
   background-color: white; }
 
 .calendario-vuelos .table tr .bg-title {
-  background-color: #7d428f; }
+  padding: 0 0 0.5rem 0;
+  background-color: #7d428f;
+  opacity: 0.8; }
+  .calendario-vuelos .table tr .bg-title div {
+    background-color: #e8663f;
+    margin-bottom: 0.5rem;
+    font-weight: 400;
+    opacity: 0; }
+  .calendario-vuelos .table tr .bg-title .day {
+    font-size: 1.2rem;
+    font-weight: 400; }
+  .calendario-vuelos .table tr .bg-title .date {
+    font-size: 1rem;
+    font-weight: 600; }
 
 .calendario-vuelos .table tr th {
   color: white; }

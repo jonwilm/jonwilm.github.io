@@ -13,6 +13,7 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/daterangepicker.css">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/actividades-detalle.css">
   
 </head>
 <body>
@@ -1167,7 +1168,292 @@
         </div>
       </div>
     </div>
+
+    <div class="container py-5">
+      <div class="d-lg-flex align-items-center justify-content-between">
+        <div class="title-page">
+          <h1>ACTIVIDADES</h1>
+        </div>
+        <div class="data-search">
+          <img class="icon" src="assets/images/icons/calendar.png" alt=""/>
+          <span>00/00/0000 - 00/00/0000</span>
+          <img class="icon" src="assets/images/icons/person.png" alt=""/>
+          <span>00 Adultos 00 Niños</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="container pb-5">
+      <div class="row">
+        <div class="col-12 col-lg-3 order-2 order-lg-1">
+          <div class="consulta-actividades">
+            <div class="title">
+              <span>Consultar sobre esta actividad</span>
+            </div>
+            <div class="form">
+              <form action="">
+                <label for="name" class="form-label">Nombre y Apellido <span>*</span></label>
+                <input type="text" class="form-control" id="name"/>
+                <label for="email" class="form-label">Email <span>*</span></label>
+                <input type="email" class="form-control" id="email"/>
+                <label for="phone" class="form-label">Celular <span>*</span></label>
+                <input type="text" class="form-control" id="phone"/>
+                <label for="consulta" class="form-label">Consulta <span>*</span></label>
+                <textarea id="consulta" rows="1"></textarea>
+                <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="detalle-alojamiento col-12 col-lg-9 order-1 order-lg-2">
+          <div class="encabezado">
+            <h5>Excursión prémium en catamarán a Isla Mujeres con traslados</h5>
+            <div class="valoracion">
+              <span class="valor">4.4</span>
+              <img src="assets/images/icons/star-gold.svg" alt="">
+              <img src="assets/images/icons/star-gold.svg" alt="">
+              <img src="assets/images/icons/star-medium.svg" alt="">
+              <img src="assets/images/icons/star-gray.svg" alt="">
+              <img src="assets/images/icons/star-gray.svg" alt="">
+            </div>
+          </div>
+          <div class="location mt-3">
+            <i class="fa fa-map-marker-alt"></i>
+            <span>Boston, MA, USA - <a href="">Ver en el mapa</a></span>
+          </div>
+          <div class="slider-detalle-alojamiento mt-3">
+            <div>
+              <a href="assets/images/detalle-alojamiento/img-hab2.png" data-lightbox="img-alojamiento">
+                <div class="content">
+                  <img class="w-100" src="assets/images/detalle-alojamiento/img-hab2.png" alt="">
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="assets/images/detalle-alojamiento/img-hab2.png" data-lightbox="img-alojamiento">
+                <div class="content">
+                  <img class="w-100" src="assets/images/detalle-alojamiento/img-hab2.png" alt="">
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="assets/images/detalle-alojamiento/img-hab2.png" data-lightbox="img-alojamiento">
+                <div class="content">
+                  <img class="w-100" src="assets/images/detalle-alojamiento/img-hab2.png" alt="">
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="assets/images/detalle-alojamiento/img-hab2.png" data-lightbox="img-alojamiento">
+                <div class="content">
+                  <img class="w-100" src="assets/images/detalle-alojamiento/img-hab2.png" alt="">
+                </div>
+              </a>
+            </div>
+            <div>
+              <a href="assets/images/detalle-alojamiento/img-hab2.png" data-lightbox="img-alojamiento">
+                <div class="content">
+                  <img class="w-100" src="assets/images/detalle-alojamiento/img-hab2.png" alt="">
+                </div>
+              </a>
+            </div>
+          </div>
+          <ul class="nav nav-tabs" id="tabDetalle" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="descripcion-tab" data-bs-toggle="tab" data-bs-target="#descripcion" type="button" role="tab" aria-controls="descripcion" aria-selected="false">Descripcion</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="facilidades-tab" data-bs-toggle="tab" data-bs-target="#facilidades" type="button" role="tab" aria-controls="facilidades" aria-selected="true">Facilidades</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="reglas-tab" data-bs-toggle="tab" data-bs-target="#reglas" type="button" role="tab" aria-controls="reglas" aria-selected="false">Reglas</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="reseñas-tab" data-bs-toggle="tab" data-bs-target="#reseñas" type="button" role="tab" aria-controls="reseñas" aria-selected="false">Reseñas</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="tabContentDetalle">
+            <div class="tab-pane fade show active" id="descripcion" role="tabpanel" aria-labelledby="descripcion-tab">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Porro totam voluptate explicabo amet. Voluptatem cupiditate quidem itaque aperiam libero eos sed fugit, officia illum omnis, ab in non est atque nam eaque natus fugiat voluptas obcaecati neque officiis. Sunt distinctio repudiandae hic nesciunt quas porro minus natus quaerat magni voluptatibus?
+            </div>
+            <div class="tab-pane fade" id="facilidades" role="tabpanel" aria-labelledby="facilidades-tab">
+              <div class="row">
+                <div class="col-12 col-sm-6">
+                  <div class="title-pane">
+                    <img src="assets/images/icons/entretenimiento.png" alt="">
+                    <h3>Entretenimiento</h3>
+                  </div>
+                  <ul>
+                    <li>Piscina exterior de agua dulce</li>
+                    <li>Sombrillas</li>
+                    <li>Wifi</li>
+                    <li>Consigna</li>
+                    <li>Comedor</li>
+                    <li>Secadora de ropa</li>
+                  </ul>
+                </div>
+                <div class="col-12 col-sm-6">
+                  <div class="title-pane">
+                    <img src="assets/images/icons/instalaciones.png" alt="">
+                    <h3>Instalaciones</h3>
+                  </div>
+                  <ul>
+                    <li>Piscina exterior de agua dulce</li>
+                    <li>Sombrillas</li>
+                    <li>Wifi</li>
+                    <li>Consigna</li>
+                    <li>Comedor</li>
+                    <li>Secadora de ropa</li>
+                    <li>Sombrillas</li>
+                    <li>Wifi</li>
+                    <li>Consigna</li>
+                    <li>Comedor</li>
+                    <li>Secadora de ropa</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="reglas" role="tabpanel" aria-labelledby="reglas-tab">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis, eaque repellat qui mollitia commodi amet! Labore nobis officia eaque, nihil asperiores neque vero culpa cum? Libero, esse consectetur. Facilis, non.
+            </div>
+            <div class="tab-pane fade" id="reseñas" role="tabpanel" aria-labelledby="reseñas-tab">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eligendi ex dolorum deleniti eum quibusdam fuga, odit impedit quo? Maiores maxime rerum omnis explicabo nulla in error nemo magni eos repellendus nostrum accusantium consequuntur sint, aliquam pariatur, nobis animi molestiae quis laboriosam adipisci nam ea commodi vero! Illo, maiores vitae a repellendus mollitia aliquam, recusandae fugit repudiandae velit soluta cum, facere itaque sequi! Impedit necessitatibus ut adipisci blanditiis molestias! Quod aliquam dolorum ad similique, corrupti neque quas qui odit esse minus totam eius officia sed iusto sapiente dolor? Ab nulla blanditiis cupiditate ipsam, vero quasi dicta doloremque dolores error sit harum!
+            </div>
+          </div>
+          <hr>
+          <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Descripción
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae veritatis possimus inventore cumque explicabo sint in non deleniti, voluptatem commodi, itaque harum dolores incidunt vel. Deserunt incidunt quia ipsum! Dolorum maxime pariatur porro ratione nemo et provident, optio velit eaque fuga, soluta ea aperiam, dolore in hic inventore nam possimus tempore. Magni deserunt earum ipsum quas aperiam, debitis ut quos odit nulla assumenda ipsa, sed illo temporibus at dolorum, eveniet optio impedit enim. Vero debitis, autem qui esse maxime laborum!
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Modalidades
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <h4>Desde Playa del Carmen</h4>
+                  <p><strong>Duración: </strong>10 horas.</p>
+                  <p>
+                    <strong>Costos:</strong>
+                    <ul>
+                      <li>A partir de 12 años. <strong>Monto: </strong>50 USD</li>
+                      <li>A partir de 5 años hasta 11 años. <strong>Monto: </strong>30 USD</li>
+                      <li>A partir de 0 años hasta 4 años. <strong>Monto: </strong>Gratis</li>
+                    </ul>
+                  </p>
+                  <p>
+                    <strong>Idiomas: </strong>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="idiomas1" value="option1">
+                      <label class="form-check-label" for="idiomas1">Inglés</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="idiomas2" value="option2">
+                      <label class="form-check-label" for="idiomas2">Portugués</label>
+                    </div>
+                  </p>
+                  <p>
+                    <strong>Sesiones: </strong>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sesion1" value="option1">
+                      <label class="form-check-label" for="sesion1">10:00</label>
+                    </div>
+                  </p>
+                  <p>
+                    <strong>Políticas de cancelación: </strong>
+                    Las cancelaciones no tienen reembolso. Una vez realizada la compra no se pueden efectuar modificaciones y/o devoluciones. Si cancela la reserva, le será cargado el monto señalado según corresponde
+                    <a class="enlace-politicas" href="#" data-bs-toggle="modal" data-bs-target="#modalPoliticas">
+                      (Ver políticas de cancelación).
+                    </a>
+                  </p>
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="pregunta1" aria-describedby="pregunta1">
+                      <div id="pregunta1" class="form-text">Por favor indique en que hotel está ud. alojado.</div>
+                    </div>
+                    <button type="submit" class="btn btn-violet-white btn-center-out">Reservar</button>
+                  </form>
+                  <hr>
+                  <h4>Desde Rivera Maya</h4>
+                  <p><strong>Duración: </strong>10 horas.</p>
+                  <p>
+                    <strong>Costos:</strong>
+                    <ul>
+                      <li>A partir de 12 años. <strong>Monto: </strong>50 USD</li>
+                      <li>A partir de 5 años hasta 11 años. <strong>Monto: </strong>30 USD</li>
+                      <li>A partir de 0 años hasta 4 años. <strong>Monto: </strong>Gratis</li>
+                    </ul>
+                  </p>
+                  <p>
+                    <strong>Idiomas: </strong>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="idiomas1" value="option1">
+                      <label class="form-check-label" for="idiomas1">Inglés</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="idiomas2" value="option2">
+                      <label class="form-check-label" for="idiomas2">Portugués</label>
+                    </div>
+                  </p>
+                  <p>
+                    <strong>Sesiones: </strong>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sesion1" value="option1">
+                      <label class="form-check-label" for="sesion1">10:00</label>
+                    </div>
+                  </p>
+                  <p>
+                    <strong>Políticas de cancelación: </strong>
+                    Las cancelaciones no tienen reembolso. Una vez realizada la compra no se pueden efectuar modificaciones y/o devoluciones. Si cancela la reserva, le será cargado el monto señalado según corresponde
+                    <a class="enlace-politicas" href="#" data-bs-toggle="modal" data-bs-target="#modalPoliticas">
+                      (Ver políticas de cancelación).
+                    </a>
+                  </p>
+                  <form>
+                    <div class="mb-3">
+                      <input type="text" class="form-control" id="pregunta1" aria-describedby="pregunta1">
+                      <div id="pregunta1" class="form-text">Por favor indique en que hotel está ud. alojado.</div>
+                    </div>
+                    <button type="submit" class="btn btn-violet-white btn-center-out">Reservar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     
+    <div class="modal fade" id="modalPoliticas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="exampleModalLabel">Políticas de cancelación</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <ul class="list-politicas">
+              <li class="item-list">A partir del 14-12-2021 se le cargará U$S 50.01</li>
+              <li class="item-list">A partir del 14-12-2021 se le cargará U$S 50.01</li>
+              <li class="item-list">A partir del 14-12-2021 se le cargará U$S 50.01</li>
+              <li class="item-list">A partir del 14-12-2021 se le cargará U$S 50.01</li>
+              <li class="item-list">A partir del 14-12-2021 se le cargará U$S 50.01</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer>
       <div class="container py-5">
         <div class="row">
@@ -1227,7 +1513,22 @@
   <script src="assets/js/main.js"></script>
   
   <script>
-    
+    $(".slider-detalle-alojamiento").slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      centerMode: true,
+      centerPadding: '10%',
+      arrows: true,
+      focusOnSelect: false,
+      prevArrow: '<button type="button" class="slick-prev"><i class="fa fa-arrow-left"></i></button>',
+      nextArrow: '<button type="button" class="slick-next"><i class="fa fa-arrow-right"></button>',
+    });
+
+    lightbox.option({
+      'showImageNumberLabel': false,
+      'wrapAround': true,
+    })
+
   </script>
 </body>
 </html>

@@ -1,0 +1,193 @@
+.section-autos {
+  padding: 5% 0; }
+  .section-autos .title-page {
+    font-size: 3.5rem;
+    font-weight: 900;
+    color: #7d428f; }
+  @media (min-width: 768px) {
+    .section-autos .content-detalles {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; } }
+  .section-autos .content-detalles .fila1 {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem; }
+    .section-autos .content-detalles .fila1 p {
+      margin-bottom: 0;
+      color: #3a3a3a;
+      font-size: 1.2rem;
+      font-weight: bold; }
+  .section-autos .content-detalles .fila2 {
+    display: flex;
+    align-items: center;
+    margin-right: 1rem; }
+    .section-autos .content-detalles .fila2 .img-icons {
+      width: 1.5rem;
+      margin-right: .8rem; }
+    .section-autos .content-detalles .fila2 p {
+      margin-bottom: 0;
+      padding-right: 1rem; }
+  .section-autos .content-detalles .fila3 {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 1rem; }
+    .section-autos .content-detalles .fila3 .img-icons {
+      width: 2rem;
+      margin-right: .8rem; }
+    .section-autos .content-detalles .fila3 .form-select {
+      width: 70px;
+      border: none;
+      padding: .375rem 1.4rem .375rem .75rem; }
+      @media (min-width: 425px) {
+        .section-autos .content-detalles .fila3 .form-select {
+          width: 100px; } }
+      .section-autos .content-detalles .fila3 .form-select:focus {
+        border-color: #7d428f;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(125, 66, 143, 0.5); }
+    .section-autos .content-detalles .fila3 .vistas {
+      text-align: center;
+      display: flex; }
+      .section-autos .content-detalles .fila3 .vistas .img-icons2 {
+        width: 2rem;
+        cursor: pointer; }
+  .section-autos .accordion-button:not(.collapsed) {
+    color: #7d428f;
+    font-weight: bold;
+    background-color: #f0d5f8; }
+  .section-autos .accordion-button {
+    font-weight: bold; }
+    .section-autos .accordion-button:focus {
+      border-color: #86b7fe;
+      box-shadow: none; }
+  .section-autos .accordion-item:last-of-type {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0; }
+  .section-autos .clean-filtro {
+    padding: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    border: 1px solid rgba(0, 0, 0, 0.125);
+    border-top: 0;
+    border-bottom-right-radius: .25rem;
+    border-bottom-left-radius: .25rem; }
+    .section-autos .clean-filtro a {
+      color: #3a3a3a; }
+  .section-autos .search-more {
+    position: relative;
+    padding: 1rem;
+    background-color: #7d428f;
+    border-radius: 5px; }
+    .section-autos .search-more .text-big {
+      color: #ffffff;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 0;
+      line-height: 1; }
+    .section-autos .search-more a {
+      color: #ffffff;
+      font-size: .8rem;
+      transition: all .3s; }
+      .section-autos .search-more a:hover {
+        color: #f8b300; }
+    .section-autos .search-more img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 10%; }
+      @media (min-width: 992px) {
+        .section-autos .search-more img {
+          width: 30%; } }
+  .section-autos .img-destacada {
+    position: relative;
+    border: 1px solid #d7d7d7; }
+    .section-autos .img-destacada .content {
+      overflow: hidden; }
+      @media (min-width: 768px) {
+        .section-autos .img-destacada .content {
+          position: absolute;
+          width: 100%;
+          height: 100%; } }
+      @media (max-width: 767.98px) {
+        .section-autos .img-destacada .content {
+          height: 40vw; } }
+      .section-autos .img-destacada .content .destacado {
+        background-color: #e8663f;
+        text-align: center;
+        color: #ffffff;
+        font-weight: bold;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        font-size: .7rem;
+        padding: .4rem;
+        position: absolute;
+        top: 15px;
+        left: 0; }
+        @media (min-width: 768px) {
+          .section-autos .img-destacada .content .destacado {
+            font-size: .9rem; } }
+      .section-autos .img-destacada .content .img-ppal {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+           object-fit: cover;
+        -o-object-position: center;
+           object-position: center;
+        transition: all 0.3s; }
+        .section-autos .img-destacada .content .img-ppal:hover {
+          transform: scale(1.2); }
+      .section-autos .img-destacada .content .heart {
+        position: absolute;
+        top: 20px;
+        right: 0;
+        width: 2rem;
+        transform: translateX(-20px); }
+  .section-autos .detalles-auto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #d7d7d7; }
+    .section-autos .detalles-auto .valoracion {
+      margin-bottom: 1rem; }
+      .section-autos .detalles-auto .valoracion img {
+        width: 10px; }
+        @media (min-width: 375px) {
+          .section-autos .detalles-auto .valoracion img {
+            width: 15px; } }
+        @media (min-width: 482px) {
+          .section-autos .detalles-auto .valoracion img {
+            width: 23px; } }
+    .section-autos .detalles-auto .name-auto {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #3a3a3a;
+      margin-bottom: 0;
+      transition: all 0.3s; }
+      .section-autos .detalles-auto .name-auto:hover {
+        color: #7d428f; }
+      .section-autos .detalles-auto .name-auto p {
+        margin-top: 1rem; }
+    .section-autos .detalles-auto ul {
+      list-style: none;
+      padding-left: 0; }
+  .section-autos .price-auto {
+    border: 1px solid #d7d7d7; }
+    .section-autos .price-auto .price {
+      font-size: 1.2rem;
+      margin-bottom: 0; }
+    .section-autos .price-auto .denominacion {
+      font-weight: bold; }
+      .section-autos .price-auto .denominacion strong {
+        color: #7d428f;
+        font-size: 1.7rem;
+        font-weight: 700; }
+    .section-autos .price-auto .descrip-reserva {
+      margin-bottom: 0; }
+    .section-autos .price-auto .btn-violet-white {
+      font-size: .8rem;
+      margin-top: 2rem; }
+
+/*# sourceMappingURL=autos.css.map */

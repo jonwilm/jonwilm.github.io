@@ -8,6 +8,21 @@ jQuery(document).ready(function ($) {
   $("#vueloDestino").select2({
     placeholder: 'País, Ciudad'
   });
+  $("#actividadDestino").select2({
+    placeholder: 'País, Ciudad, Ubicación'
+  });
+  $("#transferenciaOrigen").select2({
+    placeholder: 'País, Ciudad'
+  });
+  $("#transferenciaDestino").select2({
+    placeholder: 'País, Ciudad'
+  });
+  $("#seguroContinente").select2({
+    placeholder: 'Continente'
+  });
+  $("#seguroPais").select2({
+    placeholder: 'País'
+  });
 });
 $(document).on('select2:open', () => {
   document.querySelector('.select2-search__field').focus();
@@ -34,8 +49,7 @@ $(document).on('select2:open', () => {
   $("input#alojamientoFechas").on("apply.daterangepicker", function (event, picker) {
     $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
     $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
-  }
-  );
+  });
   
   $("input#vueloSalida, input#vueloRegreso").daterangepicker({
     singleDatePicker: true,
@@ -50,10 +64,53 @@ $(document).on('select2:open', () => {
   $("input#vueloSalida, input#vueloRegreso").on("apply.daterangepicker", function (event, picker) {
     $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
     $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
-  }
-  );
+  });
   
-  $("#popover-habs, #popover-pasajeros").on("click", ".mas, .menos", function (e) {
+  $("input#actividadFechas").daterangepicker({
+    startDate: moment(),
+    endDate: moment().add(1, "day"),
+    autoApply: true,
+    locale: {
+      format: "DD/MM/YYYY",
+    },
+  });
+  
+  $("input#actividadFechas").on("apply.daterangepicker", function (event, picker) {
+    $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
+    $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
+  });
+
+  $("input#transferenciaSalida, input#transferenciaRegreso").daterangepicker({
+    singleDatePicker: true,
+    startDate: moment(),
+    endDate: moment().add(1, "day"),
+    autoApply: true,
+    locale: {
+      format: "DD/MM/YYYY",
+    },
+  });
+  
+  $("input#transferenciaSalida, input#transferenciaRegreso").on("apply.daterangepicker", function (event, picker) {
+    $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
+    $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
+  });
+
+  $("input#seguroInicio, input#seguroFin").daterangepicker({
+    singleDatePicker: true,
+    startDate: moment(),
+    endDate: moment().add(1, "day"),
+    autoApply: true,
+    locale: {
+      format: "DD/MM/YYYY",
+    },
+  });
+  
+  $("input#seguroInicio, input#seguroFin").on("apply.daterangepicker", function (event, picker) {
+    $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
+    $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
+  });
+  
+  $("#popover-habs, #popover-pasajeros, #popover-act, #popover-transf-pasajeros, #popover-seguro").on("click", ".mas, .menos", function (e) {
     let cantidad = $(this).siblings(".cantidad");
     let min = parseInt(cantidad.attr("min"));
     let max = parseInt(cantidad.attr("max"));
@@ -90,14 +147,7 @@ $(document).on('select2:open', () => {
         $("#hab" + currentItem).remove();
       }
     } else {
-      if (current_value2 === max2) {
-        if (!$("#hab" + current_value2).length) {
-          createItemHabs(current_value2 + 1);
-          let currentItem = current_value2 + 1;
-          $("#hab" + currentItem - 1).after(itemHabs);
-        }
-        return;
-      } else {
+      if (!$("#hab" + current_value2).length) {
         createItemHabs(current_value2);
         let currentItem = current_value2 - 1;
         $("#hab" + currentItem).after(itemHabs);
@@ -130,7 +180,7 @@ $(document).on('select2:open', () => {
       sumPasajeros = sumPasajeros + parseInt($(this).val());
       $("#nro-pasajeros").val(sumPasajeros);
     });
-    $("#popover-habs").removeClass("show");
+    $("#popover-pasajeros").removeClass("show");
   });
   $("#btn-pasajeros").on("click", function (e) {
     $("#popover-pasajeros").addClass("show");
@@ -141,6 +191,111 @@ $(document).on('select2:open', () => {
   $("#popover-pasajeros, #btn-pasajeros").on("click", function (e) {
     e.stopPropagation();
   });
+  
+  $("#popover-act").on("click", "#mas-act, #menos-act", function (e) {
+    let cantidad3 = $(this).siblings("#popover-act .cantidad");
+    let min3 = parseInt(cantidad3.attr("min"));
+    let max3 = parseInt(cantidad3.attr("max"));
+    e.preventDefault();
+    let current_value3 = parseInt(cantidad3.val());
+    let classname3 = $(this).attr("class");
+    console.log(current_value3)
+    console.log(max3)
+    if (classname3 === "menos") {
+      if (current_value3 < min3) {
+        return;
+      } else {
+        let currentItem = current_value3 + 1;
+        $("#act" + currentItem).remove();
+      }
+    } else {
+      if (!$("#act" + current_value3).length) {
+        createItemActs(current_value3);
+        let currentItem = current_value3 - 1;
+        $("#act" + currentItem).after(itemActs);
+      }
+    }
+  });
+  
+  $("#popover-act #aplicarAct").on("click", function (e) {
+    let edadact = '';
+    $('input[data="edadact"]').each(function () {
+      edadact += parseInt($(this).val()) + ', ';
+      $("#edadPersons").val(edadact);
+    });
+    $("#popover-act").removeClass("show");
+  });
+  $("#btn-act").on("click", function (e) {
+    $("#popover-act").addClass("show");
+  });
+  $("html").on("click", function () {
+    $("#popover-act").removeClass("show");
+  });
+  $("#popover-act, #btn-act").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  $("#popover-transf-pasajeros #aplicarTransfPasajeros").on("click", function (e) {
+    let sumTransfPasajeros = 0;
+    $('input[data="transf-pasajeros"]').each(function () {
+      sumTransfPasajeros = sumTransfPasajeros + parseInt($(this).val());
+      $("#nro-transf-pasajeros").val(sumTransfPasajeros);
+    });
+    $("#popover-transf-pasajeros").removeClass("show");
+  });
+  $("#btn-transf-pasajeros").on("click", function (e) {
+    $("#popover-transf-pasajeros").addClass("show");
+  });
+  $("html").on("click", function () {
+    $("#popover-transf-pasajeros").removeClass("show");
+  });
+  $("#popover-transf-pasajeros, #btn-transf-pasajeros").on("click", function (e) {
+    e.stopPropagation();
+  });
+
+  $("#popover-seguro").on("click", "#mas-seguro, #menos-seguro", function (e) {
+    let cantidad4 = $(this).siblings("#popover-seguro .cantidad");
+    let min4 = parseInt(cantidad4.attr("min"));
+    let max4 = parseInt(cantidad4.attr("max"));
+    e.preventDefault();
+    let current_value4 = parseInt(cantidad4.val());
+    let classname4 = $(this).attr("class");
+    console.log(current_value4)
+    console.log(max4)
+    if (classname4 === "menos") {
+      if (current_value4 < min4) {
+        return;
+      } else {
+        let currentItem = current_value4 + 1;
+        $("#seguro" + currentItem).remove();
+      }
+    } else {
+      if (!$("#seguro" + current_value4).length) {
+        createItemSeguro(current_value4);
+        let currentItem = current_value4 - 1;
+        $("#seguro" + currentItem).after(itemSeguro);
+      }
+    }
+  });
+  
+  $("#popover-seguro #aplicarSeguro").on("click", function (e) {
+    let edadseguro = '';
+    $('input[data="edadseguro"]').each(function () {
+      edadseguro += parseInt($(this).val()) + ', ';
+      $("#edadSeguroPersons").val(edadseguro);
+    });
+    $("#popover-seguro").removeClass("show");
+  });
+  $("#btn-seguro").on("click", function (e) {
+    $("#popover-seguro").addClass("show");
+  });
+  $("html").on("click", function () {
+    $("#popover-seguro").removeClass("show");
+  });
+  $("#popover-seguro, #btn-seguro").on("click", function (e) {
+    e.stopPropagation();
+  });
+  
 })(jQuery);
 
 let itemHabs;
@@ -171,7 +326,7 @@ function createItemHabs(param) {
   '">' +
   "<span class='me-3'>Niños</span>" +
   "<div>" +
-  '<button class="menos" onclick="less(' +
+  '<button class="menos" onclick="menosInputEdad(' +
   param +
   ', this)">' +
   '<i class="fa fa-minus"></i>' +
@@ -179,7 +334,7 @@ function createItemHabs(param) {
   '<input type="number" id="child' +
   param +
   '" name="children[]" data="persons" class="cantidad" min="0" max="8" step="1" value="0" readonly">' +
-  '<button class="mas" onclick="mas(' +
+  '<button class="mas" onclick="masInputEdad(' +
   param +
   ', this)">' +
   '<i class="fa fa-plus"></i>' +
@@ -188,6 +343,42 @@ function createItemHabs(param) {
   "</div>" +
   "<hr>" +
   "</div>";
+}
+let itemActs;
+function createItemActs(param) {
+  itemActs =
+  '<div id="act' + param + '">' +
+  '<div class="content-person' + param + '">' +
+  '<span class="me-3">Edad ' + param + '</span>' +
+  '<div>' +
+  '<button class="menos">' +
+  '<i class="fa fa-minus"></i>' +
+  '</button>' +
+  '<input type="number" id="person' + param + '" name="person' + param + '" data="edadact" class="cantidad" min="1" max="99" step="1" value="1">' +
+  '<button class="mas">' +
+  '<i class="fa fa-plus"></i>' +
+  '</button>' +
+  '</div>' +
+  '</div>' +
+  '</div>';
+}
+let itemSeguro;
+function createItemSeguro(param) {
+  itemSeguro =
+  '<div id="seguro' + param + '">' +
+  '<div class="content-person' + param + '">' +
+  '<span class="me-3">Edad ' + param + '</span>' +
+  '<div>' +
+  '<button class="menos">' +
+  '<i class="fa fa-minus"></i>' +
+  '</button>' +
+  '<input type="number" id="seguroperson' + param + '" name="seguroperson' + param + '" data="edadseguro" class="cantidad" min="1" max="99" step="1" value="1">' +
+  '<button class="mas">' +
+  '<i class="fa fa-plus"></i>' +
+  '</button>' +
+  '</div>' +
+  '</div>' +
+  '</div>';
 }
 
 jQuery(document).ready(function ($) {
@@ -200,7 +391,7 @@ jQuery(document).ready(function ($) {
   });
 });
 
-const mas = (param, _this) => {
+const masInputEdad = (param, _this) => {
   const html = `
   <div class='content-age${param} py-2'>
   <span class="w-50">Edad del menor</span>
@@ -226,13 +417,28 @@ const mas = (param, _this) => {
   </select>
   </div>
   </div>`;
-  jQuery(_this).parent().parent().after(html);
-};
-
-const less = (param, _this) => {
-  if (jQuery(".content-age" + param).length > 0) {
-    jQuery(".content-age" + param)
-    .last()
-    .remove();
+  let inputChild = $(_this).siblings("input");
+  let maxChild = parseInt(inputChild.attr("max"));
+  let inputVal = parseInt(inputChild.val());
+  console.log(maxChild)
+  console.log(inputVal + 1)
+  if ((inputVal + 1) < (maxChild + 1)) {
+    jQuery(_this).parent().parent().after(html);
   }
 };
+
+const menosInputEdad = (param, _this) => {
+  if (jQuery(".content-age" + param).length > 0) {
+    jQuery(".content-age" + param).last().remove();
+  }
+};
+
+$('.cantidad').change(function() {
+  let mincant = parseInt($(this).attr('min'));
+  let maxcant = parseInt($(this).attr('max'));
+  if (parseInt($(this).val()) < mincant) {
+    $(this).val(mincant)
+  } else if (parseInt($(this).val()) > maxcant) {
+    $(this).val(maxcant)
+  }
+})

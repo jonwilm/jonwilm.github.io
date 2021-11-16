@@ -267,7 +267,10 @@ main {
           width: 20%;
           text-align: center; }
     .searcher .tab-pane #popover-habs,
-    .searcher .tab-pane #popover-pasajeros {
+    .searcher .tab-pane #popover-pasajeros,
+    .searcher .tab-pane #popover-act,
+    .searcher .tab-pane #popover-transf-pasajeros,
+    .searcher .tab-pane #popover-seguro {
       position: absolute;
       background-color: white;
       padding: 1rem 0.5rem;
@@ -279,24 +282,45 @@ main {
       transform: translateX(5000px);
       transition: opacity 0.3s; }
       .searcher .tab-pane #popover-habs.show,
-      .searcher .tab-pane #popover-pasajeros.show {
+      .searcher .tab-pane #popover-pasajeros.show,
+      .searcher .tab-pane #popover-act.show,
+      .searcher .tab-pane #popover-transf-pasajeros.show,
+      .searcher .tab-pane #popover-seguro.show {
         transform: translateX(0);
         opacity: 1; }
       .searcher .tab-pane #popover-habs [class^='content-'], .searcher .tab-pane #popover-habs [class^='content-age'],
       .searcher .tab-pane #popover-pasajeros [class^='content-'],
-      .searcher .tab-pane #popover-pasajeros [class^='content-age'] {
+      .searcher .tab-pane #popover-pasajeros [class^='content-age'],
+      .searcher .tab-pane #popover-act [class^='content-'],
+      .searcher .tab-pane #popover-act [class^='content-age'],
+      .searcher .tab-pane #popover-transf-pasajeros [class^='content-'],
+      .searcher .tab-pane #popover-transf-pasajeros [class^='content-age'],
+      .searcher .tab-pane #popover-seguro [class^='content-'],
+      .searcher .tab-pane #popover-seguro [class^='content-age'] {
         display: flex;
         align-items: center;
         justify-content: space-between; }
         .searcher .tab-pane #popover-habs [class^='content-'] span, .searcher .tab-pane #popover-habs [class^='content-age'] span,
         .searcher .tab-pane #popover-pasajeros [class^='content-'] span,
-        .searcher .tab-pane #popover-pasajeros [class^='content-age'] span {
+        .searcher .tab-pane #popover-pasajeros [class^='content-age'] span,
+        .searcher .tab-pane #popover-act [class^='content-'] span,
+        .searcher .tab-pane #popover-act [class^='content-age'] span,
+        .searcher .tab-pane #popover-transf-pasajeros [class^='content-'] span,
+        .searcher .tab-pane #popover-transf-pasajeros [class^='content-age'] span,
+        .searcher .tab-pane #popover-seguro [class^='content-'] span,
+        .searcher .tab-pane #popover-seguro [class^='content-age'] span {
           font-size: 1rem; }
       .searcher .tab-pane #popover-habs .form-select,
-      .searcher .tab-pane #popover-pasajeros .form-select {
+      .searcher .tab-pane #popover-pasajeros .form-select,
+      .searcher .tab-pane #popover-act .form-select,
+      .searcher .tab-pane #popover-transf-pasajeros .form-select,
+      .searcher .tab-pane #popover-seguro .form-select {
         cursor: pointer; }
         .searcher .tab-pane #popover-habs .form-select:focus,
-        .searcher .tab-pane #popover-pasajeros .form-select:focus {
+        .searcher .tab-pane #popover-pasajeros .form-select:focus,
+        .searcher .tab-pane #popover-act .form-select:focus,
+        .searcher .tab-pane #popover-transf-pasajeros .form-select:focus,
+        .searcher .tab-pane #popover-seguro .form-select:focus {
           border-color: #7d428f;
           outline: 0;
           box-shadow: 0 0 0 0.25rem rgba(125, 66, 143, 0.5); }

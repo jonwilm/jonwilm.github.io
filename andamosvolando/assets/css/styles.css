@@ -226,7 +226,8 @@ main {
       color: #3a3a3a;
       margin-bottom: 0; }
     .searcher .tab-pane form .line-horizontal {
-      display: flex; }
+      display: flex;
+      height: 100%; }
       @media (max-width: 991.98px) {
         .searcher .tab-pane form .line-horizontal {
           border-bottom: 1px solid #7d428f;
@@ -239,6 +240,8 @@ main {
         justify-content: center; }
         .searcher .tab-pane form .line-horizontal .icon img {
           max-height: 2.5rem; }
+      .searcher .tab-pane form .line-horizontal .content-select2 {
+        width: calc(100% - 3.5rem); }
     .searcher .tab-pane form label {
       font-weight: bold; }
     .searcher .tab-pane form .input-group input {
@@ -324,6 +327,15 @@ main {
           border-color: #7d428f;
           outline: 0;
           box-shadow: 0 0 0 0.25rem rgba(125, 66, 143, 0.5); }
+      .searcher .tab-pane #popover-habs hr,
+      .searcher .tab-pane #popover-pasajeros hr,
+      .searcher .tab-pane #popover-act hr,
+      .searcher .tab-pane #popover-transf-pasajeros hr,
+      .searcher .tab-pane #popover-seguro hr {
+        margin: 1rem 0;
+        background-color: #7d428f;
+        border: 0;
+        opacity: 1; }
   .searcher input.cantidad {
     text-align: center;
     border: none;
@@ -380,6 +392,8 @@ main {
   .searcher .select2-container--classic .select2-selection--single:focus {
     background-color: #7d428f;
     color: white; }
+  .searcher .select2-container .select2-selection--single .select2-selection__rendered {
+    width: 100%; }
 
 footer {
   background-color: #3a3a3a; }

@@ -231,6 +231,14 @@ hr {
 
 #modalPoliticas {
   z-index: 3050; }
+  #modalPoliticas .modal-header .modal-title {
+    font-weight: bold;
+    color: #7d428f;
+    line-height: 0.7; }
+    #modalPoliticas .modal-header .modal-title strong {
+      font-size: 1.2rem;
+      color: #3a3a3a;
+      font-weight: 600; }
   #modalPoliticas .modal-body .list-politicas {
     list-style: none;
     padding-left: 0; }

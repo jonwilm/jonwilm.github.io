@@ -77,19 +77,22 @@
               <a class="nav-link line" href="#">Paquetes</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link line" href="vuelos.html">Vuelos</a>
+              <a class="nav-link line" href="calendario-vuelos.html">Vuelos</a>
             </li>
             <li class="nav-item">
               <a class="nav-link line" href="alojamientos.html">Alojamientos</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link line" href="#">Actividades</a>
+              <a class="nav-link line" href="actividades.html">Actividades</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link line" href="#">Autos</a>
+              <a class="nav-link line" href="#">Traslados</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link line" href="#">Seguros</a>
+              <a class="nav-link line" href="autos.html">Autos</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link line" href="seguros.html">Seguros</a>
             </li>
             <li class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -193,143 +196,19 @@
                 <div class="col-12 col-lg-4 border-right">
                   <div class="line-horizontal">
                     <div class="icon">
-                      <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
+                      <img class="" src="assets/images/icons/location.png" alt=""/>
                     </div>
-                    <div class="ps-3 w-100 d-flex justify-content-around">
+                    <div class="content-select2 ps-3 d-flex">
                       <div class="w-50">
-                        <label for="vueloOrigen" class="form-label w-100">Origen</label>
-                        <div class="input-group h-100 w-100">
-                          <select id="vueloOrigen" class="form-control" name="origen">
-                          <option value="">País, Ciudad</option>
-                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                              <option value="AK">Alaska</option>
-                              <option value="HI">Hawaii</option>
-                            </optgroup>
-                            <optgroup label="Pacific Time Zone">
-                              <option value="CA">California</option>
-                              <option value="NV">Nevada</option>
-                              <option value="OR">Oregon</option>
-                              <option value="WA">Washington</option>
-                            </optgroup>
-                            <optgroup label="Mountain Time Zone">
-                              <option value="AZ">Arizona</option>
-                              <option value="CO">Colorado</option>
-                              <option value="ID">Idaho</option>
-                              <option value="MT">Montana</option>
-                              <option value="NE">Nebraska</option>
-                              <option value="NM">New Mexico</option>
-                              <option value="ND">North Dakota</option>
-                              <option value="UT">Utah</option>
-                              <option value="WY">Wyoming</option>
-                            </optgroup>
-                            <optgroup label="Central Time Zone">
-                              <option value="AL">Alabama</option>
-                              <option value="AR">Arkansas</option>
-                              <option value="IL">Illinois</option>
-                              <option value="IA">Iowa</option>
-                              <option value="KS">Kansas</option>
-                              <option value="KY">Kentucky</option>
-                              <option value="LA">Louisiana</option>
-                              <option value="MN">Minnesota</option>
-                              <option value="MS">Mississippi</option>
-                              <option value="MO">Missouri</option>
-                              <option value="OK">Oklahoma</option>
-                              <option value="SD">South Dakota</option>
-                              <option value="TX">Texas</option>
-                              <option value="TN">Tennessee</option>
-                              <option value="WI">Wisconsin</option>
-                            </optgroup>
-                            <optgroup label="Eastern Time Zone">
-                              <option value="CT">Connecticut</option>
-                              <option value="DE">Delaware</option>
-                              <option value="FL">Florida</option>
-                              <option value="GA">Georgia</option>
-                              <option value="IN">Indiana</option>
-                              <option value="ME">Maine</option>
-                              <option value="MD">Maryland</option>
-                              <option value="MA">Massachusetts</option>
-                              <option value="MI">Michigan</option>
-                              <option value="NH">New Hampshire</option>
-                              <option value="NJ">New Jersey</option>
-                              <option value="NY">New York</option>
-                              <option value="NC">North Carolina</option>
-                              <option value="OH">Ohio</option>
-                              <option value="PA">Pennsylvania</option>
-                              <option value="RI">Rhode Island</option>
-                              <option value="SC">South Carolina</option>
-                              <option value="VT">Vermont</option>
-                              <option value="VA">Virginia</option>
-                              <option value="WV">West Virginia</option>
-                            </optgroup>
-                          </select>
+                        <label for="vueloOrigen" class="form-label">Origen</label>
+                        <div class="input-group h-100">
+                          <select id="vueloOrigen" class="form-control" name="origen"></select>
                         </div>
                       </div>
                       <div class="w-50">
-                        <label for="vueloDestino" class="form-label w-100">Destino</label>
-                        <div class="input-group h-100 w-100">
-                          <select id="vueloDestino" class="form-control" name="destino">
-                          <option value="">País, Ciudad</option>
-                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                              <option value="AK">Alaska</option>
-                              <option value="HI">Hawaii</option>
-                            </optgroup>
-                            <optgroup label="Pacific Time Zone">
-                              <option value="CA">California</option>
-                              <option value="NV">Nevada</option>
-                              <option value="OR">Oregon</option>
-                              <option value="WA">Washington</option>
-                            </optgroup>
-                            <optgroup label="Mountain Time Zone">
-                              <option value="AZ">Arizona</option>
-                              <option value="CO">Colorado</option>
-                              <option value="ID">Idaho</option>
-                              <option value="MT">Montana</option>
-                              <option value="NE">Nebraska</option>
-                              <option value="NM">New Mexico</option>
-                              <option value="ND">North Dakota</option>
-                              <option value="UT">Utah</option>
-                              <option value="WY">Wyoming</option>
-                            </optgroup>
-                            <optgroup label="Central Time Zone">
-                              <option value="AL">Alabama</option>
-                              <option value="AR">Arkansas</option>
-                              <option value="IL">Illinois</option>
-                              <option value="IA">Iowa</option>
-                              <option value="KS">Kansas</option>
-                              <option value="KY">Kentucky</option>
-                              <option value="LA">Louisiana</option>
-                              <option value="MN">Minnesota</option>
-                              <option value="MS">Mississippi</option>
-                              <option value="MO">Missouri</option>
-                              <option value="OK">Oklahoma</option>
-                              <option value="SD">South Dakota</option>
-                              <option value="TX">Texas</option>
-                              <option value="TN">Tennessee</option>
-                              <option value="WI">Wisconsin</option>
-                            </optgroup>
-                            <optgroup label="Eastern Time Zone">
-                              <option value="CT">Connecticut</option>
-                              <option value="DE">Delaware</option>
-                              <option value="FL">Florida</option>
-                              <option value="GA">Georgia</option>
-                              <option value="IN">Indiana</option>
-                              <option value="ME">Maine</option>
-                              <option value="MD">Maryland</option>
-                              <option value="MA">Massachusetts</option>
-                              <option value="MI">Michigan</option>
-                              <option value="NH">New Hampshire</option>
-                              <option value="NJ">New Jersey</option>
-                              <option value="NY">New York</option>
-                              <option value="NC">North Carolina</option>
-                              <option value="OH">Ohio</option>
-                              <option value="PA">Pennsylvania</option>
-                              <option value="RI">Rhode Island</option>
-                              <option value="SC">South Carolina</option>
-                              <option value="VT">Vermont</option>
-                              <option value="VA">Virginia</option>
-                              <option value="WV">West Virginia</option>
-                            </optgroup>
-                          </select>
+                        <label for="vueloDestino" class="form-label">Destino</label>
+                        <div class="input-group h-100">
+                          <select id="vueloDestino" class="form-control" name="destino"></select>
                         </div>
                       </div>
                     </div>
@@ -345,16 +224,14 @@
                         <label for="vueloSalida" class="form-label">Salida</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="vueloSalida" placeholder="Salida"/>
-                          <input type="hidden" name="checkIn" value="">
-                          <input type="hidden" name="checkOut" value="">
+                          <input type="hidden" name="depart_date" value="">
                         </div>
                       </div>
                       <div id="contentVueloRegreso">
                         <label for="vueloRegreso" class="form-label">Regreso</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="vueloRegreso" placeholder="Regreso"/>
-                          <input type="hidden" name="checkIn" value="">
-                          <input type="hidden" name="checkOut" value="">
+                          <input type="hidden" name="return_date" value="">
                         </div>
                       </div>
                     </div>
@@ -421,7 +298,7 @@
                   <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100 mt-3 mt-lg-0">Buscar</button>
                 </div>
                 <div class="col-12">
-                  <div class="form-check mt-3 mt-lg-0">
+                  <div class="form-check mt-3">
                     <input class="form-check-input" type="checkbox" value="" id="vueloFlexible">
                     <label class="form-check-label" for="vueloFlexible">
                       Soy flexible con mis fechas de viaje
@@ -440,71 +317,11 @@
                     <div class="icon">
                       <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
                     </div>
-                    <div class="ps-3 w-100">
+                    <div class="content-select2 ps-3">
                       <label for="alojamientoDestino" class="form-label">Destino</label>
                       <div class="input-group h-100">
                         <select id="alojamientoDestino" class="form-control" name="destination">
                           <option value="">País, Ciudad, Ubicación</option>
-                          <optgroup label="Alaskan/Hawaiian Time Zone">
-                            <option value="AK">Alaska</option>
-                            <option value="HI">Hawaii</option>
-                          </optgroup>
-                          <optgroup label="Pacific Time Zone">
-                            <option value="CA">California</option>
-                            <option value="NV">Nevada</option>
-                            <option value="OR">Oregon</option>
-                            <option value="WA">Washington</option>
-                          </optgroup>
-                          <optgroup label="Mountain Time Zone">
-                            <option value="AZ">Arizona</option>
-                            <option value="CO">Colorado</option>
-                            <option value="ID">Idaho</option>
-                            <option value="MT">Montana</option>
-                            <option value="NE">Nebraska</option>
-                            <option value="NM">New Mexico</option>
-                            <option value="ND">North Dakota</option>
-                            <option value="UT">Utah</option>
-                            <option value="WY">Wyoming</option>
-                          </optgroup>
-                          <optgroup label="Central Time Zone">
-                            <option value="AL">Alabama</option>
-                            <option value="AR">Arkansas</option>
-                            <option value="IL">Illinois</option>
-                            <option value="IA">Iowa</option>
-                            <option value="KS">Kansas</option>
-                            <option value="KY">Kentucky</option>
-                            <option value="LA">Louisiana</option>
-                            <option value="MN">Minnesota</option>
-                            <option value="MS">Mississippi</option>
-                            <option value="MO">Missouri</option>
-                            <option value="OK">Oklahoma</option>
-                            <option value="SD">South Dakota</option>
-                            <option value="TX">Texas</option>
-                            <option value="TN">Tennessee</option>
-                            <option value="WI">Wisconsin</option>
-                          </optgroup>
-                          <optgroup label="Eastern Time Zone">
-                            <option value="CT">Connecticut</option>
-                            <option value="DE">Delaware</option>
-                            <option value="FL">Florida</option>
-                            <option value="GA">Georgia</option>
-                            <option value="IN">Indiana</option>
-                            <option value="ME">Maine</option>
-                            <option value="MD">Maryland</option>
-                            <option value="MA">Massachusetts</option>
-                            <option value="MI">Michigan</option>
-                            <option value="NH">New Hampshire</option>
-                            <option value="NJ">New Jersey</option>
-                            <option value="NY">New York</option>
-                            <option value="NC">North Carolina</option>
-                            <option value="OH">Ohio</option>
-                            <option value="PA">Pennsylvania</option>
-                            <option value="RI">Rhode Island</option>
-                            <option value="SC">South Carolina</option>
-                            <option value="VT">Vermont</option>
-                            <option value="VA">Virginia</option>
-                            <option value="WV">West Virginia</option>
-                          </optgroup>
                         </select>
                       </div>
                     </div>
@@ -604,7 +421,7 @@
                     <div class="icon">
                       <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
                     </div>
-                    <div class="ps-3 w-100">
+                    <div class="content-select2 ps-3">
                       <label for="actividadDestino" class="form-label">Destino</label>
                       <div class="input-group h-100">
                         <select id="actividadDestino" class="form-control" name="destination">
@@ -729,6 +546,7 @@
                             </div>
                           </div>
                         </div>
+                        <hr>
                         <div class="text-end mt-3">
                           <button type="button" id="aplicarAct" class="btn btn-violet-white btn-center-out ms-auto">Aplicar</button>
                         </div>
@@ -746,146 +564,42 @@
           <div class="tab-pane fade" id="Transferencias" role="tabpanel" aria-labelledby="Transferencias-tab">
             <form action="" method="get">
               <div class="row">
+                <div class="col-12 col-lg-4 offset-lg-4 d-flex justify-content-end">
+                  <div class="form-check p-0">
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input radio-transferencia" type="radio" name="inlineRadioOptions" id="transferenciaIdayVuelta" value="option1" checked>
+                      <label class="form-check-label" for="transferenciaIdayVuelta">Ida y Vuelta</label>
+                    </div>
+                    <div class="form-check form-check-inline">
+                      <input class="form-check-input radio-transferencia" type="radio" name="inlineRadioOptions" id="transferenciaSoloIda" value="option2">
+                      <label class="form-check-label" for="transferenciaSoloIda">Solo Ida</label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
                 <div class="col-12 col-lg-4 border-right">
                   <div class="line-horizontal">
                     <div class="icon">
                       <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
                     </div>
-                    <div class="ps-3 w-100 d-flex justify-content-around">
+                    <div class="content-select2 ps-3 d-flex">
                       <div class="w-50">
-                        <label for="transferenciaOrigen" class="form-label w-100">Origen</label>
-                        <div class="input-group h-100 w-100">
+                        <label for="transferenciaOrigen" class="form-label">Origen</label>
+                        <div class="input-group h-100">
                           <select id="transferenciaOrigen" class="form-control" name="origen">
                           <option value="">País, Ciudad</option>
-                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                              <option value="AK">Alaska</option>
-                              <option value="HI">Hawaii</option>
-                            </optgroup>
-                            <optgroup label="Pacific Time Zone">
-                              <option value="CA">California</option>
-                              <option value="NV">Nevada</option>
-                              <option value="OR">Oregon</option>
-                              <option value="WA">Washington</option>
-                            </optgroup>
-                            <optgroup label="Mountain Time Zone">
-                              <option value="AZ">Arizona</option>
-                              <option value="CO">Colorado</option>
-                              <option value="ID">Idaho</option>
-                              <option value="MT">Montana</option>
-                              <option value="NE">Nebraska</option>
-                              <option value="NM">New Mexico</option>
-                              <option value="ND">North Dakota</option>
-                              <option value="UT">Utah</option>
-                              <option value="WY">Wyoming</option>
-                            </optgroup>
-                            <optgroup label="Central Time Zone">
-                              <option value="AL">Alabama</option>
-                              <option value="AR">Arkansas</option>
-                              <option value="IL">Illinois</option>
-                              <option value="IA">Iowa</option>
-                              <option value="KS">Kansas</option>
-                              <option value="KY">Kentucky</option>
-                              <option value="LA">Louisiana</option>
-                              <option value="MN">Minnesota</option>
-                              <option value="MS">Mississippi</option>
-                              <option value="MO">Missouri</option>
-                              <option value="OK">Oklahoma</option>
-                              <option value="SD">South Dakota</option>
-                              <option value="TX">Texas</option>
-                              <option value="TN">Tennessee</option>
-                              <option value="WI">Wisconsin</option>
-                            </optgroup>
-                            <optgroup label="Eastern Time Zone">
-                              <option value="CT">Connecticut</option>
-                              <option value="DE">Delaware</option>
-                              <option value="FL">Florida</option>
-                              <option value="GA">Georgia</option>
-                              <option value="IN">Indiana</option>
-                              <option value="ME">Maine</option>
-                              <option value="MD">Maryland</option>
-                              <option value="MA">Massachusetts</option>
-                              <option value="MI">Michigan</option>
-                              <option value="NH">New Hampshire</option>
-                              <option value="NJ">New Jersey</option>
-                              <option value="NY">New York</option>
-                              <option value="NC">North Carolina</option>
-                              <option value="OH">Ohio</option>
-                              <option value="PA">Pennsylvania</option>
-                              <option value="RI">Rhode Island</option>
-                              <option value="SC">South Carolina</option>
-                              <option value="VT">Vermont</option>
-                              <option value="VA">Virginia</option>
-                              <option value="WV">West Virginia</option>
-                            </optgroup>
                           </select>
+                          <input type="hidden" id="fromType" name="fromType" value="IATA">
                         </div>
                       </div>
                       <div class="w-50">
-                        <label for="transferenciaDestino" class="form-label w-100">Destino</label>
-                        <div class="input-group h-100 w-100">
+                        <label for="transferenciaDestino" class="form-label">Destino</label>
+                        <div class="input-group h-100">
                           <select id="transferenciaDestino" class="form-control" name="destino">
                           <option value="">País, Ciudad</option>
-                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                              <option value="AK">Alaska</option>
-                              <option value="HI">Hawaii</option>
-                            </optgroup>
-                            <optgroup label="Pacific Time Zone">
-                              <option value="CA">California</option>
-                              <option value="NV">Nevada</option>
-                              <option value="OR">Oregon</option>
-                              <option value="WA">Washington</option>
-                            </optgroup>
-                            <optgroup label="Mountain Time Zone">
-                              <option value="AZ">Arizona</option>
-                              <option value="CO">Colorado</option>
-                              <option value="ID">Idaho</option>
-                              <option value="MT">Montana</option>
-                              <option value="NE">Nebraska</option>
-                              <option value="NM">New Mexico</option>
-                              <option value="ND">North Dakota</option>
-                              <option value="UT">Utah</option>
-                              <option value="WY">Wyoming</option>
-                            </optgroup>
-                            <optgroup label="Central Time Zone">
-                              <option value="AL">Alabama</option>
-                              <option value="AR">Arkansas</option>
-                              <option value="IL">Illinois</option>
-                              <option value="IA">Iowa</option>
-                              <option value="KS">Kansas</option>
-                              <option value="KY">Kentucky</option>
-                              <option value="LA">Louisiana</option>
-                              <option value="MN">Minnesota</option>
-                              <option value="MS">Mississippi</option>
-                              <option value="MO">Missouri</option>
-                              <option value="OK">Oklahoma</option>
-                              <option value="SD">South Dakota</option>
-                              <option value="TX">Texas</option>
-                              <option value="TN">Tennessee</option>
-                              <option value="WI">Wisconsin</option>
-                            </optgroup>
-                            <optgroup label="Eastern Time Zone">
-                              <option value="CT">Connecticut</option>
-                              <option value="DE">Delaware</option>
-                              <option value="FL">Florida</option>
-                              <option value="GA">Georgia</option>
-                              <option value="IN">Indiana</option>
-                              <option value="ME">Maine</option>
-                              <option value="MD">Maryland</option>
-                              <option value="MA">Massachusetts</option>
-                              <option value="MI">Michigan</option>
-                              <option value="NH">New Hampshire</option>
-                              <option value="NJ">New Jersey</option>
-                              <option value="NY">New York</option>
-                              <option value="NC">North Carolina</option>
-                              <option value="OH">Ohio</option>
-                              <option value="PA">Pennsylvania</option>
-                              <option value="RI">Rhode Island</option>
-                              <option value="SC">South Carolina</option>
-                              <option value="VT">Vermont</option>
-                              <option value="VA">Virginia</option>
-                              <option value="WV">West Virginia</option>
-                            </optgroup>
                           </select>
+                          <input type="hidden" id="toType" name="toType" value="IATA">
                         </div>
                       </div>
                     </div>
@@ -901,16 +615,14 @@
                         <label for="transferenciaSalida" class="form-label">Salida</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="transferenciaSalida" placeholder="Salida"/>
-                          <input type="hidden" name="checkIn" value="">
-                          <input type="hidden" name="checkOut" value="">
+                          <input type="hidden" name="outbound" value="">
                         </div>
                       </div>
                       <div id="contentTransferenciaRegreso">
                         <label for="transferenciaRegreso" class="form-label">Regreso</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="transferenciaRegreso" placeholder="Regreso"/>
-                          <input type="hidden" name="checkIn" value="">
-                          <input type="hidden" name="checkOut" value="">
+                          <input type="hidden" name="inbound" value="">
                         </div>
                       </div>
                     </div>
@@ -988,10 +700,10 @@
                     <div class="icon">
                       <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
                     </div>
-                    <div class="ps-3 w-100 d-flex justify-content-around">
+                    <div class="content-select2 ps-3 d-flex">
                       <div class="w-50">
-                        <label for="seguroContinente" class="form-label w-100">Continente</label>
-                        <div class="input-group h-100 w-100">
+                        <label for="seguroContinente" class="form-label">Continente</label>
+                        <div class="input-group h-100">
                           <select id="seguroContinente" class="form-control" name="origen">
                           <option value="">Continente</option>
                             <option value="EU">Europa</option>
@@ -1005,8 +717,8 @@
                         </div>
                       </div>
                       <div class="w-50">
-                        <label for="seguroPais" class="form-label w-100">País</label>
-                        <div class="input-group h-100 w-100">
+                        <label for="seguroPais" class="form-label">País</label>
+                        <div class="input-group h-100">
                           <select id="seguroPais" class="form-control" name="destino">
                           <option value="">País, Ciudad</option>
                             <optgroup label="Alaskan/Hawaiian Time Zone">
@@ -1140,6 +852,7 @@
                             </div>
                           </div>
                         </div>
+                        <hr>
                         <div class="text-end mt-3">
                           <button type="button" id="aplicarSeguro" class="btn btn-violet-white btn-center-out ms-auto">Aplicar</button>
                         </div>
@@ -1155,7 +868,75 @@
           </div>
       
           <div class="tab-pane fade" id="Autos" role="tabpanel" aria-labelledby="Autos-tab">
-
+            <form action="" method="get">
+              <div class="row">
+                <div class="col-12 col-lg-5 border-right">
+                  <div class="line-horizontal">
+                    <div class="icon">
+                      <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
+                    </div>
+                    <div class="content-select2 ps-3 d-flex">
+                      <div id="contentLugarRetiro" class="w-100">
+                        <label for="autosRetiro" class="form-label">Lugar de Retiro</label>
+                        <div class="input-group h-100">
+                          <select id="autosRetiro" class="form-control" name="retiro">
+                          <option value="">Ciudad, Aeropuerto</option>
+                          </select>
+                          <input type="hidden" id="fromType" name="fromType" value="IATA">
+                        </div>
+                      </div>
+                      <div id="contentLugarDevolucion" class="w-50 d-none">
+                        <label for="autosDevolucion" class="form-label">Lugar de Devolución</label>
+                        <div class="input-group h-100">
+                          <select id="autosDevolucion" class="form-control" name="devolucion">
+                          <option value="">Ciudad, Aeropuerto</option>
+                          </select>
+                          <input type="hidden" id="toType" name="toType" value="IATA">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-5 border-right">
+                  <div class="line-horizontal">
+                    <div class="icon">
+                      <img class="img-fluid" src="assets/images/icons/calendar.png" alt=""/>
+                    </div>
+                    <div class="ps-3 w-100 d-flex">
+                      <div>
+                        <label for="autosFechaRetiro" class="form-label">Retiro</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="autosFechaRetiro" placeholder="Retiro"/>
+                          <input type="hidden" name="outbound" value="">
+                        </div>
+                      </div>
+                      <div id="contentAutosDevolucion">
+                        <label for="autosFechaDevolucion" class="form-label">Devolución</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="autosFechaDevolucion" placeholder="Devolución"/>
+                          <input type="hidden" name="inbound" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-2 d-flex align-items-center">
+                  <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100 mt-3 mt-lg-0">Buscar</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-4 d-flex">
+                  <div class="form-check p-0">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkDevolucionAuto">
+                      <label class="form-check-label" for="checkDevolucionAuto">
+                        Devolverlo en otro destino
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
@@ -1400,47 +1181,97 @@
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
-                      <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="">
-                          <p>Envision Hotel Boston</p>
+                    <div class="col-12 col-md-5 detalles-seguros p-0">
+                      <div class="p-3">
+                        <a class="name-seguros" href="">
+                          <p>World Cover</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="row">
+                          <div class="col-9">
+                            <p class="texto-cobertura">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura">Medicamentos por hospitalización</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalSeguros">Ver toda la cobertura</a>
+                          </div>
+                          <div class="col-3 p-0">
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-seguros">
                       <div class="p-4">
                         <p class="price">Precio Desde</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <button id="reservar" class="btn btn-violet-white btn-center-out">Reservar / Detalles</button>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out">Seleccionar</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <div class="modal fade" id="modalSeguros" tabindex="-1" aria-labelledby="modalSegurosLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="modalSegurosLabel">Cobertura de seguros</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-9 pe-0">
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura-modal">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Asistencia medica por enfermedad preexistente</p>
+                            <p class="texto-cobertura-modal">Gastos hospitalarios por Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Medicamentos Ambulatorios</p>
+                          </div>
+                          <div class="col-3 ps-0">
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white-orange btn-center-out" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-violet-white btn-center-out">Seleccionar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="col-12 p-3 p-md-0">
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
@@ -1451,47 +1282,97 @@
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
-                      <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="">
-                          <p>Envision Hotel Boston</p>
+                    <div class="col-12 col-md-5 detalles-seguros p-0">
+                      <div class="p-3">
+                        <a class="name-seguros" href="">
+                          <p>World Cover</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="row">
+                          <div class="col-9">
+                            <p class="texto-cobertura">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura">Medicamentos por hospitalización</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalSeguros">Ver toda la cobertura</a>
+                          </div>
+                          <div class="col-3 p-0">
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-seguros">
                       <div class="p-4">
                         <p class="price">Precio Desde</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <button id="reservar" class="btn btn-violet-white btn-center-out">Reservar / Detalles</button>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out">Seleccionar</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <div class="modal fade" id="modalSeguros" tabindex="-1" aria-labelledby="modalSegurosLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="modalSegurosLabel">Cobertura de seguros</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-9 pe-0">
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura-modal">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Asistencia medica por enfermedad preexistente</p>
+                            <p class="texto-cobertura-modal">Gastos hospitalarios por Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Medicamentos Ambulatorios</p>
+                          </div>
+                          <div class="col-3 ps-0">
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white-orange btn-center-out" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-violet-white btn-center-out">Seleccionar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="col-12 p-3 p-md-0">
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
@@ -1502,47 +1383,97 @@
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
-                      <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="">
-                          <p>Envision Hotel Boston</p>
+                    <div class="col-12 col-md-5 detalles-seguros p-0">
+                      <div class="p-3">
+                        <a class="name-seguros" href="">
+                          <p>World Cover</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="row">
+                          <div class="col-9">
+                            <p class="texto-cobertura">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura">Medicamentos por hospitalización</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalSeguros">Ver toda la cobertura</a>
+                          </div>
+                          <div class="col-3 p-0">
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-seguros">
                       <div class="p-4">
                         <p class="price">Precio Desde</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <button id="reservar" class="btn btn-violet-white btn-center-out">Reservar / Detalles</button>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out">Seleccionar</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <div class="modal fade" id="modalSeguros" tabindex="-1" aria-labelledby="modalSegurosLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="modalSegurosLabel">Cobertura de seguros</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-9 pe-0">
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura-modal">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Asistencia medica por enfermedad preexistente</p>
+                            <p class="texto-cobertura-modal">Gastos hospitalarios por Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Medicamentos Ambulatorios</p>
+                          </div>
+                          <div class="col-3 ps-0">
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white-orange btn-center-out" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-violet-white btn-center-out">Seleccionar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="col-12 p-3 p-md-0">
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
@@ -1553,47 +1484,97 @@
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
-                      <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="">
-                          <p>Envision Hotel Boston</p>
+                    <div class="col-12 col-md-5 detalles-seguros p-0">
+                      <div class="p-3">
+                        <a class="name-seguros" href="">
+                          <p>World Cover</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="row">
+                          <div class="col-9">
+                            <p class="texto-cobertura">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura">Medicamentos por hospitalización</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalSeguros">Ver toda la cobertura</a>
+                          </div>
+                          <div class="col-3 p-0">
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-seguros">
                       <div class="p-4">
                         <p class="price">Precio Desde</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <button id="reservar" class="btn btn-violet-white btn-center-out">Reservar / Detalles</button>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out">Seleccionar</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <div class="modal fade" id="modalSeguros" tabindex="-1" aria-labelledby="modalSegurosLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="modalSegurosLabel">Cobertura de seguros</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-9 pe-0">
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura-modal">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Asistencia medica por enfermedad preexistente</p>
+                            <p class="texto-cobertura-modal">Gastos hospitalarios por Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Medicamentos Ambulatorios</p>
+                          </div>
+                          <div class="col-3 ps-0">
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white-orange btn-center-out" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-violet-white btn-center-out">Seleccionar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
                 <div class="col-12 p-3 p-md-0">
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
@@ -1604,47 +1585,97 @@
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
-                      <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="">
-                          <p>Envision Hotel Boston</p>
+                    <div class="col-12 col-md-5 detalles-seguros p-0">
+                      <div class="p-3">
+                        <a class="name-seguros" href="">
+                          <p>World Cover</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="row">
+                          <div class="col-9">
+                            <p class="texto-cobertura">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura">Medicamentos por hospitalización</p>
+                            <a href="#" data-bs-toggle="modal" data-bs-target="#modalSeguros">Ver toda la cobertura</a>
+                          </div>
+                          <div class="col-3 p-0">
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-seguros">
                       <div class="p-4">
                         <p class="price">Precio Desde</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <button id="reservar" class="btn btn-violet-white btn-center-out">Reservar / Detalles</button>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out">Seleccionar</button>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
+                <div class="modal fade" id="modalSeguros" tabindex="-1" aria-labelledby="modalSegurosLabel" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h3 class="modal-title" id="modalSegurosLabel">Cobertura de seguros</h3>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-9 pe-0">
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de accidente</p>
+                            <p class="texto-cobertura-modal">Asistencia médica en caso de enfermedad</p>
+                            <p class="texto-cobertura-modal">Asistencia Médica Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Asistencia medica por enfermedad preexistente</p>
+                            <p class="texto-cobertura-modal">Gastos hospitalarios por Covid-19 (hasta 75 años)</p>
+                            <p class="texto-cobertura-modal">Medicamentos Ambulatorios</p>
+                          </div>
+                          <div class="col-3 ps-0">
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>INCLUIDO</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                            <p class="texto-cobertura-modal">
+                              <strong>USD 50</strong>
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-white-orange btn-center-out" data-bs-dismiss="modal">Cerrar</button>
+                        <button type="button" class="btn btn-violet-white btn-center-out">Seleccionar</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

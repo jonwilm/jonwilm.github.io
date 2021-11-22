@@ -1,30 +1,192 @@
 jQuery(document).ready(function ($) {
+  var Wookapis = {
+    'ajax_url': 'https://staging.andamosvolando.joseayram.com/wp-admin/admin-ajax.php',
+  };
+
   $("#alojamientoDestino").select2({
-    placeholder: 'País, Ciudad, Ubicación'
+    language: 'es',
+    placeholder: 'Ubicación, País',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+            action: 'hotelbeds_hotels_destinations',
+            q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
   });
+
   $("#vueloOrigen").select2({
-    placeholder: 'País, Ciudad'
+    placeholder: 'Aeropuerto, Ciudad, País',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+          action: 'amadeus_flights_destinations',
+          q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
   });
+
   $("#vueloDestino").select2({
-    placeholder: 'País, Ciudad'
+    placeholder: 'Aeropuerto, Ciudad, País',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+            action: 'amadeus_flights_destinations',
+            q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
   });
+
   $("#actividadDestino").select2({
     placeholder: 'País, Ciudad, Ubicación'
   });
+
   $("#transferenciaOrigen").select2({
-    placeholder: 'País, Ciudad'
+    placeholder: 'Origen',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+          action: 'hotelbeds_transfers_destinations',
+          q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
   });
+
+  $("#transferenciaOrigen").on('change', function(e) {
+    let type = 'IATA';
+    if(typeof $(this).select2('data')[0] !== "undefined") {
+      type = $(this).select2('data')[0].type;
+    }
+    $("#fromType").val(type);
+  });
+
   $("#transferenciaDestino").select2({
-    placeholder: 'País, Ciudad'
+    placeholder: 'Destino',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+          action: 'hotelbeds_transfers_destinations',
+          q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
   });
+
+  $("#transferenciaDestino").on('change', function(e) {
+    let type = 'IATA';
+    if(typeof $(this).select2('data')[0] !== "undefined") {
+      type = $(this).select2('data')[0].type;
+    }
+    $("#toType").val(type);
+  });
+
   $("#seguroContinente").select2({
     placeholder: 'Continente'
   });
   $("#seguroPais").select2({
     placeholder: 'País'
   });
+
+  $("#autosRetiro").select2({
+    placeholder: 'Ciudad, Aeropuerto',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+          action: 'amadeus_flights_destinations',
+          q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
+  });
+
+  $("#autosDevolucion").select2({
+    placeholder: 'Ciudad, Aeropuerto',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+            action: 'amadeus_flights_destinations',
+            q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
+  });
 });
-$(document).on('select2:open', () => {
+
+jQuery(document).on('select2:open', () => {
   document.querySelector('.select2-search__field').focus();
 });
 
@@ -36,7 +198,23 @@ $(document).on('select2:open', () => {
       $("#contentVueloRegreso").removeClass("d-none");
     }
   });
-  
+  $(".radio-transferencia").change(function () {
+    if ($("#transferenciaSoloIda").is(':checked')) {
+      $("#contentTransferenciaRegreso").addClass("d-none");
+    } else {
+      $("#contentTransferenciaRegreso").removeClass("d-none");
+    }
+  });
+  $("#checkDevolucionAuto").change(function () {
+    if ($(this).is(':checked')) {
+      $("#contentLugarDevolucion").removeClass("d-none");
+      $("#contentLugarRetiro").removeClass("w-100").addClass("w-50");
+    } else {
+      $("#contentLugarDevolucion").addClass("d-none");
+      $("#contentLugarRetiro").removeClass("w-50").addClass("w-100");
+    }
+  });  
+
   $("input#alojamientoFechas").daterangepicker({
     startDate: moment(),
     endDate: moment().add(1, "day"),
@@ -45,12 +223,12 @@ $(document).on('select2:open', () => {
       format: "DD/MM/YYYY",
     },
   });
-  
+
   $("input#alojamientoFechas").on("apply.daterangepicker", function (event, picker) {
     $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
     $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
   });
-  
+
   $("input#vueloSalida, input#vueloRegreso").daterangepicker({
     singleDatePicker: true,
     startDate: moment(),
@@ -60,12 +238,15 @@ $(document).on('select2:open', () => {
       format: "DD/MM/YYYY",
     },
   });
-  
-  $("input#vueloSalida, input#vueloRegreso").on("apply.daterangepicker", function (event, picker) {
-    $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
-    $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
+
+  $("input#vueloSalida").on("apply.daterangepicker", function (event, picker) {
+        $('input[name="depart_date"]').val(picker.startDate.format("YYYY-MM-DD"));
+    });
+
+  $("input#vueloRegreso").on("apply.daterangepicker", function (event, picker) {
+      $('input[name="return_date"]').val(picker.endDate.format("YYYY-MM-DD"));
   });
-  
+
   $("input#actividadFechas").daterangepicker({
     startDate: moment(),
     endDate: moment().add(1, "day"),
@@ -74,7 +255,7 @@ $(document).on('select2:open', () => {
       format: "DD/MM/YYYY",
     },
   });
-  
+
   $("input#actividadFechas").on("apply.daterangepicker", function (event, picker) {
     $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
     $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
@@ -82,17 +263,25 @@ $(document).on('select2:open', () => {
 
   $("input#transferenciaSalida, input#transferenciaRegreso").daterangepicker({
     singleDatePicker: true,
+    autoApply: true,
+    timePicker: true,
+    timePickerIncrement: 15,
+    timePicker24Hour: true,
+    timePickerSeconds: false,
     startDate: moment(),
     endDate: moment().add(1, "day"),
     autoApply: true,
     locale: {
-      format: "DD/MM/YYYY",
+      format: "DD/MM/YYYY HH:mm",
     },
   });
-  
-  $("input#transferenciaSalida, input#transferenciaRegreso").on("apply.daterangepicker", function (event, picker) {
-    $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
-    $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
+
+  $("input#transferenciaSalida").on("apply.daterangepicker", function (event, picker) {
+    $('input[name="outbound"]').val(picker.startDate.format("YYYYMMDDHHmm")+'00');
+  });
+
+  $("input#transferenciaRegreso").on("apply.daterangepicker", function (event, picker) {
+    $('input[name="inbound"]').val(picker.endDate.format("YYYYMMDDHHmm")+'00');
   });
 
   $("input#seguroInicio, input#seguroFin").daterangepicker({
@@ -104,12 +293,35 @@ $(document).on('select2:open', () => {
       format: "DD/MM/YYYY",
     },
   });
-  
+
   $("input#seguroInicio, input#seguroFin").on("apply.daterangepicker", function (event, picker) {
     $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
     $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
   });
-  
+
+  $("input#autosFechaRetiro, input#autosFechaDevolucion").daterangepicker({
+    singleDatePicker: true,
+    autoApply: true,
+    timePicker: true,
+    timePickerIncrement: 15,
+    timePicker24Hour: true,
+    timePickerSeconds: false,
+    startDate: moment(),
+    endDate: moment().add(1, "day"),
+    autoApply: true,
+    locale: {
+      format: "DD/MM/YYYY HH:mm",
+    },
+  });
+
+  $("input#autosFechaRetiro").on("apply.daterangepicker", function (event, picker) {
+    $('input[name="outbound"]').val(picker.startDate.format("YYYYMMDDHHmm")+'00');
+  });
+
+  $("input#autosFechaDevolucion").on("apply.daterangepicker", function (event, picker) {
+    $('input[name="inbound"]').val(picker.endDate.format("YYYYMMDDHHmm")+'00');
+  });
+
   $("#popover-habs, #popover-pasajeros, #popover-act, #popover-transf-pasajeros, #popover-seguro").on("click", ".mas, .menos", function (e) {
     let cantidad = $(this).siblings(".cantidad");
     let min = parseInt(cantidad.attr("min"));
@@ -131,7 +343,7 @@ $(document).on('select2:open', () => {
       }
     }
   });
-  
+
   $("#popover-habs").on("click", "#mas-habs, #menos-habs", function (e) {
     let cantidad2 = $(this).siblings("#popover-habs .cantidad");
     let min2 = parseInt(cantidad2.attr("min"));
@@ -154,7 +366,7 @@ $(document).on('select2:open', () => {
       }
     }
   });
-  
+
   $("#popover-habs #aplicarHabs").on("click", function (e) {
     let sumPersons = 0;
     $('input[data="persons"]').each(function () {
@@ -173,7 +385,7 @@ $(document).on('select2:open', () => {
   $("#popover-habs, #btn-habs").on("click", function (e) {
     e.stopPropagation();
   });
-  
+
   $("#popover-pasajeros #aplicarPasajeros").on("click", function (e) {
     let sumPasajeros = 0;
     $('input[data="pasajeros"]').each(function () {
@@ -191,7 +403,7 @@ $(document).on('select2:open', () => {
   $("#popover-pasajeros, #btn-pasajeros").on("click", function (e) {
     e.stopPropagation();
   });
-  
+
   $("#popover-act").on("click", "#mas-act, #menos-act", function (e) {
     let cantidad3 = $(this).siblings("#popover-act .cantidad");
     let min3 = parseInt(cantidad3.attr("min"));
@@ -199,8 +411,7 @@ $(document).on('select2:open', () => {
     e.preventDefault();
     let current_value3 = parseInt(cantidad3.val());
     let classname3 = $(this).attr("class");
-    console.log(current_value3)
-    console.log(max3)
+
     if (classname3 === "menos") {
       if (current_value3 < min3) {
         return;
@@ -216,13 +427,17 @@ $(document).on('select2:open', () => {
       }
     }
   });
-  
+
   $("#popover-act #aplicarAct").on("click", function (e) {
     let edadact = '';
     $('input[data="edadact"]').each(function () {
-      edadact += parseInt($(this).val()) + ', ';
-      $("#edadPersons").val(edadact);
+      if (edadact == '') {
+        edadact += parseInt($(this).val());
+      } else {
+        edadact += ', ' + parseInt($(this).val());
+      }
     });
+    $("#edadPersons").val(edadact);
     $("#popover-act").removeClass("show");
   });
   $("#btn-act").on("click", function (e) {
@@ -277,13 +492,17 @@ $(document).on('select2:open', () => {
       }
     }
   });
-  
+
   $("#popover-seguro #aplicarSeguro").on("click", function (e) {
     let edadseguro = '';
     $('input[data="edadseguro"]').each(function () {
-      edadseguro += parseInt($(this).val()) + ', ';
-      $("#edadSeguroPersons").val(edadseguro);
+      if (edadseguro == '') {
+        edadseguro += parseInt($(this).val());
+      } else {
+        edadseguro += ', ' + parseInt($(this).val());
+      }
     });
+    $("#edadSeguroPersons").val(edadseguro);
     $("#popover-seguro").removeClass("show");
   });
   $("#btn-seguro").on("click", function (e) {
@@ -295,19 +514,14 @@ $(document).on('select2:open', () => {
   $("#popover-seguro, #btn-seguro").on("click", function (e) {
     e.stopPropagation();
   });
-  
+
 })(jQuery);
 
 let itemHabs;
 function createItemHabs(param) {
-  itemHabs =
-  '<div id="hab' +
-  param +
-  '">' +
+  itemHabs = '<div id="hab' + param + '">' +
   "<p><strong>Habitación</strong></p>" +
-  '<div class="content-adult' +
-  param +
-  '">' +
+  '<div class="content-adult' + param +'">' +
   "<span class='me-3'>Adultos</span>" +
   "<div>" +
   '<button class="menos">' +
@@ -321,9 +535,7 @@ function createItemHabs(param) {
   "</button>" +
   "</div>" +
   "</div>" +
-  '<div class="content-child' +
-  param +
-  '">' +
+  '<div class="content-child' + param + '">' +
   "<span class='me-3'>Niños</span>" +
   "<div>" +
   '<button class="menos" onclick="menosInputEdad(' +
@@ -385,7 +597,7 @@ jQuery(document).ready(function ($) {
   $(".dropdown-search-mobile .nav-link.active").each(function () {
     $("#dropdown-menu-search").html($(this).html());
   });
-  
+
   $(".dropdown-search-mobile .nav-link").on("click", function () {
     $("#dropdown-menu-search").html($(this).html());
   });
@@ -417,11 +629,10 @@ const masInputEdad = (param, _this) => {
   </select>
   </div>
   </div>`;
-  let inputChild = $(_this).siblings("input");
+  let inputChild = jQuery(_this).siblings("input");
   let maxChild = parseInt(inputChild.attr("max"));
   let inputVal = parseInt(inputChild.val());
-  console.log(maxChild)
-  console.log(inputVal + 1)
+
   if ((inputVal + 1) < (maxChild + 1)) {
     jQuery(_this).parent().parent().after(html);
   }

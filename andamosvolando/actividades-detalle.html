@@ -125,14 +125,15 @@
             Menu
           </button>
           <ul class="nav dropdown-menu w-100" id="tabSearcher" role="tablist" aria-labelledby="dropdown-menu-search">
+            <!--
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="Paquetes-tab" data-bs-toggle="tab" data-bs-target="#Paquetes" type="button" role="tab" aria-controls="Paquetes" aria-selected="false">Paquetes</button>
+            </li>-->
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="Vuelos-tab" data-bs-toggle="tab" data-bs-target="#Vuelos" type="button" role="tab" aria-controls="Vuelos" aria-selected="false">Vuelos</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="Vuelos-tab" data-bs-toggle="tab" data-bs-target="#Vuelos" type="button" role="tab" aria-controls="Vuelos" aria-selected="false">Vuelos</button>
-            </li>
-            <li class="nav-item" role="presentation">
-              <button class="nav-link active" id="Alojamientos-tab" data-bs-toggle="tab" data-bs-target="#Alojamientos" type="button" role="tab" aria-controls="Alojamientos" aria-selected="true">Alojamientos</button>
+              <button class="nav-link" id="Alojamientos-tab" data-bs-toggle="tab" data-bs-target="#Alojamientos" type="button" role="tab" aria-controls="Alojamientos" aria-selected="true">Alojamientos</button>
             </li>
             <li class="nav-item" role="presentation">
               <button class="nav-link" id="Actividades-tab" data-bs-toggle="tab" data-bs-target="#Actividades" type="button" role="tab" aria-controls="Actividades" aria-selected="false">Actividades</button>
@@ -141,22 +142,26 @@
               <button class="nav-link" id="Traslados-tab" data-bs-toggle="tab" data-bs-target="#Traslados" type="button" role="tab" aria-controls="Traslados" aria-selected="false">Traslados</button>
             </li>
             <li class="nav-item" role="presentation">
+              <button class="nav-link" id="Autos-tab" data-bs-toggle="tab" data-bs-target="#Autos" type="button" role="tab" aria-controls="Autos" aria-selected="false">Autos</button>
+            </li>
+            <li class="nav-item" role="presentation">
               <button class="nav-link" id="Seguros-tab" data-bs-toggle="tab" data-bs-target="#Seguros" type="button" role="tab" aria-controls="Seguros" aria-selected="false">Seguros</button>
             </li>
             <li class="nav-item" role="presentation">
-              <button class="nav-link" id="Autos-tab" data-bs-toggle="tab" data-bs-target="#Autos" type="button" role="tab" aria-controls="Autos" aria-selected="false">Autos</button>
+              <button class="nav-link" id="Circuitos-tab" data-bs-toggle="tab" data-bs-target="#Circuitos" type="button" role="tab" aria-controls="Circuitos" aria-selected="false">Circuitos</button>
             </li>
           </ul>
         </div>
         <ul class="nav nav-tabs d-none d-lg-flex" id="tabSearcher" role="tablist">
+          <!--
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="Paquetes-tab" data-bs-toggle="tab" data-bs-target="#Paquetes" type="button" role="tab" aria-controls="Paquetes" aria-selected="false">Paquetes</button>
+          </li>-->
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="Vuelos-tab" data-bs-toggle="tab" data-bs-target="#Vuelos" type="button" role="tab" aria-controls="Vuelos" aria-selected="false">Vuelos</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Vuelos-tab" data-bs-toggle="tab" data-bs-target="#Vuelos" type="button" role="tab" aria-controls="Vuelos" aria-selected="false">Vuelos</button>
-          </li>
-          <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="Alojamientos-tab" data-bs-toggle="tab" data-bs-target="#Alojamientos" type="button" role="tab" aria-controls="Alojamientos" aria-selected="true">Alojamientos</button>
+            <button class="nav-link" id="Alojamientos-tab" data-bs-toggle="tab" data-bs-target="#Alojamientos" type="button" role="tab" aria-controls="Alojamientos" aria-selected="true">Alojamientos</button>
           </li>
           <li class="nav-item" role="presentation">
             <button class="nav-link" id="Actividades-tab" data-bs-toggle="tab" data-bs-target="#Actividades" type="button" role="tab" aria-controls="Actividades" aria-selected="false">Actividades</button>
@@ -165,10 +170,13 @@
             <button class="nav-link" id="Transferencias-tab" data-bs-toggle="tab" data-bs-target="#Transferencias" type="button" role="tab" aria-controls="Transferencias" aria-selected="false">Transferencias</button>
           </li>
           <li class="nav-item" role="presentation">
+            <button class="nav-link" id="Autos-tab" data-bs-toggle="tab" data-bs-target="#Autos" type="button" role="tab" aria-controls="Autos" aria-selected="false">Autos</button>
+          </li>
+          <li class="nav-item" role="presentation">
             <button class="nav-link" id="Seguros-tab" data-bs-toggle="tab" data-bs-target="#Seguros" type="button" role="tab" aria-controls="Seguros" aria-selected="false">Seguros</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="Autos-tab" data-bs-toggle="tab" data-bs-target="#Autos" type="button" role="tab" aria-controls="Autos" aria-selected="false">Autos</button>
+            <button class="nav-link" id="Circuitos-tab" data-bs-toggle="tab" data-bs-target="#Circuitos" type="button" role="tab" aria-controls="Circuitos" aria-selected="false">Circuitos</button>
           </li>
         </ul>
         <div class="tab-content" id="tabSearcherContent">
@@ -177,7 +185,7 @@
 
           </div>
 
-          <div class="tab-pane fade" id="Vuelos" role="tabpanel" aria-labelledby="Vuelos-tab">
+          <div class="tab-pane fade show active" id="Vuelos" role="tabpanel" aria-labelledby="Vuelos-tab">
             <form action="" method="get">
               <div class="row">
                 <div class="col-12 col-lg-4 offset-lg-4 d-flex justify-content-end">
@@ -310,7 +318,7 @@
             </form>
           </div>
 
-          <div class="tab-pane fade show active" id="Alojamientos" role="tabpanel" aria-labelledby="Alojamientos-tab">
+          <div class="tab-pane fade" id="Alojamientos" role="tabpanel" aria-labelledby="Alojamientos-tab">
             <form action="" method="get">
               <div class="row">
                 <div class="col-12 col-lg-4 border-right">
@@ -413,7 +421,7 @@
               </div>
             </form>
           </div>
-      
+
           <div class="tab-pane fade" id="Actividades" role="tabpanel" aria-labelledby="Actividades-tab">
             <form action="" method="get">
               <div class="row">
@@ -501,8 +509,8 @@
                       <label for="actividadFechas" class="form-label">Fechas</label>
                       <div class="input-group">
                         <input type="text" class="form-control" id="actividadFechas" placeholder="Desde - Hasta"/>
-                        <input type="hidden" name="checkIn" value="">
-                        <input type="hidden" name="checkOut" value="">
+                        <input type="hidden" name="from" value="">
+                        <input type="hidden" name="to" value="">
                       </div>
                     </div>
                   </div>
@@ -516,7 +524,7 @@
                       <label for="actividadPersons" class="form-label me-3">Personas</label>
                       <div id="btn-act" class="w-100">
                         <div class="input-group">
-                          <input type="text" id="edadPersons" name="edadPersons" class="w-100 me-3" placeholder="Click para agregar" readonly/>
+                          <input type="text" id="edadPersons" class="w-100 me-3" placeholder="Click para agregar" readonly/>
                         </div>
                       </div>
                       <div id="popover-act">
@@ -540,7 +548,7 @@
                               <button class="menos">
                                 <i class="fa fa-minus"></i>
                               </button>
-                              <input type="number" id="person1" name="persons1" data="edadact" class="cantidad" min="1" max="99" step="1" value="1">
+                              <input type="number" id="person1" name="ages[]" data="edadact" class="cantidad" min="1" max="99" step="1" value="1">
                               <button class="mas">
                                 <i class="fa fa-plus"></i>
                               </button>
@@ -561,7 +569,7 @@
               </div>
             </form>
           </div>
-      
+
           <div class="tab-pane fade" id="Transferencias" role="tabpanel" aria-labelledby="Transferencias-tab">
             <form action="" method="get">
               <div class="row">
@@ -692,7 +700,77 @@
               </div>
             </form>
           </div>
-      
+
+          <div class="tab-pane fade" id="Autos" role="tabpanel" aria-labelledby="Autos-tab">
+            <form action="" method="get">
+              <div class="row">
+                <div class="col-12 col-lg-5 border-right">
+                  <div class="line-horizontal">
+                    <div class="icon">
+                      <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
+                    </div>
+                    <div class="content-select2 ps-3 d-flex">
+                      <div id="contentLugarRetiro" class="w-100">
+                        <label for="autosRetiro" class="form-label">Lugar de Retiro</label>
+                        <div class="input-group h-100">
+                          <select id="autosRetiro" class="form-control" name="destination">
+                          <option value="">Ciudad, Aeropuerto</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div id="contentLugarDevolucion" class="w-50 d-none">
+                        <label for="autosDevolucion" class="form-label">Lugar de Devolución</label>
+                        <div class="input-group h-100">
+                          <select id="autosDevolucion" class="form-control" name="devolution">
+                          <option value="">Ciudad, Aeropuerto</option>
+                          </select>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-5 border-right">
+                  <div class="line-horizontal">
+                    <div class="icon">
+                      <img class="img-fluid" src="assets/images/icons/calendar.png" alt=""/>
+                    </div>
+                    <div class="ps-3 w-100 d-flex">
+                      <div>
+                        <label for="autosFechaRetiro" class="form-label">Retiro</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="autosFechaRetiro" placeholder="Retiro"/>
+                          <input type="hidden" name="pickupDate" value="">
+                        </div>
+                      </div>
+                      <div id="contentAutosDevolucion">
+                        <label for="autosFechaDevolucion" class="form-label">Devolución</label>
+                        <div class="input-group">
+                          <input type="text" class="form-control" id="autosFechaDevolucion" placeholder="Devolución"/>
+                          <input type="hidden" name="deliverDate" value="">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-2 d-flex align-items-center">
+                  <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100 mt-3 mt-lg-0">Buscar</button>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-4 d-flex">
+                  <div class="form-check p-0">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="checkDevolucionAuto">
+                      <label class="form-check-label" for="checkDevolucionAuto">
+                        Devolverlo en otro destino
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </form>
+          </div>
+
           <div class="tab-pane fade" id="Seguros" role="tabpanel" aria-labelledby="Seguros-tab">
             <form action="" method="get">
               <div class="row">
@@ -703,86 +781,24 @@
                     </div>
                     <div class="content-select2 ps-3 d-flex">
                       <div class="w-50">
-                        <label for="seguroContinente" class="form-label">Continente</label>
+                        <label for="seguroContinente" class="form-label">Región</label>
                         <div class="input-group h-100">
-                          <select id="seguroContinente" class="form-control" name="origen">
-                          <option value="">Continente</option>
-                            <option value="EU">Europa</option>
-                            <option value="SA">Suramerica y Caribe</option>
-                            <option value="NA">Norteamerica</option>
-                            <option value="AF">Africa</option>
-                            <option value="OC">Oceania</option>
-                            <option value="AS">Asia</option>
-                            <option value="VD">Varios Destinos</option>
+                          <select id="seguroContinente" class="form-control" name="region">
+                            <option value="" selected>Región</option>
+                            <option value="10">Europa</option>
+                            <option value="5">Sudamerica y Caribe</option>
+                            <option value="16">Norteamerica</option>
+                            <option value="9">Asia</option>
+                            <option value="2">Oceanía</option>
+                            <option value="6">África</option>
+                            <option value="17">Varios Destinos</option>
                           </select>
                         </div>
                       </div>
                       <div class="w-50">
                         <label for="seguroPais" class="form-label">País</label>
                         <div class="input-group h-100">
-                          <select id="seguroPais" class="form-control" name="destino">
-                          <option value="">País, Ciudad</option>
-                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                              <option value="AK">Alaska</option>
-                              <option value="HI">Hawaii</option>
-                            </optgroup>
-                            <optgroup label="Pacific Time Zone">
-                              <option value="CA">California</option>
-                              <option value="NV">Nevada</option>
-                              <option value="OR">Oregon</option>
-                              <option value="WA">Washington</option>
-                            </optgroup>
-                            <optgroup label="Mountain Time Zone">
-                              <option value="AZ">Arizona</option>
-                              <option value="CO">Colorado</option>
-                              <option value="ID">Idaho</option>
-                              <option value="MT">Montana</option>
-                              <option value="NE">Nebraska</option>
-                              <option value="NM">New Mexico</option>
-                              <option value="ND">North Dakota</option>
-                              <option value="UT">Utah</option>
-                              <option value="WY">Wyoming</option>
-                            </optgroup>
-                            <optgroup label="Central Time Zone">
-                              <option value="AL">Alabama</option>
-                              <option value="AR">Arkansas</option>
-                              <option value="IL">Illinois</option>
-                              <option value="IA">Iowa</option>
-                              <option value="KS">Kansas</option>
-                              <option value="KY">Kentucky</option>
-                              <option value="LA">Louisiana</option>
-                              <option value="MN">Minnesota</option>
-                              <option value="MS">Mississippi</option>
-                              <option value="MO">Missouri</option>
-                              <option value="OK">Oklahoma</option>
-                              <option value="SD">South Dakota</option>
-                              <option value="TX">Texas</option>
-                              <option value="TN">Tennessee</option>
-                              <option value="WI">Wisconsin</option>
-                            </optgroup>
-                            <optgroup label="Eastern Time Zone">
-                              <option value="CT">Connecticut</option>
-                              <option value="DE">Delaware</option>
-                              <option value="FL">Florida</option>
-                              <option value="GA">Georgia</option>
-                              <option value="IN">Indiana</option>
-                              <option value="ME">Maine</option>
-                              <option value="MD">Maryland</option>
-                              <option value="MA">Massachusetts</option>
-                              <option value="MI">Michigan</option>
-                              <option value="NH">New Hampshire</option>
-                              <option value="NJ">New Jersey</option>
-                              <option value="NY">New York</option>
-                              <option value="NC">North Carolina</option>
-                              <option value="OH">Ohio</option>
-                              <option value="PA">Pennsylvania</option>
-                              <option value="RI">Rhode Island</option>
-                              <option value="SC">South Carolina</option>
-                              <option value="VT">Vermont</option>
-                              <option value="VA">Virginia</option>
-                              <option value="WV">West Virginia</option>
-                            </optgroup>
-                          </select>
+                          <select id="seguroPais" class="form-control" name="country"></select>
                         </div>
                       </div>
                     </div>
@@ -795,19 +811,11 @@
                     </div>
                     <div class="ps-3 w-100 d-flex">
                       <div>
-                        <label for="seguroInicio" class="form-label">Inicio</label>
+                        <label for="seguroInicio" class="form-label">Desde - Hasta</label>
                         <div class="input-group">
                           <input type="text" class="form-control" id="seguroInicio" placeholder="Inicio"/>
-                          <input type="hidden" name="checkIn" value="">
-                          <input type="hidden" name="checkOut" value="">
-                        </div>
-                      </div>
-                      <div id="contentSeguroFin">
-                        <label for="seguroFin" class="form-label">Fin</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="seguroFin" placeholder="Fin"/>
-                          <input type="hidden" name="checkIn" value="">
-                          <input type="hidden" name="checkOut" value="">
+                          <input type="hidden" name="from" value="">
+                          <input type="hidden" name="to" value="">
                         </div>
                       </div>
                     </div>
@@ -819,10 +827,10 @@
                       <img class="" src="assets/images/icons/person.png" alt=""/>
                     </div>
                     <div class="ps-3 w-100 position-relative">
-                      <label for="seguroPersons" class="form-label me-3">Personas</label>
+                      <label for="seguroPersons" class="form-label me-3">Personas (Edades)</label>
                       <div id="btn-seguro" class="w-100">
                         <div class="input-group">
-                          <input type="text" id="edadSeguroPersons" name="edadSeguroPersons" class="w-100 me-3" placeholder="Click para agregar" readonly/>
+                          <input type="text" id="edadSeguroPersons" name="people" class="w-100 me-3" placeholder="Click para agregar" readonly/>
                         </div>
                       </div>
                       <div id="popover-seguro">
@@ -846,7 +854,7 @@
                               <button class="menos">
                                 <i class="fa fa-minus"></i>
                               </button>
-                              <input type="number" id="seguroperson1" name="seguropersons1" data="edadseguro" class="cantidad" min="1" max="99" step="1" value="1">
+                              <input type="number" id="seguroperson1" name="ages[]" data="edadseguro" class="cantidad" min="1" max="99" step="1" value="1">
                               <button class="mas">
                                 <i class="fa fa-plus"></i>
                               </button>
@@ -867,55 +875,65 @@
               </div>
             </form>
           </div>
-      
-          <div class="tab-pane fade" id="Autos" role="tabpanel" aria-labelledby="Autos-tab">
+
+          <div class="tab-pane fade" id="Circuitos" role="tabpanel" aria-labelledby="Circuitos-tab">
             <form action="" method="get">
               <div class="row">
-                <div class="col-12 col-lg-5 border-right">
+                <div class="col-12 col-lg-10 border-right">
                   <div class="line-horizontal">
-                    <div class="icon">
-                      <img class="img-fluid" src="assets/images/icons/location.png" alt=""/>
-                    </div>
                     <div class="content-select2 ps-3 d-flex">
-                      <div id="contentLugarRetiro" class="w-100">
-                        <label for="autosRetiro" class="form-label">Lugar de Retiro</label>
+                      <div class="w-20">
+                        <label for="circuitoNombre" class="form-label">Nombre del circuito</label>
                         <div class="input-group h-100">
-                          <select id="autosRetiro" class="form-control" name="retiro">
-                          <option value="">Ciudad, Aeropuerto</option>
+                          <select id="circuitoNombre" class="form-control" name="nombre">
+                            <option value="" selected>Nombre del circuito</option>
+                            <option value="">Circuito 1</option>
+                            <option value="">Circuito 2</option>
+                            <option value="">Circuito 3</option>
                           </select>
-                          <input type="hidden" id="fromType" name="fromType" value="IATA">
                         </div>
                       </div>
-                      <div id="contentLugarDevolucion" class="w-50 d-none">
-                        <label for="autosDevolucion" class="form-label">Lugar de Devolución</label>
+                      <div class="w-20">
+                        <label for="circuitoDuracion" class="form-label">Duración</label>
                         <div class="input-group h-100">
-                          <select id="autosDevolucion" class="form-control" name="devolucion">
-                          <option value="">Ciudad, Aeropuerto</option>
+                          <select id="circuitoDuracion" class="form-control" name="duracion">
+                            <option value="" selected>Duración</option>
+                            <option value="">Hasta 7 Días</option>
+                            <option value="">Entre 7 y 15 Días</option>
+                            <option value="">Más de 15 Días</option>
                           </select>
-                          <input type="hidden" id="toType" name="toType" value="IATA">
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-12 col-lg-5 border-right">
-                  <div class="line-horizontal">
-                    <div class="icon">
-                      <img class="img-fluid" src="assets/images/icons/calendar.png" alt=""/>
-                    </div>
-                    <div class="ps-3 w-100 d-flex">
-                      <div>
-                        <label for="autosFechaRetiro" class="form-label">Retiro</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="autosFechaRetiro" placeholder="Retiro"/>
-                          <input type="hidden" name="outbound" value="">
+                      <div class="w-20">
+                        <label for="circuitoMesInicio" class="form-label">Mes inicio</label>
+                        <div class="input-group h-100">
+                          <select id="circuitoMesInicio" class="form-control" name="mesInicio">
+                            <option value="" selected>Mes inicio</option>
+                            <option value="">Enero</option>
+                            <option value="">Febrero</option>
+                            <option value="">Marzo</option>
+                            <option value="">Abril</option>
+                            <option value="">Mayo</option>
+                            <option value="">Junio</option>
+                            <option value="">Julio</option>
+                            <option value="">Agosto</option>
+                            <option value="">Septiembre</option>
+                            <option value="">Octubre</option>
+                            <option value="">Noviembre</option>
+                            <option value="">Diciembre</option>
+                          </select>
                         </div>
                       </div>
-                      <div id="contentAutosDevolucion">
-                        <label for="autosFechaDevolucion" class="form-label">Devolución</label>
-                        <div class="input-group">
-                          <input type="text" class="form-control" id="autosFechaDevolucion" placeholder="Devolución"/>
-                          <input type="hidden" name="inbound" value="">
+                      <div class="w-20">
+                        <label for="circuitoCiudadInicio" class="form-label">Ciudad Inicio</label>
+                        <div class="input-group h-100">
+                          <select id="circuitoCiudadInicio" class="form-control" name="ciudadInicio"></select>
+                        </div>
+                      </div>
+                      <div class="w-20">
+                        <label for="circuitoDestinos" class="form-label">Destinos</label>
+                        <div class="input-group h-100">
+                          <select id="circuitoDestinos" class="form-control" name="destinos"></select>
                         </div>
                       </div>
                     </div>
@@ -923,18 +941,6 @@
                 </div>
                 <div class="col-12 col-lg-2 d-flex align-items-center">
                   <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100 mt-3 mt-lg-0">Buscar</button>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 col-lg-4 d-flex">
-                  <div class="form-check p-0">
-                    <div class="form-check">
-                      <input class="form-check-input" type="checkbox" value="" id="checkDevolucionAuto">
-                      <label class="form-check-label" for="checkDevolucionAuto">
-                        Devolverlo en otro destino
-                      </label>
-                    </div>
-                  </div>
                 </div>
               </div>
             </form>

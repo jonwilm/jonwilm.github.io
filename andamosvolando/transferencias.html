@@ -13,7 +13,7 @@
   <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="assets/css/daterangepicker.css">
   <link rel="stylesheet" href="assets/css/styles.css">
-  <link rel="stylesheet" href="assets/css/alojamientos.css">
+  <link rel="stylesheet" href="assets/css/transferencias.css">
 </head>
 <body>
   <div class="content-navbar">
@@ -954,26 +954,15 @@
         </div>
       </div>
     </div>
-    <div class="section-alojamientos">
+    <div class="section-transferencias">
       <div class="container">
-        <p class="title-page">ALOJAMIENTOS</p>
+        <p class="title-page">TRANSFERENCIAS</p>
         <div class="row">
           <div class="col-12 col-md-3">
-            <iframe class="w-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3036.139772535398!2d-3.690384084773646!3d40.45004327936136!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd4228e3e6476fb3%3A0x43633f47e21c592e!2sPaseo%20de%20la%20Habana%2C%2015%2C%2028036%20Madrid!5e0!3m2!1sen!2ses!4v1626963833775!5m2!1sen!2ses" class="embed-map" allowfullscreen="" loading="lazy"></iframe>
           </div>
           <div class="col-12 col-md-9 mt-3 mt-lg-0 content-detalles">
             <div class="fila1">
-              <p class="text-black">20 Alojamientos</p>
-            </div>
-            <div class="fila2">
-              <div class="d-flex justify-content-center align-items-center">
-                <img class="img-icons" src="assets/images/icons/calendar.png" alt="calendar">
-                <p>00/00/0000 - 00/00/0000</p>
-              </div>
-              <div class="d-flex justify-content-center align-items-center">
-                <img class="img-icons" src="assets/images/icons/person.png" alt="person">
-                <p>1</p>
-              </div>
+              <p class="text-black">20 resultado(s) encontrado(s)</p>
             </div>
             <div class="fila3">
               <select class="form-select" aria-label="Default select example">
@@ -1192,47 +1181,52 @@
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
                       <div class="content">
-                        <a href="alojamiento-detalle.html">
-                          <img class="img-ppal" src="assets/images/alojamiento/hotel.jpg" alt="destacada">
+                        <a href="">
+                          <img class="img-ppal img-fluid" src="assets/images/autos/auto.jpg" alt="destacada">
                         </a>
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
+                    <div class="col-12 col-md-5 detalles-transferencia p-0">
                       <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="alojamiento-detalle.html">
-                          <p>Envision Hotel Boston</p>
+                        <a class="name-transferencia" href="">
+                          <p>Shuttle Estándar</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="icons-users">
+                          <i class="fas fa-user"></i> 1
+                          <i class="fas fa-users"></i> 99
                         </div>
+                        <ul>
+                          <li>
+                            <i class="fas fa-check"></i> Lugar de Recogida: Sistina
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Destino: Roma, Aeropuerto De Ciampino
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Fecha: 2021-12-15
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Hora: The pickup time will be provided in <a href="http://www.checkpickup.com/">http://www.checkpickup.com</a> 36 hours before the departure.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo max. espera del cliente:  0 minutos.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo máximo de espera para los conductores en las llegadas nacionales:  0 minutos.
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-transferencia">
                       <div class="p-4">
-                        <p class="price">Precio Desde</p>
+                        <p class="price">Precio</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <a id="reservar" href="alojamiento-detalle.html" class="btn btn-violet-white btn-center-out">Reservar / Detalles</a>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleTransferencia">Reservar / Detalles</button>
                         </div>
                       </div>
                     </div>
@@ -1243,47 +1237,52 @@
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
                       <div class="content">
-                        <a href="alojamiento-detalle.html">
-                          <img class="img-ppal" src="assets/images/alojamiento/hotel.jpg" alt="destacada">
+                        <a href="">
+                          <img class="img-ppal img-fluid" src="assets/images/autos/auto.jpg" alt="destacada">
                         </a>
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
+                    <div class="col-12 col-md-5 detalles-transferencia p-0">
                       <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="alojamiento-detalle.html">
-                          <p>Envision Hotel Boston</p>
+                        <a class="name-transferencia" href="">
+                          <p>Shuttle Estándar</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="icons-users">
+                          <i class="fas fa-user"></i> 1
+                          <i class="fas fa-users"></i> 99
                         </div>
+                        <ul>
+                          <li>
+                            <i class="fas fa-check"></i> Lugar de Recogida: Sistina
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Destino: Roma, Aeropuerto De Ciampino
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Fecha: 2021-12-15
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Hora: The pickup time will be provided in <a href="http://www.checkpickup.com/">http://www.checkpickup.com</a> 36 hours before the departure.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo max. espera del cliente:  0 minutos.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo máximo de espera para los conductores en las llegadas nacionales:  0 minutos.
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-transferencia">
                       <div class="p-4">
-                        <p class="price">Precio Desde</p>
+                        <p class="price">Precio</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <a id="reservar" href="alojamiento-detalle.html" class="btn btn-violet-white btn-center-out">Reservar / Detalles</a>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleTransferencia">Reservar / Detalles</button>
                         </div>
                       </div>
                     </div>
@@ -1294,47 +1293,52 @@
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
                       <div class="content">
-                        <a href="alojamiento-detalle.html">
-                          <img class="img-ppal" src="assets/images/alojamiento/hotel.jpg" alt="destacada">
+                        <a href="">
+                          <img class="img-ppal img-fluid" src="assets/images/autos/auto.jpg" alt="destacada">
                         </a>
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
+                    <div class="col-12 col-md-5 detalles-transferencia p-0">
                       <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="alojamiento-detalle.html">
-                          <p>Envision Hotel Boston</p>
+                        <a class="name-transferencia" href="">
+                          <p>Shuttle Estándar</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="icons-users">
+                          <i class="fas fa-user"></i> 1
+                          <i class="fas fa-users"></i> 99
                         </div>
+                        <ul>
+                          <li>
+                            <i class="fas fa-check"></i> Lugar de Recogida: Sistina
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Destino: Roma, Aeropuerto De Ciampino
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Fecha: 2021-12-15
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Hora: The pickup time will be provided in <a href="http://www.checkpickup.com/">http://www.checkpickup.com</a> 36 hours before the departure.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo max. espera del cliente:  0 minutos.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo máximo de espera para los conductores en las llegadas nacionales:  0 minutos.
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-transferencia">
                       <div class="p-4">
-                        <p class="price">Precio Desde</p>
+                        <p class="price">Precio</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <a id="reservar" href="alojamiento-detalle.html" class="btn btn-violet-white btn-center-out">Reservar / Detalles</a>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleTransferencia">Reservar / Detalles</button>
                         </div>
                       </div>
                     </div>
@@ -1345,47 +1349,52 @@
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
                       <div class="content">
-                        <a href="alojamiento-detalle.html">
-                          <img class="img-ppal" src="assets/images/alojamiento/hotel.jpg" alt="destacada">
+                        <a href="">
+                          <img class="img-ppal img-fluid" src="assets/images/autos/auto.jpg" alt="destacada">
                         </a>
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
+                    <div class="col-12 col-md-5 detalles-transferencia p-0">
                       <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="alojamiento-detalle.html">
-                          <p>Envision Hotel Boston</p>
+                        <a class="name-transferencia" href="">
+                          <p>Shuttle Estándar</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="icons-users">
+                          <i class="fas fa-user"></i> 1
+                          <i class="fas fa-users"></i> 99
                         </div>
+                        <ul>
+                          <li>
+                            <i class="fas fa-check"></i> Lugar de Recogida: Sistina
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Destino: Roma, Aeropuerto De Ciampino
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Fecha: 2021-12-15
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Hora: The pickup time will be provided in <a href="http://www.checkpickup.com/">http://www.checkpickup.com</a> 36 hours before the departure.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo max. espera del cliente:  0 minutos.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo máximo de espera para los conductores en las llegadas nacionales:  0 minutos.
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-transferencia">
                       <div class="p-4">
-                        <p class="price">Precio Desde</p>
+                        <p class="price">Precio</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <a id="reservar" href="alojamiento-detalle.html" class="btn btn-violet-white btn-center-out">Reservar / Detalles</a>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleTransferencia">Reservar / Detalles</button>
                         </div>
                       </div>
                     </div>
@@ -1396,47 +1405,52 @@
                   <div class="row mb-3">
                     <div class="col-12 col-md-4 img-destacada p-0">
                       <div class="content">
-                        <a href="alojamiento-detalle.html">
-                          <img class="img-ppal" src="assets/images/alojamiento/hotel.jpg" alt="destacada">
+                        <a href="">
+                          <img class="img-ppal img-fluid" src="assets/images/autos/auto.jpg" alt="destacada">
                         </a>
                         <div class="destacado">
                           Destacado
                         </div>
-                        <img src="assets/images/icons/heart.png" alt="heart" class="heart">
                       </div>
                     </div>
-                    <div class="col-12 col-md-5 detalles-hotel p-0">
+                    <div class="col-12 col-md-5 detalles-transferencia p-0">
                       <div class="p-4">
-                        <div class="valoracion">
-                          <span class="valor">4.4</span>
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                          <img src="assets/images/icons/star-gold.svg" alt="">
-                        </div>
-                        <a class="name-hotel" href="alojamiento-detalle.html">
-                          <p>Envision Hotel Boston</p>
+                        <a class="name-transferencia" href="">
+                          <p>Shuttle Estándar</p>
                         </a>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Cancelación Gratuita</p>
-                        <p class="mb-0"><img src="assets/images/icons/item.png" alt="item"> Incluye Desayuno</p>
-                        <div class="ubicacion">
-                          <a href="#">
-                            <i class="fa fa-map-marker-alt fa-lg"></i>
-                            Boston, MA, USA - Ver en el mapa
-                          </a>
+                        <div class="icons-users">
+                          <i class="fas fa-user"></i> 1
+                          <i class="fas fa-users"></i> 99
                         </div>
+                        <ul>
+                          <li>
+                            <i class="fas fa-check"></i> Lugar de Recogida: Sistina
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Destino: Roma, Aeropuerto De Ciampino
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Fecha: 2021-12-15
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Hora: The pickup time will be provided in <a href="http://www.checkpickup.com/">http://www.checkpickup.com</a> 36 hours before the departure.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo max. espera del cliente:  0 minutos.
+                          </li>
+                          <li>
+                            <i class="fas fa-check"></i> Tiempo máximo de espera para los conductores en las llegadas nacionales:  0 minutos.
+                          </li>
+                        </ul>
                       </div>
                     </div>
-                    <div class="col-12 col-md-3 p-0 price-hotel">
+                    <div class="col-12 col-md-3 p-0 price-transferencia">
                       <div class="p-4">
-                        <p class="price">Precio Desde</p>
+                        <p class="price">Precio</p>
                         <p class="denominacion">USD <strong>999</strong></p>
                         <hr>
-                        <p class="descrip-reserva">4 noches</p>
-                        <p class="descrip-reserva">2 adultos, 2 niños</p>
                         <div class="button">
-                          <a id="reservar" href="alojamiento-detalle.html" class="btn btn-violet-white btn-center-out">Reservar / Detalles</a>
+                          <button id="reservar" class="btn btn-violet-white btn-center-out" data-bs-toggle="modal" data-bs-target="#modalDetalleTransferencia">Reservar / Detalles</button>
                         </div>
                       </div>
                     </div>
@@ -1449,6 +1463,79 @@
         </div>
       </div>
     </div>
+
+    <div class="modal fade" id="modalDetalleTransferencia" tabindex="-1" aria-labelledby="modalDetalleTransferenciaLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h3 class="modal-title" id="modalDetalleTransferenciaLabel">Detalles de Transferencia</h3>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-4">
+                <img class="img-fluid" src="assets/images/autos/auto.jpg" alt="auto">
+              </div>
+              <div class="col-8 col-name-transf">
+                <p class="name-transf">Shuttle Estándar</p>
+                <p class="name-transf">
+                  <strong>
+                    DEPARTURE SHARED
+                  </strong>
+                </p>
+              </div>
+            </div>
+            <hr>
+            <div class="row caracteristicas-transf">
+              <div class="col-6">
+                <h5>Pickup Information</h5>
+                <ul>
+                  <li>Lugar de Recogida: Sistina</li>
+                  <li>Destino: Roma, Aeropuerto De Ciampino</li>
+                  <li>Fecha: 2021-12-15</li>
+                  <li>Hora: The pickup time will be provided in <a href="http://www.checkpickup.com/">http://www.checkpickup.com/ </a> 36 hours before the departure</li>
+                  <li>Description: Te recogeremos en la recepción del hotel. Por favor, llega 5 minutos antes de la hora de recogida establecida. El Shuttle puede llegar aproximadamente 30 minutos después de la hora programada debido a las condiciones imprevisibles del tráfico. Si no puedes localizar al conductor/agente, por favor llama a Paganelli de lunes a viernes de 8:30 a 20:00 horas, el sábado de 9:00 a 12:30 horas y el domingo de 12:00 a 20:00 horas al +39 0697 657 060, fuera de este horario llama al +39 3472 297 500 o al +39 3939 066 532. Idiomas de atención telefónica: inglés, italiano. No abandones la zona de recogida sin antes contactar con el agente/conductor. Si el proveedor no contesta, por favor llama al número de emergencia que aparece al final del bono antes de abandonar el punto de encuentro.</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <h5>Transfers Details Information</h5>
+                <ul>
+                  <li>Máximo</li>
+                  <li>1 bolso de mano permitido por persona</li>
+                  <li>1 maleta permitida por persona (max.dimensiones 158cm) largo+ancho+alto=158cm</li>
+                  <li>BONO:  Presenta este bono impreso al representante/guía/conductor junto con tu DNI o pasaporte. Por favor, no olvides tu documentación.</li>
+                  <li>NO SE ENCUENTRA AL CONDUCTOR:  En caso de que no localices al conductor, llama por favor al teléfono de emergencias indicado en este bono.</li>
+                  <li>Silla de ruedas plegable:  Los servicios de vehículos adaptados son para sillas plegables, si la silla no es plegable puede conllevar un coste extra para el cliente.</li>
+                  <li>Zonas inaccesibles:  Por favor, ten en cuenta que debido a las restricciones de tráfico en el centro de la ciudad, dependiendo de la ubicación de tu hotel, te dejaremos tan cerca como sea posible. Quizás debas caminar algunos metros.</li>
+                  <li>PROBLEMAS CON EL EQUIPAJE:  En caso de que tengas algún retraso en el vuelo o problema con su equipaje, llama por favor al teléfono de emergencias para informar del retraso y adoptar las medidas oportunas.</li>
+                  <li>Zonas inaccesibles:  Por favor, ten en cuenta que debido a las restricciones de tráfico en el centro de la ciudad, dependiendo de la ubicación de tu hotel, te dejaremos tan cerca como sea posible. Quizás debas caminar algunos metros.</li>
+                </ul>
+              </div>
+              <hr>
+              <div class="col-6">
+                <h5>Paxes Distribution</h5>
+                <ul>
+                  <li>Capacidad Mínima: 1</li>
+                  <li>Capacidad Máxima: 99</li>
+                </ul>
+              </div>
+              <div class="col-6">
+                <h5>Tiempos máximos de espera</h5>
+                <ul>
+                  <li>Cliente:  0 minutos</li>
+                  <li>Conductores en las llegadas nacionales:  0 minutos</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-white-orange btn-center-out" data-bs-dismiss="modal">Cerrar</button>
+            <button type="button" class="btn btn-violet-white btn-center-out">Reservar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <footer>
       <div class="container py-5">
         <div class="row">

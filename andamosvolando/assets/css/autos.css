@@ -95,7 +95,9 @@
     position: relative;
     border: 1px solid #d7d7d7; }
     .section-autos .img-destacada .content {
-      overflow: hidden; }
+      overflow: hidden;
+      display: flex;
+      align-items: center; }
       @media (min-width: 768px) {
         .section-autos .img-destacada .content {
           position: absolute;
@@ -120,12 +122,6 @@
           .section-autos .img-destacada .content .destacado {
             font-size: .9rem; } }
       .section-autos .img-destacada .content .img-ppal {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-           object-fit: cover;
-        -o-object-position: center;
-           object-position: center;
         transition: all 0.3s; }
         .section-autos .img-destacada .content .img-ppal:hover {
           transform: scale(1.2); }
@@ -157,6 +153,17 @@
     .section-autos .detalles-auto ul {
       list-style: none;
       padding-left: 0; }
+    .section-autos .detalles-auto .perfil-proveedor {
+      display: flex;
+      align-items: center; }
+      .section-autos .detalles-auto .perfil-proveedor img {
+        width: 10%;
+        border-radius: 50%;
+        border: 2px solid #7d428f;
+        margin-right: .8rem; }
+        @media (min-width: 768px) {
+          .section-autos .detalles-auto .perfil-proveedor img {
+            width: 15%; } }
   .section-autos .price-auto {
     border: 1px solid #d7d7d7; }
     .section-autos .price-auto .price {
@@ -186,6 +193,7 @@
       font-weight: 600; }
   #modalDetalleAuto .modal-content .modal-body .col-name-car {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center; }
     #modalDetalleAuto .modal-content .modal-body .col-name-car .name-car {
@@ -196,6 +204,18 @@
       @media (min-width: 992px) {
         #modalDetalleAuto .modal-content .modal-body .col-name-car .name-car {
           font-size: 2rem; } }
+  #modalDetalleAuto .modal-content .modal-body .perfil-proveedor {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    #modalDetalleAuto .modal-content .modal-body .perfil-proveedor img {
+      width: 10%;
+      border-radius: 50%;
+      border: 2px solid #7d428f;
+      margin-right: .8rem; }
+      @media (min-width: 768px) {
+        #modalDetalleAuto .modal-content .modal-body .perfil-proveedor img {
+          width: 15%; } }
   #modalDetalleAuto .modal-content .modal-body .caracteristicas-auto ul {
     list-style: none;
     padding-left: 1rem; }

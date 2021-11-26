@@ -1,0 +1,309 @@
+.title-page h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  color: #7d428f;
+  margin: 0; }
+
+.data-search {
+  text-align: end; }
+  .data-search .icon {
+    width: 1.5rem;
+    margin: 0 0.5rem; }
+
+.consulta-circuito {
+  border: 1px solid #3a3a3a;
+  margin-bottom: 2rem; }
+  .consulta-circuito .title {
+    padding: 1rem;
+    background-color: rgba(125, 66, 143, 0.2); }
+    .consulta-circuito .title span {
+      font-size: 1.5rem;
+      font-weight: 800; }
+  .consulta-circuito .form {
+    padding: 1rem;
+    border-top: 1px solid #3a3a3a; }
+    .consulta-circuito .form label {
+      margin-bottom: 0; }
+      .consulta-circuito .form label span {
+        color: #7d428f; }
+    .consulta-circuito .form input, .consulta-circuito .form textarea {
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 0;
+      border-bottom: 1px solid #3a3a3a;
+      padding: 0.2rem; }
+      .consulta-circuito .form input:focus, .consulta-circuito .form textarea:focus {
+        box-shadow: none; }
+    .consulta-circuito .form textarea {
+      width: 100%;
+      resize: none; }
+      .consulta-circuito .form textarea:focus-visible {
+        outline: none; }
+
+@media (min-width: 992px) {
+  .detalle-circuito .encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; } }
+
+.detalle-circuito .encabezado h2 {
+  font-size: 2rem;
+  font-weight: 800; }
+
+.detalle-circuito .encabezado .valoracion {
+  text-align: end; }
+  .detalle-circuito .encabezado .valoracion .valor {
+    position: relative;
+    background-color: #7d428f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-right: 1rem; }
+    .detalle-circuito .encabezado .valoracion .valor:before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      left: -10px;
+      bottom: 0px;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent #7d428f transparent;
+      transition-duration: .3s;
+      transition-property: transform; }
+
+.location a {
+  color: #7d428f; }
+  .location a:hover {
+    color: #f8b300; }
+
+.slider-detalle-circuito .slick-slide {
+  padding: 0 3px; }
+  .slider-detalle-circuito .slick-slide .content-text {
+    text-align: center;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    color: #d7d7d7;
+    background-color: rgba(125, 66, 143, 0.8); }
+    .slider-detalle-circuito .slick-slide .content-text h4 {
+      font-weight: 800; }
+  .slider-detalle-circuito .slick-slide .content-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; }
+    .slider-detalle-circuito .slick-slide .content-img img {
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center;
+      transition: all 0.5s; }
+      @media (orientation: landscape) {
+        .slider-detalle-circuito .slick-slide .content-img img {
+          height: 50vh; } }
+      @media (orientation: portrait) {
+        .slider-detalle-circuito .slick-slide .content-img img {
+          height: 50vw; } }
+
+.slider-detalle-circuito .slick-slide.slick-center .content img:hover {
+  transform: scale(1.2); }
+
+.slider-detalle-circuito .slick-prev, .slider-detalle-circuito .slick-next {
+  color: white;
+  font-size: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background-color: rgba(58, 58, 58, 0.5);
+  z-index: 1; }
+  .slider-detalle-circuito .slick-prev:before, .slider-detalle-circuito .slick-next:before {
+    display: none; }
+
+.slider-detalle-circuito .slick-prev {
+  left: 0.5rem; }
+
+.slider-detalle-circuito .slick-next {
+  right: 0.5rem; }
+
+#tabDetalle {
+  border-bottom: 1px solid #3a3a3a; }
+  #tabDetalle .nav-item .nav-link {
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #3a3a3a;
+    transition: all 0.3s; }
+    #tabDetalle .nav-item .nav-link.active, #tabDetalle .nav-item .nav-link:hover {
+      color: #7d428f; }
+    #tabDetalle .nav-item .nav-link.active {
+      border: 1px solid transparent;
+      background-color: transparent; }
+
+#tabContentDetalle .tab-pane {
+  padding: 2rem 1rem; }
+  #tabContentDetalle .tab-pane .img-itinerario {
+    width: 100%;
+    height: 30vh;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center; }
+  #tabContentDetalle .tab-pane .col-text-itinerario {
+    border-left: 2px solid #7d428f;
+    position: relative; }
+    #tabContentDetalle .tab-pane .col-text-itinerario .icon-marker {
+      position: absolute;
+      top: 1.5rem;
+      left: 0;
+      transform: translateX(calc(-50% - 1px));
+      font-size: 1.3rem;
+      color: #7d428f;
+      background-color: white; }
+    #tabContentDetalle .tab-pane .col-text-itinerario h4 {
+      font-weight: 800; }
+
+hr {
+  background-color: #3a3a3a;
+  opacity: 1; }
+
+.disponibles h3 {
+  font-weight: 800;
+  margin-bottom: 2rem; }
+
+.disponibles .img-destacada {
+  position: relative;
+  border: 1px solid #d7d7d7;
+  padding: 0; }
+  @media (min-width: 768px) {
+    .disponibles .img-destacada .content {
+      position: absolute;
+      width: 100%;
+      height: 100%; } }
+  @media (max-width: 767.98px) {
+    .disponibles .img-destacada .content {
+      height: 40vw; } }
+  .disponibles .img-destacada .content .destacado {
+    background-color: #e8663f;
+    text-align: center;
+    color: #ffffff;
+    font-weight: bold;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    font-size: .9rem;
+    padding: .4rem;
+    position: absolute;
+    top: 15px;
+    left: 0; }
+  .disponibles .img-destacada .content img {
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center; }
+
+.disponibles .detalles-habitacion {
+  border: 1px solid #d7d7d7;
+  padding: 0; }
+  .disponibles .detalles-habitacion .valoracion .valor {
+    position: relative;
+    background-color: #7d428f;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 800;
+    margin-right: 1rem; }
+    .disponibles .detalles-habitacion .valoracion .valor:before {
+      position: absolute;
+      z-index: -1;
+      content: "";
+      left: -10px;
+      bottom: 0px;
+      border-style: solid;
+      border-width: 0 10px 10px 10px;
+      border-color: transparent transparent #7d428f transparent;
+      transition-duration: .3s;
+      transition-property: transform; }
+  .disponibles .detalles-habitacion .name-habitacion {
+    background-color: #d7d7d7;
+    padding: 1rem 1rem;
+    border: 1px solid white; }
+    .disponibles .detalles-habitacion .name-habitacion p {
+      font-size: 1.3rem;
+      font-weight: 800;
+      margin: 0; }
+  .disponibles .detalles-habitacion .content {
+    padding: 1rem 1rem; }
+    .disponibles .detalles-habitacion .content p {
+      margin: 0; }
+    .disponibles .detalles-habitacion .content button {
+      margin-top: 1rem; }
+
+.disponibles .price-habitacion {
+  border: 1px solid #d7d7d7;
+  padding: 0; }
+  .disponibles .price-habitacion .label-precio {
+    font-size: 1.5rem;
+    margin-bottom: 0; }
+  .disponibles .price-habitacion .precio {
+    font-size: 2rem;
+    color: #7d428f;
+    font-weight: 800; }
+    .disponibles .price-habitacion .precio span {
+      font-size: 1.5rem;
+      color: #3a3a3a;
+      margin-right: 1rem; }
+  .disponibles .price-habitacion .descrip-reserva {
+    margin-bottom: 0;
+    font-weight: 800; }
+  .disponibles .price-habitacion #seleccionar {
+    font-size: 1rem;
+    margin-top: 2rem; }
+
+#modalHabitacion {
+  z-index: 3050; }
+  #modalHabitacion .modal-content .modal-header {
+    background-color: #d7d7d7; }
+    #modalHabitacion .modal-content .modal-header .modal-title {
+      font-weight: bold; }
+  #modalHabitacion .modal-content .modal-body #carouselHabitacion {
+    height: 50vh; }
+    #modalHabitacion .modal-content .modal-body #carouselHabitacion .carousel-inner {
+      height: 100%; }
+      #modalHabitacion .modal-content .modal-body #carouselHabitacion .carousel-inner .carousel-item {
+        width: 100%;
+        height: 100%; }
+        #modalHabitacion .modal-content .modal-body #carouselHabitacion .carousel-inner .carousel-item img {
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
+          -o-object-position: center;
+             object-position: center; }
+  #modalHabitacion .modal-content .modal-body #tabDetalleHab {
+    border-bottom: 1px solid #3a3a3a; }
+    #modalHabitacion .modal-content .modal-body #tabDetalleHab .nav-item .nav-link {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #3a3a3a;
+      transition: all 0.3s; }
+      #modalHabitacion .modal-content .modal-body #tabDetalleHab .nav-item .nav-link.active, #modalHabitacion .modal-content .modal-body #tabDetalleHab .nav-item .nav-link:hover {
+        color: #7d428f; }
+      #modalHabitacion .modal-content .modal-body #tabDetalleHab .nav-item .nav-link.active {
+        border: 1px solid transparent;
+        background-color: transparent; }
+  #modalHabitacion .modal-content .modal-body #tabContentDetalleHab .tab-pane {
+    padding: 2rem 1rem; }
+    #modalHabitacion .modal-content .modal-body #tabContentDetalleHab .tab-pane .title-pane {
+      display: flex;
+      align-items: center;
+      margin-bottom: 1rem; }
+      #modalHabitacion .modal-content .modal-body #tabContentDetalleHab .tab-pane .title-pane img {
+        width: 3rem;
+        margin-right: 1rem; }
+      #modalHabitacion .modal-content .modal-body #tabContentDetalleHab .tab-pane .title-pane h3 {
+        font-weight: 800; }
+    #modalHabitacion .modal-content .modal-body #tabContentDetalleHab .tab-pane ul {
+      padding-left: 1rem; }
+
+/*# sourceMappingURL=circuito-detalle.css.map */

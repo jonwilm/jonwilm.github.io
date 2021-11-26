@@ -43,6 +43,9 @@ main {
 .daterangepicker .calendar-table td {
   padding: 0; }
 
+.daterangepicker .calendar-time select {
+  display: initial; }
+
 .btn-rounded-10 {
   border-radius: 10px; }
 
@@ -184,6 +187,8 @@ main {
   position: relative;
   padding-top: 2rem;
   padding-bottom: 2rem; }
+  .searcher .w-20 {
+    width: 20%; }
   .searcher .dropdown-search-mobile .nav {
     display: none; }
   .searcher .dropdown-search-mobile .dropdown-menu.show {

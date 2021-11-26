@@ -71,7 +71,26 @@ jQuery(document).ready(function ($) {
   });
 
   $("#actividadDestino").select2({
-    placeholder: 'País, Ciudad, Ubicación'
+    placeholder: 'Ubicación, País',
+    language: 'es',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+            action: 'hotelbeds_activities_destinations',
+            q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
   });
 
   $("#transferenciaOrigen").select2({
@@ -135,10 +154,28 @@ jQuery(document).ready(function ($) {
   });
 
   $("#seguroContinente").select2({
-    placeholder: 'Continente'
+    placeholder: 'Región'
   });
   $("#seguroPais").select2({
-    placeholder: 'País'
+    placeholder: 'País',
+    minimumInputLength: 3,
+    ajax: {
+      url: Wookapis.ajax_url,
+      dataType: 'json',
+      data: function (params) {
+        var query = {
+            action: 'assist365_countries',
+            q: $.trim(params.term)
+        }
+        return query;
+      },
+      processResults: function (data) {
+        return {
+            results: data
+        };
+      },
+      cache: true
+    }
   });
 
   $("#autosRetiro").select2({
@@ -184,6 +221,26 @@ jQuery(document).ready(function ($) {
       cache: true
     }
   });
+
+  $("#circuitoNombre").select2({
+    placeholder: 'Nombre del circuito',
+    minimumResultsForSearch : Infinity,
+  });
+  $("#circuitoDuracion").select2({
+    placeholder: 'Duración',
+    minimumResultsForSearch : Infinity,
+  });
+  $("#circuitoMesInicio").select2({
+    placeholder: 'Mes inicio',
+    minimumResultsForSearch : Infinity,
+  });
+  $("#circuitoCiudadInicio").select2({
+    placeholder: 'Ciudad inicio',
+    minimumResultsForSearch : Infinity,
+  });
+  $("#circuitoDestinos").select2({
+    placeholder: 'Destinos',
+  });
 });
 
 jQuery(document).on('select2:open', () => {
@@ -213,12 +270,13 @@ jQuery(document).on('select2:open', () => {
       $("#contentLugarDevolucion").addClass("d-none");
       $("#contentLugarRetiro").removeClass("w-50").addClass("w-100");
     }
-  });  
+  });
 
   $("input#alojamientoFechas").daterangepicker({
     startDate: moment(),
     endDate: moment().add(1, "day"),
     autoApply: true,
+    minDate: moment(),
     locale: {
       format: "DD/MM/YYYY",
     },
@@ -232,24 +290,27 @@ jQuery(document).on('select2:open', () => {
   $("input#vueloSalida, input#vueloRegreso").daterangepicker({
     singleDatePicker: true,
     startDate: moment(),
-    endDate: moment().add(1, "day"),
     autoApply: true,
+    minDate: moment(),
     locale: {
       format: "DD/MM/YYYY",
     },
   });
 
   $("input#vueloSalida").on("apply.daterangepicker", function (event, picker) {
-        $('input[name="depart_date"]').val(picker.startDate.format("YYYY-MM-DD"));
-    });
+    $('input[name="depart_date"]').val(picker.startDate.format("YYYY-MM-DD"));
+    $('input#vueloRegreso').data('daterangepicker').minDate = picker.startDate.add(1, "day");
+    $('input#vueloRegreso').data('daterangepicker').setStartDate(picker.startDate.add(1, "day"));
+  });
 
   $("input#vueloRegreso").on("apply.daterangepicker", function (event, picker) {
-      $('input[name="return_date"]').val(picker.endDate.format("YYYY-MM-DD"));
+    $('input[name="return_date"]').val(picker.endDate.format("YYYY-MM-DD"));
   });
 
   $("input#actividadFechas").daterangepicker({
     startDate: moment(),
     endDate: moment().add(1, "day"),
+    minDate: moment(),
     autoApply: true,
     locale: {
       format: "DD/MM/YYYY",
@@ -257,8 +318,8 @@ jQuery(document).on('select2:open', () => {
   });
 
   $("input#actividadFechas").on("apply.daterangepicker", function (event, picker) {
-    $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
-    $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
+    $('input[name="from"]').val(picker.startDate.format("YYYY-MM-DD"));
+    $('input[name="to"]').val(picker.endDate.format("YYYY-MM-DD"));
   });
 
   $("input#transferenciaSalida, input#transferenciaRegreso").daterangepicker({
@@ -270,7 +331,7 @@ jQuery(document).on('select2:open', () => {
     timePickerSeconds: false,
     startDate: moment(),
     endDate: moment().add(1, "day"),
-    autoApply: true,
+    minDate: moment(),
     locale: {
       format: "DD/MM/YYYY HH:mm",
     },
@@ -278,25 +339,28 @@ jQuery(document).on('select2:open', () => {
 
   $("input#transferenciaSalida").on("apply.daterangepicker", function (event, picker) {
     $('input[name="outbound"]').val(picker.startDate.format("YYYYMMDDHHmm")+'00');
+    $('input#transferenciaRegreso').data('daterangepicker').minDate = picker.startDate.add(1, "day");
+    $('input#transferenciaRegreso').data('daterangepicker').setStartDate(picker.startDate.add(1, "day"));
   });
 
   $("input#transferenciaRegreso").on("apply.daterangepicker", function (event, picker) {
     $('input[name="inbound"]').val(picker.endDate.format("YYYYMMDDHHmm")+'00');
   });
 
-  $("input#seguroInicio, input#seguroFin").daterangepicker({
-    singleDatePicker: true,
+  $("input#seguroInicio").daterangepicker({
     startDate: moment(),
     endDate: moment().add(1, "day"),
+    minDate: moment(),
+    maxDate: moment().add(365, "day"),
     autoApply: true,
     locale: {
       format: "DD/MM/YYYY",
     },
   });
 
-  $("input#seguroInicio, input#seguroFin").on("apply.daterangepicker", function (event, picker) {
-    $('input[name="checkIn"]').val(picker.startDate.format("YYYY-MM-DD"));
-    $('input[name="checkOut"]').val(picker.endDate.format("YYYY-MM-DD"));
+  $("input#seguroInicio").on("apply.daterangepicker", function (event, picker) {
+    $('input[name="from"]').val(picker.startDate.format("YYYY-MM-DD"));
+    $('input[name="to"]').val(picker.endDate.format("YYYY-MM-DD"));
   });
 
   $("input#autosFechaRetiro, input#autosFechaDevolucion").daterangepicker({
@@ -306,6 +370,7 @@ jQuery(document).on('select2:open', () => {
     timePickerIncrement: 15,
     timePicker24Hour: true,
     timePickerSeconds: false,
+    minDate: moment(),
     startDate: moment(),
     endDate: moment().add(1, "day"),
     autoApply: true,
@@ -315,11 +380,13 @@ jQuery(document).on('select2:open', () => {
   });
 
   $("input#autosFechaRetiro").on("apply.daterangepicker", function (event, picker) {
-    $('input[name="outbound"]').val(picker.startDate.format("YYYYMMDDHHmm")+'00');
+    $('input[name="pickupDate"]').val(picker.startDate.format("YYYYMMDDHHmm")+'00');
+    $('input#autosFechaDevolucion').data('daterangepicker').minDate = picker.startDate.add(1, "day");
+    $('input#autosFechaDevolucion').data('daterangepicker').setStartDate(picker.startDate.add(1, "day"));
   });
 
   $("input#autosFechaDevolucion").on("apply.daterangepicker", function (event, picker) {
-    $('input[name="inbound"]').val(picker.endDate.format("YYYYMMDDHHmm")+'00');
+    $('input[name="deliverDate"]').val(picker.endDate.format("YYYYMMDDHHmm")+'00');
   });
 
   $("#popover-habs, #popover-pasajeros, #popover-act, #popover-transf-pasajeros, #popover-seguro").on("click", ".mas, .menos", function (e) {
@@ -584,7 +651,7 @@ function createItemSeguro(param) {
   '<button class="menos">' +
   '<i class="fa fa-minus"></i>' +
   '</button>' +
-  '<input type="number" id="seguroperson' + param + '" name="seguroperson' + param + '" data="edadseguro" class="cantidad" min="1" max="99" step="1" value="1">' +
+  '<input type="number" id="seguroperson' + param + '" name="ages[]' + param + '" data="edadseguro" class="cantidad" min="1" max="99" step="1" value="1">' +
   '<button class="mas">' +
   '<i class="fa fa-plus"></i>' +
   '</button>' +
@@ -644,7 +711,7 @@ const menosInputEdad = (param, _this) => {
   }
 };
 
-$('.cantidad').change(function() {
+jQuery('.cantidad').change(function() {
   let mincant = parseInt($(this).attr('min'));
   let maxcant = parseInt($(this).attr('max'));
   if (parseInt($(this).val()) < mincant) {

@@ -222,25 +222,11 @@ jQuery(document).ready(function ($) {
     }
   });
 
-  $("#circuitoNombre").select2({
-    placeholder: 'Nombre del circuito',
-    minimumResultsForSearch : Infinity,
-  });
-  $("#circuitoDuracion").select2({
-    placeholder: 'Duración',
-    minimumResultsForSearch : Infinity,
-  });
-  $("#circuitoMesInicio").select2({
-    placeholder: 'Mes inicio',
-    minimumResultsForSearch : Infinity,
-  });
-  $("#circuitoCiudadInicio").select2({
-    placeholder: 'Ciudad inicio',
-    minimumResultsForSearch : Infinity,
-  });
-  $("#circuitoDestinos").select2({
-    placeholder: 'Destinos',
-  });
+  $("#circuitoNombre").select2();
+  $("#circuitoDuracion").select2();
+  $("#circuitoMesInicio").select2();
+  $("#circuitoCiudadInicio").select2();
+  $("#circuitoDestinos").select2();
 });
 
 jQuery(document).on('select2:open', () => {

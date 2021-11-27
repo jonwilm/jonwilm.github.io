@@ -183,49 +183,49 @@
       font-size: .8rem;
       margin-top: 2rem; }
 
-#modalDetalleTransferencia {
+.modal-transfers {
   z-index: 3050; }
-  #modalDetalleTransferencia .modal-content .modal-header .modal-title {
+  .modal-transfers .modal-content .modal-header .modal-title {
     font-weight: bold;
     color: #7d428f;
     line-height: 0.7; }
-    #modalDetalleTransferencia .modal-content .modal-header .modal-title strong {
+    .modal-transfers .modal-content .modal-header .modal-title strong {
       font-size: 1.2rem;
       color: #3a3a3a;
       font-weight: 600; }
-  #modalDetalleTransferencia .modal-content .modal-body .col-name-transf {
+  .modal-transfers .modal-content .modal-body .col-name-transf {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; }
-    #modalDetalleTransferencia .modal-content .modal-body .col-name-transf .name-transf {
+    .modal-transfers .modal-content .modal-body .col-name-transf .name-transf {
       font-size: 1.5rem;
       font-weight: bold;
       color: #3a3a3a;
       margin-bottom: 0; }
       @media (min-width: 992px) {
-        #modalDetalleTransferencia .modal-content .modal-body .col-name-transf .name-transf {
+        .modal-transfers .modal-content .modal-body .col-name-transf .name-transf {
           font-size: 2rem; } }
-      #modalDetalleTransferencia .modal-content .modal-body .col-name-transf .name-transf strong {
+      .modal-transfers .modal-content .modal-body .col-name-transf .name-transf strong {
         color: #7d428f; }
-  #modalDetalleTransferencia .modal-content .modal-body .perfil-proveedor {
+  .modal-transfers .modal-content .modal-body .perfil-proveedor {
     display: flex;
     align-items: center;
     justify-content: center; }
-    #modalDetalleTransferencia .modal-content .modal-body .perfil-proveedor img {
+    .modal-transfers .modal-content .modal-body .perfil-proveedor img {
       width: 10%;
       border-radius: 50%;
       border: 2px solid #7d428f;
       margin-right: .8rem; }
       @media (min-width: 768px) {
-        #modalDetalleTransferencia .modal-content .modal-body .perfil-proveedor img {
+        .modal-transfers .modal-content .modal-body .perfil-proveedor img {
           width: 15%; } }
-  #modalDetalleTransferencia .modal-content .modal-body .caracteristicas-transf {
+  .modal-transfers .modal-content .modal-body .caracteristicas-transf {
     font-size: .8rem; }
-    #modalDetalleTransferencia .modal-content .modal-body .caracteristicas-transf ul {
+    .modal-transfers .modal-content .modal-body .caracteristicas-transf ul {
       list-style: circle;
       padding-left: 2rem; }
-  #modalDetalleTransferencia .modal-content .modal-body .form-control:focus {
+  .modal-transfers .modal-content .modal-body .form-control:focus {
     color: #212529;
     background-color: #fff;
     border-color: rgba(125, 66, 143, 0.5);

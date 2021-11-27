@@ -86,7 +86,7 @@
               <a class="nav-link line" href="actividades.html">Actividades</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link line" href="#">Traslados</a>
+              <a class="nav-link line" href="transferencias.html">Transferencias</a>
             </li>
             <li class="nav-item">
               <a class="nav-link line" href="autos.html">Autos</a>
@@ -575,11 +575,11 @@
                 <div class="col-12 col-lg-4 offset-lg-4 d-flex justify-content-end">
                   <div class="form-check p-0">
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input radio-transferencia" type="radio" name="inlineRadioOptions" id="transferenciaIdayVuelta" value="option1" checked>
+                      <input class="form-check-input radio-transferencia" type="radio" name="roundtrip" id="transferenciaIdayVuelta" value="1" checked>
                       <label class="form-check-label" for="transferenciaIdayVuelta">Ida y Vuelta</label>
                     </div>
                     <div class="form-check form-check-inline">
-                      <input class="form-check-input radio-transferencia" type="radio" name="inlineRadioOptions" id="transferenciaSoloIda" value="option2">
+                      <input class="form-check-input radio-transferencia" type="radio" name="roundtrip" id="transferenciaSoloIda" value="0">
                       <label class="form-check-label" for="transferenciaSoloIda">Solo Ida</label>
                     </div>
                   </div>
@@ -878,67 +878,124 @@
           <div class="tab-pane fade" id="Circuitos" role="tabpanel" aria-labelledby="Circuitos-tab">
             <form action="" method="get">
               <div class="row">
-                <div class="col-12 col-lg-10 border-right">
-                  <div class="line-horizontal">
-                    <div class="content-select2 ps-3 d-flex">
-                      <div class="w-20">
-                        <label for="circuitoNombre" class="form-label">Nombre del circuito</label>
-                        <div class="input-group h-100">
-                          <select id="circuitoNombre" class="form-control" name="nombre">
-                            <option value="" selected>Nombre del circuito</option>
-                            <option value="">Circuito 1</option>
-                            <option value="">Circuito 2</option>
-                            <option value="">Circuito 3</option>
-                          </select>
+                <div class="col-12 col-lg-10">
+                  <div class="row">
+                    <div class="col-12 col-lg-6 border-right">
+                      <div class="line-horizontal">
+                        <div class="icon">
+                          <img class="" src="assets/images/icons/circuito.svg" alt=""/>
+                        </div>
+                        <div class="content-select2 ps-3 d-flex">
+                          <div class="w-100">
+                            <label for="circuitoNombre" class="form-label">Nombre del circuito</label>
+                            <div class="input-group h-100">
+                              <select id="circuitoNombre" class="form-control" name="nombre">
+                                <option value="" selected>Nombre del circuito</option>
+                                <option value="">Circuito 1</option>
+                                <option value="">Circuito 2</option>
+                                <option value="">Circuito 3</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="w-20">
-                        <label for="circuitoDuracion" class="form-label">Duración</label>
-                        <div class="input-group h-100">
-                          <select id="circuitoDuracion" class="form-control" name="duracion">
-                            <option value="" selected>Duración</option>
-                            <option value="">Hasta 7 Días</option>
-                            <option value="">Entre 7 y 15 Días</option>
-                            <option value="">Más de 15 Días</option>
-                          </select>
+                    </div>
+                    <div class="col-12 col-lg-3 border-right">
+                      <div class="line-horizontal">
+                        <div class="icon">
+                          <img class="" src="assets/images/icons/calendar-clock.svg" alt=""/>
+                        </div>
+                        <div class="content-select2 ps-3 d-flex">
+                          <div class="w-100">
+                            <label for="circuitoDuracion" class="form-label">Duración</label>
+                            <div class="input-group h-100">
+                              <select id="circuitoDuracion" class="form-control" name="duracion">
+                                <option value="" selected>Duración</option>
+                                <option value="">Hasta 7 Días</option>
+                                <option value="">Entre 7 y 15 Días</option>
+                                <option value="">Más de 15 Días</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="w-20">
-                        <label for="circuitoMesInicio" class="form-label">Mes inicio</label>
-                        <div class="input-group h-100">
-                          <select id="circuitoMesInicio" class="form-control" name="mesInicio">
-                            <option value="" selected>Mes inicio</option>
-                            <option value="">Enero</option>
-                            <option value="">Febrero</option>
-                            <option value="">Marzo</option>
-                            <option value="">Abril</option>
-                            <option value="">Mayo</option>
-                            <option value="">Junio</option>
-                            <option value="">Julio</option>
-                            <option value="">Agosto</option>
-                            <option value="">Septiembre</option>
-                            <option value="">Octubre</option>
-                            <option value="">Noviembre</option>
-                            <option value="">Diciembre</option>
-                          </select>
+                    </div>
+                    <div class="col-12 col-lg-3">
+                      <div class="line-horizontal">
+                        <div class="icon">
+                          <img class="" src="assets/images/icons/calendar.png" alt=""/>
+                        </div>
+                        <div class="content-select2 ps-3 d-flex">
+                          <div class="w-100">
+                            <label for="circuitoMesInicio" class="form-label">Mes inicio</label>
+                            <div class="input-group h-100">
+                              <select id="circuitoMesInicio" class="form-control" name="mesInicio">
+                                <option value="" selected>Mes inicio</option>
+                                <option value="">Enero</option>
+                                <option value="">Febrero</option>
+                                <option value="">Marzo</option>
+                                <option value="">Abril</option>
+                                <option value="">Mayo</option>
+                                <option value="">Junio</option>
+                                <option value="">Julio</option>
+                                <option value="">Agosto</option>
+                                <option value="">Septiembre</option>
+                                <option value="">Octubre</option>
+                                <option value="">Noviembre</option>
+                                <option value="">Diciembre</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="w-20">
-                        <label for="circuitoCiudadInicio" class="form-label">Ciudad Inicio</label>
-                        <div class="input-group h-100">
-                          <select id="circuitoCiudadInicio" class="form-control" name="ciudadInicio"></select>
+                    </div>
+                    <div class="col-12 d-none d-lg-block">
+                      <hr>
+                    </div>
+                    <div class="col-12 col-lg-6 border-right">
+                      <div class="line-horizontal">
+                        <div class="icon">
+                          <img class="" src="assets/images/icons/plane-out.png" alt=""/>
+                        </div>
+                        <div class="content-select2 ps-3 d-flex">
+                          <div class="w-100">
+                            <label for="circuitoCiudadInicio" class="form-label">Ciudad Inicio</label>
+                            <div class="input-group h-100">
+                              <select id="circuitoCiudadInicio" class="form-control" name="ciudadInicio">
+                                <option value="" selected>Ciudad Inicio</option>
+                                <option value="">Madrid</option>
+                                <option value="">Paris</option>
+                                <option value="">Londres</option>
+                                <option value="">Roma</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
-                      <div class="w-20">
-                        <label for="circuitoDestinos" class="form-label">Destinos</label>
-                        <div class="input-group h-100">
-                          <select id="circuitoDestinos" class="form-control" name="destinos"></select>
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <div class="line-horizontal">
+                        <div class="icon">
+                          <img class="" src="assets/images/icons/map-location.svg" alt=""/>
+                        </div>
+                        <div class="content-select2 ps-3 d-flex">
+                          <div class="w-100">
+                            <label for="circuitoDestinos" class="form-label">Destinos</label>
+                            <div class="input-group h-100">
+                              <select id="circuitoDestinos" class="form-control" name="destinos" multiple="multiple">
+                                <option value="">Madrid</option>
+                                <option value="">Paris</option>
+                                <option value="">Londres</option>
+                                <option value="">Roma</option>
+                              </select>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div class="col-12 col-lg-2 d-flex align-items-center">
+                <div class="col-12 col-lg-2 border-left d-flex align-items-center">
                   <button type="submit" id="submit" class="btn btn-rounded-10 btn-white-orange btn-center-out w-100 mt-3 mt-lg-0">Buscar</button>
                 </div>
               </div>

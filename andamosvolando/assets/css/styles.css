@@ -46,6 +46,14 @@ main {
 .daterangepicker .calendar-time select {
   display: initial; }
 
+.form-check-input {
+  border: 1px solid #7d428f; }
+  .form-check-input:checked {
+    background-color: #7d428f;
+    border-color: #7d428f; }
+  .form-check-input:focus {
+    box-shadow: 0 0 0 0.25rem rgba(125, 66, 143, 0.3); }
+
 .btn-rounded-10 {
   border-radius: 10px; }
 
@@ -225,8 +233,15 @@ main {
     padding: 2rem 1rem;
     background-color: white;
     box-shadow: 0px 0px 10px #3a3a3a; }
-    .searcher .tab-pane form .border-right {
-      border-right: 1px solid #7d428f; }
+    @media (min-width: 992px) {
+      .searcher .tab-pane form .border-right {
+        border-right: 1px solid #7d428f; } }
+    @media (min-width: 992px) {
+      .searcher .tab-pane form .border-left {
+        border-left: 1px solid #7d428f; } }
+    .searcher .tab-pane form hr {
+      background: #7d428f;
+      opacity: 1; }
     .searcher .tab-pane form label {
       color: #3a3a3a;
       margin-bottom: 0; }
@@ -369,13 +384,6 @@ main {
     color: #7d428f;
     font-size: 0.8rem;
     padding: 0 5px; }
-  .searcher .form-check-input {
-    border: 1px solid #7d428f; }
-    .searcher .form-check-input:checked {
-      background-color: #7d428f;
-      border-color: #7d428f; }
-    .searcher .form-check-input:focus {
-      box-shadow: 0 0 0 0.25rem rgba(125, 66, 143, 0.3); }
   .searcher input {
     cursor: pointer; }
   .searcher .box-colors {
@@ -384,7 +392,8 @@ main {
     right: 0; }
   .searcher .select2-container {
     width: 100% !important; }
-  .searcher .select2-container--default .select2-selection--single {
+  .searcher .select2-container--default .select2-selection--single,
+  .searcher .select2-container--default .select2-selection--multiple {
     border: 1px solid transparent; }
   .searcher .select2-container .select2-selection--single .select2-selection__rendered {
     padding: 0.5rem 0;

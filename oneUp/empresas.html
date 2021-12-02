@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OneUp</title>
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+  
+</head>
+<body class="nav-transp">
+  <div id="navbar">
+    <nav class="navbar navbar-expand-xl navbar-light">
+      <div class="container">
+        <a class="navbar-brand" href="./">
+          <img class="logo-navbar" src="assets/images/logo.png" alt="One Up">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item">
+              <a class="nav-link active btn-underline-from-center" href="#">INICIO</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link @@tienda btn-underline-from-center" href="#">TIENDA</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link @@productos btn-underline-from-center" href="#">PRODUCTOS</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-custom btn-rounded btn-red-transparent btn-center-out" href="">CATALOGO VIRTUAL</a>
+            </li>
+          </ul>
+          <div class="icons-perfil mt-3 mt-xl-0">
+            <a href="#">
+              <img class="img-icons" src="assets/images/buscador.png" alt="buscar">
+            </a>
+            <a href="#" style="position: relative;">
+              <img class="img-icons" src="assets/images/carrito.png" alt="carrito">
+              <span class="notificacion-icon">2</span>
+            </a>
+            <a href="#" class="btn-user" style="position: relative";>
+              <img class="img-icons" src="assets/images/perfil.png" alt="user"/>
+            </a>
+            <div class="popup-login" style="display: none;">
+              <div class="d-grid p-3">
+                <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out px-0 mb-3" href="">Iniciar Sesión</a>
+                <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out px-0" href="">Registrarse</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+
+  <div id="navbar-mobile" class="navbar-mobil">
+    <div class="container">
+      <div class="menu">
+        <button id="open" class="btn">
+          <img src="assets/images/menu.png" alt="menu">
+        </button>
+        <img class="img-logo" src="assets/images/logo.png" alt="logo">
+        <div class="icons-perfil">
+          <a href="#" class="btn-user" style="position: relative";>
+            <img class="img-icons" src="assets/images/perfil.png" alt="user"/>
+          </a>
+          <div class="popup-login" style="display: none;">
+            <div class="d-grid p-3">
+              <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out px-0 mb-3" href="">Iniciar Sesión</a>
+              <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out px-0" href="">Registrarse</a>
+            </div>
+          </div>
+          <a href="#" style="position: relative;">
+            <img class="img-icons" src="assets/images/carrito.png" alt="carrito">
+            <span class="notificacion-icon">2</span>
+          </a>
+        </div>
+      </div>
+    
+      <div class="menu-open">
+        <div id="close" class="icon-close">
+          <img src="assets/images/cerrar.png" alt="close">
+        </div>
+        <div class="contenedor-menu">
+          <p class="title-menu">Menu</p>
+          <ul>
+            <li>
+              <a href="#">
+                Catalogo Virtual
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Notificaciones
+              </a>
+              <span class="notificacion">2</span>
+            </li>
+            <li>
+              <a href="#">
+                Perfil
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Sobre Nosotros
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Aviso Legal
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Cerrar Sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <link rel="stylesheet" href="assets/css/empresas.min.css">
+  
+  <main>
+    
+    <div class="section-empresas">
+      <div class="container">
+        <div class="desktop d-none d-xl-flex">
+          <div class="circle-rotate"></div>
+          <div class="circle-info">
+            <div class="content-img d-flex align-items-center">
+              <div id="triangulo" class="pos-1"></div>
+            </div>
+            <div class="content-info">
+              <div class="info">
+                <p class="title">Título 1</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+                <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+              </div>
+            </div>
+            <div class="content-img"><img btnInfo="1" src="assets/images/empresas/e1.png" alt="" class="img-empresa img-1"></div>
+            <div class="content-img"><img btnInfo="2" src="assets/images/empresas/e2.png" alt="" class="img-empresa img-2"></div>
+            <div class="content-img"><img btnInfo="3" src="assets/images/empresas/e3.png" alt="" class="img-empresa img-3"></div>
+            <div class="content-img"><img btnInfo="4" src="assets/images/empresas/e4.png" alt="" class="img-empresa img-4"></div>
+            <div class="content-img"><img btnInfo="5" src="assets/images/empresas/e5.png" alt="" class="img-empresa img-5"></div>
+            <div class="content-img"><img btnInfo="6" src="assets/images/empresas/e6.png" alt="" class="img-empresa img-6"></div>
+            <div class="content-img"><img btnInfo="7" src="assets/images/empresas/e7.png" alt="" class="img-empresa img-7"></div>
+            <div class="content-img"><img btnInfo="8" src="assets/images/empresas/e8.png" alt="" class="img-empresa img-8"></div>
+            <div class="content-img"><img btnInfo="9" src="assets/images/empresas/e9.png" alt="" class="img-empresa img-9"></div>
+            <div class="content-img"><img btnInfo="10" src="assets/images/empresas/e10.png" alt="" class="img-empresa img-10"></div>
+            <div class="content-img"><img btnInfo="11" src="assets/images/empresas/e11.png" alt="" class="img-empresa img-11"></div>
+            <div class="content-img"><img btnInfo="12" src="assets/images/empresas/e12.png" alt="" class="img-empresa img-12"></div>
+          </div>
+        </div>
+        <div class="mobile d-xl-none">
+          <div class="row">
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="1" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e1.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="2" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e2.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="3" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e3.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="4" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e4.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="5" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e5.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="6" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e6.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="7" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e7.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="8" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e8.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="9" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e9.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="10" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e10.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="11" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e11.png" alt="" class="img-fluid">
+              </a>
+            </div>
+            <div class="col-4 mt-3 text-center">
+              <a btnInfo="12" type="button" data-bs-toggle="modal" data-bs-target="#modalInfo" class="img-empresa">
+                <img src="assets/images/empresas/e12.png" alt="" class="img-fluid">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal fade" id="modalInfo" tabindex="-1" aria-labelledby="exampleModalInfo" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div class="content-info">
+                <div class="info">
+                  <p class="title">Título 1</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+                  <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="info-empresas d-none">
+      <div info="1" class="info animated fadeIn">
+        <p class="title">Título 1</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="2" class="info animated fadeIn">
+        <p class="title">Título 2</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="3" class="info animated fadeIn">
+        <p class="title">Título 3</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="4" class="info animated fadeIn">
+        <p class="title">Título 4</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="5" class="info animated fadeIn">
+        <p class="title">Título 5</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="6" class="info animated fadeIn">
+        <p class="title">Título 6</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="7" class="info animated fadeIn">
+        <p class="title">Título 7</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="8" class="info animated fadeIn">
+        <p class="title">Título 8</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="9" class="info animated fadeIn">
+        <p class="title">Título 9</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="10" class="info animated fadeIn">
+        <p class="title">Título 10</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="11" class="info animated fadeIn">
+        <p class="title">Título 11</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+      <div info="12" class="info animated fadeIn">
+        <p class="title">Título 12</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur provident quidem, tenetur quae delectus voluptatum porro! Unde porro cum accusamus voluptates magnam. Dolore quos repellat vitae autem laudantium cum molestiae vel delectus, alias laborum exercitationem id nisi dolorum ducimus ad quasi! Enim quibusdam neque esse perspiciatis! Quam consequuntur impedit dolore.</p>
+        <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
+      </div>
+    </div>
+    
+    <div class="section-newsletter">
+      <div class="container">
+        <form>
+          <div class="row">
+            <div class="col-12 col-md-8 offset-md-2">
+              <div class="row">
+                <div class="col-12">
+                  <p class="text-newsletter">¡Conoces las Novedades,<br>promociones, articulos y oneup!</p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-8">
+                  <input type="text" class="form-control mb-3" id="name" placeholder="Nombre">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                    <label class="form-check-label" for="flexCheckDefault">
+                      <a href="">Acepto los términos y condiciones.</a>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 col-md-4 text-center">
+                  <a id="btn-newsletter" class="btn btn-custom btn-rounded btn-transparent-white btn-center-out">SUSCRIBIRME</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
+        <div class="placaNewsletter" style="display: none;">
+          <lord-icon src="./assets/images/approved-checked-outline.json" trigger="loop" target="a" colors="primary:#ffffff;,secondary:#00ff00;" style="width: auto; height: 80%;"></lord-icon>
+          <p>Enviado Correctamente</p>
+        </div>
+      </div>
+    </div>
+    <div class="section-footer1 d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 wow fadeInLeft slow">
+            <img src="assets/images/logo.png" alt="logo one up" class="img-fluid logo-footer">
+            <p class="mt-3">Puedes visitarnos, conocer el proyecto de primera mano en <br>Las Palmas de Gran Canaria. <br>En nuestras oficinas en C/Alcalde Ramírez Bethencourt 1.</p>
+            <div class="mt-4">
+              <div id="redes">
+                <a class="me-2" href="">
+                  <div class="red fb">
+                    <img src="assets/images/icons/fb.png" alt="facebook">
+                  </div>
+                </a>
+                <a class="me-2" href="">
+                  <div class="red ig">
+                    <img src="assets/images/icons/ig.png" alt="instagram">
+                  </div>
+                </a>
+                <a class="me-2" href="">
+                  <div class="red yt">
+                    <img src="assets/images/icons/yt.png" alt="youtube">
+                  </div>
+                </a>
+                <a class="me-2" href="">
+                  <div class="red ta">
+                    <img src="assets/images/icons/tp.png" alt="tripavisor">
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-3 mt-5 wow fadeInLeft slow">
+            <h5>Trabaja con nosotros</h5>
+            <ul>
+              <li>
+                <a href="" class="items-menu">Trabajadores</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Asociados</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Contacto</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 mt-5 wow fadeInLeft slow">
+            <h5>Otras secciones</h5>
+            <ul>
+              <li>
+                <a href="" class="items-menu">Press kit</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Equipo</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Tienda</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Blog</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 mt-5 wow fadeInLeft slow">
+            <h5>Legal</h5>
+            <ul>
+              <li>
+                <a href="" class="items-menu">Aviso legal</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Políticas de cookies</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Preguntas frecuentes</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Mapa del sitio</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-mobil-footer d-block d-lg-none">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Trabaja con nosotros
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li>
+                  <a href="#">Trabajadores</a>
+                </li>
+                <li>
+                  <a href="#">Asociados</a>
+                </li>
+                <li>
+                  <a href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Otras secciones
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li>
+                  <a href="#">Press kit</a>
+                </li>
+                <li>
+                  <a href="#">Equipo</a>
+                </li>
+                <li>
+                  <a href="#">Tienda</a>
+                </li>
+                <li>
+                  <a href="#">Blog</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+              Legal
+            </button>
+          </h2>
+          <div id="flush-collapseThree" class="accordion-collapse collapse" aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li>
+                  <a href="#">Aviso legal</a>
+                </li>
+                <li>
+                  <a href="#">Política de cookies</a>
+                </li>
+                <li>
+                  <a href="#">Preguntas frecuentes</a>
+                </li>
+                <li>
+                  <a href="#">Mapa del sitio</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inf-oneup">
+        <img src="assets/images/logo.png" alt="logo one up" class="img-fluid logo-footer">
+        <p class="mt-3">Puedes visitarnos, conocer el proyecto de primera mano en Las Palmas de Gran Canaria. En nuestras oficinas en C/Alcalde Ramírez Bethencourt 1.</p>
+        <div class="mt-4">
+          <div id="redes">
+            <a class="me-2" href="">
+              <div class="red fb">
+                <img src="assets/images/icons/fb.png" alt="facebook">
+              </div>
+            </a>
+            <a class="me-2" href="">
+              <div class="red ig">
+                <img src="assets/images/icons/ig.png" alt="instagram">
+              </div>
+            </a>
+            <a class="me-2" href="">
+              <div class="red yt">
+                <img src="assets/images/icons/yt.png" alt="youtube">
+              </div>
+            </a>
+            <a class="me-2" href="">
+              <div class="red ta">
+                <img src="assets/images/icons/tp.png" alt="tripavisor">
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-footer2">
+      <div class="text-center">
+        <small>
+          <p class="mb-0 wow fadeIn">
+            &copy; 2021 OneUPSaves - Todos los derechos reservados 
+          </p>
+        </small>
+      </div>
+    </div>
+  </main>
+  
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/wowjs/wow.min.js"></script>
+  <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    wow = new WOW({
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    })
+    wow.init();
+  </script>
+
+  <script>
+    $('.img-empresa').click(function() {
+      let item = $(this).attr('btnInfo')
+      $('.content-info').load(window.location + ' .info[info="' + item + '"]')
+      let posTriangulo = $('#triangulo').attr('class')
+      $('#triangulo').removeClass(posTriangulo)
+      $('#triangulo').addClass('pos-' + item)
+    })
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Rifeño</title>
+  <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
+  <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/styles.min.css">
+  <link rel="stylesheet" href="assets/css/menu-combo.min.css">
+
+</head>
+<body class="nav-transp">
+  <div id="navbar">
+    <nav class="navbar navbar-expand-xl navbar-light">
+      <div class="container">
+        <ul class="navbar-nav navbar-nav-left">
+          <li class="nav-item">
+            <a class="nav-link @@index btn-underline-from-center" href="#">inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @@carta btn-underline-from-center" href="#">Carta</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @@cocina btn-underline-from-center" href="#">Cocina</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav navbar-nav-center">
+          <a class="navbar-brand" href="./">
+            <img class="logo-navbar" src="assets/images/logo.png" alt="El rifeño">
+          </a>
+        </ul>
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item">
+            <a class="nav-link @@bereber btn-underline-from-center" href="#">Bereber</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @@casa btn-underline-from-center" href="#">Nuestra Casa</a>
+          </li>
+          <li class="nav-item">
+            <a class="btn btn-custom btn-rounded btn-yellow-white btn-center-out" href="">RESERVAR</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div id="navbar-mobile" class="navbar-mobil">
+    <div class="container">
+      <div class="menu">
+        <div class="text-start">
+          <button id="open" class="btn-menu">
+            <img src="assets/images/menu.png" alt="menu">
+          </button>
+        </div>
+        <div class="text-center">
+          <img class="img-logo" src="assets/images/logo.png" alt="logo">
+        </div>
+        <div class="text-end">
+          <a class="btn btn-custom btn-rounded btn-yellow-white btn-center-out" href="">RESERVAR</a>
+        </div>
+      </div>
+      <div class="menu-open">
+        <div id="close" class="icon-close">
+          <img src="assets/images/x.png" alt="close">
+        </div>
+        <div class="contenedor-menu">
+          <p class="title-menu">Menu</p>
+          <ul class="list-menu">
+            <li>
+              <a href="#">
+                Inicio
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Carta
+              </a>
+              <span class="notificacion">2</span>
+            </li>
+            <li>
+              <a href="#">
+                Cocina
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Bereber
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Nuestra Casa
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                Otros
+              </a>
+            </li>
+          </ul>
+          <div class="text-center">
+            <img class="w-50" src="assets/images/logo.png" alt="logo">
+          </div>
+          <div class="redes-menu">
+            <ul>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/icons/fb.png" alt="facebook">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/icons/tw.png" alt="twitter">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/icons/ig.png" alt="instagram">
+                </a>
+              </li>
+              <li>
+                <a href="#" target="_blank" rel="noopener noreferrer">
+                  <img src="assets/images/icons/wa.png" alt="whatsapp">
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <main>
+    <div class="section-welcome">
+      <div class="container">
+        <p class="title wow fadeInDown">La auténtica cocina <br><span class="text-yellow">Menú combo</span></p>
+      </div>
+    </div>
+    <div class="section-combo">
+      <div class="container">
+        <div class="content-menu">
+          <div class="row">
+            <div class="col-6 col-lg-4 col-combos">
+              <div class="img-container wow fadeIn">
+                <div class="img-rhombus">
+                  <div class="inner-wrapper">
+                    <div class="placa-menu"></div>
+                    <img src="assets/images/home/img-nosotros.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-custom btn-combos btn-center-out text-center wow fadeInUp" data-bs-toggle="modal" data-bs-target="#menu-combos">Nombre menú</a>
+            </div>
+            <div class="col-6 col-lg-4 col-combos">
+              <div class="img-container wow fadeIn">
+                <div class="img-rhombus">
+                  <div class="inner-wrapper">
+                    <div class="placa-menu"></div>
+                    <img src="assets/images/home/img-nosotros.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-custom btn-combos btn-center-out text-center wow fadeInUp" data-bs-toggle="modal" data-bs-target="#menu-combos">Nombre menú</a>
+            </div>
+            <div class="col-6 col-lg-4 col-combos">
+              <div class="img-container wow fadeIn">
+                <div class="img-rhombus">
+                  <div class="inner-wrapper">
+                    <div class="placa-menu"></div>
+                    <img src="assets/images/home/img-nosotros.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-custom btn-combos btn-center-out text-center wow fadeInUp" data-bs-toggle="modal" data-bs-target="#menu-combos">Nombre menú</a>
+            </div>
+            <div class="col-6 col-lg-4 col-combos">
+              <div class="img-container wow fadeIn">
+                <div class="img-rhombus">
+                  <div class="inner-wrapper">
+                    <div class="placa-menu"></div>
+                    <img src="assets/images/home/img-nosotros.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-custom btn-combos btn-center-out text-center wow fadeInUp" data-bs-toggle="modal" data-bs-target="#menu-combos">Nombre menú</a>
+            </div>
+            <div class="col-6 col-lg-4 col-combos">
+              <div class="img-container wow fadeIn">
+                <div class="img-rhombus">
+                  <div class="inner-wrapper">
+                    <div class="placa-menu"></div>
+                    <img src="assets/images/home/img-nosotros.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-custom btn-combos btn-center-out text-center wow fadeInUp" data-bs-toggle="modal" data-bs-target="#menu-combos">Nombre menú</a>
+            </div>
+            <div class="col-6 col-lg-4 col-combos">
+              <div class="img-container wow fadeIn">
+                <div class="img-rhombus">
+                  <div class="inner-wrapper">
+                    <div class="placa-menu"></div>
+                    <img src="assets/images/home/img-nosotros.png" alt="">
+                  </div>
+                </div>
+              </div>
+              <a class="btn btn-custom btn-combos btn-center-out text-center wow fadeInUp" data-bs-toggle="modal" data-bs-target="#menu-combos">Nombre menú</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="menu-combos" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="row">
+            <div class="col-12 col-lg-6 col-izq">
+              <img class="img-menu-modal" src="assets/images/img-menu.png" alt="menu">
+            </div>
+            <div class="col-12 col-lg-6 pt-2 ">
+              <div class="contenido-modal p-2">
+                <div class="text-end">
+                  <button type="button" class="btn-close me-2" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <p class="title-modal">Nombre menú</p>
+                <p class="text-gray">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perferendis architecto provident et. Ratione sed autem ab neque soluta facilis quam fugiat officiis.</p>
+                <hr style="border: 1px dotted lightgray;" />
+                <ol>
+                  <li>Menu</li>
+                  <li>Menu</li>
+                  <li>Menu</li>
+                  <li>Menu</li>
+                  <li>Menu</li>
+                  <li>Menu</li>
+                </ol>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-rounded btn-custom btn-black-white btn-center-out text-center" data-bs-dismiss="modal">Volver</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-newsletter">
+      <div class="container">
+        <form>
+          <div class="row">
+            <div class="col-12 col-xl-10 offset-xl-1">
+              <div class="row">
+                <div class="col-12">
+                  <p class="title wow fadeInDown">¡Novedades y promociones <span class="text-yellow">en un paso!</span></p>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-9">
+                  <div class="row">
+                    <div class="col-12 col-lg-6">
+                      <input type="text" class="form-control mb-3 wow fadeInDown" id="name" placeholder="Nombre">
+                    </div>
+                    <div class="col-12 col-lg-6">
+                      <input type="text" class="form-control mb-3 wow fadeInDown" id="mail" placeholder="Email">
+                    </div>
+                    <div class="col-12">
+                      <div class="form-check wow fadeInDown">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                        <label class="form-check-label" for="flexCheckDefault">
+                          <a href="">Acepto los términos y condiciones.</a>
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12 col-lg-3 text-center">
+                  <div class="d-lg-grid">
+                    <a id="btn-newsletter" class="btn btn-yellow-white btn-center-out px-3 px-lg-0 wow fadeInDown">¡Quiero ser el primero!</a>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="row">
+            
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="placaNewsletter" style="display: none;">
+        <lord-icon src="./assets/images/approved-checked-outline.json" trigger="loop" target="a" colors="primary:#ffffff;,secondary:#00ff00;" style="width: auto; height: 80%;"></lord-icon>
+        <p>Enviado Correctamente</p>
+      </div>
+    </div>
+    <div class="section-footer1 d-none d-lg-block">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-md-3 wow fadeInLeft slow">
+            <h5>Trabaja con nosotros</h5>
+            <ul>
+              <li>
+                <a href="" class="items-menu">¿Te unes al equipo?</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Contacto</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 wow fadeInLeft slow">
+            <h5>Legal</h5>
+            <ul>
+              <li>
+                <a href="" class="items-menu">Términos y condiciones</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Política de privacidad</a>
+              </li>
+              <li>
+                <a href="" class="items-menu">Política de cookies</a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-12 col-md-3 wow fadeInLeft slow">
+            <h5 class="mb-3">Síguenos</h5>
+            <a class="redes-blue" href="#" target="_blank">
+              <span class="fa-stack fa-2x">
+                <i class="icon-bg fas fa-square fa-stack-2x"></i>
+                <i class="icon-red fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <a class="redes-yellow" href="#" target="_blank">
+              <span class="fa-stack fa-2x">
+                <i class="icon-bg fas fa-square fa-stack-2x"></i>
+                <i class="icon-red fab fa-twitter fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <a class="redes-blue" href="#" target="_blank">
+              <span class="fa-stack fa-2x">
+                <i class="icon-bg fas fa-square fa-stack-2x"></i>
+                <i class="icon-red fab fa-instagram fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+            <a class="redes-yellow" href="#" target="_blank">
+              <span class="fa-stack fa-2x">
+                <i class="icon-bg fas fa-square fa-stack-2x"></i>
+                <i class="icon-red fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-mobil-footer d-block d-lg-none">
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+              Trabaja con nosotros
+            </button>
+          </h2>
+          <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li>
+                  <a href="#">¿Te unes al equipo?</a>
+                </li>
+                <li>
+                  <a href="#">Contacto</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+              Legal
+            </button>
+          </h2>
+          <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <ul>
+                <li>
+                <a href="#">Términos y condiciones</a>
+              </li>
+              <li>
+                <a href="#">Política de privacidad</a>
+              </li>
+              <li>
+                <a href="#">Política de cookies</a>
+              </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="inf-oneup">
+        <h5 class="mb-4">Síguenos</h5>
+        <a class="redes-blue" href="#" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="icon-bg fas fa-square fa-stack-2x"></i>
+            <i class="icon-red fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a class="redes-yellow" href="#" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="icon-bg fas fa-square fa-stack-2x"></i>
+            <i class="icon-red fab fa-twitter fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a class="redes-blue" href="#" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="icon-bg fas fa-square fa-stack-2x"></i>
+            <i class="icon-red fab fa-instagram fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+        <a class="redes-yellow" href="#" target="_blank">
+          <span class="fa-stack fa-2x">
+            <i class="icon-bg fas fa-square fa-stack-2x"></i>
+            <i class="icon-red fab fa-whatsapp fa-stack-1x fa-inverse"></i>
+          </span>
+        </a>
+      </div>
+    </div>
+
+    <div class="section-footer2">
+      <div class="text-center">
+        <small>
+          <p class="mb-0 wow fadeIn">
+            &copy; 2021 El rifeño - Todos los derechos reservados 
+          </p>
+        </small>
+      </div>
+    </div>
+
+    <div class="ventanaPeq">
+      <img src="assets/images/x.png" alt="close" class="close-reservar-peq">
+      <img class="img-rombo-reserva" src="assets/images/rombo-reservar.png" alt="rombo">
+      <a href="#">
+        RESERVAR MESA
+      </a>
+    </div>
+
+    <div class="ventanaGde">
+      <img src="assets/images/x.png" alt="close" class="close-reservar">
+      <img class="img-rombo-reserva" src="assets/images/rombo-reservar.png" alt="rombo">
+      <a href="#">
+        RESERVAR MESA
+      </a>
+    </div>
+  </main>
+
+  <script src="assets/libs/jquery/jquery.min.js"></script>
+  <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/libs/wowjs/wow.min.js"></script>
+  <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    wow = new WOW({
+      boxClass:     'wow',      // default
+      animateClass: 'animated', // default
+      offset:       0,          // default
+      mobile:       true,       // default
+      live:         true        // default
+    })
+    wow.init();
+  </script>
+</body>
+</html>

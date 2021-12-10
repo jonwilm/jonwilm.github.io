@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.min.css">
   <link rel="stylesheet" href="assets/css/contacto.min.css">
-
+  
 </head>
 <body class="nav-transp">
   <div id="navbar">
@@ -59,7 +59,18 @@
           <img class="img-logo" src="assets/images/logo.png" alt="logo">
         </div>
         <div class="text-end">
-          <a class="btn btn-custom btn-rounded btn-yellow-white btn-center-out" href="">RESERVAR</a>
+          <a class="redes-yellow" href="#" target="_blank">
+            <span class="fa-stack fa-2x">
+              <i class="icon-bg fas fa-square fa-stack-2x"></i>
+              <i class="icon-red fab fa-facebook-f fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
+          <a class="redes-yellow" href="#" target="_blank">
+            <span class="fa-stack fa-2x">
+              <i class="icon-bg fas fa-square fa-stack-2x"></i>
+              <i class="icon-red fab fa-instagram fa-stack-1x fa-inverse"></i>
+            </span>
+          </a>
         </div>
       </div>
       <div class="menu-open">
@@ -133,16 +144,17 @@
     </div>
   </div>
 
-
+  
   <main>
     <div class="section-welcome">
+      <div class="trasfondo"></div>
       <div class="container">
         <div class="row">
           <div class="col-12 col-md-4">
             <p class="title wow fadeInLeft">La auténtica cocina <br><span class="text-yellow">Contacto</span></p>
           </div>
           <div class="col-12 col-md-8">
-            <div class="content-reserva wow fadeInRight">
+            <div class="content-reserva wow fadeInRight d-none d-sm-block">
               <img src="assets/images/x.png" alt="close">
               <p class="mb-0">Puedes hacer tu <a href="#"><strong>reserva aquí</strong></a></p>
               <p class="mb-0">Para trabajar con nosotros, haz <a href="#"><strong>click aquí.</strong></a></p>
@@ -153,12 +165,18 @@
       </div>
     </div>
     <div class="section-contacto">
+      <div class="content-reserva d-sm-none">
+        <img src="assets/images/x.png" alt="close">
+        <p class="mb-0">Puedes hacer tu <a href="#"><strong>reserva aquí</strong></a></p>
+        <p class="mb-0">Para trabajar con nosotros, haz <a href="#"><strong>click aquí.</strong></a></p>
+        <p class="mt-4 mb-0">Para cualquier otro tema, no dudes en contactarnos utilizando el siguiente formulario.</p>
+      </div>
       <div class="container">
         <div class="content-contacto">
           <div class="row">
             <div class="col-12 col-md-6 mt-4 col-izq">
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3519.459455271361!2d-15.416249585445117!3d28.10202668263006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xc40958ebdbc1ab9%3A0x357ea8f26706474a!2sC.%20Pelota%2C%2015%2C%2035001%20Las%20Palmas%20de%20Gran%20Canaria%2C%20Las%20Palmas%2C%20Espa%C3%B1a!5e0!3m2!1ses!2sve!4v1638830240786!5m2!1ses!2sve" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-              <div class="content-map row">
+              <div class="content-map row mx-0">
                 <div class="col-7 d-flex align-items-center">
                   <i class="fas fa-map-marker-alt wow fadeInUp"></i>
                   <p class="ms-2 mb-0 wow fadeInUp">C. Pelota, 15, 35001 Las Palmas de Gran Canaria, Las Palmas.</p>
@@ -231,18 +249,11 @@
                   </div>
                 </div>
               </div>
-          
-              <div class="row">
-            
-              </div>
             </div>
           </div>
         </form>
       </div>
-      <div class="placaNewsletter" style="display: none;">
-        <lord-icon src="./assets/images/approved-checked-outline.json" trigger="loop" target="a" colors="primary:#ffffff;,secondary:#00ff00;" style="width: auto; height: 80%;"></lord-icon>
-        <p>Enviado Correctamente</p>
-      </div>
+      <div class="placaNewsletter" style="display: none;"></div>
     </div>
     <div class="section-footer1 d-none d-lg-block">
       <div class="container">
@@ -402,11 +413,11 @@
       </a>
     </div>
   </main>
-
+  
   <script src="assets/libs/jquery/jquery.min.js"></script>
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/libs/wowjs/wow.min.js"></script>
-  <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     wow = new WOW({

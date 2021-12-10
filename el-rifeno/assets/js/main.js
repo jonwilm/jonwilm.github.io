@@ -6,7 +6,7 @@ $(window).ready(function () {
     $(".navbar").toggleClass("bg-red");
   });
   changeColorNavbar();
-
+  
   $("#open").click(function () {
     $(".menu-open").css("left", "0");
   });
@@ -33,31 +33,32 @@ function changeColorNavbar() {
 // ------------------------------------------------------------
 // AUTOMATIC DROPDOWN
 // ------------------------------------------------------------
-$(".dropdown").hover(
-  function () {
-    if ($(window).width() > 1200) {
-      $("a", this).addClass("show");
-      $("a", this).attr("aria-expanded", "true");
-      $(".dropdown-menu", this).addClass("show");
-      $(".dropdown-menu", this).attr("data-bs-popper", "none");
-    }
-  },
-  function () {
-    if ($(window).width() > 1200) {
-      $("a", this).removeClass("show");
-      $("a", this).attr("aria-expanded", "false");
-      $(".dropdown-menu", this).removeClass("show");
-      $(".dropdown-menu", this).removeAttr("data-bs-popper");
-    }
+$(".dropdown").hover(function() {
+  if ($(window).width() > 1200) {
+    $("a", this).addClass("show");
+    $("a", this).attr("aria-expanded", "true");
+    $(".dropdown-menu", this).addClass("show");
+    $(".dropdown-menu", this).attr("data-bs-popper", "none");
   }
-);
+}, function() {
+  if ($(window).width() > 1200) {
+    $("a", this).removeClass("show");
+    $("a", this).attr("aria-expanded", "false");
+    $(".dropdown-menu", this).removeClass("show");
+    $(".dropdown-menu", this).removeAttr("data-bs-popper");
+  }
+});
 
 // ------------------------------------------------------------
 // NEWSLETTER
 // ------------------------------------------------------------
-$("#btn-newsletter").click(function () {
-  $(".placaNewsletter").fadeIn(300);
-});
+$('#btn-newsletter').click(function() {
+  $('.placaNewsletter').css('display', 'block')
+  $('.placaNewsletter').html(`
+  <lottie-player src="https://assets5.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json" background="transparent" speed="1" style="width: auto; height: 80%;" autoplay></lottie-player>
+  <p>Enviado Correctamente</p>
+  `)
+})
 
 // ------------------------------------------------------------
 // RESERVAR MESA
@@ -77,21 +78,31 @@ $(".close-reservar-peq").click(function () {
 // ------------------------------------------------------------
 // PLACA MENU
 // ------------------------------------------------------------
-$(".btn-combos").hover(
-  function () {
-    $(this)
-      .siblings(".img-container")
-      .find(".inner-wrapper")
-      .css({ width: "200%", height: "200%" });
-    $(this).siblings(".img-container").find(".placa-menu").css("opacity", 1);
-    $(this).text("Ver más");
-  },
-  function () {
-    $(this)
-      .siblings(".img-container")
-      .find(".inner-wrapper")
-      .css({ width: "160%", height: "160%" });
-    $(this).siblings(".img-container").find(".placa-menu").css("opacity", 0);
-    $(this).text("Nombre menú");
-  }
-);
+$(".btn-combos").hover(function() {
+  $(this).siblings(".img-container").find(".inner-wrapper").css({ width: "200%", height: "200%" });
+  $(this).siblings(".img-container").find(".placa-menu").css("opacity", 1);
+  $(this).text("Ver más");
+}, function() {
+  $(this).siblings(".img-container").find(".inner-wrapper").css({ width: "160%", height: "160%" });
+  $(this).siblings(".img-container").find(".placa-menu").css("opacity", 0);
+  $(this).text($(this).attr('name-menu'));
+});
+$(".rombo-hover").hover(function() {
+  let colCombos = $(this).parents(".col-combos");
+  let btnCombos = colCombos.find(".btn-combos");
+  $(this).parent(".inner-wrapper").css({ width: "200%", height: "200%" });
+  $(this).siblings(".placa-menu").css("opacity", 1);
+  btnCombos.text("Ver más");
+  btnCombos.addClass('active');
+}, function() {
+  let colCombos = $(this).parents(".col-combos");
+  let btnCombos = colCombos.find(".btn-combos");
+  $(this).parent(".inner-wrapper").css({ width: "160%", height: "160%" });
+  $(this).siblings(".placa-menu").css("opacity", 0);
+  btnCombos.text(btnCombos.attr('name-menu'));
+  btnCombos.removeClass('active');
+});
+$(".rombo-hover").on('click', function() {
+  let modalOpen = $(this).parents(".col-combos").find(".btn-combos").attr('data-bs-target');
+  $(modalOpen).modal("show");
+});

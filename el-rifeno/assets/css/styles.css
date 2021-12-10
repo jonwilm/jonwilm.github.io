@@ -21,7 +21,11 @@ html, body {
   color: #FFBF53 !important; }
 
 .content-title {
-  display: flex; }
+  display: flex;
+  justify-content: center; }
+  @media (min-width: 992px) {
+    .content-title {
+      justify-content: start; } }
   .content-title img {
     width: 3rem;
     height: 3rem;
@@ -63,7 +67,7 @@ html, body {
   .redes-yellow:hover .icon-bg {
     color: #ffffff; }
   .redes-yellow:hover .icon-red {
-    color: #FFBF53; }
+    color: #00A9DC; }
 
 #navbar {
   display: none;
@@ -86,7 +90,8 @@ html, body {
       font-size: .8rem; }
     #navbar .navbar .navbar-brand {
       padding-top: 5px;
-      padding-bottom: 5px; }
+      padding-bottom: 5px;
+      margin: 0 auto; }
       #navbar .navbar .navbar-brand .logo-navbar {
         height: 80px; }
     #navbar .navbar .navbar-nav {
@@ -249,15 +254,28 @@ html, body {
     color: black; }
 
 .btn-combos {
-  padding-left: 5rem;
-  padding-right: 5rem;
+  min-width: 100%;
+  max-width: 100%;
+  padding-left: 1rem;
+  padding-right: 1rem;
   color: #ffffff;
   font-weight: bold;
   background: linear-gradient(to right, white 0%, white 5%, #00a9dc 53%, white 95%, white 100%);
   border: none;
   transition: all 0.3s; }
+  @media (min-width: 768px) {
+    .btn-combos {
+      min-width: 85%; } }
+  @media (min-width: 1024px) {
+    .btn-combos {
+      min-width: 100%; } }
+  @media (min-width: 1200px) {
+    .btn-combos {
+      min-width: 80%; } }
   .btn-combos:hover {
     color: #ffffff;
+    background: linear-gradient(to right, white 0%, white 5%, #ffbf53 53%, white 95%, white 100%); }
+  .btn-combos.active {
     background: linear-gradient(to right, white 0%, white 5%, #ffbf53 53%, white 95%, white 100%); }
 
 .btn-center-out {
@@ -411,10 +429,10 @@ html, body {
     .ventanaPeq {
       width: 320px; } }
   .ventanaPeq .close-reservar-peq {
-    width: 20px;
+    width: 15px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0.5rem;
+    right: 0.5rem;
     cursor: pointer; }
   .ventanaPeq .img-rombo-reserva {
     width: 50px;
@@ -441,10 +459,10 @@ html, body {
     .ventanaGde {
       width: 320px; } }
   .ventanaGde .close-reservar {
-    width: 20px;
+    width: 15px;
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 0.5rem;
+    right: 0.5rem;
     cursor: pointer; }
   .ventanaGde .img-rombo-reserva {
     width: 60%; }
@@ -462,32 +480,35 @@ html, body {
   padding-top: 4rem;
   padding-bottom: 4rem;
   position: relative; }
-  .section-newsletter form .form-control {
-    height: 2.5rem; }
-    .section-newsletter form .form-control:focus {
-      color: #5c5c5c;
-      background-color: #ffffff;
-      border-color: #FFBF53;
-      outline: 0;
-      box-shadow: 0 0 0 0.25rem rgba(255, 191, 83, 0.25); }
-  .section-newsletter form .form-check-input {
-    margin-bottom: 1rem; }
-    .section-newsletter form .form-check-input:checked {
-      background-color: #FFBF53;
-      border-color: #FFBF53; }
-    .section-newsletter form .form-check-input:focus {
-      border-color: #FFBF53;
-      outline: 0;
-      box-shadow: 0 0 0 0.25rem rgba(255, 191, 83, 0.25); }
-  .section-newsletter form .form-check-label a {
-    color: #ffffff;
-    text-decoration: none;
-    transition: all 0.3s; }
-    .section-newsletter form .form-check-label a:hover {
-      color: #FFBF53; }
-  .section-newsletter form #btn-newsletter {
-    height: 2.5rem;
-    padding: 0.5rem 0; }
+  .section-newsletter form {
+    padding-left: 2rem;
+    padding-right: 2rem; }
+    .section-newsletter form .form-control {
+      height: 2.5rem; }
+      .section-newsletter form .form-control:focus {
+        color: #5c5c5c;
+        background-color: #ffffff;
+        border-color: #FFBF53;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(255, 191, 83, 0.25); }
+    .section-newsletter form .form-check-input {
+      margin-bottom: 1rem; }
+      .section-newsletter form .form-check-input:checked {
+        background-color: #FFBF53;
+        border-color: #FFBF53; }
+      .section-newsletter form .form-check-input:focus {
+        border-color: #FFBF53;
+        outline: 0;
+        box-shadow: 0 0 0 0.25rem rgba(255, 191, 83, 0.25); }
+    .section-newsletter form .form-check-label a {
+      color: #ffffff;
+      text-decoration: none;
+      transition: all 0.3s; }
+      .section-newsletter form .form-check-label a:hover {
+        color: #FFBF53; }
+    .section-newsletter form #btn-newsletter {
+      height: 2.5rem;
+      padding: 0.5rem 0; }
 
 .placaNewsletter {
   width: 100%;

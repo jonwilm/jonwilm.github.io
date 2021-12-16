@@ -1,17 +1,20 @@
 .section-welcome {
-  background-image: url(../images/home/bg-welcome.png);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 50%, white 50%), url(../images/home/bg-welcome-mobile.png);
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   padding-top: 50px;
   padding-bottom: 3rem;
-  height: auto;
   display: flex;
   align-items: center; }
   @media (min-width: 992px) {
     .section-welcome {
-      padding-top: 100px; } }
+      padding-top: 100px;
+      background-image: url(../images/home/bg-welcome.png); } }
+  @media (min-width: 1600px) {
+    .section-welcome {
+      min-height: 90vh; } }
   .section-welcome .container {
     position: relative; }
     .section-welcome .container .slider-cards {
@@ -28,6 +31,9 @@
       @media (min-width: 992px) {
         .section-welcome .container .slider-cards {
           height: 500px; } }
+      @media (min-width: 1600px) {
+        .section-welcome .container .slider-cards {
+          height: 600px; } }
       .section-welcome .container .slider-cards .slider-card-item {
         display: flex;
         justify-content: center;
@@ -46,23 +52,34 @@
           .section-welcome .container .slider-cards .slider-card-item {
             padding: 3rem 2rem; } }
         .section-welcome .container .slider-cards .slider-card-item .row {
-          background-color: #ffffff;
+          background-color: #eaeaea;
           border-radius: 0.5rem;
           box-shadow: 0 30px 50px rgba(0, 0, 0, 0.1);
           padding: 1.5rem 0;
           height: 100%; }
           @media (min-width: 992px) {
             .section-welcome .container .slider-cards .slider-card-item .row {
-              padding: 1rem 0; } }
-          .section-welcome .container .slider-cards .slider-card-item .row .img-product {
-            max-width: 100%;
-            height: auto;
-            transform: scale(1); }
-            @media (min-width: 992px) {
-              .section-welcome .container .slider-cards .slider-card-item .row .img-product {
-                max-width: 70%;
-                height: auto;
-                transform: scale(1.4); } }
+              padding: 0; } }
+          .section-welcome .container .slider-cards .slider-card-item .row .heart {
+            color: #C80C25; }
+          .section-welcome .container .slider-cards .slider-card-item .row .content-img-product {
+            position: relative; }
+            .section-welcome .container .slider-cards .slider-card-item .row .content-img-product .img-product {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              max-width: 100%;
+              max-height: 100%;
+              transform: translate(-50%, -50%) scale(1); }
+              @media (min-width: 992px) {
+                .section-welcome .container .slider-cards .slider-card-item .row .content-img-product .img-product {
+                  max-width: 70%;
+                  max-height: 85%;
+                  transform: translate(-50%, -50%) scale(1.4); } }
+              @media (min-width: 1600px) {
+                .section-welcome .container .slider-cards .slider-card-item .row .content-img-product .img-product {
+                  max-width: 75%;
+                  max-height: 85%; } }
         .section-welcome .container .slider-cards .slider-card-item * {
           pointer-events: none; }
         .section-welcome .container .slider-cards .slider-card-item--left {
@@ -114,11 +131,12 @@
               transition: opacity 1s; }
     .section-welcome .container .content-button-slider {
       position: absolute;
-      right: 1rem;
-      bottom: 0;
+      right: 2rem;
+      bottom: 4.5rem;
       z-index: 4; }
       @media (min-width: 992px) {
         .section-welcome .container .content-button-slider {
+          right: 1rem;
           bottom: 25%; } }
       .section-welcome .container .content-button-slider button {
         width: 35px;
@@ -154,10 +172,10 @@
           width: 90px; } }
       @media (min-width: 992px) {
         .section-empresas .content-logos img {
-          width: 120px; } }
+          width: 130px; } }
       @media (min-width: 1200px) {
         .section-empresas .content-logos img {
-          width: 150px; } }
+          width: 180px; } }
     .section-empresas .content-logos img:nth-child(1) {
       -webkit-animation-delay: 0.2s;
               animation-delay: 0.2s; }
@@ -221,8 +239,8 @@
         @media (min-width: 992px) {
           .section-description .col-izq-descrip .img-col-izq .img-descrip {
             display: block;
-            transform: scale(1.1);
-            width: 80%;
+            transform: scale(1.2);
+            width: 95%;
             height: 100%;
             margin: 0 auto;
             -o-object-fit: cover;
@@ -268,9 +286,6 @@
         top: 0;
         right: 0;
         transform: translateY(-50%); }
-        @media (max-width: 992px) {
-          .section-description .col-der-descrip .text-descrip .img-comillas {
-            display: none; } }
 
 .section-cards {
   background-color: #ffffff;
@@ -280,18 +295,37 @@
     margin: 0 1rem; }
   .section-cards .cards-cuadradas {
     margin-top: 4rem; }
-    @media (max-width: 992px) {
+    @media (max-width: 991.98px) {
       .section-cards .cards-cuadradas {
         display: flex;
         flex-wrap: nowrap;
         overflow-x: auto;
-        overflow-y: hidden; } }
+        overflow-y: hidden; }
+        .section-cards .cards-cuadradas::-webkit-scrollbar {
+          display: none; } }
     .section-cards .cards-cuadradas .card {
+      border: none;
+      border-radius: 10px;
       transition: all .5s;
       box-shadow: 0px 24px 21px -15px rgba(0, 0, 0, 0.2); }
       .section-cards .cards-cuadradas .card:hover {
         box-shadow: 0px 0px 16px 9px rgba(228, 0, 43, 0.1);
         transform: scale(1.05); }
+      .section-cards .cards-cuadradas .card .content-img-top {
+        width: 100%;
+        padding-bottom: 70%;
+        position: relative;
+        border-radius: 10px; }
+        .section-cards .cards-cuadradas .card .content-img-top img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          -o-object-fit: cover;
+             object-fit: cover;
+          -o-object-position: center;
+             object-position: center;
+          border-top-left-radius: 10px;
+          border-top-right-radius: 10px; }
       .section-cards .cards-cuadradas .card .card-body {
         position: relative; }
         .section-cards .cards-cuadradas .card .card-body .btn-redgr-white {
@@ -313,7 +347,7 @@
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
-  background-color: lightgray; }
+  background-color: #efeff7; }
   .section-productos .slider-productos {
     width: 80%;
     margin: 3rem auto; }
@@ -325,18 +359,26 @@
     .section-productos .slider-productos .items-productos .slick-next {
       width: 30px;
       height: 30px;
-      right: -30px; }
+      right: -30px;
+      opacity: 0.6;
+      transition: all 0.3s; }
       .section-productos .slider-productos .items-productos .slick-next img {
         width: 30px;
         height: 30px; }
+      .section-productos .slider-productos .items-productos .slick-next:hover {
+        opacity: 1; }
     .section-productos .slider-productos .items-productos .slick-prev {
       left: -30px;
       width: 30px;
       height: 30px;
+      opacity: 0.6;
+      transition: all 0.3s;
       z-index: 1; }
       .section-productos .slider-productos .items-productos .slick-prev img {
         width: 30px;
         height: 30px; }
+      .section-productos .slider-productos .items-productos .slick-prev:hover {
+        opacity: 1; }
     .section-productos .slider-productos .items-productos .slick-next:before,
     .section-productos .slider-productos .items-productos .slick-prev:before {
       display: none; }
@@ -487,8 +529,8 @@
         @media (min-width: 992px) {
           .section-description2 .col-izq-descrip .img-col-izq .img-descrip {
             display: block;
-            transform: scale(1.1);
-            width: 80%;
+            transform: scale(1.2);
+            width: 95%;
             height: 100%;
             margin: 0 auto;
             -o-object-fit: cover;
@@ -532,11 +574,8 @@
       .section-description2 .col-der-descrip .text-descrip .img-comillas {
         position: absolute;
         top: 0;
-        right: 0;
+        left: 0;
         transform: translateY(-50%); }
-        @media (max-width: 992px) {
-          .section-description2 .col-der-descrip .text-descrip .img-comillas {
-            display: none; } }
 
 .section-noticias {
   padding-top: 4rem;

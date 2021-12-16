@@ -82,32 +82,44 @@ $(".dropdown").hover(
 // ------------------------------------------------------------
 // CAROUSEL WELCOME HOME
 // ------------------------------------------------------------
-$('.slider-card-item').on('click', function() {
-  let thisSlide = $(this)
-  if (thisSlide.hasClass('slider-card-item--right')) {
-    clickSlideRight(thisSlide)
+$(".slider-card-item").on("click", function () {
+  let thisSlide = $(this);
+  if (thisSlide.hasClass("slider-card-item--right")) {
+    clickSlideRight(thisSlide);
   }
-  if (thisSlide.hasClass('slider-card-item--left')) {
-    clickSlideLeft(thisSlide)
+  if (thisSlide.hasClass("slider-card-item--left")) {
+    clickSlideLeft(thisSlide);
   }
-})
-$('.content-button-slider button').on('click', function() {
-  if ($(this).hasClass('prev-slider')) {
-    $('.slider-card-item.slider-card-item--left').click()
+});
+$(".content-button-slider button").on("click", function () {
+  if ($(this).hasClass("prev-slider")) {
+    $(".slider-card-item.slider-card-item--left").click();
   }
-  if ($(this).hasClass('next-slider')) {
-    $('.slider-card-item.slider-card-item--right').click()
+  if ($(this).hasClass("next-slider")) {
+    $(".slider-card-item.slider-card-item--right").click();
   }
-})
+});
 function clickSlideRight(thisSlide) {
-  $('.slider-card-item.slider-card-item--left').removeClass('slider-card-item--left').addClass('slider-card-item--right')
-  $('.slider-card-item.slider-card-item--center').removeClass('slider-card-item--center').addClass('slider-card-item--left')
-  thisSlide.removeClass('slider-card-item--right').addClass('slider-card-item--center')
+  $(".slider-card-item.slider-card-item--left")
+    .removeClass("slider-card-item--left")
+    .addClass("slider-card-item--right");
+  $(".slider-card-item.slider-card-item--center")
+    .removeClass("slider-card-item--center")
+    .addClass("slider-card-item--left");
+  thisSlide
+    .removeClass("slider-card-item--right")
+    .addClass("slider-card-item--center");
 }
 function clickSlideLeft(thisSlide) {
-  $('.slider-card-item.slider-card-item--right').removeClass('slider-card-item--right').addClass('slider-card-item--left')
-  $('.slider-card-item.slider-card-item--center').removeClass('slider-card-item--center').addClass('slider-card-item--right')
-  thisSlide.removeClass('slider-card-item--left').addClass('slider-card-item--center')
+  $(".slider-card-item.slider-card-item--right")
+    .removeClass("slider-card-item--right")
+    .addClass("slider-card-item--left");
+  $(".slider-card-item.slider-card-item--center")
+    .removeClass("slider-card-item--center")
+    .addClass("slider-card-item--right");
+  thisSlide
+    .removeClass("slider-card-item--left")
+    .addClass("slider-card-item--center");
 }
 // ------------------------------------------------------------
 // PRODUCTOS
@@ -128,43 +140,65 @@ function openCity(evt, cardMenus) {
 // ------------------------------------------------------------
 // LOGOS EMPRESAS
 // ------------------------------------------------------------
-$(window).ready(function() {
-  let intervalLogos
-  let mobile = "mobile"
-  let desktop = "desktop"
+$(window).ready(function () {
+  let intervalLogos;
+  let mobile = "mobile";
+  let desktop = "desktop";
   if ($(window).width() < 768) {
-    clearInterval(intervalLogos)
-    changeLogos(mobile)
+    clearInterval(intervalLogos);
+    changeLogos(mobile);
   } else {
-    clearInterval(intervalLogos)
-    changeLogos(desktop)
+    clearInterval(intervalLogos);
+    changeLogos(desktop);
   }
-})
-$(window).resize(function() {
-  let mobile = "mobile"
-  let desktop = "desktop"
+});
+$(window).resize(function () {
+  let mobile = "mobile";
+  let desktop = "desktop";
   if ($(window).width() < 768) {
-    clearInterval(intervalLogos)
-    changeLogos(mobile)
+    clearInterval(intervalLogos);
+    changeLogos(mobile);
   } else {
-    clearInterval(intervalLogos)
-    changeLogos(desktop)
+    clearInterval(intervalLogos);
+    changeLogos(desktop);
   }
-})
+});
 function changeLogos(resolucion) {
-  let change_logos_time = 5000
+  let change_logos_time = 5000;
   let currentIndex = 0;
-  $(".logos-" + resolucion + " .content-logos:not(:eq("+ currentIndex +"))").hide();
+  $(
+    ".logos-" + resolucion + " .content-logos:not(:eq(" + currentIndex + "))"
+  ).hide();
   let totalDiv = $(".logos-" + resolucion + " .content-logos").length;
-  intervalLogos = setInterval(function(){
-      currentIndex = (currentIndex + 1) % totalDiv;
-      $(".logos-" + resolucion + " .content-logos").hide();
-      $(".logos-" + resolucion + " .content-logos").eq(currentIndex).show();
+  intervalLogos = setInterval(function () {
+    currentIndex = (currentIndex + 1) % totalDiv;
+    $(".logos-" + resolucion + " .content-logos").hide();
+    $(".logos-" + resolucion + " .content-logos")
+      .eq(currentIndex)
+      .show();
   }, change_logos_time);
 }
 // ------------------------------------------------------------
 // NEWSLETTER
 // ------------------------------------------------------------
-$('#btn-newsletter').click(function() {
-  $('.placaNewsletter').fadeIn(300)
-})
+$("#btn-newsletter").click(function () {
+  $(".placaNewsletter").css("display", "block");
+  $(".placaNewsletter").html(`
+    <lottie-player src="https://assets5.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json" background="transparent" speed="1" style="width: auto; height: 80%;" autoplay></lottie-player>
+    <p>Enviado Correctamente</p>
+  `);
+});
+
+// ------------------------------------------------------------
+// LOGIN
+// ------------------------------------------------------------
+
+let open = document.querySelector("#open");
+let close = document.querySelector("#close");
+
+open.addEventListener("click", () => {
+  document.querySelector(".menu-open").style.left = "0%";
+});
+close.addEventListener("click", () => {
+  document.querySelector(".menu-open").style.left = "-100%";
+});

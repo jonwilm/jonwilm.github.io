@@ -1,0 +1,113 @@
+.section-direcciones {
+  padding-top: 100px;
+  background-image: url(../images/team/bg-team-mobile.png);
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media (min-width: 992px) {
+    .section-direcciones {
+      background: #efeff7;
+      background-image: url(../images/team/bg-team.png);
+      background-position: center top;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      padding-top: 150px;
+      padding-bottom: 3rem; } }
+  .section-direcciones .content-container {
+    background-color: #ffffff;
+    padding: 0; }
+    @media (max-width: 991.98px) {
+      .section-direcciones .content-container {
+        max-width: 100%; } }
+    @media (min-width: 576px) {
+      .section-direcciones .content-container {
+        border-radius: 25px; } }
+    @media (min-width: 992px) {
+      .section-direcciones .content-container {
+        background: #ffffff;
+        padding-bottom: 5rem; } }
+  .section-direcciones .container1 {
+    background: #ffffff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px; }
+    @media (min-width: 992px) {
+      .section-direcciones .container1 {
+        background: #ffffff; } }
+    @media (max-width: 991.98px) {
+      .section-direcciones .container1 p {
+        color: #e4002b; } }
+  .section-direcciones .container2 {
+    background: #ffffff; }
+    @media (max-width: 991.98px) {
+      .section-direcciones .container2 {
+        max-width: 100%;
+        padding-bottom: 4rem; } }
+    @media (min-width: 992px) {
+      .section-direcciones .container2 {
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        padding-bottom: 4rem; } }
+    .section-direcciones .container2 .col-izq {
+      display: none;
+      border-right: 1px solid #eaeaea; }
+      @media (min-width: 992px) {
+        .section-direcciones .container2 .col-izq {
+          display: flex;
+          justify-content: center;
+          align-items: flex-start; } }
+      .section-direcciones .container2 .col-izq ul {
+        padding-left: 0;
+        list-style: none; }
+        .section-direcciones .container2 .col-izq ul li:before {
+          background: #e4002b; }
+        .section-direcciones .container2 .col-izq ul li.active:before {
+          left: 0;
+          right: 0; }
+        .section-direcciones .container2 .col-izq ul li .items {
+          font-weight: bold;
+          cursor: pointer;
+          color: #1d1d1b;
+          text-decoration: none;
+          transition: all 0.3s; }
+          .section-direcciones .container2 .col-izq ul li .items p {
+            margin-bottom: 0;
+            padding: .5rem; }
+          .section-direcciones .container2 .col-izq ul li .items.close-sesion {
+            color: #e4002b; }
+    .section-direcciones .container2 .col-der {
+      order: 1; }
+      @media (min-width: 992px) {
+        .section-direcciones .container2 .col-der {
+          order: 2; } }
+      .section-direcciones .container2 .col-der .address p {
+        color: #222;
+        font-size: 0.8rem; }
+      .section-direcciones .container2 .col-der .address a {
+        text-decoration: none;
+        font-size: 0.8rem;
+        transition: all 0.3s;
+        color: #1d1d1b;
+        font-weight: 600; }
+        .section-direcciones .container2 .col-der .address a:hover {
+          color: #FF642B; }
+
+#anadirNueva .modal-dialog .modal-content .modal-header .btn-close:focus,
+#editarDireccion .modal-dialog .modal-content .modal-header .btn-close:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #e4002b;
+  outline: 0;
+  box-shadow: none; }
+
+#anadirNueva .modal-dialog .modal-content .modal-body .form-control:focus,
+#editarDireccion .modal-dialog .modal-content .modal-body .form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #e4002b;
+  outline: 0;
+  box-shadow: none; }
+
+#anadirNueva .modal-dialog .modal-content .modal-footer .btn:focus,
+#editarDireccion .modal-dialog .modal-content .modal-footer .btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem rgba(253, 69, 13, 0.25); }

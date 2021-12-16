@@ -7,8 +7,7 @@
   <title>OneUp</title>
   <link rel="stylesheet" href="assets/libs/bootstrap/css/bootstrap.min.css">
   <link rel="stylesheet" href="assets/libs/animate.css/animate.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/fontawesome.min.css">
+  <link rel="stylesheet" href="assets/libs/@fortawesome/fontawesome-free/css/all.min.css">
   <link rel="stylesheet" href="assets/css/styles.min.css">
 
 </head>
@@ -146,9 +145,10 @@
                       <h1>Salva vidas OneUp</h1>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                       <a class="btn btn-custom btn-rounded btn-black-white btn-center-out" href="">Ver más</a>
+                      <i class="heart fas fa-heart fa-lg ms-3"></i>
                     </div>
                   </div>
-                  <div class="col-6 col-lg-7 text-center d-flex align-items-center justify-content-center">
+                  <div class="col-6 col-lg-7 content-img-product">
                     <img class="img-product" src="assets/images/home/producto.png"/>
                   </div>
                 </div>
@@ -160,9 +160,10 @@
                       <h1>Salva vidas OneUp</h1>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                       <a class="btn btn-custom btn-rounded btn-black-white btn-center-out" href="">Ver más</a>
+                      <i class="heart fas fa-heart fa-lg ms-3"></i>
                     </div>
                   </div>
-                  <div class="col-6 col-lg-7 text-center d-flex align-items-center justify-content-center">
+                  <div class="col-6 col-lg-7 content-img-product">
                     <img class="img-product" src="assets/images/home/producto2.png"/>
                   </div>
                 </div>
@@ -174,9 +175,10 @@
                       <h1>Salva vidas OneUp</h1>
                       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
                       <a class="btn btn-custom btn-rounded btn-black-white btn-center-out" href="">Ver más</a>
+                      <i class="heart fas fa-heart fa-lg ms-3"></i>
                     </div>
                   </div>
-                  <div class="col-6 col-lg-7 text-center d-flex align-items-center justify-content-center">
+                  <div class="col-6 col-lg-7 content-img-product">
                     <img class="img-product" src="assets/images/home/producto3.png"/>
                   </div>
                 </div>
@@ -195,7 +197,8 @@
         <p class="title wow fadeInDown">Con confianza</p>
         <p class="text-parrafos text-center wow fadeInDown">de las mejores empresas y mas innovadoras del mundo.</p>
         <div class="logos-desktop d-none d-md-block">
-          <div class="content-logos">
+          <!-- MAX 7 POR LINEA -->
+          <div class="content-logos"> <!-- LINEA -->
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_1.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_2.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_3.png" alt="">
@@ -211,29 +214,33 @@
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_11.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_12.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_13.png" alt="">
+            <img class="img-fluid animated fadeInDown" src="assets/images/home/e_1.png" alt="">
           </div>
         </div>
+
         <div class="logos-mobile d-md-none">
-          <div class="content-logos">
+          <!-- MAX 4 POR LINEA -->
+          <div class="content-logos"> <!-- LINEA -->
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_1.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_2.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_3.png" alt="">
+            <img class="img-fluid animated fadeInDown" src="assets/images/home/e_4.png" alt="">
           </div>
           <div class="content-logos">
-            <img class="img-fluid animated fadeInDown" src="assets/images/home/e_4.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_5.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_6.png" alt="">
-          </div>
-          <div class="content-logos">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_7.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_8.png" alt="">
-            <img class="img-fluid animated fadeInDown" src="assets/images/home/e_9.png" alt="">
           </div>
           <div class="content-logos">
+            <img class="img-fluid animated fadeInDown" src="assets/images/home/e_9.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_10.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_11.png" alt="">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_12.png" alt="">
+          </div>
+          <div class="content-logos">
             <img class="img-fluid animated fadeInDown" src="assets/images/home/e_13.png" alt="">
+            <img class="img-fluid animated fadeInDown" src="assets/images/home/e_1.png" alt="">
           </div>
         </div>
       </div>
@@ -271,7 +278,9 @@
         <div class="row cards-cuadradas py-5">
           <div class="col-10 col-md-8 col-lg-4">
             <div class="card wow fadeIn">
-              <img src="assets/images/home/img_2.png" class="card-img-top" alt="img-card">
+              <div class="content-img-top">
+                <img src="assets/images/home/img_2.png" class="card-img-top" alt="img-card">
+              </div>
               <div class="card-body">
                 <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
                 <p class="card-text">
@@ -282,7 +291,9 @@
           </div>
           <div class="col-10 col-md-8 col-lg-4">
             <div class="card wow fadeIn">
-              <img src="assets/images/home/img_4.png" class="card-img-top" alt="img-card">
+              <div class="content-img-top">
+                <img src="assets/images/home/img_3.png" class="card-img-top" alt="img-card">
+              </div>
               <div class="card-body">
                 <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
                 <p class="card-text">
@@ -293,7 +304,9 @@
           </div>
           <div class="col-10 col-md-8 col-lg-4">
             <div class="card wow fadeIn">
-              <img src="assets/images/home/img_1.png" class="card-img-top" alt="img-card">
+              <div class="content-img-top">
+                <img src="assets/images/home/img_5.png" class="card-img-top" alt="img-card">
+              </div>
               <div class="card-body">
                 <a class="btn btn-custom btn-rounded btn-redgr-white btn-center-out" href="">Ver más</a>
                 <p class="card-text">
@@ -747,8 +760,11 @@
                 </div>
               </div>
               <div class="row">
-                <div class="col-12 col-md-8">
-                  <input type="text" class="form-control mb-3" id="name" placeholder="Nombre">
+                <div class="col-12">
+                  <div class="input-grupo mb-3">
+                    <input type="text" class="form-control me-4" id="name" placeholder="Nombre">
+                    <a id="btn-newsletter" class="btn btn-custom btn-rounded btn-transparent-white btn-center-out">SUSCRIBIRME</a>
+                  </div>
                   <div class="form-check">
                     <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
                     <label class="form-check-label" for="flexCheckDefault">
@@ -756,17 +772,11 @@
                     </label>
                   </div>
                 </div>
-                <div class="col-12 col-md-4 text-center">
-                  <a id="btn-newsletter" class="btn btn-custom btn-rounded btn-transparent-white btn-center-out">SUSCRIBIRME</a>
-                </div>
               </div>
             </div>
           </div>
         </form>
-        <div class="placaNewsletter" style="display: none;">
-          <lord-icon src="./assets/images/approved-checked-outline.json" trigger="loop" target="a" colors="primary:#ffffff;,secondary:#00ff00;" style="width: auto; height: 80%;"></lord-icon>
-          <p>Enviado Correctamente</p>
-        </div>
+        <div class="placaNewsletter" style="display: none;"></div>
       </div>
     </div>
     <div class="section-footer1 d-none d-lg-block">
@@ -971,7 +981,7 @@
   <script src="assets/libs/jquery/jquery.min.js"></script>
   <script src="assets/libs/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/libs/wowjs/wow.min.js"></script>
-  <script src="https://cdn.lordicon.com/libs/frhvbuzj/lord-icon-2.0.2.js"></script>
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
   <script src="assets/js/main.js"></script>
   <script>
     wow = new WOW({

@@ -127,77 +127,268 @@
     </div>
   </div>
 
-  <link rel="stylesheet" href="assets/css/team.min.css">
+  <link rel="stylesheet" href="assets/css/carrito.min.css">
   
   <main>
-    
-    <div class="section-team">
-      <div class="container container1">
-        <div class="row py-5">
-          <div class="col-12 col-md-8 offset-md-2 text-center">
-            <p class="title">TÍTULO</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus neque ducimus laboriosam similique cumque omnis saepe eum, dolorum quidem voluptatem aliquam odio delectus explicabo earum reiciendis facere placeat rem quisquam ea beatae error.</p>
-          </div>
-        </div>
-      </div>
-      <div class="container container2">
-        <div class="row bg-gray py-item">
-          <div class="col-6 d-flex align-items-center justify-content-center">
-            <div class="content-data bg-white">
-              <p class="nombre">NOMBRE APELLIDOS</p>
-              <p class="cargo">PUESTO</p>
-              <a href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin icon-ln"></i>
-              </a>
-            </div>
-          </div>
-          <div class="col-6 content-img">
-            <img class="img-1" src="assets/images/team/r_1.png" alt="">
-            <img class="img-2" src="assets/images/team/r_1r.png" alt="">
-          </div>
-        </div>
-        <div class="row bg-white py-item">
-          <div class="col-6 content-img">
-            <img class="img-1" src="assets/images/team/r_2.png" alt="">
-            <img class="img-2" src="assets/images/team/r_2r.png" alt="">
-          </div>
-          <div class="col-6 d-flex align-items-center justify-content-center">
-            <div class="content-data bg-gray">
-              <p class="nombre">NOMBRE APELLIDOS</p>
-              <p class="cargo">PUESTO</p>
-              <a href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin icon-ln"></i>
-              </a>
+    <div class="section-carrito">
+      <div class="container content-container">
+        <div class="container1">
+          <div class="row py-5">
+            <div class="col-12 text-center">
+              <p class="title">Tu bolsa de compra</p>
             </div>
           </div>
         </div>
-        <div class="row bg-gray py-item">
-          <div class="col-6 d-flex align-items-center justify-content-center">
-            <div class="content-data bg-white">
-              <p class="nombre">NOMBRE APELLIDOS</p>
-              <p class="cargo">PUESTO</p>
-              <a href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin icon-ln"></i>
-              </a>
+        <div class="container2">
+          <div class="row">
+            <div class="col-10 offset-1 col-lg-7 offset-lg-0 col-izq">
+              <div class="row">
+                <div class="col-12 col-lg-11">
+                  <div class="">
+                    <div class="">
+                      <p class="pedido-title">1. Promociones</p>
+                      <div class="">
+                        <p>Introduce tus códigos promocionales</p>
+                        <div class="codigos">
+                          <input type="text" class="form-control" aria-describedby="button-aplicar">
+                          <button id="btn-aplicar-codigo" class="btn btn-custom btn-redgr-white btn-center-out" type="button">Aplicar</button>
+                        </div>
+                        <div id="codigo-success" class="alert alert-success alert-dismissible m-0 mt-3" role="alert" style="display: none;">
+                          Código aplicado correctamente
+                          <button type="button" class="btn-close" id="close-alert-codigo"></button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-11">
+                  <div class="pt-5">
+                    <div class="">
+                      <p class="pedido-title">2. Entrega</p>
+                      <div class="">
+                        <p>Escoge el tipo de entrega de tu pedido</p>
+                        <div class="content-radio-btn">
+                          <input type="radio" class="form-check-input" name="tipo-entrega" id="tipo-entrega1" checked/>
+                          <label class="form-check-label" for="tipo-entrega1">
+                            <div class="radiobtn btn btn-custom btn-blue-white btn-center-out">Recoger</div>
+                          </label>
+                          <div class="separador-vertical"></div>
+                          <input type="radio" class="form-check-input" name="tipo-entrega" id="tipo-entrega2"/>
+                          <label class="form-check-label" for="tipo-entrega2">
+                            <div class="radiobtn btn btn-custom btn-blue-white btn-center-out">Enviar</div>
+                          </label>
+                          <div class="separador-vertical"></div>
+                          <input type="radio" class="form-check-input" name="tipo-entrega" id="tipo-entrega3"/>
+                          <label class="form-check-label" for="tipo-entrega3">
+                            <div class="radiobtn btn btn-custom btn-blue-white btn-center-out">Reservar</div>
+                          </label>
+                        </div>
+                        <p class="pt-3">Dirección por defecto</p>
+                        <div class="address address-pedido">
+                          <p>NOMBRE</p>
+                          <p>Av. Alcalde José Ramirez Bethencourt, 13</p>
+                          <p>35004</p>
+                          <p>Las Palmas de Gran Canaria</p>
+                          <a href="">Escoger otra</a>
+                          <span>/</span>
+                          <a href="">Introducir nueva</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-12 col-lg-11">
+                  <div class="pt-5">
+                    <div class="">
+                      <p class="pedido-title">3. Método de Pago</p>
+                      <div class="">
+                        <p>Realiza el pago online mediante</p>
+                        <div class="content-radio-btn">
+                          <input type="radio" class="form-check-input" name="tipo-pago" id="tipo-pago1" checked/>
+                          <label class="form-check-label" for="tipo-pago1">
+                            <div class="radiobtn btn btn-custom btn-blue-white btn-center-out">Tarjeta</div>
+                          </label>
+                          <div class="separador-vertical"></div>
+                          <input type="radio" class="form-check-input" name="tipo-pago" id="tipo-pago2"/>
+                          <label class="form-check-label" for="tipo-pago2">
+                            <div class="radiobtn btn btn-custom btn-blue-white btn-center-out">Bizum</div>
+                          </label>
+                          <div class="separador-vertical"></div>
+                          <input type="radio" class="form-check-input" name="tipo-pago" id="tipo-pago3"/>
+                          <label class="form-check-label" for="tipo-pago3">
+                            <div class="radiobtn btn btn-custom btn-blue-white btn-center-out">PayPal</div>
+                          </label>
+                        </div>
+                        <div class="pasarela-pago mt-3">
+                          Pasarela de pago
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col-6 content-img">
-            <img class="img-1" src="assets/images/team/r_1.png" alt="">
-            <img class="img-2" src="assets/images/team/r_1r.png" alt="">
-          </div>
-        </div>
-        <div class="row bg-white py-item">
-          <div class="col-6 content-img">
-            <img class="img-1" src="assets/images/team/r_2.png" alt="">
-            <img class="img-2" src="assets/images/team/r_2r.png" alt="">
-          </div>
-          <div class="col-6 d-flex align-items-center justify-content-center">
-            <div class="content-data bg-gray">
-              <p class="nombre">NOMBRE APELLIDOS</p>
-              <p class="cargo">PUESTO</p>
-              <a href="http://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-                <i class="fab fa-linkedin icon-ln"></i>
-              </a>
+            <div class="col-10 offset-1 col-lg-5 offset-lg-0 col-der">
+              <div class="content-productos">
+                <div class="producto">
+                  <div class="row">
+                    <div class="col-4 col-sm-3 d-flex align-items-center">
+                      <div class="content-img-product">
+                        <img src="assets/images/pedidos/producto.png" alt="Producto">
+                      </div>
+                    </div>
+                    <div class="col-8 col-sm-9">
+                      <div>
+                        <p class="mb-0">Lorem ipsum dolor sit.</p>
+                        <p class="precio text-red mb-0">10,00&euro;</p>
+                        <div class="content-cantidad">
+                          <button class="menos">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                          <input type="number" id="" name="" class="cantidad" min="1" max="99" step="1" value="1">
+                          <button class="mas">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn delete">
+                    <i class="fas fa-trash-alt fa-lg"></i>
+                  </button>
+                </div>
+                <div class="producto">
+                  <div class="row">
+                    <div class="col-4 col-sm-3 d-flex align-items-center">
+                      <div class="content-img-product">
+                        <img src="assets/images/pedidos/producto.png" alt="Producto">
+                      </div>
+                    </div>
+                    <div class="col-8 col-sm-9">
+                      <div>
+                        <p class="mb-0">Lorem ipsum dolor sit.</p>
+                        <p class="precio text-red mb-0">10,00&euro;</p>
+                        <div class="content-cantidad">
+                          <button class="menos">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                          <input type="number" id="" name="" class="cantidad" min="1" max="99" step="1" value="1">
+                          <button class="mas">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn delete">
+                    <i class="fas fa-trash-alt fa-lg"></i>
+                  </button>
+                </div>
+                <div class="producto">
+                  <div class="row">
+                    <div class="col-4 col-sm-3 d-flex align-items-center">
+                      <div class="content-img-product">
+                        <img src="assets/images/pedidos/producto.png" alt="Producto">
+                      </div>
+                    </div>
+                    <div class="col-8 col-sm-9">
+                      <div>
+                        <p class="mb-0">Lorem ipsum dolor sit.</p>
+                        <p class="precio text-red mb-0">10,00&euro;</p>
+                        <div class="content-cantidad">
+                          <button class="menos">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                          <input type="number" id="" name="" class="cantidad" min="1" max="99" step="1" value="1">
+                          <button class="mas">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn delete">
+                    <i class="fas fa-trash-alt fa-lg"></i>
+                  </button>
+                </div>
+                <div class="producto">
+                  <div class="row">
+                    <div class="col-4 col-sm-3 d-flex align-items-center">
+                      <div class="content-img-product">
+                        <img src="assets/images/pedidos/producto.png" alt="Producto">
+                      </div>
+                    </div>
+                    <div class="col-8 col-sm-9">
+                      <div>
+                        <p class="mb-0">Lorem ipsum dolor sit.</p>
+                        <p class="precio text-red mb-0">10,00&euro;</p>
+                        <div class="content-cantidad">
+                          <button class="menos">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                          <input type="number" id="" name="" class="cantidad" min="1" max="99" step="1" value="1">
+                          <button class="mas">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn delete">
+                    <i class="fas fa-trash-alt fa-lg"></i>
+                  </button>
+                </div>
+                <div class="producto">
+                  <div class="row">
+                    <div class="col-4 col-sm-3 d-flex align-items-center">
+                      <div class="content-img-product">
+                        <img src="assets/images/pedidos/producto.png" alt="Producto">
+                      </div>
+                    </div>
+                    <div class="col-8 col-sm-9">
+                      <div>
+                        <p class="mb-0">Lorem ipsum dolor sit.</p>
+                        <p class="precio text-red mb-0">10,00&euro;</p>
+                        <div class="content-cantidad">
+                          <button class="menos">
+                            <i class="fa fa-minus"></i>
+                          </button>
+                          <input type="number" id="" name="" class="cantidad" min="1" max="99" step="1" value="1">
+                          <button class="mas">
+                            <i class="fa fa-plus"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <button class="btn delete">
+                    <i class="fas fa-trash-alt fa-lg"></i>
+                  </button>
+                </div>
+              </div>
+              <hr>
+              <div class="totales">
+                <div class="row">
+                  <div class="col-5 col-md-4 col-lg-6 col-xl-4">
+                    <p>Subtotal:</p>
+                    <p>Descuentos:</p>
+                  </div>
+                  <div class="col-7 col-md-8 col-lg-6 col-xl-8">
+                    <p class="subtotal">10,00<span>&euro;</span></p>
+                    <p class="descuentos">10,00<span>&euro;</span></p>
+                  </div>
+                </div>
+                <hr>
+                <div class="row">
+                  <div class="col-12">
+                    <p>Total: <span class="total text-red">10,00</span><span class="text-red">&euro;</span></p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -447,6 +638,46 @@
       live:         true        // default
     })
     wow.init();
+  </script>
+  <script>
+    $(document).ready(function() {
+      $('#btn-aplicar-codigo').click(function() {
+        $('#codigo-success').fadeIn(300)
+      })
+      $('#close-alert-codigo').click(function() {
+        $('#codigo-success').fadeOut(300)
+      })
+      $('.mas, .menos').click("on", function(e) {
+        e.preventDefault();
+        let cantidad = $(this).siblings('.cantidad');
+        let min = parseInt(cantidad.attr('min'));
+        let max = parseInt(cantidad.attr('max'));
+        let current_value = parseInt(cantidad.val());
+        let classname = $(this).attr("class");
+        if (classname === "menos") {
+          if (current_value == min) {
+            return;
+          } else {
+            cantidad.val(current_value - 1);
+          }
+        } else {
+          if (current_value == max) {
+            return;
+          } else {
+            cantidad.val(current_value + 1);
+          }
+        }
+      })
+      $('.cantidad').change(function() {
+        let min = parseInt($(this).attr('min'));
+        let max = parseInt($(this).attr('max'));
+        if (parseInt($(this).val()) < min) {
+          $(this).val(min)
+        } else if (parseInt($(this).val()) > max) {
+          $(this).val(max)
+        }
+      })
+    })
   </script>
   
 </body>

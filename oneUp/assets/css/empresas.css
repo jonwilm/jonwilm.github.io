@@ -10,7 +10,7 @@
     .section-empresas {
       padding-top: 100px;
       background-image: url(../images/empresas/bg-empresas.png);
-      background-size: contain; } }
+      background-size: 100% auto; } }
   .section-empresas .container p {
     color: #ffffff;
     text-align: center; }
@@ -27,6 +27,46 @@
       border-radius: 50%;
       position: absolute;
       z-index: 1; }
+      .section-empresas .container .desktop .circle-rotate .content-img {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%) rotate(-90deg);
+        pointer-events: none; }
+      .section-empresas .container .desktop .circle-rotate #triangulo {
+        width: 0;
+        height: 0;
+        border-left: 100px solid #e4002b;
+        border-top: 50px solid transparent;
+        border-bottom: 50px solid transparent;
+        transition: all 0.5s; }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-1 {
+          transform: rotate(320deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-2 {
+          transform: rotate(295deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-3 {
+          transform: rotate(270deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-4 {
+          transform: rotate(243deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-5 {
+          transform: rotate(218deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-6 {
+          transform: rotate(193deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-7 {
+          transform: rotate(167deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-8 {
+          transform: rotate(142deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-9 {
+          transform: rotate(117deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-10 {
+          transform: rotate(90deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-11 {
+          transform: rotate(65deg) translate(325px); }
+        .section-empresas .container .desktop .circle-rotate #triangulo.pos-12 {
+          transform: rotate(40deg) translate(325px); }
     .section-empresas .container .desktop .circle-info {
       width: calc(570px - 3rem);
       height: calc(570px - 3rem);
@@ -89,37 +129,6 @@
           transform: rotate(334.3deg) translate(470px) rotate(-334.3deg); }
         .section-empresas .container .desktop .circle-info .img-empresa.img-12 {
           transform: rotate(308.6deg) translate(470px) rotate(-308.6deg); }
-      .section-empresas .container .desktop .circle-info #triangulo {
-        width: 0;
-        height: 0;
-        border-left: 120px solid #e4002b;
-        border-top: 30px solid transparent;
-        border-bottom: 30px solid transparent;
-        transition: all 0.5s; }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-1 {
-          transform: rotate(231.4deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-2 {
-          transform: rotate(205.7deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-3 {
-          transform: rotate(180deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-4 {
-          transform: rotate(154.3deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-5 {
-          transform: rotate(128.6deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-6 {
-          transform: rotate(102.9deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-7 {
-          transform: rotate(77.1deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-8 {
-          transform: rotate(51.4deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-9 {
-          transform: rotate(25.7deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-10 {
-          transform: rotate(0deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-11 {
-          transform: rotate(334.3deg) translate(325px); }
-        .section-empresas .container .desktop .circle-info #triangulo.pos-12 {
-          transform: rotate(308.6deg) translate(325px); }
   .section-empresas .modal .modal-dialog .modal-content {
     background-color: #e4002b; }
     .section-empresas .modal .modal-dialog .modal-content .modal-header {

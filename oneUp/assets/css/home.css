@@ -476,6 +476,21 @@
             padding-right: 3rem; } }
   .section-productos .tabcontent.tab-ppal {
     display: block; }
+  .section-productos .content-pagination .pagination {
+    display: block; }
+    .section-productos .content-pagination .pagination .next_link,
+    .section-productos .content-pagination .pagination .prev_link {
+      margin: 0 1rem;
+      color: #e4002b;
+      transition: all 0.3s; }
+      .section-productos .content-pagination .pagination .next_link:hover,
+      .section-productos .content-pagination .pagination .prev_link:hover {
+        color: #5c5c5c; }
+    .section-productos .content-pagination .pagination .text-pagination {
+      padding: 0.5rem 1rem;
+      background-color: #e4002b;
+      color: #ffffff;
+      font-weight: 700; }
 
 .section-premios {
   padding-top: 4rem;

@@ -443,9 +443,6 @@
         @media (min-width: 1200px) {
           .section-productos .tabcontent .card .content {
             height: 35vh; } }
-        @media (min-width: 1440px) {
-          .section-productos .tabcontent .card .content {
-            height: 45vh; } }
       .section-productos .tabcontent .card .img-producto {
         width: 100%;
         height: 100%;

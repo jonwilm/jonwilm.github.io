@@ -1,5 +1,5 @@
 .section-direcciones {
-  padding-top: 100px;
+  padding-top: 50px;
   background-image: url(../images/team/bg-team-mobile.png);
   background-position: center top;
   background-repeat: no-repeat;
@@ -110,4 +110,6 @@
 #anadirNueva .modal-dialog .modal-content .modal-footer .btn:focus,
 #editarDireccion .modal-dialog .modal-content .modal-footer .btn:focus {
   outline: 0;
-  box-shadow: 0 0 0 0.25rem rgba(253, 69, 13, 0.25); }
+  box-shadow: none;
+  color: #e4002b;
+  border: 1px solid #e4002b; }

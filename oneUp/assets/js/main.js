@@ -48,7 +48,7 @@ $(window).resize(function () {
   changeColorNavbar();
 });
 function changeColorNavbar() {
-  if ($(window).scrollTop() > 80) {
+  if ($(window).scrollTop() > 30) {
     $(".navbar").css("background-color", "#e4002b");
     $(".navbar-mobil").css("background-color", "#e4002b");
   } else {
@@ -184,9 +184,10 @@ function changeLogos(resolucion) {
 $("#btn-newsletter").click(function () {
   $(".placaNewsletter").css("display", "block");
   $(".placaNewsletter").html(`
-    <lottie-player src="https://assets5.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json" background="transparent" speed="1" style="width: auto; height: 80%;" autoplay></lottie-player>
-    <p>Enviado Correctamente</p>
+  <lottie-player src="https://assets5.lottiefiles.com/datafiles/8UjWgBkqvEF5jNoFcXV4sdJ6PXpS6DwF7cK4tzpi/Check Mark Success/Check Mark Success Data.json" background="transparent" speed="1" style="width: auto; height: 80%;" autoplay></lottie-player>
+  <p>Enviado Correctamente</p>
   `);
+  $("#btn-newsletter").css("display", "none");
 });
 
 // ------------------------------------------------------------

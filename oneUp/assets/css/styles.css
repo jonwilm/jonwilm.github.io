@@ -415,9 +415,8 @@ html, body {
     background: #ffffff;
     border-radius: 50px; }
   .btn-redgr-white:focus {
-    box-shadow: none;
     color: #e4002b;
-    border: 1px solid #e4002b; }
+    box-shadow: 0 0 1px 1px #e4002b; }
 
 .btn-yellow-red {
   padding-left: 2rem;
@@ -434,9 +433,8 @@ html, body {
     background: #ffffff;
     border-radius: 50px; }
   .btn-yellow-red:focus {
-    box-shadow: none;
     color: #1d1d1b;
-    border: 1px solid #e4002b; }
+    box-shadow: 0 0 1px 1px #1d1d1b; }
 
 .btn-black-white {
   padding-left: 2rem;
@@ -453,9 +451,8 @@ html, body {
     background: #ffffff;
     border-radius: 50px; }
   .btn-black-white:focus {
-    box-shadow: none;
-    color: #1d1d1b;
-    border: 1px solid #e4002b; }
+    color: #ffffff;
+    box-shadow: 0 0 1px 1px #1d1d1b; }
 
 .btn-white-black {
   padding-left: 2rem;
@@ -472,9 +469,8 @@ html, body {
     background: #ffffff;
     border-radius: 50px; }
   .btn-white-black:focus {
-    box-shadow: none;
     color: #1d1d1b;
-    border: 1px solid #e4002b; }
+    box-shadow: 0 0 1px 1px #1d1d1b; }
 
 .btn-red-transparent {
   padding-left: .7rem;
@@ -491,8 +487,8 @@ html, body {
     background: transparent;
     border-radius: 50px; }
   .btn-red-transparent:focus {
-    box-shadow: none;
-    color: #e4002b; }
+    color: #e4002b;
+    border: 2px solid #f7d054; }
 
 .btn-transparent-white {
   padding-left: 2rem;
@@ -509,8 +505,8 @@ html, body {
     background: #ffffff;
     border-radius: 50px; }
   .btn-transparent-white:focus {
-    box-shadow: none;
-    color: #ffffff; }
+    color: #343233;
+    border: 2px solid #343233; }
 
 .btn-center-out {
   transform: perspective(1px) translateZ(0);
@@ -615,6 +611,12 @@ html, body {
 .section-mobil-footer {
   background-color: #e4002b;
   color: #ffffff; }
+  .section-mobil-footer .accordion-item {
+    background: #e4002b;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    border-bottom: 1px solid #ffffff; }
   .section-mobil-footer .accordion-button {
     color: #ffffff;
     background-color: #e4002b;

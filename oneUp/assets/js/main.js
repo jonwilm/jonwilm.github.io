@@ -140,7 +140,7 @@ function openCity(evt, cardMenus) {
 // ------------------------------------------------------------
 // LOGOS EMPRESAS
 // ------------------------------------------------------------
-$(window).ready(function () {
+$(document).ready(function () {
   let intervalLogos;
   let mobile = "mobile";
   let desktop = "desktop";
@@ -166,9 +166,7 @@ $(window).resize(function () {
 function changeLogos(resolucion) {
   let change_logos_time = 5000;
   let currentIndex = 0;
-  $(
-    ".logos-" + resolucion + " .content-logos:not(:eq(" + currentIndex + "))"
-  ).hide();
+  $(".logos-" + resolucion + " .content-logos:not(:eq(" + currentIndex + "))").hide();
   let totalDiv = $(".logos-" + resolucion + " .content-logos").length;
   intervalLogos = setInterval(function () {
     currentIndex = (currentIndex + 1) % totalDiv;

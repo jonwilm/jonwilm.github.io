@@ -144,13 +144,14 @@ $(document).ready(function () {
   let intervalLogos;
   let mobile = "mobile";
   let desktop = "desktop";
-  if ($(window).width() < 768) {
-    clearInterval(intervalLogos);
-    changeLogos(mobile);
-  } else {
-    clearInterval(intervalLogos);
-    changeLogos(desktop);
-  }
+  // if ($(window).width() < 768) {
+  //   clearInterval(intervalLogos);
+  //   changeLogos(mobile);
+  // } else {
+  //   clearInterval(intervalLogos);
+  //   changeLogos(desktop);
+  // }
+  changeLogos()
 });
 $(window).resize(function () {
   let mobile = "mobile";
@@ -163,18 +164,35 @@ $(window).resize(function () {
     changeLogos(desktop);
   }
 });
-function changeLogos(resolucion) {
-  let change_logos_time = 5000;
-  let currentIndex = 0;
-  $(".logos-" + resolucion + " .content-logos:not(:eq(" + currentIndex + "))").hide();
-  let totalDiv = $(".logos-" + resolucion + " .content-logos").length;
-  intervalLogos = setInterval(function () {
-    currentIndex = (currentIndex + 1) % totalDiv;
-    $(".logos-" + resolucion + " .content-logos").hide();
-    $(".logos-" + resolucion + " .content-logos")
-      .eq(currentIndex)
-      .show();
-  }, change_logos_time);
+// function changeLogos(resolucion) {
+//   let change_logos_time = 5000;
+//   let currentIndex = 0;
+//   $(".logos-" + resolucion + " .content-logos:not(:eq(" + currentIndex + "))").hide();
+//   let totalDiv = $(".logos-" + resolucion + " .content-logos").length;
+//   intervalLogos = setInterval(function () {
+//     currentIndex = (currentIndex + 1) % totalDiv;
+//     $(".logos-" + resolucion + " .content-logos").hide();
+//     $(".logos-" + resolucion + " .content-logos")
+//       .eq(currentIndex)
+//       .show();
+//   }, change_logos_time);
+// }
+
+function changeLogos(change_logos_time = 5000){
+	var currentIndexDesktop = 0;
+	var currentIndexMobile = 0;
+	$(".logos-desktop .content-logos:not(:eq("+ currentIndexDesktop +"))").hide();
+	$(".logos-mobile .content-logos:not(:eq("+ currentIndexMobile +"))").hide();
+	var totalDivDesktop = $(".logos-desktop .content-logos").length;
+	var totalDivMobile = $(".logos-mobile .content-logos").length;
+	setInterval(function() {
+    currentIndexDesktop = (currentIndexDesktop + 1) % totalDivDesktop;
+    currentIndexMobile = (currentIndexMobile + 1) % totalDivMobile;
+    $(".logos-desktop .content-logos").hide();
+    $(".logos-mobile .content-logos").hide();
+    $(".logos-desktop .content-logos").eq(currentIndexDesktop).show();
+    $(".logos-mobile .content-logos").eq(currentIndexMobile).show();
+	}, change_logos_time);
 }
 // ------------------------------------------------------------
 // NEWSLETTER

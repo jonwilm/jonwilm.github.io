@@ -140,30 +140,30 @@ function openCity(evt, cardMenus) {
 // ------------------------------------------------------------
 // LOGOS EMPRESAS
 // ------------------------------------------------------------
-$(document).ready(function () {
-  let intervalLogos;
-  let mobile = "mobile";
-  let desktop = "desktop";
-  // if ($(window).width() < 768) {
-  //   clearInterval(intervalLogos);
-  //   changeLogos(mobile);
-  // } else {
-  //   clearInterval(intervalLogos);
-  //   changeLogos(desktop);
-  // }
-  changeLogos()
-});
-$(window).resize(function () {
-  let mobile = "mobile";
-  let desktop = "desktop";
-  if ($(window).width() < 768) {
-    clearInterval(intervalLogos);
-    changeLogos(mobile);
-  } else {
-    clearInterval(intervalLogos);
-    changeLogos(desktop);
-  }
-});
+// $(document).ready(function () {
+//   let intervalLogos;
+//   let mobile = "mobile";
+//   let desktop = "desktop";
+//   // if ($(window).width() < 768) {
+//   //   clearInterval(intervalLogos);
+//   //   changeLogos(mobile);
+//   // } else {
+//   //   clearInterval(intervalLogos);
+//   //   changeLogos(desktop);
+//   // }
+//   changeLogos()
+// });
+// $(window).resize(function () {
+//   let mobile = "mobile";
+//   let desktop = "desktop";
+//   if ($(window).width() < 768) {
+//     clearInterval(intervalLogos);
+//     changeLogos(mobile);
+//   } else {
+//     clearInterval(intervalLogos);
+//     changeLogos(desktop);
+//   }
+// });
 // function changeLogos(resolucion) {
 //   let change_logos_time = 5000;
 //   let currentIndex = 0;

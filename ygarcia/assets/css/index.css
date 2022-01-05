@@ -59,19 +59,17 @@
 .section-perfil {
   padding-top: 20vh;
   padding-bottom: 3rem; }
-  @media (max-width: 767.98px) {
+  @media (max-width: 991.98px) {
     .section-perfil .col-izq {
       box-shadow: 2px 52px 19px -56px rgba(0, 0, 0, 0.75);
       padding-bottom: 3rem; } }
   .section-perfil .col-der {
     text-align: center; }
-    @media (min-width: 768px) {
+    @media (min-width: 992px) {
       .section-perfil .col-der {
         box-shadow: -35px 0px 16px -41px rgba(0, 0, 0, 0.75); } }
     .section-perfil .col-der .content-icons {
-      display: flex;
       align-items: center;
-      justify-content: center;
       margin-top: 3rem; }
       .section-perfil .col-der .content-icons .fa-stack {
         font-size: 1.2rem; }
@@ -188,7 +186,7 @@
         border: 1px solid #003c78;
         border-radius: 50px;
         padding: 1rem 2rem;
-        font-size: 1.5rem;
+        font-size: 1rem;
         font-weight: 600;
         font-style: italic;
         background-color: #003c78;

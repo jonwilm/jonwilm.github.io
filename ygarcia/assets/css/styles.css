@@ -22,12 +22,9 @@ html, body {
   font-weight: 700;
   text-align: center;
   letter-spacing: 0.5rem;
-  margin-bottom: 0;
+  margin-bottom: 3rem;
   position: relative;
   z-index: 1; }
-  @media (min-width: 768px) {
-    .title-blue {
-      margin-bottom: 3rem; } }
   .title-blue:before {
     content: '';
     position: absolute;
@@ -113,13 +110,28 @@ footer {
   padding-bottom: 1rem; }
   footer .row > * {
     display: flex;
-    align-items: center; }
-  footer .row > *:nth-child(1) {
-    justify-content: flex-start; }
-  footer .row > *:nth-child(2) {
+    align-items: center;
     justify-content: center; }
+  footer .row > *:nth-child(1) {
+    order: 3; }
+    @media (min-width: 768px) {
+      footer .row > *:nth-child(1) {
+        order: 1;
+        justify-content: flex-start; } }
+  footer .row > *:nth-child(2) {
+    order: 2; }
+    @media (min-width: 768px) {
+      footer .row > *:nth-child(2) {
+        order: 2;
+        justify-content: center; } }
   footer .row > *:nth-child(3) {
-    justify-content: flex-end; }
+    order: 1;
+    margin-bottom: 1rem; }
+    @media (min-width: 768px) {
+      footer .row > *:nth-child(3) {
+        order: 3;
+        justify-content: flex-end;
+        margin-bottom: 0; } }
   footer p {
     color: #ffffff;
     margin: 0;

@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/vendor/fancybox/jquery.fancybox.css">
+  <title>Volant - Platform</title>
+</head>
+<style>
+
+</style>
+<body>
+  <!-- PLACA -->
+  <div class="placa"></div>
+  <!-- PRELOADER -->
+  <div id="preloader">
+  <div id="preloader-status" class="text-center">
+    <img src="../assets/images/logo-preload.png" height="100" alt="" class="mb-3">
+    <div class="preloader-position loader">
+      <span></span>
+    </div>
+  </div>
+</div>
+  <!-- COOKIES -->
+  <!-- MODAL COOKIES -->
+<div class="modal fade" id="modalGPDR" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-custom modal-dialog-centered" role="document" style="min-width: 40%;">
+    <div class="modal-content modal-content-custom">
+      <div class="modal-body modal-body-custom text-center" style="padding: 1rem 1rem;">
+        <h3 class="mt-3" style="font-style: normal;">We use cookies</h3>
+        <div>
+          <hr style="width: 46%; margin: 1rem auto 0;">
+          <hr style="width: 17%; margin: 0 0 1rem 27%;">
+        </div>
+        <p>We use cookies and other tracking technologies to improve your browsing experience on our website, to analyze our website traffic, and to understand where our visitors are coming from. By browsing our website, you consent to our use of cookies and other tracking technologies.</p>
+        <a data-rel="lightcase" class="mt-3" href="../privacy-policy.html">Check our Privacy Policy</a>
+      </div>
+      <div class="modal-footer modal-footer-custom">
+        <button class="close-gpdr btn" data-dismiss="modal" aria-label="Close">Accept</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- NAVBAR -->
+  <nav id="main_nav" class="main_nav fixed-top d-flex align-items-end">
+  <div id="bg_header"></div>
+  <div class="logo">
+    <a href="index.html"><img src="../assets/images/logo-horizontal-white.png" alt="" class="img-fluid"></a>
+  </div>
+  <div class="main_menu">
+    <div id="btn_menu_text" class="btn btn-menu-corners">
+      MENU
+    </div>
+    <div id="btn_menu" class="btn_menu">
+      <div class="uno"></div>
+      <div class="dos"></div>
+      <div class="tres"></div>
+    </div>
+  </div>
+  <!-- MENU MOBILE -->
+  <div id="menu_mobile" class="menu_mobile d-flex align-items-center justify-content-center d-lg-none pt-5">
+    <ul class="text-center p-0 m-0">
+      <li class="menu_item d-none">
+        <a href="index.html#home" class="menu_link btn-block">Home</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="platform.html#capabilities" class="menu_link btn-block">Platform</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="drone-services.html#about-us" class="menu_link btn-block">UAV/Drone Services</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="cases-studies.html#studies" class="menu_link btn-block">Case Studies</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="pricing.html#pricing" class="menu_link btn-block">Pricing</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="company.html#company" class="menu_link btn-block">Company</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="careers.html#careers" class="menu_link btn-block">Careers</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="contact.html#contact" class="menu_link btn-block">Contact</a>
+      </li>
+      <li class="menu_item text-center mt-2 p-0 d-none" style="background: transparent;">
+        <a class="link-social" href="https://www.facebook.com/volant.aerial" target="_blank">
+          <i class="fab fa-facebook-f fa-sm"></i>
+        </a>
+        <a class="link-social" href="https://www.youtube.com/channel/UCjBkBCu2jaLkZyL6YjQRexQ" target="_blank">
+          <i class="fab fa-youtube fa-sm"></i>
+        </a>
+        <a class="link-social" href="https://www.instagram.com/volantaerial/" target="_blank">
+          <i class="fab fa-instagram fa-sm"></i>
+        </a>
+        <a class="link-social" href="https://twitter.com/volantaerial" target="_blank">
+          <i class="fab fa-twitter fa-sm"></i>
+        </a>
+      </li>
+      <li class="menu_item text-center mt-2 d-none" style="background: transparent;">
+        <div class="btn-group">
+          <a href="#" class="btn btn-corners btn-corners-red btn-corners-left">ESP</a>
+          <div class="btn btn-corners btn-corners-red btn-corners-right"><i class="fas fa-caret-right fa-lg"></i> ENG</div>
+        </div>
+      </li>
+      <li class="menu_item text-center mt-2 d-none" style="background: transparent;">
+        <ul class="list-inline m-0 mb-2 mr-auto">
+          <div class="list-inline-item" style="font-size: 0.8rem;">
+            <li>
+              <a class="mr-2 text-decoration-none text-white" data-rel="lightcase" href="../terms-and-conditions.html">TERMS & CONDITIONS</a>
+              <a class="mr-2 text-decoration-none text-white" data-rel="lightcase" href="../privacy-policy.html">PRIVACY POLICY</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <!-- FULLPAGE -->
+  <div id="Fullpage">
+
+    <!-- SECTION 1 -->
+    
+    <div class="section section-capabilities">
+  <div class="container">
+    <div class="row afid1 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-wdr" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Platform</h2>
+            <h1 class="m-0">Capabilities</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="system-column h-100"><!-- h-100 -->
+      <div class="row mt-4"><!-- h-100 -->
+        <div id="wdr-column" class="column-01 col afi1 delay-1s">
+          <!-- <i class="icon-choose fas fa-caret-down"></i> -->
+          <!-- <span class="text-choose">CHOOSE</span> -->
+          <ul class="overflow">
+            <li><p><i class="fal fa-arrow-right"></i>Fully Autonomous Operation</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>Remote Manual Operation</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>Continuous AI Learning</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>Wi-Fi Enabled</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>Compatible with Existing Infrastructure</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>Acts as Mesh Communication Network</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>Scalable Network</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>Redundancies to Maximize Data Logging</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>User-Friendly</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>Minimal Maintenance</p></li>
+            <li><p><i class="fal fa-arrow-right"></i>A/C or Solar Powered</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- SECTION 2 -->
+
+    <div class="section section-applications">
+  <div class="container">
+    <div class="row afid2 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-app" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Platform capabilities</h2>
+            <h1 class="m-0">Applications by Industry</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="system-column h-100">
+      <div class="row">
+        <div id="app-column" class="column-01 col afi2 delay-1s">
+          <i class="icon-choose mt-4 fas fa-caret-down"></i>
+          <span class="text-choose mt-4">CHOOSE</span>
+          <ul class="mt-4">
+            <li id="app-col1-item1" onclick="app_col1_item1()" class="app-col1-item"><p>Agriculture <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item2" onclick="app_col1_item2()" class="app-col1-item"><p>Border Control <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item3" onclick="app_col1_item3()" class="app-col1-item"><p>Construction <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item4" onclick="app_col1_item4()" class="app-col1-item"><p>Insurance <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item5" onclick="app_col1_item5()" class="app-col1-item"><p>Forestry <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item6" onclick="app_col1_item6()" class="app-col1-item"><p>Golf Courses <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item7" onclick="app_col1_item7()" class="app-col1-item"><p>Law Enforcement <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item8" onclick="app_col1_item8()" class="app-col1-item"><p>Mining  <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item9" onclick="app_col1_item9()" class="app-col1-item"><p>Park Service  <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item10" onclick="app_col1_item10()" class="app-col1-item"><p>Oil & Gas  <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item11" onclick="app_col1_item11()" class="app-col1-item"><p>Maritime  <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item12" onclick="app_col1_item12()" class="app-col1-item"><p>Public Safety  <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item13" onclick="app_col1_item13()" class="app-col1-item"><p>Security  <i class="fal fa-arrow-right"></i></p></li>
+            <li id="app-col1-item14" onclick="app_col1_item14()" class="app-col1-item"><p>Utilities  <i class="fal fa-arrow-right"></i></p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- SECTION 3 -->
+
+    <div class="section section-command-center">
+  <div class="container">
+    <div class="row afid3 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-wdr" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Platform</h2>
+            <h1 class="m-0">Command Center</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="system-column h-100"><!-- h-100 -->
+      <div class="row mt-4"><!-- h-100 -->
+        <div id="wdr-column" class="column-01 col afi3 delay-1s">
+          <!-- <i class="icon-choose fas fa-caret-down"></i> -->
+          <!-- <span class="text-choose">CHOOSE</span> -->
+          <ul class="overflow">
+            <li><p><strong>Compatible</strong> with Existing Command <strong>Centers</strong></p></li>
+            <li><p>Customizable Command Centers</p></li>
+            <li><p>Virtual Remote Command Control (Access via Internet)</p></li>
+            <li><p>Upgradable Storage Capacity Onsite or in the Cloud</p></li>
+            <li><p>Standard File Extensions for Easy Data Visualization</p></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- SECTION 4 -->
+
+    <div class="section section-home">
+  <div class="container">
+    <div id="title-home">
+      <div class="row afid4 delay-1s">
+        <div class="col d-flex justify-content-start">
+          <div class="titles w-100">
+            <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+            <div class="text-title float-left">
+              <h2 class="m-0">Platform</h2>
+              <h1 class="m-0">Outposts</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="world-home" class="row afi4 delay-1s">
+      <div class="col p-0">
+        <img src="../assets/images/platform/system-outpost.png" alt="" class="img-fluid my-3">
+      </div>
+    </div>
+    <div id="content" class="row afi4 delay-1s">
+      <div class="col">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Tethered Aerostat</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <ul>
+                  <li><p>Ideal for Flatter Terrain</p></li>
+                  <li><p>Large Area Coverage</p></li>
+                  <li><p>Possible 24/7 Operation</p></li>
+                  <li><p>Low Energy Consumption</p></li>
+                  <li><p>Fully Autonomous Operation</p></li>
+                  <li><p>Relatively Mobile for Use in Multiple Locations</p></li>
+                </ul>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Mast</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <ul>
+                  <li><p>Ideal for Varied Elevations</p></li>
+                  <li><p>Extreme Weather Resistant</p></li>
+                  <li><p>24/7 Operation</p></li>
+                  <li><p>Capable of Larger Payloads</p></li>
+                </ul>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Tethered Drone</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <ul>
+                  <li><p>Ideal for One-Off / Emergency Use</p></li>
+                  <li><p>High Mobility / Fast Deployment</p></li>
+                  <li><p>12+ Hour Flight Times</p></li>
+                  <li><p>Quick Take-Off and Landing</p></li>
+                </ul>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Ground Sensor</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <ul>
+                  <li><p>Ideal for Precise Measurements</p></li>
+                  <li><p>Landslides/Water Levels, Pressure Flow, Etc.</p></li>
+                  <li><p>24/7 Operation</p></li>
+                  <li><p>Redundant Power Systems to Mitigate Data Outages</p></li>
+                </ul>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Existing Infrastructure</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <ul>
+                  <li><p>Ideal with Elevated Infrastructure</p></li>
+                  <li><p>Increased Security</p></li>
+                  <li><p>24/7 Operation</p></li>
+                </ul>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+          </div>
+          <div class="swiper-button-next swiper-button-red"></div>
+          <div class="swiper-button-prev swiper-button-red"></div>
+        </div>
+        <!-- <div class="gradient-home"></div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- SECTION 5 -->
+
+    <div class="section section-home">
+  <div class="container">
+    <div id="title-home">
+      <div class="row afid5 delay-1s">
+        <div class="col d-flex justify-content-start">
+          <div class="titles w-100">
+            <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+            <div class="text-title float-left">
+              <h2 class="m-0">Platform</h2>
+              <h1 class="m-0" style="font-size: 1.8rem;">IoT Sensor Uses</h1>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="world-home" class="row afi5 delay-1s">
+      <div class="col p-0">
+        <img src="../assets/images/platform/system-iot-sensor-uses.png" alt="" class="img-fluid my-3">
+      </div>
+    </div>
+    <div id="content" class="row afi5 delay-1s">
+      <div class="col">
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Predictive Maintenance</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Monitoring sensor output signals over a period of time can offer insights into predictive maintenance planning, avoiding catastrophic failures, downtime and costs. equipment failure.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Asset Monitoring</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors help monitor raw materials inventory, increasing operational efficiencies.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Tamper Detection</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors detection of physical tampering in small, high security enclosures.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Precision Agriculture</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors can check for soil humidity, pests and diseases in crops.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Livestock Tracking</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Farm animals can be tracked and monitored.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Fire Detection</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors detect sudden changes in temperature caused by fires.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Structural Integrity</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors monitor vibrations for indications of structural abnormalities.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Waste Level Monitoring</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Knowing exact waste receptacle levels creates efficiencies in pickup operations.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Lighting Requirements</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Only using lights when there is an active presence saves in energy costs.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Perimeter Control</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors detect breaches in perimeters and door/window openings, alerting security personnel.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Air Quality</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors can monitor emissions and radiation levels, protecting lives.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Water Quality</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors can monitor the quality of water in any location.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Disaster Management</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors can detect flood, earthquake, landslide and avalanche conditions.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Production Visibility</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors throughout the production cycle gives management the ability to identify bottlenecks and find the root cause of problems.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Power Control & Lighting</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors can be used to detect the presence or non-presence of electrical current which can then be used to control backup power systems and emergency lighting.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Worker Safety</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Sensors can track the state of health of employees and monitor risky activities that could lead to injuries.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Noise Levels</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Monitoring noise levels helps protect health and well-being.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+            <div class="swiper-slide">
+              <h3 class="px-4 text-center">Item Location</h3>
+              <div class="height-slide">
+                <hr class="hr1">
+                <hr class="hr2">
+                <p>Whether lost or stolen, sensors allow for the tracking of equipment.</p>
+                <hr class="hr1">
+                <hr class="hr2">
+              </div>
+            </div>
+            <!-- ------------------------------------------------------------------------------------ -->
+          </div>
+          <div class="swiper-button-next swiper-button-red"></div>
+          <div class="swiper-button-prev swiper-button-red"></div>
+        </div>
+        <!-- <div class="gradient-home"></div> -->
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- SECTION 6 -->
+
+    <div class="section section-iot-sensor-types">
+  <div class="container">
+    <div class="row afid6 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-wdr" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Platform</h2>
+            <h1 class="m-0">IoT Sensor Types</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="system-column h-100"><!-- h-100 -->
+      <div class="row mt-4"><!-- h-100 -->
+        <div id="wdr-column" class="column-01 col afi6 delay-1s">
+          <i class="icon-choose fas fa-caret-down"></i>
+          <span class="text-choose">CHOOSE</span>
+          <div class="accordion overflow" id="accordion3">
+            <div class="row-fluid">
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-1">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-1" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Velocity / Acceleration / Tilt
+                  </p>
+                </div>
+                <div id="collapse3-1" class="collapse" aria-labelledby="heading3-1" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Velocity (speed of motion) sensors may be linear or angular, indicating how fast an object moves along a straight line or how fast it rotates. Acceleration sensors measure change in velocity. Tilt sensors measure tilt on various axes. They are useful in measuring the stability/tilt of platforms, open/close doors, pole lean detection, etc.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Accelerometer, TLT, G-Force Snapshot, G-Force Max & AVG, Gyroscopes, Tilt Sensors</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-2">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-2" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Position / Proximity
+                  </p>
+                </div>
+                <div id="collapse3-2" class="collapse" aria-labelledby="heading3-2" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Position sensor measures the position of an object referenced either to or from a fixed point or position.  They minimize downtime, reduce maintenance requirements, and enhance production efficiency.  Uses include measuring variables in offshore oil rigs and monitoring, construction, chemical processing and more.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Potentiometer, Inclinometer, Potentiometer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-3">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-3" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Occupancy and Motion Sensors 
+                  </p>
+                </div>
+                <div id="collapse3-3" class="collapse" aria-labelledby="heading3-3" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Occupancy sensors detect the presence of people, vehicles and animals in a given area, while the motion sensors detect their movement. Uses are numerous including parking space availability, smart lighting, intruder detection, etc.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Ambient Light Sensors, PIR Sensors, RADAR, Electric Eye</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-4">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-4" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Force
+                  </p>
+                </div>
+                <div id="collapse3-4" class="collapse" aria-labelledby="heading3-4" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Force sensors detect whether a physical force is applied and whether the magnitude of force is beyond a threshold.  They are useful in weighing objects and preventing machinery from overloading, monitoring loads on mine lifts, construction cranes, industrial tanks and much more.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Tactile Sensor, Force Gauge, Tension Links, Load Pins, Shear Beams</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-5">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-5" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Pressure
+                  </p>
+                </div>
+                <div id="collapse3-5" class="collapse" aria-labelledby="heading3-5" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Pressure sensors measure the force applied by liquids or gases. Pressure is measured in terms of force per unit area.  They are useful in monitoring pressure-critical equipment such as boilers, water systems, gas turbines, oil drilling systems and more.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Barometer, Piezometer, Resonant, Strain-Gauge</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-6">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-6" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Flow
+                  </p>
+                </div>
+                <div id="collapse3-6" class="collapse" aria-labelledby="heading3-6" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Flow sensors detect the instant flow rate of a gas or liquid. They measure the volume (mass flow) or rate (flow velocity) that has passed through a system in a given period of time.  Mass flow sensors are widely-used to control the exact dosing of gases or liquids in many technical systems.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Turbine Flow Sensor, Electromagnetic Flow Sensor, Thermal Mass Flow Sensor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-7">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-7" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Levels / Leaks
+                  </p>
+                </div>
+                <div id="collapse3-7" class="collapse" aria-labelledby="heading3-7" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Level sensors detect the level of substances, including liquids, powders and granular materials.  Leakage sensors detect leakage of chemicals, oil and water.  It is also possible to detect condensation.  Leak detection sensors detect and localize leaks, reducing downtime and inspection time.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Hydrostatic, Infrared, Laser, Vapor Sensors</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-8">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-8" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Acoustic / Vibration
+                  </p>
+                </div>
+                <div id="collapse3-8" class="collapse" aria-labelledby="heading3-8" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Acoustic sensors measure sound level.  Vibration amplitude (the force applied to the object) and frequency (the rate of the back and forth movement) identify predictive maintenance requirements for industrial equipment.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Lace Sensor, Geophone, Hydrophone, Seismometer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-9">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-9" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Humidity / Moisture
+                  </p>
+                </div>
+                <div id="collapse3-9" class="collapse" aria-labelledby="heading3-9" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Humidity sensors detect humidity (amount of water vapor) in the air or other gases. Moisture is a contaminant that exists in industrial gases and the atmosphere. And, it is able to penetrate virtually any surface including such metals as copper, bronze and carbon steel, damaging equipment and wasting energy.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Hygrometer, Humistor, Soil Moisture Sensor</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-10">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-10" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Optical
+                  </p>
+                </div>
+                <div id="collapse3-10" class="collapse" aria-labelledby="heading3-10" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Optical sensors monitor any kind of electromagnetic radiation, such as; light, electricity, and a magnetic field.  The molecular recognition elements interact with the target analytes under study and provide information about their presence, concentration, and other physical properties of interest.  They are particularly beneficial for remote and multimodal detection.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Infrared Sensor, Fiber-Optic, Flame Detector</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-11">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-11" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Radiation
+                  </p>
+                </div>
+                <div id="collapse3-11" class="collapse" aria-labelledby="heading3-11" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Radiation sensors detect radiation levels in a given environment. Radiation can be sensed by scintillating or ionization detection.  They are useful when monitoring for radioactive contamination as well as inspecting vehicles and freight.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Geiger–Mueller Counter, Scintillator, Pyranometer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-12">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-12" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Temperature
+                  </p>
+                </div>
+                <div id="collapse3-12" class="collapse" aria-labelledby="heading3-12" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Temperature sensors measure the amount of heat or cold that is present in a system, detecting physical variations. They can be broadly of two types: contact and non-contact. Contact temperature sensors need to be in physical contact with the object being sensed. Non-contact sensors do not need physical contact, as they measure temperature through convection and radiation. </p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Thermometer, Calorimeter, Infrared Pyrometer</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-13">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-13" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Chemical / Gas
+                  </p>
+                </div>
+                <div id="collapse3-13" class="collapse" aria-labelledby="heading3-13" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Chemical sensors measure the concentration of chemicals in a system.  Gas sensors are used to detect gas leaks or other emissions.  Reliable detection of various gases in low concentration is mandatory in fields such as industrial plants, environmental monitoring, or air quality assurance.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Infrared Point Sensors, Ultrasonic Sensors, Electrochemical Gas Sensors</p>
+                  </div>
+                </div>
+              </div>
+              <div class="card card-custom">
+                <div class="card-header card-header-custom" id="heading3-14">
+                  <p class="btn-block btn-custom collapsed" data-toggle="collapse" data-target="#collapse3-14" aria-expanded="true" aria-controls="collapse1">
+                    <i class="mas far fa-plus-circle"></i><i class="menos far fa-minus-circle"></i> Current / Voltage
+                  </p>
+                </div>
+                <div id="collapse3-14" class="collapse" aria-labelledby="heading3-14" data-parent="#accordion3">
+                  <div class="card-body card-body-custom">
+                    <p>Current and voltage sensors are used for used in applications such as power demand control, power failure detection, load sensing, safety switching, and motor overload control.</p>
+                    <p class="mt-2"><span class="font-italic font-weight-bold">Examples</span> – Rogowski Coil, Hall Effect</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+    
+  </div>
+
+  <div id="scroll-down" class="scroll-down">Scroll Down</div>
+  
+  <script src="assets/js/scripts.js"></script>
+  <script src="../assets/vendor/fancybox/jquery.fancybox.js"></script>
+  <script>
+    var sections = '6'
+    // **********************************************************************************************
+    // * FULLPAGE
+    // **********************************************************************************************
+    $('#Fullpage').fullpage({
+      anchors: ['capabilities', 'applications', 'command-center', 'outposts', 'iot-sensors-uses', 'iot-sensors-types'],
+      navigation: false,
+      navigationPosition: 'left',
+      scrollBar: false,
+      paddingTop: '60px',
+      paddingBottom: '40px',
+      verticalCentered: false,
+      normalScrollElements: '.content-col-3, .height-slide, .overflow',
+      recordHistory: false,
+      onLeave: function(index, nextIndex, direction) {
+        if (nextIndex == 1) {
+          $('.afid1').addClass('animated fadeInDown Slow')
+          $('.afi1').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 2) {
+          $('.afid2').addClass('animated fadeInDown Slow')
+          $('.afi2').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 3) {
+          $('.afid3').addClass('animated fadeInDown Slow')
+          $('.afi3').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 4) {
+          $('.afid4').addClass('animated fadeInDown Slow')
+          $('.afi4').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 5) {
+          $('.afid5').addClass('animated fadeInDown Slow')
+          $('.afi5').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 6) {
+          $('.afid6').addClass('animated fadeInDown Slow')
+          $('.afi6').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == sections) {
+          hideScrollDown()
+        } else {
+          showScrollDown()
+        }
+      },
+      afterLoad: function(anchorLink, index) {
+        if (index == 1) {
+          $('.afid1').addClass('animated fadeInDown Slow')
+          $('.afi1').addClass('animated fadeIn Slow')
+        }
+        if (index == sections) {
+          hideScrollDown()
+        }
+      },
+    })
+
+    $('#scroll-down').click(function() {
+      $.fn.fullpage.moveSectionDown();
+    });
+
+    $('.swiper-container').css('height', $(window).height() - $('#title-home').height() - $('#world-home').height() - 60)
+    var swiper = new Swiper('.swiper-container', {
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>

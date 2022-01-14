@@ -1,0 +1,892 @@
+<div id="map-ppal" class="h-100">
+  <div class="title-home wow fadeInDown slow">
+    <div class="float-left">
+      <img class="w-75" src="assets/images/icon-title.png">
+    </div>
+    <div class="float-left">
+      <h2 class="m-0">Make Your</h2>
+      <h1 class="m-0">World Smarter</h1>
+    </div>
+  </div>
+  <img id="" class="maps-labels img-fluid wow fadeIn slow" src="assets/images/index/home/maps-labels.png">
+  <img id="map-shore-label" class="img-fluid" src="assets/images/index/home/map-shore-label.png">
+  <img id="map-terrain-label" class="img-fluid" src="assets/images/index/home/map-terrain-label.png">
+  <img id="map-industry-label" class="img-fluid" src="assets/images/index/home/map-industry-label.png">
+  <img id="map-city-label" class="img-fluid" src="assets/images/index/home/map-city-label.png">
+  <img onload="imgMaps()" style="opacity: 0;" class="maps-labels img-fluid wow fadeIn slow" src="assets/images/index/home/maps-labels-hide.png" usemap="#map-coords">
+</div>
+<!-- MAP SHORE -->
+<div id="map-shore" class="h-100" style="width: 100%;">
+  <div class="row h-100">
+    <div class="col-4 h-100" style="padding-left: 85px">
+      <div class="title-home wow fadeInDown slow">
+        <div class="float-left">
+          <img class="w-75" src="assets/images/icon-title.png">
+        </div>
+        <div class="float-left">
+          <h2 class="m-0">Smart World</h2>
+          <h1 class="m-0">Shore</h1>
+        </div>
+      </div>
+      <div id="content-map-shore"></div>
+    </div>
+    <div class="maps-internals col-8 h-100 d-flex align-items-center wow fadeIn slow">
+      <img id="map-shore-dots" src="assets/images/index/home/shore-dots.png" class="img-fluid map-dots">
+      <img id="map-shore-dots-dark" src="assets/images/index/home/shore-dots-dark.png" class="img-fluid map-dark">
+      <img id="map-shore-port" src="assets/images/index/home/shore-port.png" class="img-fluid map-dark">
+      <img id="map-shore-container" src="assets/images/index/home/shore-container.png" class="img-fluid map-dark">
+      <img id="map-shore-bridge" src="assets/images/index/home/shore-bridge.png" class="img-fluid map-dark">
+      <img id="map-shore-border" src="assets/images/index/home/shore-border.png" class="img-fluid map-dark">
+      <img id="map-shore-ocean" src="assets/images/index/home/shore-ocean.png" class="img-fluid map-dark">
+      <img id="map-shore-shark" src="assets/images/index/home/shore-shark.png" class="img-fluid map-dark">
+      <img onload="imgMaps()" src="assets/images/index/home/shore-dots-hide.png" class="img-fluid wow fadeIn slow map-hidden" usemap="#map-shore-coords" style="opacity: 0;">
+      <!-- <i id="back-world" class="fas fa-arrow-left fa-2x" onclick="back_world()"></i> -->
+    </div>
+  </div>
+</div>
+<!-- CONTENT MAP SHORE -->
+<!-- PORT -->
+<div id="content-shore-port" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Port Operation</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Port Operation</p> -->
+    <ul>
+      <li><p>Monitoring of Proper Passenger and Baggage Screening Protocols</p></li>
+      <li><p>Supervising Unloading/Loading of Vessels</p></li>
+      <li><p>Monitoring and Control of Containers</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- MARINE -->
+<div id="content-shore-marine" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Marine Traffic Flow</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Marine Traffic Flow</p> -->
+    <ul>
+      <li><p>Monitor Vessel Movement</p></li>
+      <li><p>Monitor Accidents & Parking Congestion</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- INFRASTRUCTURE -->
+<div id="content-shore-infrastructure" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Infrastructure Monitoring/Inspection</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Visual</p>
+    <ul>
+      <li><p>RGB Cameras with Optical & Digital Zoom</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Chemical</p>
+    <ul>
+      <li><p>pH, Oxidation, Particulate Matter, Pollution, etc</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Mechanical</p>
+    <ul>
+      <li><p>Strain, Stress, Deformation, Etc.</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Physical</p>
+    <ul>
+      <li><p>Temperature, Pressure, Flow, Humidity, Etc.</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- BORDER -->
+<div id="content-shore-perimeter" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Perimeter/Border Breach Monitoring</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Perimeter/Border Breach Monitoring</p> -->
+    <ul>
+      <li><p>Visual (RGB) with AI</p></li>
+      <li><p>Heat Sensing (Thermal) for Night and Obstructed View</p></li>
+      <li><p>IoT Sensors</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- WATER -->
+<div id="content-shore-water" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Water Quality Monitoring</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Water Quality Monitoring</p>
+    <hr>
+    <p class="text-uppercase">Flood Condition Monitoring</p>
+    <hr>
+  </div> -->
+</div>
+<!-- WATER -->
+<div id="content-shore-flood" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Flood Condition Monitoring</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Water Quality Monitoring</p>
+    <hr>
+    <p class="text-uppercase">Flood Condition Monitoring</p>
+    <hr>
+  </div> -->
+</div>
+<!-- SHARK -->
+<div id="content-shore-shark" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Shark Detection</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Shark Detection</p>
+    <hr>
+  </div> -->
+</div>
+<!-- MAP TERRAIN -->
+<div id="map-terrain" class="h-100" style="width: 100%;">
+  <div class="row h-100">
+    <div class="col-4 h-100" style="padding-left: 85px">
+      <div class="title-home wow fadeInDown slow">
+        <div class="float-left">
+          <img class="w-75" src="assets/images/icon-title.png">
+        </div>
+        <div class="float-left">
+          <h2 class="m-0">Smart World</h2>
+          <h1 class="m-0">Terrain</h1>
+        </div>
+      </div>
+      <div id="content-map-terrain"></div>
+    </div>
+    <div class="maps-internals col-8 h-100 d-flex align-items-center wow fadeIn slow">
+      <img id="map-terrain-dots" src="assets/images/index/home/terrain-dots.png" class="img-fluid map-dots">
+      <img id="map-terrain-dots-dark" src="assets/images/index/home/terrain-dots-dark.png" class="img-fluid map-dark">
+      <img id="map-terrain-mountain" src="assets/images/index/home/terrain-mountain.png" class="img-fluid map-dark">
+      <img id="map-terrain-forest" src="assets/images/index/home/terrain-forest.png" class="img-fluid map-dark">
+      <img id="map-terrain-timber" src="assets/images/index/home/terrain-timber.png" class="img-fluid map-dark">
+      <img id="map-terrain-farm" src="assets/images/index/home/terrain-farm.png" class="img-fluid map-dark">
+      <img id="map-terrain-livestock" src="assets/images/index/home/terrain-livestock.png" class="img-fluid map-dark">
+      <img id="map-terrain-golf" src="assets/images/index/home/terrain-golf.png" class="img-fluid map-dark">
+      <img id="map-terrain-solar" src="assets/images/index/home/terrain-solar.png" class="img-fluid map-dark">
+      <img onload="imgMaps()" src="assets/images/index/home/terrain-dots-hide.png" class="img-fluid wow fadeIn slow map-hidden" usemap="#map-terrain-coords" style="opacity: 0;">
+      <!-- <i id="back-world" class="fas fa-arrow-left fa-2x" onclick="back_world()"></i> -->
+    </div>
+  </div>
+</div>
+<!-- CONTENT MAP TERRAIN -->
+<!-- MOUNTAIN -->
+<div id="content-terrain-avalanche" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Avalanche Monitoring</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Avalanche Monitoring</p>
+    <hr>
+    <p class="text-uppercase">Landslide Monitoring</p>
+    <hr>
+    <p class="text-uppercase">Search & Rescue</p>
+    <ul>
+      <li><p>Human Identification & Location Tracking</p></li>
+      <li><p>RGB with AI and Thermal for Night and Limited Visibility Conditions</p></li>
+      <li><p>Archived Footage for Incident Investigation</p></li>
+      <li><p>Synchronization of Search Crews with Real-Time Aerial Views</p></li>
+    </ul>
+    <hr>
+  </div> -->
+</div>
+<!-- MOUNTAIN -->
+<div id="content-terrain-landslide" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Landslide Monitoring</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Avalanche Monitoring</p>
+    <hr>
+    <p class="text-uppercase">Landslide Monitoring</p>
+    <hr>
+    <p class="text-uppercase">Search & Rescue</p>
+    <ul>
+      <li><p>Human Identification & Location Tracking</p></li>
+      <li><p>RGB with AI and Thermal for Night and Limited Visibility Conditions</p></li>
+      <li><p>Archived Footage for Incident Investigation</p></li>
+      <li><p>Synchronization of Search Crews with Real-Time Aerial Views</p></li>
+    </ul>
+    <hr>
+  </div> -->
+</div>
+<!-- MOUNTAIN -->
+<div id="content-terrain-search-rescue" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Search & Rescue</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Avalanche Monitoring</p>
+    <hr>
+    <p class="text-uppercase">Landslide Monitoring</p>
+    <hr>
+    <p class="text-uppercase">Search & Rescue</p> -->
+    <ul>
+      <li><p>Human Identification & Location Tracking</p></li>
+      <li><p>RGB with AI and Thermal for Night and Limited Visibility Conditions</p></li>
+      <li><p>Archived Footage for Incident Investigation</p></li>
+      <li><p>Synchronization of Search Crews with Real-Time Aerial Views</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- FOREST -->
+<div id="content-terrain-reduction-fire" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Reduction of Fire Damage & Loss of Life</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Reduction of Fire Damage & Loss of Life</p> -->
+    <ul>
+      <li><p>Fire Mitigation Planning</p></li>
+      <li><p>Early Fire Detection (Day and Night)</p></li>
+      <li><p>Real-Time Visual Operational Support</p></li>
+      <li><p>Fire Path prediction</p></li>
+      <li><p>Back-Up Communications System</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- TIMBER -->
+<div id="content-terrain-timber" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Maximization of Timber Value</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Maximization of Timber Value</p> -->
+    <ul>
+      <li><p>Precision Agriculture</p></li>
+      <li><p>Inventory Analysis</p></li>
+      <li><p>Theft Reduction</p></li>
+    </ul>
+    <hr>
+    <!-- <p class="text-uppercase">Wildlife Conservation</p>
+    <ul>
+      <li><p>Animal Detection</p></li>
+      <li><p>Species Identification and Counting</p></li>
+      <li><p>Poaching Activity Monitoring</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Communication</p>
+    <ul>
+      <li><p>Backup and/or Remote Internet Mesh Network</p></li>
+      <li><p>14+ Mile Range per Link (Line of Sight)</p></li>
+      <li><p>Compatible with Multiple Internet Access Points</p></li>
+      <ul>
+        <div class="row">
+          <div class="col-4">
+            <li><p>Cable</p></li>
+            <li><p>Fiber Optic</p></li>
+            <li><p>Microwave Link</p></li>
+          </div>
+          <div class="col-8">
+            <li><p>Satellite</p></li>
+            <li><p>Long Range Directional Wi-Fi</p></li>
+            <li><p>Cellular 3G/4G/5G</p></li>
+          </div>
+        </div>
+      </ul>
+    </ul>
+    <hr> -->
+  </div>
+</div>
+<!-- TIMBER -->
+<div id="content-terrain-wildlife" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Wildlife Conservation</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Maximization of Timber Value</p>
+    <ul>
+      <li><p>Precision Agriculture</p></li>
+      <li><p>Inventory Analysis</p></li>
+      <li><p>Theft Reduction</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Wildlife Conservation</p> -->
+    <ul>
+      <li><p>Animal Detection</p></li>
+      <li><p>Species Identification and Counting</p></li>
+      <li><p>Poaching Activity Monitoring</p></li>
+    </ul>
+    <hr>
+    <!-- <p class="text-uppercase">Communication</p>
+    <ul>
+      <li><p>Backup and/or Remote Internet Mesh Network</p></li>
+      <li><p>14+ Mile Range per Link (Line of Sight)</p></li>
+      <li><p>Compatible with Multiple Internet Access Points</p></li>
+      <ul>
+        <div class="row">
+          <div class="col-4">
+            <li><p>Cable</p></li>
+            <li><p>Fiber Optic</p></li>
+            <li><p>Microwave Link</p></li>
+          </div>
+          <div class="col-8">
+            <li><p>Satellite</p></li>
+            <li><p>Long Range Directional Wi-Fi</p></li>
+            <li><p>Cellular 3G/4G/5G</p></li>
+          </div>
+        </div>
+      </ul>
+    </ul>
+    <hr> -->
+  </div>
+</div>
+<!-- TIMBER -->
+<div id="content-terrain-comunication" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Communication</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Maximization of Timber Value</p>
+    <ul>
+      <li><p>Precision Agriculture</p></li>
+      <li><p>Inventory Analysis</p></li>
+      <li><p>Theft Reduction</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Wildlife Conservation</p>
+    <ul>
+      <li><p>Animal Detection</p></li>
+      <li><p>Species Identification and Counting</p></li>
+      <li><p>Poaching Activity Monitoring</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Communication</p> -->
+    <ul>
+      <li><p>Backup and/or Remote Internet Mesh Network</p></li>
+      <li><p>14+ Mile Range per Link (Line of Sight)</p></li>
+      <li><p>Compatible with Multiple Internet Access Points</p></li>
+      <ul>
+        <div class="row">
+          <div class="col-4">
+            <li><p>Cable</p></li>
+            <li><p>Fiber Optic</p></li>
+            <li><p>Microwave Link</p></li>
+          </div>
+          <div class="col-8">
+            <li><p>Satellite</p></li>
+            <li><p>Long Range Directional Wi-Fi</p></li>
+            <li><p>Cellular 3G/4G/5G</p></li>
+          </div>
+        </div>
+      </ul>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- FARM -->
+<div id="content-terrain-crop-yield" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Crop Yield</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Monitor Crop Health</p>
+    <ul>
+      <li><p>Adapt to Changing Variables, such as; Soil Type, Sunlight, Slope, etc.</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Monitor Crop Height</p>
+    <hr>
+    <p class="text-uppercase">Pest & Weed Detection</p>
+    <hr>
+    <p class="text-uppercase">Irrigation Optimization</p>
+    <hr>
+  </div>
+</div>
+<!-- LIVESTOCK -->
+<div id="content-terrain-livestock" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Livestock Control</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Livestock Control</p> -->
+    <ul>
+      <li><p>Forage Area Analysis</p></li>
+      <li><p>Livestock Location Monitoring</p></li>
+      <li><p>Livestock Counting</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- GOLF -->
+<div id="content-terrain-golf" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Golf Course Health</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Monitor Green & Fairway Health</p>
+    <ul>
+      <li><p>Monitor Rough Height</p></li>
+      <li><p>Pest & Weed Detection</p></li>
+      <li><p>Irrigation Optimization</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Pace of Play</p>
+    <ul>
+      <li><p>Monitor Cart Locations & Timing</p></li>
+      <li><p>Monitor People Locations & Timing</p></li>
+      <li><p>Send Alerts to Staff & Players</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- PANEL SOLAR -->
+<div id="content-terrain-solar" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Solar Panel Monitoring</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <ul>
+      <li><p>Cleanliness Monitoring</p></li>
+      <li><p>Damage Monitoring</p></li>
+      <li><p>Thermal Efficiency Monitoring</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- MAP INDUSTRY -->
+<div id="map-industry" class="h-100" style="width: 100%;">
+  <div class="row h-100">
+    <div class="col-4 h-100" style="padding-left: 85px">
+      <div class="title-home wow fadeInDown slow">
+        <div class="float-left">
+          <img class="w-75" src="assets/images/icon-title.png">
+        </div>
+        <div class="float-left">
+          <h2 class="m-0">Smart World</h2>
+          <h1 class="m-0">Industry</h1>
+        </div>
+      </div>
+      <div id="content-map-industry"></div>
+    </div>
+    <div class="maps-internals col-8 h-100 d-flex align-items-center wow fadeIn slow">
+      <img id="map-industry-dots" src="assets/images/index/home/industry-dots.png" class="img-fluid map-dots">
+      <img id="map-industry-dots-dark" src="assets/images/index/home/industry-dots-dark.png" class="img-fluid map-dark">
+      <img id="map-industry-construction" src="assets/images/index/home/industry-construction.png" class="img-fluid map-dark">
+      <img id="map-industry-nuclear" src="assets/images/index/home/industry-nuclear.png" class="img-fluid map-dark">
+      <img id="map-industry-smoke" src="assets/images/index/home/industry-smoke.png" class="img-fluid map-dark">
+      <img id="map-industry-mine" src="assets/images/index/home/industry-mine.png" class="img-fluid map-dark">
+      <img id="map-industry-inventory" src="assets/images/index/home/industry-inventory.png" class="img-fluid map-dark">
+      <img id="map-industry-operations" src="assets/images/index/home/industry-operations.png" class="img-fluid map-dark">
+      <img id="map-industry-gas" src="assets/images/index/home/industry-gas.png" class="img-fluid map-dark">
+      <img onload="imgMaps()" src="assets/images/index/home/industry-dots-hide.png" class="img-fluid wow fadeIn slow map-hidden" usemap="#map-industry-coords" style="opacity: 0;">
+      <!-- <i id="back-world" class="fas fa-arrow-left fa-2x" onclick="back_world()"></i> -->
+    </div>
+  </div>
+</div>
+<!-- CONTENT MAP INDUSTRY -->
+<!-- CONSTRUCTION -->
+<div id="content-industry-field" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Field Productivity</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Field Productivity</p> -->
+    <ul>
+      <li><p>Track Crew Deployment in Real-Time</p></li>
+      <li><p>Track On-Site Productivity</p></li>
+      <li><p>Project Time Lapse Imagery</p></li>
+    </ul>
+    <hr>
+    <!-- <p class="text-uppercase">Contract Management</p>
+    <ul>
+      <li><p>Track Contract Compliance</p></li>
+    </ul>
+    <hr> -->
+  </div>
+</div>
+<div id="content-industry-contract" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Contract Management</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <!-- <hr>
+    <p class="text-uppercase">Field Productivity</p>
+    <ul>
+      <li><p>Track Crew Deployment in Real-Time</p></li>
+      <li><p>Track On-Site Productivity</p></li>
+      <li><p>Project Time Lapse Imagery</p></li>
+    </ul> -->
+    <hr>
+    <!-- <p class="text-uppercase">Contract Management</p> -->
+    <ul>
+      <li><p>Track Contract Compliance</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- NUCLEAR -->
+<div id="content-industry-compliance" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Compliance</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Compliance</p> -->
+    <ul>
+      <li><p>Monitor High-Risk Areas and Activities</p></li>
+      <li><p>Monitor Sensitive Environmental Zones to Stay in Regulatory Compliance</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- SMOKE -->
+<div id="content-industry-hazardous" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Hazardous Gas Detection</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Hazardous Gas Detection</p>
+    <hr>
+    <p class="text-uppercase">Air Quality Monitoring</p>
+    <hr>
+  </div> -->
+</div>
+<!-- SMOKE -->
+<div id="content-industry-air" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Air Quality Monitoring</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Hazardous Gas Detection</p>
+    <hr>
+    <p class="text-uppercase">Air Quality Monitoring</p>
+    <hr>
+  </div> -->
+</div>
+<!-- MINE -->
+<div id="content-industry-exploration" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Exploration</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Exploration</p> -->
+    <ul>
+      <li><p>Identify and Qualify New Opportunities with Mineral Exploration Mapping</p></li>
+    </ul>
+    <hr>
+    <!-- <p class="text-uppercase">Operations</p>
+    <ul>
+      <li><p>Measurement of Blast Volumes</p></li>
+      <li><p>Tracking of Site Changes Over Time</p></li>
+      <li><p>Tracking of Wall Cracks, Erosion and Rock Falls</p></li>
+      <li><p>Detection of Pooling on Leach Pads</p></li>
+      <li><p>Monitoring of Grades and Slopes</p></li>
+      <li><p>Checking of Batter Slopes</p></li>
+      <li><p>Monitoring for Landslides</p></li>
+    </ul>
+    <hr> -->
+  </div>
+</div>
+<!-- MINE -->
+<div id="content-industry-operation" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Operations</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <!-- <hr>
+    <p class="text-uppercase">Exploration</p>
+    <ul>
+      <li><p>Identify and Qualify New Opportunities with Mineral Exploration Mapping</p></li>
+    </ul> -->
+    <hr>
+    <!-- <p class="text-uppercase">Operations</p> -->
+    <ul>
+      <li><p>Measurement of Blast Volumes</p></li>
+      <li><p>Tracking of Site Changes Over Time</p></li>
+      <li><p>Tracking of Wall Cracks, Erosion and Rock Falls</p></li>
+      <li><p>Detection of Pooling on Leach Pads</p></li>
+      <li><p>Monitoring of Grades and Slopes</p></li>
+      <li><p>Checking of Batter Slopes</p></li>
+      <li><p>Monitoring for Landslides</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- INVENTORY -->
+<div id="content-industry-inventory" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Inventory Counting</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Inventory Counting</p> -->
+    <ul>
+      <li><p>Visual & Weight</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- GAS -->
+<div id="content-industry-intelligent" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Intelligent 24/7 Inspection & Monitoring</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Intelligent 24/7 Inspection & Monitoring</p> -->
+    <ul>
+      <li><p>RGB Cameras with Optical & Digital Zoom</p></li>
+      <li><p>Pipeline Pressure Sensors</p></li>
+      <li><p>Pipeline Liquid Flow Sensors</p></li>
+      <li><p>Pipeline Leak Detection Sensors</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- MAP CITY -->
+<div id="map-city" class="h-100" style="width: 100%;">
+  <div class="row h-100">
+    <div class="col-4 h-100" style="padding-left: 85px">
+      <div class="title-home wow fadeInDown slow">
+        <div class="float-left">
+          <img class="w-75" src="assets/images/icon-title.png">
+        </div>
+        <div class="float-left">
+          <h2 class="m-0">Smart World</h2>
+          <h1 class="m-0">City</h1>
+        </div>
+      </div>
+      <div id="content-map-city"></div>
+    </div>
+    <div class="maps-internals col-8 h-100 d-flex align-items-center wow fadeIn slow">
+      <img id="map-city-dots" src="assets/images/index/home/city-dots.png" class="img-fluid map-dots">
+      <img id="map-city-dots-dark" src="assets/images/index/home/city-dots-dark.png" class="img-fluid map-dark">
+      <img id="map-city-standard-building" src="assets/images/index/home/city-standard-building.png" class="img-fluid map-dark">
+      <img id="map-city-one-building" src="assets/images/index/home/city-one-building.png" class="img-fluid map-dark">
+      <img id="map-city-stadium" src="assets/images/index/home/city-stadium.png" class="img-fluid map-dark">
+      <img id="map-city-street" src="assets/images/index/home/city-street.png" class="img-fluid map-dark">
+      <img id="map-city-cars" src="assets/images/index/home/city-cars.png" class="img-fluid map-dark">
+      <img id="map-city-bicyclist" src="assets/images/index/home/city-bicyclist.png" class="img-fluid map-dark">
+      <img id="map-city-pedestrians" src="assets/images/index/home/city-pedestrians.png" class="img-fluid map-dark">
+      <img id="map-city-dumpster" src="assets/images/index/home/city-dumpster.png" class="img-fluid map-dark">
+      <img id="map-city-sewage" src="assets/images/index/home/city-sewage.png" class="img-fluid map-dark">
+      <img id="map-city-electromagnetic" src="assets/images/index/home/city-electromagnetic.png" class="img-fluid map-dark">
+      <img onload="imgMaps()" src="assets/images/index/home/city-dots-hide.png" class="img-fluid wow fadeIn slow map-hidden" usemap="#map-city-coords" style="opacity: 0;">
+      <!-- <i id="back-world" class="fas fa-arrow-left fa-2x" onclick="back_world()"></i> -->
+    </div>
+  </div>
+</div>
+<!-- CONTENT MAP CITY -->
+<!-- STANDARD BUILDING-->
+<div id="content-city-noise" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Noise Level Monitoring</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Noise Level Monitoring</p>
+    <hr>
+  </div> -->
+</div>
+<!-- ONE BUILDING-->
+<div id="content-city-electromagnetic" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Electromagnetic Radiation Monitoring</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Electromagnetic Radiation Monitoring</p>
+    <hr>
+  </div> -->
+</div>
+<!-- STADIUM-->
+<div id="content-city-identification" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Threat Identification</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Perimeter/Border Breach Monitoring</p>
+    <ul>
+      <li><p>Visual (RGB) with AI</p></li>
+      <li><p>Heat Sensing (Thermal) for Night and Obstructed View</p></li>
+      <li><p>IoT Sensors</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Monitoring of Unauthorized Activities</p>
+    <hr>
+    <p class="text-uppercase">Motion Detection</p>
+    <hr>
+    <p class="text-uppercase">Animal Detection</p>
+    <hr>
+    <p class="text-uppercase">Facial Recognition</p>
+    <ul>
+      <li><p>Identity</p></li>
+      <li><p>Age, Gender & Emotion</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Person Dwell Times</p>
+    <hr>
+    <p class="text-uppercase">Weapons Identification</p>
+    <ul>
+      <li><p>Pistol, Rifle, Knife</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Gunshot Detection</p>
+    <hr>
+    <p class="text-uppercase">UAV Detection</p>
+    <hr>
+  </div>
+</div>
+<!-- STREET-->
+<div id="content-city-mitigation" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Threat Mitigation</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Threat Mitigation</p> -->
+    <ul>
+      <li><p>Smartphone Detection</p></li>
+      <li><p>Automated Early Warning System Cut Response Times</p></li>
+      <li><p>Synchronization of First Responders with Real-Time Aerial Views</p></li>
+      <li><p>UAV Intruder Mitigation</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- CARS-->
+<div id="content-city-traffic" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Traffic</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Vehicle Detection</p>
+    <hr>
+    <p class="text-uppercase">Vehicle Recognition</p>
+    <ul>
+      <li><p>Make, Model, Color</p></li>
+      <li><p>License Plate State & Number</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">Speed Monitoring & Ticketing</p>
+    <hr>
+  </div>
+</div>
+<!-- PEDESTRIANS-->
+<div id="content-city-investigations" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Investigations</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <ul>
+      <li><p>Automated Cloud-Based Customizable Archival System</p></li>
+    </ul>
+    <!-- <p class="text-uppercase">People Detection</p>
+    <hr>
+    <p class="text-uppercase">Facial Recognition</p>
+    <ul>
+      <li><p>Identity</p></li>
+      <li><p>Age, Gender & Emotion</p></li>
+    </ul>
+    <hr>
+    <p class="text-uppercase">People Counting</p>
+    <hr>
+    <p class="text-uppercase">Pedestrian Flow</p>
+    <hr>
+    <p class="text-uppercase">Weapons Identification</p>
+    <ul>
+      <li><p>Pistol, Rifle, Knife</p></li>
+    </ul> -->
+    <hr>
+  </div>
+</div>
+<!-- DUMPSTER-->
+<div id="content-city-smart" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Smart Waste Management</h4>
+  </div>
+  <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <!-- <p class="text-uppercase">Smart Waste Management</p> -->
+    <ul>
+      <li><p>Trash Receptacle Fill Level Monitoring</p></li>
+    </ul>
+    <hr>
+  </div>
+</div>
+<!-- SEWAGE-->
+<div id="content-city-leak" class="wow fadeIn slow">
+  <div class="subtitle-home">
+    <h4>Leak Detection</h4>
+  </div>
+  <!-- <div class="content-home">
+    <i class="arrow-right-45 fas fa-arrow-right fa-xs"></i>
+    <hr>
+    <p class="text-uppercase">Leak Detection</p>
+    <hr>
+  </div> -->
+</div>

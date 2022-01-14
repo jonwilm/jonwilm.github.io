@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="apple-touch-icon" sizes="57x57" href="../assets/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="../assets/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="../assets/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="../assets/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="../assets/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="../assets/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="../assets/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="../assets/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="../assets/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+  <link rel="manifest" href="../assets/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="../assets/favicon/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="../assets/vendor/fancybox/jquery.fancybox.css">
+  <title>Volant - UAV/Drone Services</title>
+</head>
+<style>
+
+</style>
+<body>
+  <!-- PLACA -->
+  <div class="placa"></div>
+  <!-- PRELOADER -->
+  <div id="preloader">
+  <div id="preloader-status" class="text-center">
+    <img src="../assets/images/logo-preload.png" height="100" alt="" class="mb-3">
+    <div class="preloader-position loader">
+      <span></span>
+    </div>
+  </div>
+</div>
+  <!-- COOKIES -->
+  <!-- MODAL COOKIES -->
+<div class="modal fade" id="modalGPDR" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-custom modal-dialog-centered" role="document" style="min-width: 40%;">
+    <div class="modal-content modal-content-custom">
+      <div class="modal-body modal-body-custom text-center" style="padding: 1rem 1rem;">
+        <h3 class="mt-3" style="font-style: normal;">We use cookies</h3>
+        <div>
+          <hr style="width: 46%; margin: 1rem auto 0;">
+          <hr style="width: 17%; margin: 0 0 1rem 27%;">
+        </div>
+        <p>We use cookies and other tracking technologies to improve your browsing experience on our website, to analyze our website traffic, and to understand where our visitors are coming from. By browsing our website, you consent to our use of cookies and other tracking technologies.</p>
+        <a data-rel="lightcase" class="mt-3" href="../privacy-policy.html">Check our Privacy Policy</a>
+      </div>
+      <div class="modal-footer modal-footer-custom">
+        <button class="close-gpdr btn" data-dismiss="modal" aria-label="Close">Accept</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- NAVBAR -->
+  <nav id="main_nav" class="main_nav fixed-top d-flex align-items-end">
+  <div id="bg_header"></div>
+  <div class="logo">
+    <a href="index.html"><img src="../assets/images/logo-horizontal-white.png" alt="" class="img-fluid"></a>
+  </div>
+  <div class="main_menu">
+    <div id="btn_menu_text" class="btn btn-menu-corners">
+      MENU
+    </div>
+    <div id="btn_menu" class="btn_menu">
+      <div class="uno"></div>
+      <div class="dos"></div>
+      <div class="tres"></div>
+    </div>
+  </div>
+  <!-- MENU MOBILE -->
+  <div id="menu_mobile" class="menu_mobile d-flex align-items-center justify-content-center d-lg-none pt-5">
+    <ul class="text-center p-0 m-0">
+      <li class="menu_item d-none">
+        <a href="index.html#home" class="menu_link btn-block">Home</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="platform.html#capabilities" class="menu_link btn-block">Platform</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="drone-services.html#about-us" class="menu_link btn-block">UAV/Drone Services</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="cases-studies.html#studies" class="menu_link btn-block">Case Studies</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="pricing.html#pricing" class="menu_link btn-block">Pricing</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="company.html#company" class="menu_link btn-block">Company</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="careers.html#careers" class="menu_link btn-block">Careers</a>
+      </li>
+      <li class="menu_item mt-3 d-none">
+        <a href="contact.html#contact" class="menu_link btn-block">Contact</a>
+      </li>
+      <li class="menu_item text-center mt-2 p-0 d-none" style="background: transparent;">
+        <a class="link-social" href="https://www.facebook.com/volant.aerial" target="_blank">
+          <i class="fab fa-facebook-f fa-sm"></i>
+        </a>
+        <a class="link-social" href="https://www.youtube.com/channel/UCjBkBCu2jaLkZyL6YjQRexQ" target="_blank">
+          <i class="fab fa-youtube fa-sm"></i>
+        </a>
+        <a class="link-social" href="https://www.instagram.com/volantaerial/" target="_blank">
+          <i class="fab fa-instagram fa-sm"></i>
+        </a>
+        <a class="link-social" href="https://twitter.com/volantaerial" target="_blank">
+          <i class="fab fa-twitter fa-sm"></i>
+        </a>
+      </li>
+      <li class="menu_item text-center mt-2 d-none" style="background: transparent;">
+        <div class="btn-group">
+          <a href="#" class="btn btn-corners btn-corners-red btn-corners-left">ESP</a>
+          <div class="btn btn-corners btn-corners-red btn-corners-right"><i class="fas fa-caret-right fa-lg"></i> ENG</div>
+        </div>
+      </li>
+      <li class="menu_item text-center mt-2 d-none" style="background: transparent;">
+        <ul class="list-inline m-0 mb-2 mr-auto">
+          <div class="list-inline-item" style="font-size: 0.8rem;">
+            <li>
+              <a class="mr-2 text-decoration-none text-white" data-rel="lightcase" href="../terms-and-conditions.html">TERMS & CONDITIONS</a>
+              <a class="mr-2 text-decoration-none text-white" data-rel="lightcase" href="../privacy-policy.html">PRIVACY POLICY</a>
+            </li>
+          </div>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</nav>
+  <!-- FULLPAGE -->
+  <div id="Fullpage">
+
+    <!-- SECTION 1 -->
+    
+    <div class="section section-drone-about-us">
+  <div class="container">
+    <div class="row afid1 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-wdr" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Traditional Industrial</h2>
+            <h1 class="m-0">Drone Services</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subtitle-drone afi1 delay-1s">
+      <h4>ABOUT US</h4>
+    </div>
+    <div class="system-column h-100"><!-- h-100 -->
+      <div class="row mt-4"><!-- h-100 -->
+        <div id="wdr-column" class="column-01 col afi1 delay-1s">
+          <div class="overflow">
+            <p class="wow fadeIn slow" data-wow-delay="1s">We turn data into business decisions.</p>
+            <ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>PLAN</span></p></li>
+              <ul>
+                <li><p>We get to know your business and recommend the right equipment and ﬂight plans to optimize your return.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>GATHER</span></p></li>
+              <ul>
+                <li><p>We can either perform ﬂights or virtually walk you through your ﬂights.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>PROCESS</span></p></li>
+              <ul>
+                <li><p>We have a core group of off-site engineers and data strategists who process the ﬂight data.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>REPORT</span></p></li>
+              <ul>
+                <li><p>Once processed, we ensure that the data is presented in a way that specifically addresses or client’s needs and deliver it via the Cloud.</p></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- SECTION 2 -->
+
+    <div class="section section-drone-benefits">
+  <div class="container">
+    <div class="row afid2 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-wdr" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Traditional Industrial</h2>
+            <h1 class="m-0">Drone Services</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subtitle-drone afi2 delay-1s">
+      <h4>BENEFITS</h4>
+    </div>
+    <div class="system-column h-100"><!-- h-100 -->
+      <div class="row mt-4"><!-- h-100 -->
+        <div id="wdr-column" class="column-01 col afi2 delay-1s">
+          <div class="overflow">
+            <ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>BETTER DECISION MAKING</span></p></li>
+              <ul>
+                <li><p>Faster, more informative data.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>REDUCED PROJECT COST</span></p></li>
+              <ul>
+                <li><p>Average cost savings up to 80% vs. traditional methods.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>REDUCED TIMESCALE</span></p></li>
+              <ul>
+                <li><p>Mapping/survey durations cut by up to 90% vs. traditional methods.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>ACCESSIBILITY & SAFETY</span></p></li>
+              <ul>
+                <li><p>Ability to safely reach difﬁcult or hazardous areas.</p></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    <!-- SECTION 3 -->
+
+    <div class="section section-drone-differentiators">
+  <div class="container">
+    <div class="row afid3 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-wdr" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Traditional Industrial</h2>
+            <h1 class="m-0">Drone Services</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subtitle-drone afi3 delay-1s">
+      <h4>DIFFERENTIATORS</h4>
+    </div>
+    <div class="system-column h-100"><!-- h-100 -->
+      <div class="row mt-4"><!-- h-100 -->
+        <div id="wdr-column" class="column-01 col afi3 delay-1s">
+          <div class="overflow">
+            <ul>
+              <li><p><i class="fas fa-angle-right"></i>We have 9 years of experience in 9 countries and have ﬂown in some of the most challenging environments in the world.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>Our methodologies result in a margin of error of 2-5 inches vs. the industry standard of approximately 1 foot.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>We have unique methodologies that adapt to urban environments, resulting in perfect geometrically corrected orthophotos.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>We offer photogrammetry with pixel size between 1-5 inches, without increased margin error, vs. the industry norm of 3-10+ inches.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>Our ultra-dense clouds are up to 17 points per square foot vs. traditional surveying methods with a norm of 0.1 point per square foot and a photogrammetry industry norm of approximately 5 per square foot.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>Our volume measurement precision level is 98% vs. 70%-85% level achieved with traditional methods and a drone industry level of 60%-90%.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>Our 2D maps come with a tool that allows clients to use a smartphone to identify boundaries and points of interest while in the ﬁeld, with accuracy up to 10 ft., dependent on a phone’s GPS accuracy.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>We deliver 3D .pdf maps that allow users to quickly review topographic information without the need for specialized software and/or expertise.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>We employ extensive safety measures, including; ongoing drone maintenance, mission planning, internal safety training, safety guidelines well beyond industry requirements, etc.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>We are well versed in all levels of governmental regulations and guidelines.</p></li>
+              <li><p><i class="fas fa-angle-right"></i>All of our pilots are certiﬁed by the FAA.</p></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- SECTION 4 -->
+
+    <div class="section section-drone-services">
+  <div class="container">
+    <div class="row afid4 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-wdr" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Traditional Industrial</h2>
+            <h1 class="m-0">Drone Services</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subtitle-drone afi4 delay-1s">
+      <h4>SERVICES</h4>
+    </div>
+    <div class="system-column h-100"><!-- h-100 -->
+      <div class="row mt-4"><!-- h-100 -->
+        <div id="wdr-column" class="column-01 col afi4 delay-1s">
+          <div class="overflow">
+            <ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>AUDIO/VISUAL</span></p></li>
+              <ul>
+                <li><p>Real estate sales & development, events, ﬁlm, etc.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>AGRICULTURE</span></p></li>
+              <ul>
+                <li><p>Remote sensing, crop health monitoring, water management, etc.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>MINING</span></p></li>
+              <ul>
+                <li><p>Area measurement & contours, volume calculation, terrain classiﬁcation, etc.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>INDUSTRIAL INSPECTION</span></p></li>
+              <ul>
+                <li><p>Infrastructure, power lines, wind turbine, ﬂare tip, etc.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>MAPPING</span></p></li>
+              <ul>
+                <li><p>3D modelling, photogrammetry, topography, construction, etc.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>SAFETY & SECURITY</span></p></li>
+              <ul>
+                <li><p>Search and rescue, ﬁre monitoring, gas measuring, disaster management, etc.</p></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <!-- SECTION 5 -->
+
+    <div class="section section-drone-aerial-mapping">
+  <div class="container">
+    <div class="row afid5 delay-1s">
+      <div class="col d-flex justify-content-center">
+        <div id="title-wdr" class="titles w-100">
+          <img class="icon-title img-fluid float-left" src="../assets/images/icon-title.png">
+          <div class="text-title float-left">
+            <h2 class="m-0">Traditional Industrial</h2>
+            <h1 class="m-0">Drone Services</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="subtitle-drone afi5 delay-1s">
+      <h4>AERIAL MAPPING</h4>
+    </div>
+    <div class="system-column h-100"><!-- h-100 -->
+      <div class="row mt-4"><!-- h-100 -->
+        <div id="wdr-column" class="column-01 col afi5 delay-1s">
+          <div class="overflow">
+            <ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>GEOTAGGED AERIAL PHOTOGRAPHY</span></p></li>
+              <ul>
+                <li><p>Images have deﬁnitions that go from 1”/pixel to 10”/pixel.</p></li>
+                <li><p>Processed to be ﬁxed with the desired reference system.</p></li>
+                <li><p>Ideal to measure areas and locate projects with updated photos on programs such as Google Earth.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>ORTHORECTIFIED AERIAL PHOTOGRAPHY</span></p></li>
+              <ul>
+                <li><p>An aerial image that works as a map.</p></li>
+                <li><p>All elements that cause error in the geometry are corrected.</p></li>
+                <li><p>Used to make very accurate measurements in the horizontal plane.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>DEM’S AND CONTOUR LINES</span></p></li>
+              <ul>
+                <li><p>3D models that provide the elevation of each visible point in a terrain.</p></li>
+                <li><p>Used to calculate volume of land, contour lines, surface areas, and many other applications.</p></li>
+                <li><p>Files can be read by GIS software.</p></li>
+                <li><p>Contour lines are delivered in DWG to be read in AutoCAD or Microstation.</p></li>
+                <li><p>Our methods take 1/5 of the time of traditional terrestrial surveying.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>DTM’S (DIGITAL TERRAIN MODELS)</span></p></li>
+              <ul>
+                <li><p>Capable of delivering bare earth data.</p></li>
+                <li><p>DTM’S can remove objects such as trees and/or buildings.</p></li>
+              </ul>
+              <li><p><i class="fal fa-arrow-right"></i><span>OUR ACCURACY AND CAPABILITIES GUARANTEE:</span></p></li>
+              <ul>
+                <li><p>No limit on the types and size of terrains that can be mapped.</p></li>
+                <li><p>5 cm accuracy in horizontal and vertical planes.</p></li>
+                <li><p>Faster delivery time than all other modern methods.</p></li>
+              </ul>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+  </div>
+
+  <div id="scroll-down" class="scroll-down">Scroll Down</div>
+  
+  <script src="assets/js/scripts.js"></script>
+  <script src="../assets/vendor/fancybox/jquery.fancybox.js"></script>
+  <script>
+    var sections = '5'
+    // **********************************************************************************************
+    // * FULLPAGE
+    // **********************************************************************************************
+    $('#Fullpage').fullpage({
+      anchors: ['about-us', 'benefits', 'differentiators', 'services', 'aerial-mapping'],
+      navigation: false,
+      navigationPosition: 'left',
+      scrollBar: false,
+      paddingTop: '60px',
+      paddingBottom: '40px',
+      verticalCentered: false,
+      normalScrollElements: '.overflow',
+      recordHistory: false,
+      onLeave: function(index, nextIndex, direction) {
+        if (nextIndex == 1) {
+          $('.afid1').addClass('animated fadeInDown Slow')
+          $('.afi1').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 2) {
+          $('.afid2').addClass('animated fadeInDown Slow')
+          $('.afi2').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 3) {
+          $('.afid3').addClass('animated fadeInDown Slow')
+          $('.afi3').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 4) {
+          $('.afid4').addClass('animated fadeInDown Slow')
+          $('.afi4').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == 5) {
+          $('.afid5').addClass('animated fadeInDown Slow')
+          $('.afi5').addClass('animated fadeIn Slow')
+        }
+        if (nextIndex == sections) {
+          hideScrollDown()
+        } else {
+          showScrollDown()
+        }
+      },
+      afterLoad: function(anchorLink, index) {
+        if (index == 1) {
+          $('.afid1').addClass('animated fadeInDown Slow')
+          $('.afi1').addClass('animated fadeIn Slow')
+        }
+        if (index == sections) {
+          hideScrollDown()
+        }
+      },
+    })
+
+    $('#scroll-down').click(function() {
+      $.fn.fullpage.moveSectionDown();
+    });
+  </script>
+</body>
+</html>

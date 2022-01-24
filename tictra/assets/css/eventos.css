@@ -1,0 +1,181 @@
+.section-fecha-eventos {
+  background-image: url(../images/bg-welcome-eventos.png);
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 100px;
+  padding-bottom: 5rem; }
+  @media (min-width: 992px) {
+    .section-fecha-eventos {
+      padding-top: 150px; } }
+  .section-fecha-eventos .content-eventos {
+    background-color: #ffffff;
+    border-radius: 15px;
+    border: 1px solid lightgray;
+    padding-top: 1rem;
+    padding-bottom: 1rem; }
+    .section-fecha-eventos .content-eventos h2 {
+      text-align: center;
+      color: #4524CB;
+      font-weight: 600; }
+    @media (max-width: 991.98px) {
+      .section-fecha-eventos .content-eventos .detalles-eventos {
+        text-align: center; } }
+    .section-fecha-eventos .content-eventos .detalles-eventos .text-blue {
+      color: #4524CB;
+      font-weight: 600; }
+    .section-fecha-eventos .content-eventos .col-izq-eventos {
+      box-shadow: 29px 1px 10px -28px #8e8a8c; }
+    .section-fecha-eventos .content-eventos .content-filtro {
+      padding: 0 2rem; }
+    @media (min-width: 992px) and (max-width: 1399.98px) {
+      .section-fecha-eventos .content-eventos .title-card-evento {
+        font-size: .8rem !important; } }
+    @media (min-width: 992px) and (max-width: 1399.98px) {
+      .section-fecha-eventos .content-eventos .text-card-evento {
+        font-size: .6rem !important; } }
+    .section-fecha-eventos .content-eventos .bg-footer-card {
+      display: flex;
+      justify-content: center; }
+      .section-fecha-eventos .content-eventos .bg-footer-card .btn-green-white {
+        margin-right: .2rem; }
+      .section-fecha-eventos .content-eventos .bg-footer-card .btn-blue-white {
+        margin-left: .2rem; }
+      .section-fecha-eventos .content-eventos .bg-footer-card .btn-green-white,
+      .section-fecha-eventos .content-eventos .bg-footer-card .btn-blue-white {
+        padding-left: .7rem;
+        padding-right: .7rem;
+        font-size: .5rem; }
+        @media (min-width: 768px) {
+          .section-fecha-eventos .content-eventos .bg-footer-card .btn-green-white,
+          .section-fecha-eventos .content-eventos .bg-footer-card .btn-blue-white {
+            font-size: .6rem; } }
+        @media (min-width: 992px) {
+          .section-fecha-eventos .content-eventos .bg-footer-card .btn-green-white,
+          .section-fecha-eventos .content-eventos .bg-footer-card .btn-blue-white {
+            padding-left: .4rem;
+            padding-right: .4rem; } }
+  .section-fecha-eventos .accordion-item {
+    border-radius: 5px; }
+
+.card-evento {
+  border-radius: 15px; }
+  .card-evento .btn-green-white,
+  .card-evento .btn-blue-white {
+    padding-left: .7rem;
+    padding-right: .7rem;
+    font-size: .5rem; }
+    @media (min-width: 768px) {
+      .card-evento .btn-green-white,
+      .card-evento .btn-blue-white {
+        font-size: .8rem; } }
+    @media (min-width: 992px) {
+      .card-evento .btn-green-white,
+      .card-evento .btn-blue-white {
+        padding-left: 1rem;
+        padding-right: 1rem; } }
+  .card-evento .header-card {
+    padding: 1rem;
+    display: flex;
+    align-items: center; }
+    .card-evento .header-card .bg-gray {
+      background-color: #EAEAEA;
+      color: #4524CB;
+      padding: .8rem; }
+      @media (min-width: 992px) {
+        .card-evento .header-card .bg-gray {
+          padding: .8rem 1.2rem; } }
+    .card-evento .header-card .title-card-evento {
+      font-weight: 600;
+      margin-bottom: 0;
+      font-size: .8rem; }
+      @media (min-width: 992px) {
+        .card-evento .header-card .title-card-evento {
+          font-size: 1rem; } }
+    .card-evento .header-card .text-card-evento {
+      margin-bottom: 0;
+      font-size: .8rem;
+      color: #aaa9a9; }
+  .card-evento .content-info {
+    position: relative;
+    width: 100%;
+    padding-top: 80%; }
+    .card-evento .content-info .img-card-info {
+      width: 100%;
+      height: 100%;
+      -o-object-fit: cover;
+         object-fit: cover;
+      -o-object-position: center;
+         object-position: center;
+      position: absolute;
+      top: 0;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px; }
+    .card-evento .content-info .footer-card {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      border-bottom-left-radius: 15px;
+      border-bottom-right-radius: 15px; }
+      .card-evento .content-info .footer-card .icon-card {
+        color: #ffffff;
+        margin-bottom: 0;
+        margin-left: 1rem;
+        font-size: .8rem; }
+        .card-evento .content-info .footer-card .icon-card i {
+          margin-right: .5rem; }
+      .card-evento .content-info .footer-card .bg-footer-card {
+        background: #ffffffbb;
+        padding: .8rem;
+        text-align: center; }
+
+.filtro-evento .input-group .input-group-text {
+  background: #ffffff;
+  border-radius: 0;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  padding: 0 0.5rem 0 1rem; }
+  .filtro-evento .input-group .input-group-text img {
+    width: 1rem; }
+
+.filtro-evento .input-group .form-control {
+  background: #ffffff;
+  border-left: none;
+  border-radius: 0;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding-left: 0.5rem;
+  padding-right: 1rem;
+  font-size: 0.8rem; }
+  .filtro-evento .input-group .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #ced4da; }
+
+.filtro-evento .form-select {
+  background-image: url(../images/icons/select.png);
+  background-size: 44px 40px;
+  background-position: right .1rem center;
+  color: #aaa9a9; }
+  .filtro-evento .form-select:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: #EAEAEA; }
+
+.filtro-evento .form-select-sm {
+  border-radius: 50px;
+  margin-top: .8rem;
+  padding-left: 1rem;
+  background-color: #EAEAEA; }
+
+.filtro-evento .text-check {
+  font-size: .8rem;
+  text-align: start;
+  margin-top: 1rem; }
+
+.filtro-evento .form-check-input:focus {
+  outline: none;
+  box-shadow: none; }
+
+.filtro-evento .form-check-input:checked {
+  background-color: #4524CB; }

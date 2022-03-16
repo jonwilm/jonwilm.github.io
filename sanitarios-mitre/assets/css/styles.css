@@ -559,16 +559,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   display: none;
 }
 
+.h-\[100\%\] {
+  height: 100%;
+}
+
 .w-0 {
   width: 0px;
-}
-
-.w-\[100full\] {
-  width: 100full;
-}
-
-.w-\[55\%\] {
-  width: 55%;
 }
 
 .w-\[100\%\] {
@@ -595,16 +591,21 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .pt-3 {
   padding-top: 0.75rem;
 }
 
-.pt-5 {
-  padding-top: 1.25rem;
-}
-
 .pl-8 {
   padding-left: 2rem;
+}
+
+.pt-5 {
+  padding-top: 1.25rem;
 }
 
 .blur {
@@ -671,9 +672,43 @@ Ensure the default browser behavior of the `hidden` attribute.
           animation-fill-mode: backwards;
 }
 
+.navbar {
+  height: 60px;
+  background-color: #ffffff;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar .logo-nav {
+  height: calc(60px - 1rem);
+}
+
+.navbar .content-rrss {
+  display: flex;
+}
+
+.navbar .content-rrss img {
+  height: calc(60px - 2rem);
+  margin-left: 0.5rem;
+  transition: all 0.3s;
+}
+
+.navbar .content-rrss a:hover img {
+  transform: scale(1.1);
+}
+
 .content-banner {
-  background: #009fe3;
-  background: linear-gradient(180deg, #009fe3 70%, #ffffff 100%);
+  /* background: #009fe3;
+  background: linear-gradient(180deg, #009fe3 70%, #ffffff 100%); */
+  background-image: url(../images/bg-ppal.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 60px - 64px);
+  display: flex;
+  align-items: center;
 }
 
 .content-img-banner {
@@ -686,24 +721,38 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .img-banner {
   width: 100%;
-  height: 100%;
+  height: calc(7 * 3.5rem);
   top: 0;
   left: 0;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: bottom right;
-     object-position: bottom right;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.content-logos {
+  padding: 0.5rem;
+  background-color: #ffffff99;
+  border-radius: 25px;
+  box-shadow: -5px 0px 45px 0px #555;
 }
 
 .logo {
-  height: 3rem;
+  max-height: 3rem;
   margin-top: 0.5rem;
   cursor: pointer;
   transition: all 0.3s;
 }
 
+@media (min-width: 1200px) {
+  .logo {
+    filter: grayscale(1);
+  }
+}
+
 .logo:hover {
   transform: scale(1.1);
+  filter: grayscale(0);
 }
 
 #logos2 {
@@ -717,7 +766,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 #logos2::-webkit-scrollbar-thumb {
-  background: #303030;
+  background: #61b7d1;
   border-radius: 5px;
 }
 
@@ -726,12 +775,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-radius: 5px;
 }
 
-@media (min-width: 924px) {
-  .lg\:mx-auto {
-    margin-left: auto;
-    margin-right: auto;
-  }
+.footer {
+  background-color: #61b7d1;
+  padding: 0.5rem;
+  text-align: center;
+}
 
+.footer p {
+  margin: 0;
+  color: #ffffff;
+}
+
+@media (min-width: 924px) {
   .lg\:block {
     display: block;
   }
@@ -740,11 +795,23 @@ Ensure the default browser behavior of the `hidden` attribute.
     display: none;
   }
 
+  .lg\:w-\[40\%\] {
+    width: 40%;
+  }
+
+  .lg\:w-\[60\%\] {
+    width: 60%;
+  }
+
   .lg\:w-\[45\%\] {
     width: 45%;
   }
 
   .lg\:w-\[55\%\] {
     width: 55%;
+  }
+
+  .lg\:pt-0 {
+    padding-top: 0px;
   }
 }

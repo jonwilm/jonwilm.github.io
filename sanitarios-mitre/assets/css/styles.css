@@ -596,6 +596,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 1.25rem;
 }
 
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
 .pt-3 {
   padding-top: 0.75rem;
 }
@@ -699,6 +704,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: scale(1.1);
 }
 
+#text-search {
+  border: 1px solid #61b7d1;
+  padding: 0.4rem 1rem;
+  border-radius: 8px;
+  color: #303030;
+}
+
+#text-search:focus-visible {
+  outline: none;
+}
+
+#search {
+  padding: 0.5rem 1rem;
+  background-color: #61b7d1;
+  border-radius: 8px;
+  color: #303030;
+}
+
+#search img {
+  width: 1rem;
+  height: 1rem;
+}
+
+#search:hover {
+  background-color: #61b7d1aa;
+}
+
 .content-banner {
   /* background: #009fe3;
   background: linear-gradient(180deg, #009fe3 70%, #ffffff 100%); */
@@ -721,7 +753,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .img-banner {
   width: 100%;
-  height: calc(7 * 3.5rem);
+  height: calc(10 * 3.5rem);
   top: 0;
   left: 0;
   -o-object-fit: contain;
@@ -755,10 +787,19 @@ Ensure the default browser behavior of the `hidden` attribute.
   filter: grayscale(0);
 }
 
+.logos1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 #logos2 {
-  max-height: calc(7 * 3.5rem);
+  min-height: calc((10 * 3.5rem) + 2rem);
   overflow-y: auto;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #logos2::-webkit-scrollbar {

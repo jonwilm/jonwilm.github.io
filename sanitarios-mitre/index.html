@@ -12,12 +12,14 @@
 
   <nav class="navbar">
     <img class="logo-nav" src="assets/images/logo-sanitarios-mitre.png" alt="">
-    <div class="search">
-      <input id="text-search" type="text">
-      <button id="search">
-        Buscar
-        <!-- <img src="assets/images/icons/lupa.svg" alt=""> -->
-      </button>
+    <div class="search hidden lg:block">
+      <form>
+        <input id="text-search" type="text" oninput="onInput()">
+        <button type="submit" id="search" disabled>
+          Buscar
+          <!-- <img src="assets/images/icons/lupa.svg" alt=""> -->
+        </button>
+      </form>
     </div>
     <div class="content-rrss">
       <a href="https://wa.me/+5491139434626" target="_blank" rel="noopener noreferrer"><img src="assets/images/icons/wa.svg" alt="whatsapp"></a>
@@ -29,6 +31,15 @@
   </nav>
   
   <div class="content-banner py-5">
+    <div class="search lg:hidden">
+      <form class="text-center pb-5">
+        <input id="text-search-mobile" type="text" oninput="onInputMobile()">
+        <button type="submit" id="search-mobile" disabled>
+          Buscar
+          <!-- <img src="assets/images/icons/lupa.svg" alt=""> -->
+        </button>
+      </form>
+    </div>
     <div class="container mx-auto relative">
       <!-- <div class="content-img-banner z-0">
         <img class="img-banner animated fadeInLeft hidden lg:block" src="assets/images/logo-mitre.png" alt="Mitre">

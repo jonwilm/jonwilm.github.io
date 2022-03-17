@@ -591,14 +591,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   border-width: 1px;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
 
-.py-4 {
+.pt-4 {
   padding-top: 1rem;
-  padding-bottom: 1rem;
 }
 
 .pb-5 {
@@ -609,12 +613,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-top: 0.75rem;
 }
 
-.pl-8 {
-  padding-left: 2rem;
-}
-
 .pt-5 {
   padding-top: 1.25rem;
+}
+
+.pl-8 {
+  padding-left: 2rem;
 }
 
 .text-center {
@@ -758,10 +762,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: calc(100vh - 60px - 64px);
+  min-height: calc(100vh - 60px - 96px);
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media (min-width: 992px) {
+  .content-banner {
+    justify-content: flex-end;
+  }
 }
 
 .content-img-banner {
@@ -774,13 +785,14 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .img-banner {
   width: 100%;
-  height: calc(10 * 3.5rem);
+  height: 100%;
+  max-height: calc((10 * 3.9rem) + 3rem);
   top: 0;
   left: 0;
   -o-object-fit: contain;
      object-fit: contain;
-  -o-object-position: center;
-     object-position: center;
+  -o-object-position: center bottom;
+     object-position: center bottom;
 }
 
 .content-logos {
@@ -790,9 +802,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   box-shadow: -5px 0px 45px 0px #555;
 }
 
+.content-logo {
+  background-color: #61b7d1aa;
+  border-radius: 10px;
+  padding: 0.3rem;
+  margin-bottom: 0.5rem;
+}
+
 .logo {
   max-height: 3rem;
-  margin-top: 0.5rem;
+  /* margin-top: 0.5rem; */
   cursor: pointer;
   transition: all 0.3s;
 }
@@ -815,7 +834,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 #logos2 {
-  min-height: calc((10 * 3.5rem) + 2rem);
+  min-height: calc((10 * 3.9rem) + 2rem);
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -839,7 +858,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .footer {
   background-color: #61b7d1;
-  padding: 0.5rem;
+  padding: 1.5rem 0.5rem;
   text-align: center;
 }
 

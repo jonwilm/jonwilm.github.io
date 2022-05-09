@@ -1,1 +1,0 @@
-import{_ as e,o as t,c,a as o}from"./index.72bd69f6.js";const s={},a={class:"container mx-auto px-4"},r=o("h1",null,"Security",-1),n=[r];function _(i,d){return t(),c("div",a,n)}var u=e(s,[["render",_]]);export{u as default};
